@@ -1,0 +1,218 @@
+[
+  {
+    "AL-number": "110100834860-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Amount reconciliation gate failed: printed/extracted gross INR 853,811.10 vs itemized sum INR 914,760.85. Case-level flagged_for_review gate was true (Printed net 189771.25 was inconsistent with the itemized total 914760.85 and was recomputed.). Strict confidence gate failed: 0.600 is not greater than 0.900.",
+    "how it happened": "The integrity guard rejected printed net INR 189,771.25 as unexplained by the itemized amount INR 914,760.85, recomputed the net, set amounts_match=false, and capped confidence. Confidence was capped after the amount-integrity failure, so low confidence is a consequence of the same reconciliation defect. All 16 bill pages were categorized as supporting/interim; the merged main bill combined summary headers and detailed pages, while deposits/receipts were also admitted into consolidation.",
+    "where it happened(step in pipeline)": "Stage 2 classification; Stage 4 sequencing; Stage 5 merging; Stage 6 consolidation; Stage 6 consolidation/integrity reconciliation; Stage 6 verdict recomputation after scoring; Stage 7 confidence scoring",
+    "why it happened(actual reasons)": "No page was classified as a final bill, so supporting/interim documents were combined across incompatible scopes. Reference workbook/PDF evidence: The ground-truth final bill shows total INR 189,771.25 and net payable approximately INR 189,771, with a pharmacy return of INR 1,048; A separate INR 50,000 payment receipt is evidence of payment, not an additional medical charge. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict. The ground-truth final bill total is INR 189,771.25 with pharmacy returns, but the output carried INR 853,811.10 extracted and INR 914,760.85 itemized across 168 lines.",
+    "what can be improved": "Separate final bills from deposits, receipts and supporting bills; reconcile each document independently before claim-level aggregation. Recognize the final-bill summary/detail sequence as one authoritative document, treat deposits/payment receipts as evidence rather than charges, and keep returns signed."
+  },
+  {
+    "AL-number": "110101016363-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Strict confidence gate failed: 0.900 is not greater than 0.900.",
+    "how it happened": "All financial and document-level gates passed, but the rule is strictly greater-than; a score exactly at 0.900 is rejected.",
+    "where it happened(step in pipeline)": "Stage 6 verdict recomputation after scoring; Stage 7 confidence scoring",
+    "why it happened(actual reasons)": "This is a threshold-boundary rejection, not evidence that the bill arithmetic is wrong. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Calibrate the boundary with validated cases and route exact-threshold cases to targeted line review instead of whole-case rejection."
+  },
+  {
+    "AL-number": "110101016434-2",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 0.971 was above 0.900, and no supporting-bill aggregation mismatch existed. 1 line-level flag(s) existed but are not a direct verdict gate.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110101016774-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 1.000 was above 0.900, and no supporting-bill aggregation mismatch existed.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110101016808-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 1.000 was above 0.900, and no supporting-bill aggregation mismatch existed.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110101017483-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 1.000 was above 0.900, and no supporting-bill aggregation mismatch existed.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110101017611-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Case-level flagged_for_review gate was true (No final bill found — charges are from a single procedure bill).",
+    "how it happened": "Categorisation produced procedure bill=1; consolidation therefore found no authoritative final bill and set a blocking review flag.",
+    "where it happened(step in pipeline)": "Stage 6 consolidation",
+    "why it happened(actual reasons)": "The available procedure/package/supporting page may be financially complete, but it was not identified as a final bill under the pipeline hierarchy. Reference workbook/PDF evidence: The reference review found the extracted bill arithmetic correct but noted handwritten prescription pages and no recognized final bill; An IP identifier formatting mismatch was observed. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Use document-level finality evidence (title, invoice total, net payable, page sequence) and a controlled manual-final designation when only one complete bill exists."
+  },
+  {
+    "AL-number": "110101017679-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 1.000 was above 0.900, and no supporting-bill aggregation mismatch existed.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110101018148-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 1.000 was above 0.900, and no supporting-bill aggregation mismatch existed.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110202494394-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Net-integrity reconciliation gate failed: printed net INR 76,278.00 was not explained by the itemized sum INR 151,956.82. Case-level flagged_for_review gate was true (Printed net 76278.0 was inconsistent with the itemized total 151956.82 and was recomputed.). Supporting-bill aggregation gate failed for 6 charge header(s). Strict confidence gate failed: 0.600 is not greater than 0.900.",
+    "how it happened": "The integrity guard rejected printed net INR 76,278.00 as unexplained by the itemized amount INR 151,956.82, recomputed the net, set amounts_match=false, and capped confidence. pharmacy bill: final header INR 80.00 vs supporting total INR 3,798.30 (difference INR 3,718.30); pharmacy bill: final header INR 2,571.00 vs supporting total INR 3,798.30 (difference INR 1,227.30); pharmacy bill: final header INR 1,227.41 vs supporting total INR 3,798.30 (difference INR 2,570.89); and 3 more mismatch(es). Confidence was capped after the amount-integrity failure, so low confidence is a consequence of the same reconciliation defect.",
+    "where it happened(step in pipeline)": "Stage 3-5 category grouping/merging; Stage 5 merging; Stage 6 consolidation; Stage 6 consolidation/integrity reconciliation; Stage 6 supporting-bill expansion; Stage 6 verdict recomputation after scoring; Stage 7 confidence scoring",
+    "why it happened(actual reasons)": "The itemized-to-net ratio is 1.99x, a strong signal of duplicated scope or mixing a gross/header total with payer/patient-share details. The final-bill category header was compared with an incomplete, over-broad, or differently scoped supporting-bill total, so the expected detail expansion was withheld. Reference workbook/PDF evidence: The reference review reports the extracted and calculated totals are approximately double the PDF amount; A policy identifier was not extracted. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Reconcile at document and payer-column scope; de-duplicate summary/header rows against detail rows before summing. Link every supporting bill to the correct final-bill category and service period, then compare one aggregated category total rather than individual lines to the whole category."
+  },
+  {
+    "AL-number": "110202494871-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Supporting-bill aggregation gate failed for 2 charge header(s).",
+    "how it happened": "pharmacy bill: final header INR 820.00 vs supporting total INR 16,457.18 (difference INR 15,637.18); pharmacy bill: final header INR 20,408.00 vs supporting total INR 16,457.18 (difference INR 3,950.82).",
+    "where it happened(step in pipeline)": "Stage 3-5 category grouping/merging; Stage 6 supporting-bill expansion",
+    "why it happened(actual reasons)": "The final-bill category header was compared with an incomplete, over-broad, or differently scoped supporting-bill total, so the expected detail expansion was withheld. Reference workbook/PDF evidence: Reviewers considered the main amount totals correct but found an IP identifier mismatch. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Link every supporting bill to the correct final-bill category and service period, then compare one aggregated category total rather than individual lines to the whole category."
+  },
+  {
+    "AL-number": "110202495953-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Supporting-bill aggregation gate failed for 3 charge header(s).",
+    "how it happened": "investigation bill: final header INR 4,600.00 vs supporting total INR 140.00 (difference INR 4,460.00); investigation bill: final header INR 1,460.00 vs supporting total INR 140.00 (difference INR 1,320.00); pharmacy bill: final header INR 8,017.00 vs supporting total INR 4,813.36 (difference INR 3,203.64).",
+    "where it happened(step in pipeline)": "Stage 3-5 category grouping/merging; Stage 6 supporting-bill expansion",
+    "why it happened(actual reasons)": "The final-bill category header was compared with an incomplete, over-broad, or differently scoped supporting-bill total, so the expected detail expansion was withheld. Reference workbook/PDF evidence: Reviewers considered the main printed and calculated totals correct; the failure is instead associated with itemized supporting-bill reconciliation. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Link every supporting bill to the correct final-bill category and service period, then compare one aggregated category total rather than individual lines to the whole category."
+  },
+  {
+    "AL-number": "110202496617-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Amount reconciliation gate failed: printed/extracted gross INR 70,702.62 vs itemized sum INR 74,254.06. Case-level flagged_for_review gate was true (Printed net 43087.0 was inconsistent with the itemized total 74254.06 and was recomputed.). Strict confidence gate failed: 0.600 is not greater than 0.900.",
+    "how it happened": "The integrity guard rejected printed net INR 43,087.00 as unexplained by the itemized amount INR 74,254.06, recomputed the net, set amounts_match=false, and capped confidence. Confidence was capped after the amount-integrity failure, so low confidence is a consequence of the same reconciliation defect.",
+    "where it happened(step in pipeline)": "Stage 5 merging; Stage 6 consolidation; Stage 6 consolidation/integrity reconciliation; Stage 6 verdict recomputation after scoring; Stage 7 confidence scoring",
+    "why it happened(actual reasons)": "No page was classified as a final bill, so supporting/interim documents were combined across incompatible scopes. Reference workbook/PDF evidence: The reference review reports wrong totals and a skipped medicine-bill component. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Separate final bills from deposits, receipts and supporting bills; reconcile each document independently before claim-level aggregation."
+  },
+  {
+    "AL-number": "110202496923-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Net-integrity reconciliation gate failed: printed net INR 24,101.00 was not explained by the itemized sum INR 17,712.18. Case-level flagged_for_review gate was true (Printed net 24101.0 was inconsistent with the itemized total 17712.18 and was recomputed.). Supporting-bill aggregation gate failed for 4 charge header(s). Strict confidence gate failed: 0.600 is not greater than 0.900.",
+    "how it happened": "The integrity guard rejected printed net INR 24,101.00 as unexplained by the itemized amount INR 17,712.18, recomputed the net, set amounts_match=false, and capped confidence. pharmacy bill: final header INR 168.48 vs supporting total INR 6,388.99 (difference INR 6,220.51); pharmacy bill: final header INR 168.48 vs supporting total INR 6,388.99 (difference INR 6,220.51); pharmacy bill: final header INR 121.80 vs supporting total INR 6,388.99 (difference INR 6,267.19); and 1 more mismatch(es). Confidence was capped after the amount-integrity failure, so low confidence is a consequence of the same reconciliation defect.",
+    "where it happened(step in pipeline)": "Stage 3-5 category grouping/merging; Stage 5 merging; Stage 6 consolidation; Stage 6 consolidation/integrity reconciliation; Stage 6 supporting-bill expansion; Stage 6 verdict recomputation after scoring; Stage 7 confidence scoring",
+    "why it happened(actual reasons)": "Both detailed and summary final bills existed; the detailed bill was preferred even though its extracted line-item scope did not explain the summary net. The final-bill category header was compared with an incomplete, over-broad, or differently scoped supporting-bill total, so the expected detail expansion was withheld. Reference workbook/PDF evidence: The reference review confirms the itemized totals do not agree with the printed net payable. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Before preferring a detailed final bill, cross-check its line count and sum against the summary final bill and retain the summary as a control total. Link every supporting bill to the correct final-bill category and service period, then compare one aggregated category total rather than individual lines to the whole category."
+  },
+  {
+    "AL-number": "110202497170-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Case-level flagged_for_review gate was true (No final bill found — charges are from a single procedure bill).",
+    "how it happened": "Categorisation produced procedure bill=1; consolidation therefore found no authoritative final bill and set a blocking review flag.",
+    "where it happened(step in pipeline)": "Stage 6 consolidation",
+    "why it happened(actual reasons)": "The available procedure/package/supporting page may be financially complete, but it was not identified as a final bill under the pipeline hierarchy. Reference workbook/PDF evidence: Reviewers found the one extracted amount correct; the rejection is explained by absence of an authoritative final-bill classification. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Use document-level finality evidence (title, invoice total, net payable, page sequence) and a controlled manual-final designation when only one complete bill exists."
+  },
+  {
+    "AL-number": "110202497302-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 1.000 was above 0.900, and no supporting-bill aggregation mismatch existed.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110202497866-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Amount reconciliation gate failed: printed/extracted gross INR 55,200.00 vs itemized sum INR 0.00. Case-level flagged_for_review gate was true (Totals do not reconcile: extracted 55200.0 vs calculated 0 (diff -55200.0).). Strict confidence gate failed: 0.000 is not greater than 0.900.",
+    "how it happened": "A printed total of INR 55,200.00 survived, but zero charge lines reached the consolidated output, producing a full-value mismatch. Confidence was capped after the amount-integrity failure, so low confidence is a consequence of the same reconciliation defect.",
+    "where it happened(step in pipeline)": "Stage 1 extraction/OCR; Stage 5 merging; Stage 6 consolidation; Stage 6 consolidation/integrity reconciliation; Stage 6 verdict recomputation after scoring; Stage 7 confidence scoring",
+    "why it happened(actual reasons)": "The final-bill page was recognized at summary level but its charge table was not extracted into line items. Reference workbook/PDF evidence: The PDF contains one billed line, while the consolidated JSON contains zero line items. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Require a nonzero line-item check whenever a bill total is present; route the page to OCR/table fallback or manual review before consolidation."
+  },
+  {
+    "AL-number": "110202497976-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Amount reconciliation gate failed: printed/extracted gross INR 79,661.00 vs itemized sum INR 69,523.63. Case-level flagged_for_review gate was true (Printed net 79661.0 was inconsistent with the itemized total 69523.63 and was recomputed.). Strict confidence gate failed: 0.600 is not greater than 0.900.",
+    "how it happened": "The integrity guard rejected printed net INR 79,661.00 as unexplained by the itemized amount INR 69,523.63, recomputed the net, set amounts_match=false, and capped confidence. Confidence was capped after the amount-integrity failure, so low confidence is a consequence of the same reconciliation defect.",
+    "where it happened(step in pipeline)": "Stage 5 merging; Stage 6 consolidation; Stage 6 consolidation/integrity reconciliation; Stage 6 verdict recomputation after scoring; Stage 7 confidence scoring",
+    "why it happened(actual reasons)": "Both detailed and summary final bills existed; the detailed bill was preferred even though its extracted line-item scope did not explain the summary net. Reference workbook/PDF evidence: The reference review counted 43 PDF line items versus 27 consolidated JSON line items. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Before preferring a detailed final bill, cross-check its line count and sum against the summary final bill and retain the summary as a control total."
+  },
+  {
+    "AL-number": "110202497982-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Net-integrity reconciliation gate failed: printed net INR 23,774.00 was not explained by the itemized sum INR 36,178.25. Case-level flagged_for_review gate was true (Printed net 23774.0 was inconsistent with the itemized total 36178.25 and was recomputed.). Strict confidence gate failed: 0.600 is not greater than 0.900.",
+    "how it happened": "The integrity guard rejected printed net INR 23,774.00 as unexplained by the itemized amount INR 36,178.25, recomputed the net, set amounts_match=false, and capped confidence. Confidence was capped after the amount-integrity failure, so low confidence is a consequence of the same reconciliation defect.",
+    "where it happened(step in pipeline)": "Stage 5 merging; Stage 6 consolidation; Stage 6 consolidation/integrity reconciliation; Stage 6 verdict recomputation after scoring; Stage 7 confidence scoring",
+    "why it happened(actual reasons)": "The lower printed net was not explained by extracted discount, deduction, return or payer-share fields, so it was treated as inconsistent. Reference workbook/PDF evidence: The reference review identifies INR 23,774 as the printed net while the output itemized amount is INR 36,178.25. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Capture discount/deduction/return and payer-share components explicitly so a legitimate lower net is not treated as a bad total."
+  },
+  {
+    "AL-number": "110202499095-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 0.960 was above 0.900, and no supporting-bill aggregation mismatch existed.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110202499409-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 0.970 was above 0.900, and no supporting-bill aggregation mismatch existed. 2 line-level flag(s) existed but are not a direct verdict gate.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110202499643-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 1.000 was above 0.900, and no supporting-bill aggregation mismatch existed.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110202500220-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable - this is a passed baseline case.",
+    "how it happened": "Printed and itemized totals reconciled, no case-level review flag was set, confidence 1.000 was above 0.900, and no supporting-bill aggregation mismatch existed.",
+    "where it happened(step in pipeline)": "Stages 6-7: consolidation, confidence scoring, and final deterministic verdict check.",
+    "why it happened(actual reasons)": "All four deterministic pass conditions were satisfied. Passed cases are the comparison control; the pass-population minimum confidence was 0.96.",
+    "what can be improved": "Retain this case as a positive regression control and preserve its document classification, amount reconciliation, supporting-bill linking, and numeric-ID extraction behavior."
+  },
+  {
+    "AL-number": "110202501198-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "Amount reconciliation gate failed: printed/extracted gross INR 11,326.77 vs itemized sum INR 14,622.31. Case-level flagged_for_review gate was true (Totals do not reconcile: extracted 11326.77 vs calculated 14622.31 (diff 3295.54).). Strict confidence gate failed: 0.500 is not greater than 0.900.",
+    "how it happened": "2 signed return/credit line(s) totalling INR -3,295.54 were present in merged charges but absent from the consolidated returns, so removing the negative lines raised the itemized sum. Confidence was capped after the amount-integrity failure, so low confidence is a consequence of the same reconciliation defect.",
+    "where it happened(step in pipeline)": "Stage 5 merging; Stage 6 consolidation; Stage 6 consolidation/integrity reconciliation; Stage 6 verdict recomputation after scoring; Stage 7 confidence scoring",
+    "why it happened(actual reasons)": "Returns were represented as negative charges instead of the dedicated returns collection and were dropped from gross reconciliation. Reference workbook/PDF evidence: The reference review counted 23 PDF lines versus 20 consolidated lines and identified two omitted return charges. Downstream adjudication overall_status=fail; it is corroborating context and does not set bill_summary.case_verdict.",
+    "what can be improved": "Preserve returns/credits as signed financial components and reconcile gross - discount + tax - returns before the verdict decision."
+  }
+]

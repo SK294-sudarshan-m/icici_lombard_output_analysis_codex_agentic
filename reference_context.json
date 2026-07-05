@@ -1,0 +1,79 @@
+{
+  "cases": {
+    "110100834860-1": {
+      "sources": ["ground_truth_001.pdf"],
+      "observations": [
+        "The ground-truth final bill shows total INR 189,771.25 and net payable approximately INR 189,771, with a pharmacy return of INR 1,048",
+        "A separate INR 50,000 payment receipt is evidence of payment, not an additional medical charge"
+      ]
+    },
+    "110101017611-1": {
+      "sources": ["Output Analysis.xlsx", "New output analysis.xlsx"],
+      "observations": [
+        "The reference review found the extracted bill arithmetic correct but noted handwritten prescription pages and no recognized final bill",
+        "An IP identifier formatting mismatch was observed"
+      ]
+    },
+    "110202494394-1": {
+      "sources": ["Output Analysis.xlsx", "New output analysis.xlsx"],
+      "observations": [
+        "The reference review reports the extracted and calculated totals are approximately double the PDF amount",
+        "A policy identifier was not extracted"
+      ]
+    },
+    "110202494871-1": {
+      "sources": ["Output Analysis.xlsx", "New output analysis.xlsx"],
+      "observations": [
+        "Reviewers considered the main amount totals correct but found an IP identifier mismatch"
+      ]
+    },
+    "110202495953-1": {
+      "sources": ["Output Analysis.xlsx", "New output analysis.xlsx"],
+      "observations": [
+        "Reviewers considered the main printed and calculated totals correct; the failure is instead associated with itemized supporting-bill reconciliation"
+      ]
+    },
+    "110202496617-1": {
+      "sources": ["Output Analysis.xlsx", "New output analysis.xlsx"],
+      "observations": [
+        "The reference review reports wrong totals and a skipped medicine-bill component"
+      ]
+    },
+    "110202496923-1": {
+      "sources": ["Output Analysis.xlsx", "New output analysis.xlsx"],
+      "observations": [
+        "The reference review confirms the itemized totals do not agree with the printed net payable"
+      ]
+    },
+    "110202497170-1": {
+      "sources": ["Output Analysis.xlsx", "New output analysis.xlsx"],
+      "observations": [
+        "Reviewers found the one extracted amount correct; the rejection is explained by absence of an authoritative final-bill classification"
+      ]
+    },
+    "110202497866-1": {
+      "sources": ["New output analysis.xlsx"],
+      "observations": [
+        "The PDF contains one billed line, while the consolidated JSON contains zero line items"
+      ]
+    },
+    "110202497976-1": {
+      "sources": ["New output analysis.xlsx"],
+      "observations": [
+        "The reference review counted 43 PDF line items versus 27 consolidated JSON line items"
+      ]
+    },
+    "110202497982-1": {
+      "sources": ["New output analysis.xlsx"],
+      "observations": [
+        "The reference review identifies INR 23,774 as the printed net while the output itemized amount is INR 36,178.25"
+      ]
+    },
+    "110202501198-1": {
+      "sources": ["Output Analysis.xlsx", "New output analysis.xlsx"],
+      "observations": [
+        "The reference review counted 23 PDF lines versus 20 consolidated lines and identified two omitted return charges"
+      ]
+    }
+  }
+}
