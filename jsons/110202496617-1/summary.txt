@@ -1,0 +1,12 @@
+PDF: 110202496617-1.pdf
+request_id: 941b06e0
+status: completed
+pages: 11
+line_items: 198
+extracted_amount: 70702.62
+payable (after discount): 74254.06
+amounts_match: False
+overall_confidence: 0.6
+billing_type: Medical Management
+adjudication_overall: fail
+summary: Case is FLAGGED and needs reviewer attention. The consolidated bill has 198 line item(s) totalling ₹70,702.62 (gross), with a net payable of ₹74,254.06. the printed net (₹43,087.00) was inconsistent with the itemised total (₹74,254.06) and was recomputed. 3 line item(s) are flagged for review. billing type assessed as Medical Management. extraction confidence 0.60.

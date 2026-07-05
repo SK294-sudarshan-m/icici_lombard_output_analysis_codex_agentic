@@ -1,0 +1,33 @@
+{
+  "bill_pages": {
+    "final_bill": [
+      1,
+      3
+    ],
+    "detailed_final_bill": [
+      2
+    ]
+  },
+  "non_bill_pages": {
+    "discharge_summary": [
+      4,
+      5,
+      7,
+      10,
+      12,
+      13
+    ],
+    "unknown": [
+      6,
+      8
+    ],
+    "prescription": [
+      9
+    ],
+    "diagnostic_report": [
+      11
+    ]
+  },
+  "unclassified_pages": [],
+  "total_pages": 13
+}

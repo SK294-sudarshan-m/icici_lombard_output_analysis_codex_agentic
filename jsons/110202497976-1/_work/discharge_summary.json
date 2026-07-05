@@ -1,0 +1,74 @@
+{
+  "source_pages": [
+    10,
+    11,
+    12,
+    18
+  ],
+  "primary_diagnosis": "Carcinoma Endometrium",
+  "procedures": [],
+  "severity": "Mild",
+  "length_of_stay": "0",
+  "treating_doctor": "A.Satya Srinivas",
+  "department": "Medical Oncology",
+  "pre_existing_diseases": [
+    "Carcinoma Endometrium"
+  ],
+  "treatment": "Patient received Cycle 5th chemotherapy with Genexol, Carboplatin, and PEG GCSF.",
+  "medications": [
+    {
+      "name": "Genexol",
+      "dosage": "230 mg",
+      "frequency": "Inj.",
+      "duration": ""
+    },
+    {
+      "name": "Carboplatin",
+      "dosage": "440 mg",
+      "frequency": "Inj.",
+      "duration": ""
+    },
+    {
+      "name": "PEG GCSF",
+      "dosage": "6 mg",
+      "frequency": "Inj.",
+      "duration": ""
+    },
+    {
+      "name": "Tab. Emeset",
+      "dosage": "8mg",
+      "frequency": "TID",
+      "duration": "4 days"
+    },
+    {
+      "name": "Tab. Rantac",
+      "dosage": "150mg",
+      "frequency": "BD",
+      "duration": "4 days"
+    },
+    {
+      "name": "Tab. Dolo",
+      "dosage": "650mg",
+      "frequency": "TID",
+      "duration": "4 days"
+    },
+    {
+      "name": "Tab. Tapal",
+      "dosage": "50mg",
+      "frequency": "TID",
+      "duration": "4 days"
+    },
+    {
+      "name": "Syp. Gavuscon",
+      "dosage": "10ml",
+      "frequency": "TID",
+      "duration": ""
+    },
+    {
+      "name": "Syp. Cremaffin Plus",
+      "dosage": "15ml",
+      "frequency": "HS",
+      "duration": ""
+    }
+  ]
+}

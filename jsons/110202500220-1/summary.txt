@@ -1,0 +1,12 @@
+PDF: 110202500220-1.pdf
+request_id: e6b769cb
+status: completed
+pages: 2
+line_items: 1
+extracted_amount: 33900.0
+payable (after discount): 33900.0
+amounts_match: True
+overall_confidence: 1.0
+billing_type: Surgery
+adjudication_overall: fail
+summary: Case is in order and recommended for processing. The consolidated bill has 1 line item(s) totalling ₹33,900.00 (gross), with a net payable of ₹33,900.00. the line items reconcile with the bill's printed total. billing type assessed as Surgery. extraction confidence 1.00.

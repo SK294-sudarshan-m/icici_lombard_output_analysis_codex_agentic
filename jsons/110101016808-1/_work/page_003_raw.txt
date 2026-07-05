@@ -1,0 +1,16 @@
+=== PAGE 3 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4022
+Tokens Out: 95
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 3,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "page_indicator": "Page 3 of 3"
+  },
+  "raw_summary": "Page 3 of a discharge summary from Oscar Hitech Multispeciality Hospital detailing surgical procedure notes, follow-up instructions, emergency contact, and signatures of the consultant and discharging authority."
+}

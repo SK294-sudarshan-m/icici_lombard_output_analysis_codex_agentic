@@ -1,0 +1,58 @@
+{
+  "page": 20,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "IDE23265/24",
+    "bill_date": "24/02/2025",
+    "page_indicator": "20",
+    "document_title": "IN-Patient Deposit Receipt"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "gender": "Female",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "",
+    "bed_number": "110A"
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "TPA",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "P. D. Hinduja Hospital & Medical Research Centre",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052. India",
+    "contact": "+91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD GENERAL INSURANCE COMPANY",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "59073.00",
+    "total_amount": "59073.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "59073.00",
+    "amount_paid": "59073.00",
+    "balance": "",
+    "advance_paid": "59073.00"
+  },
+  "sub_bills": [],
+  "raw_summary": "This page is an In-Patient Deposit Receipt from P.D. Hinduja Hospital for patient Chander Kochhar, showing a credit card payment of IRS 59,073.00 made on 24/02/2025 for a TPA-sponsored admission under ICICI Lombard General Insurance Company.",
+  "pipeline_category": "supporting_interim_bill",
+  "bill_id": "supporting_interim_bill_5",
+  "sequence_reason": "Pages 20 and 21 are two separate In-Patient Deposit Receipts from P.D. Hinduja Hospital for the same patient (CHANDER KOCHHAR) and admission (68049), dated the same day (24/02/2025). They are distinct documents for different deposit amounts (Rs. 50,000.00 and Rs. 59,073.00) and are grouped together as they represent related financial transactions for the same admission."
+}

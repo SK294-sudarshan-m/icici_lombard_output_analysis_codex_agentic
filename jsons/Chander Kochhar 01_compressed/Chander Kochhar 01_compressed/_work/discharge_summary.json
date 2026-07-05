@@ -1,0 +1,96 @@
+{
+  "source_pages": [
+    1,
+    2,
+    3,
+    8,
+    64,
+    68,
+    69,
+    70
+  ],
+  "primary_diagnosis": "BILATERAL POSTEROBASAL, INTERLOBAR SEGMENTAL AND SUBSEGMENTAL PULMONARY EMBOLISM",
+  "procedures": [
+    "Right hip bipolar hemiarthroplasty (08/01/2025)",
+    "CTPA",
+    "Bilateral lower limb venous doppler"
+  ],
+  "severity": "Severe",
+  "length_of_stay": "3",
+  "treating_doctor": "Abhay Raut",
+  "department": "Orthopaedics",
+  "pre_existing_diseases": [
+    "Hypertension",
+    "Diabetes Mellitus",
+    "Bronchial Asthma"
+  ],
+  "treatment": "ICU admission with anticoagulation (TARGOCID, ERTAPENEM), oxygen support, and monitoring; transitioned to ward with stabilization and weaning off oxygen.",
+  "medications": [
+    {
+      "name": "TAB.APIXABAN 5 MG",
+      "dosage": "5 MG",
+      "frequency": "1 in Morning, 1 in Night",
+      "duration": "3 MONTHS"
+    },
+    {
+      "name": "TAB.SYNDOPA PLUS",
+      "dosage": "100 MG",
+      "frequency": "½ in Morning, ½ in Afternoon, 1 in Night",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "TAB.MODALERT 100 MG",
+      "dosage": "100 MG",
+      "frequency": "1 in Morning",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "TAB.PANTOP 40 MG (BEFORE MEALS)",
+      "dosage": "40 MG",
+      "frequency": "1 in Morning",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "TAB.CILACAR 5 MG",
+      "dosage": "5 MG",
+      "frequency": "1 in Morning, 1 in Night",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "TAB.COBADEX CZS",
+      "dosage": "CZS",
+      "frequency": "1 in Morning, 1 in Night",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "TAB.SHELICAL 500 MG",
+      "dosage": "500 MG",
+      "frequency": "1 in Morning",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "NEB.FORACORT 1 MG FOLLOWED BY GARGLES WITH CHLORHEXIDINE MOUTHWASH AFTER BOTH NEBULISATIONS",
+      "dosage": "1 MG",
+      "frequency": "1 in Morning, 1 in Night",
+      "duration": "10 DAYS"
+    },
+    {
+      "name": "NEB.GLYCOHALE",
+      "dosage": "1 MG",
+      "frequency": "1 in Morning, 1 in Night",
+      "duration": "10 DAYS"
+    },
+    {
+      "name": "SYP.CREMAFFIN 20 ML",
+      "dosage": "20 ML",
+      "frequency": "1 in Night",
+      "duration": "FOR CONSTIPATION"
+    },
+    {
+      "name": "SYP.OROFER XT 10 ML",
+      "dosage": "10 ML",
+      "frequency": "1 in Night",
+      "duration": "CONTINUE"
+    }
+  ]
+}

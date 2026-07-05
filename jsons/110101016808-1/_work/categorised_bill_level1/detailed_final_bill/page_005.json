@@ -1,0 +1,58 @@
+{
+  "page": 5,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "59 / 2026-2027",
+    "bill_date": "08/06/2026",
+    "page_indicator": "Page 2 of 2",
+    "document_title": "IN-PATIENT BILL - PROVISIONAL"
+  },
+  "patient": {
+    "name": "Mrs. Anshu Singh",
+    "age": "33Y",
+    "gender": "Female",
+    "uhid": "2026-2027 | 7460",
+    "ip_number": "134 / 2026-2027",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "06/06/2026 05:00 PM",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "Dr.Gaurav Prakash Sawant",
+    "department": ""
+  },
+  "hospital": {
+    "name": "OSCAR HITECH MULTISPECIALITY HOSPITAL",
+    "address": "axmi Niwas, Near Borivali Phatak, S V Road, Daulat Nagar, Borivali East, Mumbai - 400066",
+    "contact": "Tel No.: 02228932255/02228932266/8425986919 | Email: oscarhitechhospital@gmail.com"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Provisional in-patient bill page for Mrs. Anshu Singh with patient and admission details, but no itemized charges or summary amounts listed on this page.",
+  "bill_category": "detailed_final_bill",
+  "pipeline_category": "detailed_final_bill"
+}

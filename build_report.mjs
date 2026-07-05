@@ -74,14 +74,22 @@ table.showFilterButton = true;
 sheet.freezePanes.freezeRows(1);
 sheet.freezePanes.freezeColumns(2);
 
-const baseline = audit.baseline_comparison || {};
-const embedding = audit.embedding_runtime || {};
+const modelAnalysis = audit.model_analysis || {};
+const cohort = modelAnalysis.cohort || {};
+const baseline = audit.baseline_comparison || {
+  case_count: audit.case_count ?? cohort.case_count,
+  fail_count: cohort.verdict_0_count,
+  pass_count: cohort.verdict_1_count,
+};
+const embedding = audit.embedding_runtime || modelAnalysis.embedding_runtime || {};
+const modelRuntime = modelAnalysis.model_runtime || {};
 const noteCell = sheet.getRange(`G${rows.length + 1}`);
 await workbook.comments.setSelf({ displayName: "User" });
 workbook.comments.addThread(
   { cell: noteCell },
   `Audit: ${baseline.case_count ?? rows.length} cases; ${baseline.fail_count ?? 0} rejected; ` +
-    `${baseline.pass_count ?? 0} passed. Cloud semantic categorization: ${embedding.model_id ?? "not recorded"} ` +
+    `${baseline.pass_count ?? 0} passed. Agent LLM: ${modelRuntime.language_model_id ?? "not recorded"}. ` +
+    `Cloud semantic categorization: ${embedding.model_id ?? modelRuntime.embedding_model_id ?? "not recorded"} ` +
     `in ${embedding.region ?? "unknown region"}; local fallback=${embedding.local_fallback ?? "unknown"}. ` +
     `All nested output files were scanned; report text excludes patient, hospital and doctor names.`,
 );

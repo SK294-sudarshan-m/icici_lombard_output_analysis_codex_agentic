@@ -1,0 +1,56 @@
+=== PAGE 2 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4360
+Tokens Out: 498
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 2,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "page_indicator": "Page 2 of 3",
+    "document_title": "Discharge Summary"
+  },
+  "hospital": {
+    "name": "OSCAR HITECH MULTISPECIALITY HOSPITAL",
+    "address": "Laxmi Niwas, Near Borivali Phatak, S V Road, Daulat Nagar, Borivali East, Mumbai - 400066",
+    "contact": "Tel No.: 0222893255/02228932266/8425986919 | Email: oscarhitechhospital@gmail.com"
+  },
+  "medications": [
+    {
+      "name": "TABLET CEFTUM 500",
+      "dosage": "",
+      "frequency": "1-0-1 ( AFTER MEALS)",
+      "duration": "5 DAYS",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "TABLET DICLOGESIC",
+      "dosage": "",
+      "frequency": "1-0-1 ( AFTER MEALS) THEN SOS IF PAIN",
+      "duration": "5 DAYS",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "TABLET PAN 40",
+      "dosage": "",
+      "frequency": "1-0-1 ( 30 MINUTES BEFORE MEAL)",
+      "duration": "5 DAYS",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "SYRUP CREMAFFINE",
+      "dosage": "30 ML 0-0-1",
+      "frequency": "",
+      "duration": "1 WEEK",
+      "quantity": "",
+      "amount": ""
+    }
+  ],
+  "raw_summary": "Page 2 of a 3-page discharge summary from Oscar Hitech Multispeciality Hospital detailing post-operative condition, drug advice with frequency and duration, patient advices, diet restrictions, operative findings, and operative notes for a laparoscopic cholecystectomy performed on 07/06/2026."
+}

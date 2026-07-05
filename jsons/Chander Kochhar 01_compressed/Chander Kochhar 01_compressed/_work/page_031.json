@@ -1,0 +1,26 @@
+{
+  "page": 31,
+  "page_type": "non_bill",
+  "non_bill_type": "diagnostic_report",
+  "document_markers": {
+    "document_title": "DEPARTMENT OF IMAGING"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 Y",
+    "gender": "F",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "406"
+  },
+  "admission": {
+    "date_of_admission": "22/02/2025 11:16AM",
+    "referring_doctor": "ABHAY RAUT"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "Tel: +91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "raw_summary": "Diagnostic report from P.D. Hinduja Hospital for a bilateral lower limb venous color doppler study performed on 22/02/2025, concluding no evidence of deep venous thrombosis, validated by Dr. Praveen Jayaswal."
+}

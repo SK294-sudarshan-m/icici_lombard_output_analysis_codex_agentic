@@ -1,0 +1,146 @@
+{
+  "page": 3,
+  "page_type": "bill",
+  "document_markers": {
+    "document_title": "OT MEDICINE DETAILS"
+  },
+  "patient": {
+    "name": "MR.VENKATACHALAM.M",
+    "age": "64 YEAR(S)",
+    "gender": "M",
+    "uhid": "215507",
+    "ip_number": "000279"
+  },
+  "hospital": {
+    "name": "L.V.S. EYE HOSPITAL",
+    "address": "13-A, Palaniappa Street, Opposite to G.H, Erode - 638 009",
+    "contact": "82200 07131, 82200 17131"
+  },
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "Centurion Balanced Salt Solution",
+      "quantity": "1",
+      "unit_price": "764.00",
+      "gross_amount": "764.00",
+      "amount": "764.00",
+      "source_line_index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "2",
+      "description": "Tropicamide Eye drops",
+      "quantity": "1",
+      "unit_price": "50.00",
+      "gross_amount": "50.00",
+      "amount": "50.00",
+      "source_line_index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "3",
+      "description": "Hynidase Injection",
+      "quantity": "1",
+      "unit_price": "139.00",
+      "gross_amount": "139.00",
+      "amount": "139.00",
+      "source_line_index": 2,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "4",
+      "description": "Aurodone Eye Drops",
+      "quantity": "1",
+      "unit_price": "25.00",
+      "gross_amount": "25.00",
+      "amount": "25.00",
+      "source_line_index": 3,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "5",
+      "description": "Paracaine Eye Drops",
+      "quantity": "1",
+      "unit_price": "51.00",
+      "gross_amount": "51.00",
+      "amount": "51.00",
+      "source_line_index": 4,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "6",
+      "description": "Keratome",
+      "quantity": "2",
+      "unit_price": "80.00",
+      "gross_amount": "160.00",
+      "amount": "160.00",
+      "source_line_index": 5,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "7",
+      "description": "Auromox Injection",
+      "quantity": "1",
+      "unit_price": "148.00",
+      "gross_amount": "148.00",
+      "amount": "148.00",
+      "source_line_index": 6,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "8",
+      "description": "Viscoat - Alcon",
+      "quantity": "1",
+      "unit_price": "2204.00",
+      "gross_amount": "2204.00",
+      "amount": "2204.00",
+      "source_line_index": 7,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "9",
+      "description": "Moxicip Eye Drops",
+      "quantity": "1",
+      "unit_price": "87.00",
+      "gross_amount": "87.00",
+      "amount": "87.00",
+      "source_line_index": 8,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "10",
+      "description": "Myticom Eye Drops",
+      "quantity": "2",
+      "unit_price": "84.00",
+      "gross_amount": "168.00",
+      "amount": "168.00",
+      "source_line_index": 9,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "11",
+      "description": "Homide Eye Drops",
+      "quantity": "1",
+      "unit_price": "27.00",
+      "gross_amount": "27.00",
+      "amount": "27.00",
+      "source_line_index": 10,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "12",
+      "description": "Amplinak Eye Drops",
+      "quantity": "1",
+      "unit_price": "177.00",
+      "gross_amount": "177.00",
+      "amount": "177.00",
+      "source_line_index": 11,
+      "charge_type": "line_item"
+    }
+  ],
+  "bill_summary": {
+    "total_amount": "4000.00"
+  },
+  "raw_summary": "OT Medicine Details bill from L.V.S. Eye Hospital for patient MR. VENKATACHALAM.M, listing 12 medication items with quantities, unit prices, and total amount of 4000.00.",
+  "bill_category": "pharmacy_bill"
+}

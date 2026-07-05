@@ -1,0 +1,15 @@
+{
+  "page": 75,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "Medical Laboratory Report"
+  },
+  "patient": {
+    "name": "Mrs. CHANDER KOCHHAR",
+    "age": "91 Year(s)",
+    "gender": "Female",
+    "uhid": "P27224542522161"
+  },
+  "raw_summary": "This page is a medical laboratory report for Mrs. Chander Kochhar, detailing the interpretation and clinical utility of MuSK Antibody testing for Myasthenia Gravis, with associated tests and references."
+}

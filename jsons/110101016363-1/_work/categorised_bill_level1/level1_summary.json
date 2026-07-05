@@ -1,0 +1,21 @@
+{
+  "bill_pages": {
+    "final_bill": [
+      6
+    ],
+    "implant_bill": [
+      7
+    ]
+  },
+  "non_bill_pages": {
+    "discharge_summary": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "unclassified_pages": [],
+  "total_pages": 7
+}

@@ -1,0 +1,17 @@
+{
+  "page": 3,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "Bayeni"
+  },
+  "hospital": {
+    "name": "SPORTSMED MUMBAI LLP",
+    "address": "2nd Floor, Parel Premises, Opp. Motilal Oswal Towers, Parel ST Bus Depot Building, Junction of Sayani & Gokhale Road South, Parel West, Mumbai 400 025",
+    "contact": "T: 022 49227777/3100 8333 | E: info@sportsmed.in | www.sportsmed.in"
+  },
+  "raw_summary": "Discharge summary page with patient declaration, signature, and emergency contact details for Sportsmed Mumbai LLP."
+}

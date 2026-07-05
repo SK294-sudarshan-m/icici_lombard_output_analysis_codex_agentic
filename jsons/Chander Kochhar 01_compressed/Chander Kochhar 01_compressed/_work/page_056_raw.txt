@@ -1,0 +1,23 @@
+=== PAGE 56 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3619
+Tokens Out: 155
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 56,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "document_title": "Checklist & Tracker for TPA patient"
+  },
+  "patient": {
+    "name": "CHANDER KOCHIAR"
+  },
+  "insurance": {
+    "company": "ICICI COMBARD",
+    "tpa": "ICICI COMBARD"
+  },
+  "raw_summary": "This page is a TPA pre-authorization checklist and tracker for patient CHANDER KOCHIAR, listing required documents and approval steps, including policy copies, medical reports, pre-auth forms, and final approval status."
+}

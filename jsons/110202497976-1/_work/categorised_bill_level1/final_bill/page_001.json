@@ -1,0 +1,147 @@
+{
+  "page": 1,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "INT2257624",
+    "bill_date": "08-Jun-2026 3:25 PM",
+    "page_indicator": "Page 1 of 4",
+    "document_title": "Final Interim Bill"
+  },
+  "patient": {
+    "name": "Mrs. NALAMOLU SATYAVATHI",
+    "age": "57 Yrs",
+    "gender": "Female",
+    "uhid": "APVHM.0000050571",
+    "ip_number": "VHMIP66521",
+    "ward": "RECLINER",
+    "bed_number": "RC-02 (Recliner)"
+  },
+  "admission": {
+    "date_of_admission": "08-Jun-2026 10:25 AM",
+    "date_of_discharge": "08-Jun-2026 2:20 PM",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "Dr. Satya Srinivas Appala",
+    "department": "Medical Oncology"
+  },
+  "hospital": {
+    "name": "HCG VIJAYAWADA",
+    "address": "HCG CURIE CITY CANCER CENTRE- Vijayawada",
+    "contact": "+91- 9909090915"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD G.I.C.LTD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "79661.00",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "I",
+      "description": "Accommodation Charges",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "2000.00",
+      "source_line_index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "II",
+      "description": "Administrative Charges",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "1200.00",
+      "source_line_index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "III",
+      "description": "Diagnostic Services",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "2420.00",
+      "source_line_index": 2,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "IV",
+      "description": "Hospital Services",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "704.00",
+      "source_line_index": 3,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "V",
+      "description": "Pharmacy & Consumables",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "63458.00",
+      "source_line_index": 4,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "VI",
+      "description": "Professional Charges",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "1.00",
+      "source_line_index": 5,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "VII",
+      "description": "Professional Services",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "2265.00",
+      "source_line_index": 6,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "VIII",
+      "description": "Ward / ICU Procedures",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "7613.00",
+      "source_line_index": 7,
+      "charge_type": "line_item"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "79661.00",
+    "total_amount": "79661.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "79661.00",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Page 1 of a 4-page Final Interim Bill from HCG Vijayawada for patient Mrs. Nalamolu Satyavathi, showing total charges of ₹79,661.00 for services rendered between 08-Jun-2026 10:25 AM and 08-Jun-2026 2:20 PM, with ICICI Lombard as the payer.",
+  "bill_category": "final_bill",
+  "pipeline_category": "final_bill"
+}

@@ -1,0 +1,77 @@
+{
+  "page": 12,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "COURSE IN THE HOSPITAL"
+  },
+  "patient": {},
+  "admission": {},
+  "hospital": {
+    "name": "HealthCare Global Enterprises Ltd.",
+    "address": "# 44-1-1/3, Padavalarevu, Gunadala Vijayawada -520 004.",
+    "contact": "Tel : 0866 - 2435900 2438331"
+  },
+  "insurance": {},
+  "medications": [
+    {
+      "name": "Tab. Emeset",
+      "dosage": "8mg",
+      "frequency": "TID",
+      "duration": "4days",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 0
+    },
+    {
+      "name": "Tab. Rantac",
+      "dosage": "150mg",
+      "frequency": "PO BD",
+      "duration": "4days",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 1
+    },
+    {
+      "name": "Tab. Dolo",
+      "dosage": "650mg",
+      "frequency": "TID",
+      "duration": "4days",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 2
+    },
+    {
+      "name": "Tab. Tapal",
+      "dosage": "50mg",
+      "frequency": "TID",
+      "duration": "4days",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 3
+    },
+    {
+      "name": "Syp. Gavuscon",
+      "dosage": "10ml",
+      "frequency": "PO TID",
+      "duration": "",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 4
+    },
+    {
+      "name": "Syp. Cremaffin Plus",
+      "dosage": "15ml",
+      "frequency": "PO HS",
+      "duration": "",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 5
+    }
+  ],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {},
+  "sub_bills": [],
+  "raw_summary": "Discharge summary page detailing the patient's course in hospital, discharge advice with medication list, and follow-up instructions, signed by Dr. A. Satya Srinivas, Medical Oncologist."
+}

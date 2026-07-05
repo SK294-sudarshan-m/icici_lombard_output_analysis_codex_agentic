@@ -1,0 +1,16 @@
+{
+  "categories": {
+    "detailed_final_bill": [
+      {
+        "bill_id": "detailed_final_bill_1",
+        "pages": [
+          4,
+          5
+        ],
+        "sequence_reason": "Page 4 shows a summary bill with a 'Medicines' line item totaling 9334.00. Page 5 provides a detailed breakdown of 'DETAILS OF MEDICATION GIVEN WITH COST' that sums to 9334.25, which corresponds to the 'Medicines' charge on Page 4. The patient details (Name, O.P. No., I.P. No., Bed No., D.O.A., D.O.D.) are identical on both pages, confirming they are part of the same bill. The logical reading order is Page 4 (summary) followed by Page 5 (detail)."
+      }
+    ]
+  },
+  "total_tokens_in": 2143,
+  "total_tokens_out": 176
+}

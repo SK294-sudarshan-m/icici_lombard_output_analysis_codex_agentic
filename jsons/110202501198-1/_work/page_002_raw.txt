@@ -1,0 +1,262 @@
+=== PAGE 2 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 5197
+Tokens Out: 2178
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 2,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "09-06-2026",
+    "page_indicator": "",
+    "document_title": "IP Bill Statement"
+  },
+  "patient": {
+    "name": "Mrs Bandla Hymavathi",
+    "age": "62 Y,1 M,17 D",
+    "gender": "Female",
+    "uhid": "893505",
+    "ip_number": "SVIMS/IP-168159",
+    "ward": "SACS-20/Special Rooms AC Room Single Ward",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "09-06-2026 10:05 AM",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "Single Room",
+    "referring_doctor": "",
+    "treating_doctor": "Dr. D Bhargavi",
+    "department": "Medical Oncology"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD, TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "insurance": {
+    "company": "ICICI Lombord",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "Dr Medical Oncology",
+      "quantity": "1",
+      "unit_price": "720",
+      "gross_amount": "720",
+      "discount": "",
+      "amount": "720"
+    },
+    {
+      "sr_no": "",
+      "description": "SODIUM CHLORIDE 100ML [NS]",
+      "quantity": "1",
+      "unit_price": "20.43",
+      "gross_amount": "20.43",
+      "discount": "",
+      "amount": "20.43"
+    },
+    {
+      "sr_no": "",
+      "description": "DEXAMETHASONE SODIUM 8MG/2ML",
+      "quantity": "1",
+      "unit_price": "10.87",
+      "gross_amount": "10.87",
+      "discount": "",
+      "amount": "10.87"
+    },
+    {
+      "sr_no": "",
+      "description": "GEMCITABINE HYDROCHLORIDE 1GM",
+      "quantity": "1",
+      "unit_price": "1,840.04",
+      "gross_amount": "1,840.04",
+      "discount": "",
+      "amount": "1,840.04"
+    },
+    {
+      "sr_no": "",
+      "description": "GEMCITABINE HYDROCHLORIDE 200MG",
+      "quantity": "1",
+      "unit_price": "1,455.5",
+      "gross_amount": "1,455.5",
+      "discount": "",
+      "amount": "1,455.5"
+    },
+    {
+      "sr_no": "",
+      "description": "PANTOPRAZOLE 40MG",
+      "quantity": "10",
+      "unit_price": "3.15",
+      "gross_amount": "31.5",
+      "discount": "",
+      "amount": "31.5"
+    },
+    {
+      "sr_no": "",
+      "description": "TRAMADOL HCL 37.5 MG+PARACETAMOL325MG",
+      "quantity": "10",
+      "unit_price": "2.36",
+      "gross_amount": "23.6",
+      "discount": "",
+      "amount": "23.6"
+    },
+    {
+      "sr_no": "",
+      "description": "ONDANSETRON 4MG",
+      "quantity": "10",
+      "unit_price": "2.52",
+      "gross_amount": "25.2",
+      "discount": "",
+      "amount": "25.2"
+    },
+    {
+      "sr_no": "",
+      "description": "Cap.Netupitant andpalonosetron 300mg&#x2F;0.5mg",
+      "quantity": "1",
+      "unit_price": "2,650",
+      "gross_amount": "2,650",
+      "discount": "",
+      "amount": "2,650"
+    },
+    {
+      "sr_no": "",
+      "description": "I.V.SET VENTED",
+      "quantity": "1",
+      "unit_price": "20.32",
+      "gross_amount": "20.32",
+      "discount": "",
+      "amount": "20.32"
+    },
+    {
+      "sr_no": "",
+      "description": "PATIENT EXAMINATION GLOVE",
+      "quantity": "6",
+      "unit_price": "6.14",
+      "gross_amount": "36.84",
+      "discount": "",
+      "amount": "36.84"
+    },
+    {
+      "sr_no": "",
+      "description": "GLOVES STERILE 7.0",
+      "quantity": "1",
+      "unit_price": "34.34",
+      "gross_amount": "34.34",
+      "discount": "",
+      "amount": "34.34"
+    },
+    {
+      "sr_no": "",
+      "description": "SYRINGES 10ML",
+      "quantity": "2",
+      "unit_price": "10",
+      "gross_amount": "20",
+      "discount": "",
+      "amount": "20"
+    },
+    {
+      "sr_no": "",
+      "description": "SYRINGES 2ML",
+      "quantity": "2",
+      "unit_price": "4.75",
+      "gross_amount": "9.5",
+      "discount": "",
+      "amount": "9.5"
+    },
+    {
+      "sr_no": "",
+      "description": "SYRINGES 5ML",
+      "quantity": "2",
+      "unit_price": "6.22",
+      "gross_amount": "12.44",
+      "discount": "",
+      "amount": "12.44"
+    },
+    {
+      "sr_no": "",
+      "description": "I.V.CANNULA FIXATOR",
+      "quantity": "1",
+      "unit_price": "11.09",
+      "gross_amount": "11.09",
+      "discount": "",
+      "amount": "11.09"
+    },
+    {
+      "sr_no": "",
+      "description": "Inj Gemcitabine (alcoholic free, premixed ready to use) 10mg&#x2F;ml",
+      "quantity": "1",
+      "unit_price": "4,000.64",
+      "gross_amount": "4,000.64",
+      "discount": "",
+      "amount": "4,000.64"
+    },
+    {
+      "sr_no": "",
+      "description": "GEMCITABINE HYDROCHLORIDE 1GM",
+      "quantity": "- 1",
+      "unit_price": "1,840.04",
+      "gross_amount": "-1,840.04",
+      "discount": "",
+      "amount": "-1,840.04"
+    },
+    {
+      "sr_no": "",
+      "description": "GEMCITABINE HYDROCHLORIDE 200MG",
+      "quantity": "- 1",
+      "unit_price": "1,455.5",
+      "gross_amount": "-1,455.5",
+      "discount": "",
+      "amount": "-1,455.5"
+    },
+    {
+      "sr_no": "",
+      "description": "CHEMOTHERAPY",
+      "quantity": "1",
+      "unit_price": "900",
+      "gross_amount": "900",
+      "discount": "",
+      "amount": "900"
+    },
+    {
+      "sr_no": "",
+      "description": "IV CANNULATION (Medical Oncology)",
+      "quantity": "1",
+      "unit_price": "300",
+      "gross_amount": "300",
+      "discount": "",
+      "amount": "300"
+    },
+    {
+      "sr_no": "",
+      "description": "Special Rooms AC Room Single Ward",
+      "quantity": "1",
+      "unit_price": "2,500",
+      "gross_amount": "2,500",
+      "discount": "",
+      "amount": "2,500"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "11,326.77",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "IP Bill Statement for Mrs Bandla Hymavathi dated 09-06-2026, detailing charges for consultation, pharmacy items, procedures, and room rent, with a total amount of 11,326.77."
+}

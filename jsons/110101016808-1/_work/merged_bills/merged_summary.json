@@ -1,0 +1,21 @@
+{
+  "bills": [
+    {
+      "bill_id": "detailed_final_bill_1",
+      "category": "detailed_final_bill",
+      "pages": [
+        4,
+        5
+      ],
+      "merged_from": 2,
+      "total_charges": 8,
+      "duplicates_removed": 0,
+      "total_amount": "65000.00"
+    }
+  ],
+  "category_totals": {
+    "detailed_final_bill": 65000.0
+  },
+  "grand_total": 65000.0,
+  "total_bills": 1
+}

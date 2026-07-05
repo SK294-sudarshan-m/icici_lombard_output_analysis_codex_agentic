@@ -1,0 +1,41 @@
+{
+  "source_pages": [
+    1
+  ],
+  "primary_diagnosis": "LEFT EYE - POSTERIOR SUBCAPSULAR CATARACT + NUCLEAR SCLEROSIS",
+  "procedures": [
+    "MICS + IOL IMPLANTATION (FIQ) PKG ↓ LA ↓ GVP done in Left eye"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "0",
+  "treating_doctor": "Pankaj Rupauliha",
+  "department": "Ophthalmology",
+  "pre_existing_diseases": [],
+  "treatment": "Surgical management with MICS and IOL implantation in the left eye.",
+  "medications": [
+    {
+      "name": "MOXISURGE D EYE DROP",
+      "dosage": "",
+      "frequency": "6 TIMES DAILY X 1 WEEK, 4 TIMES DAILY X 1 WEEK, 3 TIMES DAILY X 1 WEEK, 2 TIMES DAILY X 1 WEEK, 1 TIMES DAILY X 1 WEEK THEN STOP",
+      "duration": ""
+    },
+    {
+      "name": "NEPASTAR OD EYE DROP",
+      "dosage": "",
+      "frequency": "1 TIME DAILY",
+      "duration": "3 MONTHS"
+    },
+    {
+      "name": "TAB PARACETAMOL (500mg)",
+      "dosage": "1 TAB",
+      "frequency": "IN CASE OF PAIN",
+      "duration": ""
+    },
+    {
+      "name": "TAB RETITEC",
+      "dosage": "1 TAB",
+      "frequency": "DAILY",
+      "duration": "20 DAYS"
+    }
+  ]
+}

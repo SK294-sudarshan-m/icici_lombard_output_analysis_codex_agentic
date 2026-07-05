@@ -1,0 +1,139 @@
+{
+  "page": 4,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "467 / 2026-2027",
+    "bill_date": "08/06/2026",
+    "page_indicator": "Page 1 of 1",
+    "document_title": "FINAL BILL CUM RECEIPT"
+  },
+  "patient": {
+    "name": "Mrs. Manali Manohar Kadam",
+    "age": "47Y",
+    "gender": "Female",
+    "uhid": "2026-2027 | 15518",
+    "ip_number": "457 / 2026-2027",
+    "ward": "Multi_Sharing2",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "05/06/2026 10:31 AM",
+    "date_of_discharge": "08/06/2026 04:27 PM",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "Dr.SHARAD SHELAR",
+    "treating_doctor": "Dr.SHARAD SHELAR",
+    "department": ""
+  },
+  "hospital": {
+    "name": "Gurukrupa Superspeciality Hospital",
+    "address": "S.No.119/5/B, Near St. Thomas Church, Off. Mira-Bhayendar Highway, Saibaba Nagar, Mira Road (E), Thane 401107.",
+    "contact": "gshforyou@gmail.com, www.gurukrupahospitals.in"
+  },
+  "insurance": {
+    "company": "ICICI Lombard General Insurance Company Limited",
+    "policy_number": "4177I/ICICI/344143612/00/000",
+    "member_id": "110101016774",
+    "claimed_amount": "87200.00",
+    "approved_amount": "0",
+    "tpa": "ICICI LOMBARD GIC"
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "REGISTRATION FEES",
+      "quantity": "1",
+      "unit_price": "500.00",
+      "gross_amount": "500.00",
+      "discount": "",
+      "amount": "500.00",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "bill_type": "Miscellaneous",
+      "sub_bill_type": "Registration Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Registration Charges",
+        "standard_name": "admission - registration charges",
+        "score": 0.8003,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "2",
+      "description": "HISTOPATH BIG",
+      "quantity": "1",
+      "unit_price": "7000.00",
+      "gross_amount": "7000.00",
+      "discount": "",
+      "amount": "7000.00",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Histopath (Large)",
+        "standard_name": "test",
+        "score": 0.6743,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "3",
+      "description": "CHOLECYSTECTOMY (LAP)",
+      "quantity": "1",
+      "unit_price": "79700.00",
+      "gross_amount": "79700.00",
+      "discount": "",
+      "amount": "79700.00",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "bill_type": "Procedure charges",
+      "sub_bill_type": "Procedure",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Lap Cholecystectomy",
+        "standard_name": "Not in list",
+        "score": 0.8329,
+        "method": "llm_selected"
+      }
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "87200.00",
+    "total_amount": "87200.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "87200.00",
+    "amount_paid": "",
+    "balance": "87200.00",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Final bill cum receipt from Gurukrupa Superspeciality Hospital for Mrs. Manali Manohar Kadam, detailing charges for registration, pathology, and laparoscopic cholecystectomy, with a total amount of ₹87,200.00, issued on 08/06/2026.",
+  "bill_category": "detailed_final_bill",
+  "pipeline_category": "detailed_final_bill",
+  "bill_id": "detailed_final_bill_1",
+  "sequence_reason": "Single page",
+  "source_pages": [
+    4
+  ],
+  "merged_from": 1,
+  "merge_stats": {
+    "total_charges": 3,
+    "summary_rows_removed": 0,
+    "duplicates_removed": 0
+  }
+}

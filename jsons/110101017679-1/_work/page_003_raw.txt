@@ -1,0 +1,64 @@
+=== PAGE 3 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4022
+Tokens Out: 364
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 3,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "",
+    "document_title": ""
+  },
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "20400",
+    "approved_amount": "16400",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "This page is a pre-authorization document showing sanctioned and disallowed amounts for procedure charges, with hospital agreed tariff details for non-package cases, and no actual bill issued to the patient."
+}

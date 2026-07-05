@@ -1,0 +1,28 @@
+{
+  "page": 47,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "PRO-BRAIN NATRIURETIC PEPTIDE 2 (NT- PRO BNP2)"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 YEARS",
+    "gender": "FEMALE",
+    "uhid": "192673",
+    "ip_number": "68049"
+  },
+  "admission": {
+    "referring_doctor": "DR.ABHAY RAUT",
+    "department": "DEPARTMENT OF LABORATORY MEDICINE"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P.D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052. India",
+    "contact": "Tel: +91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "insurance": {
+    "tpa": "TPA"
+  },
+  "raw_summary": "Lab report for Pro-Brain Natriuretic Peptide 2 (NT-PRO BNP2) test for patient Kochhar Chander, age 91, female, with order number 4116537, sample collected on 21/02/2025, authenticated on 22/02/2025, and report printed on 23-Feb-2025. The report includes test result, units, and interpretation fields, signed by Dr. Jaswandi Joshi and Dr. Maneesh V Doshi."
+}

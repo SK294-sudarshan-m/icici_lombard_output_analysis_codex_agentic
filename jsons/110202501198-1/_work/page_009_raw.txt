@@ -1,0 +1,81 @@
+=== PAGE 9 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3466
+Tokens Out: 567
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 9,
+  "page_type": "non_bill",
+  "non_bill_type": "prescription",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "",
+    "document_title": "Active Medicine"
+  },
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD,TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [
+    {
+      "name": "Inj.Gemcitabine (alcoholic free, premixed ready to use) 10mg/ml",
+      "dosage": "1.0",
+      "frequency": "OD",
+      "duration": "1.0",
+      "quantity": "1.0",
+      "amount": ""
+    },
+    {
+      "name": "Cap.Netupitant andpalonosetron 300mg/0.5mg",
+      "dosage": "1.0",
+      "frequency": "OD",
+      "duration": "1.0",
+      "quantity": "1.0",
+      "amount": ""
+    }
+  ],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Page 9 is a prescription list titled 'Active Medicine' from Sri Venkateswara Institute of Medical Sciences, listing two medications with dosage, frequency, and duration details, printed on 09-06-2026."
+}

@@ -1,0 +1,32 @@
+{
+  "bills": [
+    {
+      "bill_id": "implant_bill_1",
+      "category": "implant_bill",
+      "pages": [
+        7
+      ],
+      "merged_from": 1,
+      "total_charges": 2,
+      "duplicates_removed": 0,
+      "total_amount": "39150"
+    },
+    {
+      "bill_id": "final_bill_1",
+      "category": "final_bill",
+      "pages": [
+        6
+      ],
+      "merged_from": 1,
+      "total_charges": 2,
+      "duplicates_removed": 0,
+      "total_amount": "313950.00"
+    }
+  ],
+  "category_totals": {
+    "implant_bill": 39150.0,
+    "final_bill": 313950.0
+  },
+  "grand_total": 353100.0,
+  "total_bills": 2
+}

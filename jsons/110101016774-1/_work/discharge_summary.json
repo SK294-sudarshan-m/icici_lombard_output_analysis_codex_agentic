@@ -1,0 +1,63 @@
+{
+  "source_pages": [
+    1,
+    2,
+    3
+  ],
+  "primary_diagnosis": "ACUTE CALCULUS CHOLECYSTITIS",
+  "procedures": [
+    "LAPAROSCOPIC CHOLECYSTECTOMY"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "3",
+  "treating_doctor": "SHARAD SHELAR",
+  "department": "General Surgery",
+  "pre_existing_diseases": [
+    "Bronchial Asthma"
+  ],
+  "treatment": "Underwent laparoscopic cholecystectomy under GA, tolerated procedure well without intraoperative complications, drain kept in situ, kept NBM for 24 hours followed by liquid and soft diet.",
+  "medications": [
+    {
+      "name": "TAB O2",
+      "dosage": "1/2",
+      "frequency": "AF",
+      "duration": "5 Days"
+    },
+    {
+      "name": "TAB ZOCEF 500 MG",
+      "dosage": "1/2",
+      "frequency": "AF",
+      "duration": "5 Days"
+    },
+    {
+      "name": "TAB SIGNOFLAM",
+      "dosage": "1",
+      "frequency": "AF",
+      "duration": "5 Days"
+    },
+    {
+      "name": "TAB PAN 20 MG",
+      "dosage": "1",
+      "frequency": "BF",
+      "duration": "5 Days"
+    },
+    {
+      "name": "TAB ONDEM 4 MG",
+      "dosage": "1",
+      "frequency": "BF",
+      "duration": "5 Days"
+    },
+    {
+      "name": "SYP. GELUSIL 2 TSF",
+      "dosage": "1",
+      "frequency": "BF",
+      "duration": "5 Days"
+    },
+    {
+      "name": "SYP DUPHALAC 15 ML",
+      "dosage": "1",
+      "frequency": "AF",
+      "duration": "SOS"
+    }
+  ]
+}

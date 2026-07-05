@@ -1,0 +1,26 @@
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE CARD"
+  },
+  "patient": {
+    "name": "Mrs. Jasmin Memon",
+    "age": "61",
+    "gender": "F",
+    "uhid": "64399"
+  },
+  "admission": {
+    "date_of_admission": "8/6/2026",
+    "date_of_discharge": "8/6/2026",
+    "admission_type": "OPD",
+    "treating_doctor": "Dr. Sanjay Jaswal"
+  },
+  "hospital": {
+    "name": "Evista Eye Care Centre",
+    "address": "Opposite Dhantoli Park, Nagpur",
+    "contact": "0712-2459855, 2467415"
+  },
+  "raw_summary": "Discharge card for Mrs. Jasmin Memon, age 61, female, admitted and operated on 8/6/2026 for RE Cataract, with pre-op investigations, IOL details, and surgery notes."
+}

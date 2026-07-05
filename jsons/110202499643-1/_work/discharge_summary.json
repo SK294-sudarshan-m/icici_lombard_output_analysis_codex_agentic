@@ -1,0 +1,51 @@
+{
+  "source_pages": [
+    1
+  ],
+  "primary_diagnosis": "CHOLELITHIASIS",
+  "procedures": [
+    "STANDARD 4 PORTS LAPAROSCOPIC CHOLECYSTECTOMY"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "2",
+  "treating_doctor": "G M SADIQUE",
+  "department": "General Surgery",
+  "pre_existing_diseases": [
+    "Hypothyroidism",
+    "Type 2 Diabetes Mellitus",
+    "Hypertension"
+  ],
+  "treatment": "Surgical management with laparoscopic cholecystectomy under general anesthesia, followed by discharge at stable condition.",
+  "medications": [
+    {
+      "name": "TAB-CETIL (500)",
+      "dosage": "1 TAB",
+      "frequency": "TWICE DAILY",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "TAB-PAN (40)",
+      "dosage": "1 TAB",
+      "frequency": "ONCE BEFORE BREAKFAST DAILY",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "TAB-ZERODOL-P",
+      "dosage": "1 TAB",
+      "frequency": "TWICE DAILY",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "SYP DUPHALAC",
+      "dosage": "20 ML",
+      "frequency": "AT BED TIME",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "T-BACT OINTMENT",
+      "dosage": "",
+      "frequency": "APPLY LOCALLY THRICE DAILY",
+      "duration": "5 DAYS"
+    }
+  ]
+}

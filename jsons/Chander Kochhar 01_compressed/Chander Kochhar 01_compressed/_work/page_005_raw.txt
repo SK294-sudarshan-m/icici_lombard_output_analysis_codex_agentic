@@ -1,0 +1,136 @@
+=== PAGE 5 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3458
+Tokens Out: 952
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 5,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "20570",
+    "bill_date": "21/02/25",
+    "page_indicator": "",
+    "document_title": "JEEVAN AMBULANCE SERVICE"
+  },
+  "patient": {
+    "name": "Chander Kochar",
+    "age": "9A",
+    "gender": "F",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "JEEVAN AMBULANCE SERVICE",
+    "address": "Hanuman Anand Bhavan, Bhaskar Colony, E.E. Highway, Naupada, Thane (W) 400 602.",
+    "contact": "9821555528, 8080608888"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "Ambulance Charges",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "4000/-",
+      "discount": "",
+      "amount": "4000/-"
+    },
+    {
+      "sr_no": "",
+      "description": "Doctor, Defibrillator, Monitor, Ventilator, Oxygen, Pulse Oximeter, Syringe Pump, Suction Machine, Bipap, C-pap, Pacemaker, Resuscitation Medical kit",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "+500/-",
+      "discount": "",
+      "amount": "+500/-"
+    },
+    {
+      "sr_no": "",
+      "description": "Neonatal & Paediatric Ventilator",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": ""
+    },
+    {
+      "sr_no": "",
+      "description": "Waiting Charges per hrs. ₹",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": ""
+    },
+    {
+      "sr_no": "",
+      "description": "Other Procedure Charges",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": ""
+    },
+    {
+      "sr_no": "",
+      "description": "Emerg. Medicines & Consumables",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "NRBM",
+      "discount": "",
+      "amount": "NRBM"
+    },
+    {
+      "sr_no": "",
+      "description": "Extra Manpower",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": ""
+    },
+    {
+      "sr_no": "",
+      "description": "Other Equipments (Auto Loading, Stretcher, Wheel Chair, Spine Board, Scoop Stretcher)",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": ""
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "4500/-",
+    "total_amount": "4500/-",
+    "discount": "",
+    "tax": "",
+    "net_payable": "4500/-",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Ambulance service bill from Jeevan Ambulance Service for patient Chander Kochar dated 21/02/25, detailing charges for ambulance transport from Pali Hill Residence Bandra to Hinduja Hospital Khar, with total amount of ₹4500."
+}

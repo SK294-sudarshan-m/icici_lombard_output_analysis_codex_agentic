@@ -1,0 +1,89 @@
+=== PAGE 3 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3682
+Tokens Out: 886
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 3,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Treatment on Discharge"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "Tel: +91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "medications": [
+    {
+      "name": "TAB.APIXABAN 5 MG",
+      "dosage": "1",
+      "frequency": "Morning: 1, Afternoon: 0, Night: 1",
+      "duration": "3 MONTHS"
+    },
+    {
+      "name": "TAB.SYNDOPA PLUS",
+      "dosage": "½",
+      "frequency": "Morning: ½, Afternoon: ½, Night: 1",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "TAB.MODALERT 100 MG",
+      "dosage": "1",
+      "frequency": "Morning: 1, Afternoon: 0, Night: 0",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "TAB.PANTOP 40 MG (BEFORE MEALS)",
+      "dosage": "1",
+      "frequency": "Morning: 1, Afternoon: 0, Night: 0",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "TAB.CILACAR 5 MG",
+      "dosage": "1",
+      "frequency": "Morning: 1, Afternoon: 0, Night: 1",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "TAB.COBADEX CZS",
+      "dosage": "1",
+      "frequency": "Morning: 1, Afternoon: 0, Night: 0",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "TAB.SHELCAL 500 MG",
+      "dosage": "1",
+      "frequency": "Morning: 1, Afternoon: 0, Night: 1",
+      "duration": "CONTINUE"
+    },
+    {
+      "name": "NEB.FORACORT 1 MG",
+      "dosage": "1",
+      "frequency": "Morning: 1, Afternoon: 0, Night: 1",
+      "duration": "10 DAYS"
+    },
+    {
+      "name": "NEB.GLYCOHALE",
+      "dosage": "1",
+      "frequency": "Morning: 1, Afternoon: 0, Night: 1",
+      "duration": "10 DAYS"
+    },
+    {
+      "name": "SYP.CREMAFFIN 20 ML",
+      "dosage": "0",
+      "frequency": "Morning: 0, Afternoon: 0, Night: 1",
+      "duration": "IF CONSTIPATION"
+    },
+    {
+      "name": "SYP.OROFER XT 10 ML",
+      "dosage": "0",
+      "frequency": "Morning: 0, Afternoon: 0, Night: 1",
+      "duration": "CONTINUE"
+    }
+  ],
+  "raw_summary": "Page 3 of a discharge summary from P. D. Hinduja Hospital listing medications prescribed on discharge with dosage, frequency, and duration, along with follow-up advice from Dr. Abhay Raut and Dr. Lance Pinto."
+}

@@ -1,0 +1,100 @@
+{
+  "bill_id": "e6b769cb",
+  "case_number": "110202500220-1",
+  "bill_summary": {
+    "extracted_amount": 33900.0,
+    "calculated_amount": 33900.0,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 33900.0,
+    "calculated_after_discount": 33900.0,
+    "total_line_items": 1,
+    "amounts_match": true,
+    "overall_confidence": 1.0,
+    "case_verdict": 1,
+    "summary": "Case is in order and recommended for processing. The consolidated bill has 1 line item(s) totalling ₹33,900.00 (gross), with a net payable of ₹33,900.00. the line items reconcile with the bill's printed total. billing type assessed as Surgery. extraction confidence 1.00.",
+    "billing_type": {
+      "billing_type": "Surgery",
+      "confidence": 0.95,
+      "reasoning": "OT/surgeon charges present + DS confirms procedure(s): Episiotomy"
+    }
+  },
+  "patient": {
+    "name": "MRS. K MOHANA SUDHARANI",
+    "age": "21 Y",
+    "gender": "FEMALE",
+    "uhid": "",
+    "ip_number": "INS597",
+    "ward": "DELUXE",
+    "bed_number": ""
+  },
+  "hospital": {
+    "name": "DR.B.JAWAHAR NURSING HOME",
+    "address": "Near RTC Bus Stand, Chimakurthy-523226, Andhra Pradesh",
+    "contact": "0859227258"
+  },
+  "insurance": {
+    "company": "ICICI",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "33900.00",
+    "approved_amount": "33900.00",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "07-JUN-2026.",
+    "date_of_discharge": "09-JUN-2026.",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "DR.B.L.SARADA DEVI",
+    "department": "GYNEAC"
+  },
+  "charges": [
+    {
+      "bill_type": "Surgeon Charges",
+      "bill_type_id": "500530",
+      "sub_bill_type": "Procedure or Surgery or Operation Charges",
+      "sub_bill_type_id": "1011539",
+      "sr_no": "1",
+      "description": "SURGERY PACKAGES CHARGES: NORMAL DELIVERY",
+      "quantity": "1",
+      "unit_price": "33900.00",
+      "discount": "",
+      "amount": "33900.00",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Normal Delivery - Surgeon Charges",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.7565,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All extracted values (description, quantity, unit_price, amount) exactly match the image. The bill_type 'Surgeon Charges' and sub_bill_type 'Procedure or Surgery or Operation Charges' are appropriate for 'NORMAL DELIVERY' under 'SURGERY PACKAGES CHARGES'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "1\tSURGERY PACKAGES CHARGES:",
+          "match_ratio": 0.735
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 0
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [],
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "overall_confidence": 1.0
+}

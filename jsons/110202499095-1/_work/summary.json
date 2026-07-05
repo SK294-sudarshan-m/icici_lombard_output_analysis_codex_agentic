@@ -1,0 +1,35 @@
+{
+  "total_pages": 4,
+  "total_tokens_in": 17141,
+  "total_tokens_out": 2048,
+  "pages": [
+    {
+      "page": 1,
+      "elapsed": 25.86,
+      "tokens_in": 4385,
+      "tokens_out": 1191,
+      "page_type": "bill"
+    },
+    {
+      "page": 2,
+      "elapsed": 13.62,
+      "tokens_in": 4395,
+      "tokens_out": 301,
+      "page_type": "non_bill"
+    },
+    {
+      "page": 3,
+      "elapsed": 13.36,
+      "tokens_in": 4235,
+      "tokens_out": 353,
+      "page_type": "non_bill"
+    },
+    {
+      "page": 4,
+      "elapsed": 11.37,
+      "tokens_in": 4126,
+      "tokens_out": 203,
+      "page_type": "non_bill"
+    }
+  ]
+}

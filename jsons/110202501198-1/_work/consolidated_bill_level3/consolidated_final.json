@@ -1,0 +1,817 @@
+{
+  "bill_id": "84198379",
+  "case_number": "110202501198-1",
+  "bill_summary": {
+    "extracted_amount": 11326.77,
+    "calculated_amount": 14622.31,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 14622.31,
+    "calculated_after_discount": 14622.31,
+    "total_line_items": 20,
+    "amounts_match": false,
+    "amount_diff": 3295.54,
+    "overall_confidence": 0.5,
+    "case_verdict": 0,
+    "summary": "Case is FLAGGED and needs reviewer attention. The consolidated bill has 20 line item(s) totalling ₹11,326.77 (gross), with a net payable of ₹14,622.31. the line items (₹14,622.31) do NOT reconcile with the printed total (₹11,326.77), a difference of ₹3,295.54. billing type assessed as Day Care. extraction confidence 0.50.",
+    "billing_type": {
+      "billing_type": "Day Care",
+      "confidence": 0.85,
+      "reasoning": "Length of stay < 24h (0h)"
+    }
+  },
+  "patient": {
+    "name": "Mrs Bandla Hymavathi",
+    "age": "62 Y,1 M,17 D",
+    "gender": "Female",
+    "uhid": "893505",
+    "ip_number": "SVIMS/IP-168159",
+    "ward": "SACS-20/Special Rooms AC Room Single Ward",
+    "bed_number": ""
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD, TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "insurance": {
+    "company": "ICICI Lombord",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "11326.77",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "09-06-2026 10:05 AM",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "Single Room",
+    "referring_doctor": "",
+    "treating_doctor": "Dr. D Bhargavi",
+    "department": "Medical Oncology"
+  },
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "Dr Medical Oncology",
+      "quantity": "1",
+      "unit_price": "720",
+      "discount": "",
+      "amount": "720",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "bill_type": "Consultation Visit Charges",
+      "sub_bill_type": "Consultation charges",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Medical Oncologist",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.8583,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) match the image exactly. Bill type 'Consultation visit charges' is appropriate for 'Dr Medical Oncology' as per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Medical Oncology",
+          "match_ratio": 0.914
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 0
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "SODIUM CHLORIDE 100ML [NS]",
+      "quantity": "1",
+      "unit_price": "20.43",
+      "discount": "",
+      "amount": "20.43",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Sodium Chloride 0. 9% 100Ml",
+        "standard_name": "medicine",
+        "score": 0.7426,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Medicines Pharmacy Charges' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "09-06-2026\tSODIUM CHLORIDE 100ML [NS]\tMDIJ00290\tSingle Room\t1\t20.43\t20.43",
+          "match_ratio": 0.525
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 1
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "DEXAMETHASONE SODIUM 8MG/2ML",
+      "quantity": "1",
+      "unit_price": "10.87",
+      "discount": "",
+      "amount": "10.87",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Inj Dexamethasone 4Mg/Ml",
+        "standard_name": "medicine",
+        "score": 0.661,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Medicines Pharmacy Charges' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "09-06-2026\tDEXAMETHASONE SODIUM 8MG/2ML\tMDIJ00495\tSingle Room\t1\t10.87\t10.87",
+          "match_ratio": 0.544
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 2
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "GEMCITABINE HYDROCHLORIDE 1GM",
+      "quantity": "1",
+      "unit_price": "1840.04",
+      "discount": "",
+      "amount": "1840.04",
+      "source_line_index": 3,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Gembin 1 Gm Inj 1 1 Vial",
+        "standard_name": "medicine",
+        "score": 0.4243,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Medicines Pharmacy Charges' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "09-06-2026\tGEMCITABINE HYDROCHLORIDE 1GM\tMDIJ00342\tSingle Room\t1\t1,840.04\t1,840.04",
+          "match_ratio": 0.523
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 3
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "GEMCITABINE HYDROCHLORIDE 200MG",
+      "quantity": "1",
+      "unit_price": "1455.5",
+      "discount": "",
+      "amount": "1455.5",
+      "source_line_index": 4,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "",
+        "standard_name": "",
+        "score": 0,
+        "method": "llm_master_taxonomy"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Medicines Pharmacy Charges' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "09-06-2026\tGEMCITABINE HYDROCHLORIDE 200MG\tMDIJ00559\tSingle Room\t1\t1,455.5\t1,455.5",
+          "match_ratio": 0.549
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_master_taxonomy",
+      "display_order": 4
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "PANTOPRAZOLE 40MG",
+      "quantity": "10",
+      "unit_price": "3.15",
+      "discount": "",
+      "amount": "31.5",
+      "source_line_index": 5,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Pantoprazole-40Mg",
+        "standard_name": "medicine",
+        "score": 0.919,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Medicines Pharmacy Charges' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.425
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 5
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "TRAMADOL HCL 37.5 MG+PARACETAMOL325MG",
+      "quantity": "10",
+      "unit_price": "2.36",
+      "discount": "",
+      "amount": "23.6",
+      "source_line_index": 6,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Tramadol Paracetamol-Tablet-37.5Mg 325Mg-Calpolt-",
+        "standard_name": "medicine",
+        "score": 0.7285,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Medicines Pharmacy Charges' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "TRAMADOL HCL 37.5",
+          "match_ratio": 0.63
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 6
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "ONDANSETRON 4MG",
+      "quantity": "10",
+      "unit_price": "2.52",
+      "discount": "",
+      "amount": "25.2",
+      "source_line_index": 7,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Ondensetron 4Mg Inj.",
+        "standard_name": "medicine",
+        "score": 0.6094,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Medicines Pharmacy Charges' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.4
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 7
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "Cap.Netupitant andpalonosetron 300mg&#x2F;0.5mg",
+      "quantity": "1",
+      "unit_price": "2650",
+      "discount": "",
+      "amount": "2650",
+      "source_line_index": 8,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Nupenta 40 Mg Inj.",
+        "standard_name": "medicine",
+        "score": 0.3543,
+        "method": "llm_normalized_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Medicines Pharmacy Charges' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "09-06-2026\tCap.Netupitant andpalonosetron 300mg&#x2F;0.5mg\tMDTB00484\tSingle Room\t1\t2,650\t2,650",
+          "match_ratio": 0.667
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_normalized_selected",
+      "display_order": 8
+    },
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500534",
+      "sub_bill_type": "Materials",
+      "sub_bill_type_id": "1011076",
+      "sr_no": "",
+      "description": "I.V.SET VENTED",
+      "quantity": "1",
+      "unit_price": "20.32",
+      "discount": "",
+      "amount": "20.32",
+      "source_line_index": 9,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Iv Set Vented",
+        "standard_name": "drip - drip set",
+        "score": 0.8466,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Consumable Charges' and sub_bill_type 'Materials' are correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.417
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 9
+    },
+    {
+      "sr_no": "",
+      "description": "PATIENT EXAMINATION GLOVE",
+      "quantity": "6",
+      "unit_price": "6.14",
+      "discount": "",
+      "amount": "36.84",
+      "source_line_index": 10,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "bill_type": "Consumables",
+      "sub_bill_type": "Disposables",
+      "payability": "Non-Payable",
+      "match_info": {
+        "matched_item": "Patient Examination Glove",
+        "standard_name": "gloves - examination gloves",
+        "score": 0.9264,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Consumable Charges' and sub_bill_type 'Disposables' are correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Patient Name",
+          "match_ratio": 0.595
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 10
+    },
+    {
+      "sr_no": "",
+      "description": "GLOVES STERILE 7.0",
+      "quantity": "1",
+      "unit_price": "34.34",
+      "discount": "",
+      "amount": "34.34",
+      "source_line_index": 11,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "bill_type": "Consumables",
+      "sub_bill_type": "Disposables",
+      "payability": "Non-Payable",
+      "match_info": {
+        "matched_item": "Gloves Sterile",
+        "standard_name": "gloves - sterilized gloves",
+        "score": 0.6631,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Consumable Charges' and sub_bill_type 'Disposables' are correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.434
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 11
+    },
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Disposables",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "SYRINGES 10ML",
+      "quantity": "2",
+      "unit_price": "10",
+      "discount": "",
+      "amount": "20",
+      "source_line_index": 12,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Syringe 10Ml Exp: ),",
+        "standard_name": "Not in list",
+        "score": 0.6678,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Consumable Charges' and sub_bill_type 'Disposables' are correct per bill master; 'Medicines Pharmacy Charges' is incorrect."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Single Room",
+          "match_ratio": 0.583
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 12
+    },
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Disposables",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "SYRINGES 2ML",
+      "quantity": "2",
+      "unit_price": "4.75",
+      "discount": "",
+      "amount": "9.5",
+      "source_line_index": 13,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Syringe 2Ml W/O",
+        "standard_name": "Not in list",
+        "score": 0.5957,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Consumable Charges' and sub_bill_type 'Disposables' are correct per bill master; 'Medicines Pharmacy Charges' is incorrect."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Single Room",
+          "match_ratio": 0.609
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 13
+    },
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Disposables",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "SYRINGES 5ML",
+      "quantity": "2",
+      "unit_price": "6.22",
+      "discount": "",
+      "amount": "12.44",
+      "source_line_index": 14,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "5Ml Syringe .",
+        "standard_name": "Not in list",
+        "score": 0.6379,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Consumable Charges' and sub_bill_type 'Disposables' are correct per bill master; 'Medicines Pharmacy Charges' is incorrect."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Single Room",
+          "match_ratio": 0.609
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 14
+    },
+    {
+      "sr_no": "",
+      "description": "I.V.CANNULA FIXATOR",
+      "quantity": "1",
+      "unit_price": "11.09",
+      "discount": "",
+      "amount": "11.09",
+      "source_line_index": 15,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "bill_type": "Consumables",
+      "sub_bill_type": "Material",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Iv Cannula Fixator",
+        "standard_name": "Not in list",
+        "score": 0.8921,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Consumable Charges' and sub_bill_type 'Materials' are correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.471
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 15
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "Inj Gemcitabine (alcoholic free, premixed ready to use) 10mg&#x2F;ml",
+      "quantity": "1",
+      "unit_price": "4000.64",
+      "discount": "",
+      "amount": "4000.64",
+      "source_line_index": 16,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "",
+        "standard_name": "",
+        "score": 0,
+        "method": "llm_master_taxonomy"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Medicines Pharmacy Charges' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": ".Gemcitabine (alcoholic free, premixed ready to use)",
+          "match_ratio": 0.85
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_master_taxonomy",
+      "display_order": 16
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Surgery or Operation charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "CHEMOTHERAPY",
+      "quantity": "1",
+      "unit_price": "900",
+      "discount": "",
+      "amount": "900",
+      "source_line_index": 19,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "CHEMO THERAPY DRUG",
+        "standard_name": "medicine",
+        "score": 0.6952,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Procedure Charges' and sub_bill_type 'Surgery or Operation charges' are more appropriate than 'Medicines Pharmacy Charges'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.4
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 17
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Dressing",
+      "sub_bill_type_id": "1014412",
+      "sr_no": "",
+      "description": "IV CANNULATION (Medical Oncology)",
+      "quantity": "1",
+      "unit_price": "300",
+      "discount": "",
+      "amount": "300",
+      "source_line_index": 20,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Cannulation IV",
+        "standard_name": "im/ iv injection charges",
+        "score": 0.8581,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Procedure Charges' and sub_bill_type 'Dressing' are correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Medical Oncology",
+          "match_ratio": 0.653
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 18
+    },
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "",
+      "description": "Special Rooms AC Room Single Ward",
+      "quantity": "1",
+      "unit_price": "2500",
+      "discount": "",
+      "amount": "2500",
+      "source_line_index": 21,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Special Room Single Ac",
+        "standard_name": "bed charges",
+        "score": 0.8332,
+        "method": "vector_consensus"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values match the image exactly. Bill type 'Room Charges' and sub_bill_type 'Room Charge' are correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "SACS-20/Special Rooms AC Room",
+          "match_ratio": 0.677
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_consensus",
+      "display_order": 19
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [],
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "flagged_for_review": true,
+  "flag_reason": "Totals do not reconcile: extracted 11326.77 vs calculated 14622.31 (diff 3295.54).",
+  "overall_confidence": 0.5
+}

@@ -1,0 +1,85 @@
+{
+  "bills": [
+    {
+      "bill_id": "supporting_interim_bill_1",
+      "category": "supporting_interim_bill",
+      "pages": [
+        4
+      ],
+      "merged_from": 1,
+      "total_charges": 1,
+      "duplicates_removed": 0,
+      "total_amount": "1337.08"
+    },
+    {
+      "bill_id": "supporting_interim_bill_2",
+      "category": "supporting_interim_bill",
+      "pages": [
+        5
+      ],
+      "merged_from": 1,
+      "total_charges": 8,
+      "duplicates_removed": 0,
+      "total_amount": "4500"
+    },
+    {
+      "bill_id": "supporting_interim_bill_3",
+      "category": "supporting_interim_bill",
+      "pages": [
+        6,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "merged_from": 10,
+      "total_charges": 157,
+      "duplicates_removed": 0,
+      "total_amount": "189771.25"
+    },
+    {
+      "bill_id": "supporting_interim_bill_4",
+      "category": "supporting_interim_bill",
+      "pages": [
+        19
+      ],
+      "merged_from": 1,
+      "total_charges": 1,
+      "duplicates_removed": 0,
+      "total_amount": "2320.00"
+    },
+    {
+      "bill_id": "supporting_interim_bill_5",
+      "category": "supporting_interim_bill",
+      "pages": [
+        20,
+        21
+      ],
+      "merged_from": 2,
+      "total_charges": 0,
+      "duplicates_removed": 0,
+      "total_amount": "50000.00"
+    },
+    {
+      "bill_id": "supporting_interim_bill_6",
+      "category": "supporting_interim_bill",
+      "pages": [
+        24
+      ],
+      "merged_from": 1,
+      "total_charges": 1,
+      "duplicates_removed": 0,
+      "total_amount": "50000.00"
+    }
+  ],
+  "category_totals": {
+    "supporting_interim_bill": 297928.33
+  },
+  "grand_total": 297928.33,
+  "total_bills": 6
+}

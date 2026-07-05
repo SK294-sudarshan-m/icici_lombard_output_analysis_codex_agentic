@@ -1,0 +1,57 @@
+{
+  "page": 7,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "",
+    "document_title": ""
+  },
+  "patient": {
+    "name": "Iradyummer Yadov",
+    "age": "134",
+    "gender": "H",
+    "uhid": "",
+    "ip_number": "6423",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "ROH Roopa Orthopaedic & Multi Speciality Hospital",
+    "address": "Opp. High School Road Bus Stop, Patamata, VIJAYAWADA - 10.",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Handwritten operation record form from ROH Roopa Orthopaedic & Multi Speciality Hospital for patient Iradyummer Yadov, IP No. 6423, dated 6/6/26, detailing pre-op diagnosis, procedure proposed (Implat Rennal), surgeon, anesthesia type, and intra-op findings with illegible handwritten notes."
+}

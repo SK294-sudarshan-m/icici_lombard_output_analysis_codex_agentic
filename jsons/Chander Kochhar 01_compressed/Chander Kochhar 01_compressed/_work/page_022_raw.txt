@@ -1,0 +1,64 @@
+=== PAGE 22 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3642
+Tokens Out: 395
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 22,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "22",
+    "document_title": "Fwd: Alert : Update on your HDFC Bank Credit Card"
+  },
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "NATIONAL HEALTH AND ED",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "This page is an email alert from HDFC Bank regarding a credit card transaction of Rs 2320.00 at NATIONAL HEALTH AND ED on 24-02-2025, showing updated available balance and total outstanding, with instructions to report unauthorized transactions."
+}

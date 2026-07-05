@@ -1,0 +1,63 @@
+{
+  "bill_id": "supporting_interim_bill_5",
+  "bill_category": "supporting_interim_bill",
+  "pipeline_category": "supporting_interim_bill",
+  "source_pages": [
+    20,
+    21
+  ],
+  "merged_from": 2,
+  "page_type": "bill",
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "gender": "Female",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "",
+    "bed_number": "110A"
+  },
+  "hospital": {
+    "name": "P. D. Hinduja Hospital & Medical Research Centre",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052. India",
+    "contact": "+91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD GENERAL INSURANCE COMPANY",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "TPA",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "charges": [],
+  "medications": [],
+  "procedures": [],
+  "lab_results": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "50000.00",
+    "total_amount": "50000.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "50000.00",
+    "amount_paid": "50000.00",
+    "balance": "",
+    "advance_paid": "50000.00"
+  },
+  "merge_stats": {
+    "total_charges": 0,
+    "summary_rows_removed": 0,
+    "summary_pages_excluded": 0,
+    "summary_charges_removed": 0,
+    "duplicates_removed": 0
+  }
+}

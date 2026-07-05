@@ -1,0 +1,33 @@
+=== PAGE 33 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3897
+Tokens Out: 394
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 33,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "COMPLETE BLOOD COUNT"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 YEARS",
+    "gender": "FEMALE",
+    "uhid": "192673",
+    "ip_number": "68049"
+  },
+  "admission": {
+    "date_of_admission": "23/02/2025",
+    "referring_doctor": "DR ABHAY RAUT",
+    "department": "DEPARTMENT OF LABORATORY MEDICINE"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "Tel: +91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "raw_summary": "Page 33 contains a Complete Blood Count (CBC) lab report from P. D. Hinduja Hospital for patient Kochhar Chander, age 91, female, with test results, reference ranges, and pathologist signatures; it is page 2 of 2 and marked for billing and report printing only."
+}

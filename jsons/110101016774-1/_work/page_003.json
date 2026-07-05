@@ -1,0 +1,20 @@
+{
+  "page": 3,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "page_indicator": "Page 3 of 3"
+  },
+  "hospital": {
+    "name": "Gurukrupa Superspeciality Hospital",
+    "address": "S.No.119/5/B, Near St. Thomas Church, Off. Mira-Bhayendar Highway, Saibaba Nagar, Mira Road (E), Thane 401107.",
+    "contact": "gshforyou@gmail.com, www.gurukrupahospitals.in"
+  },
+  "insurance": {
+    "tpa": "ICICI Lombard General Insurance"
+  },
+  "admission": {
+    "treating_doctor": "DR SHARAD S. SHELAR"
+  },
+  "raw_summary": "Page 3 of a discharge summary from Gurukrupa Superspeciality Hospital, containing emergency contact instructions, clinical complaint list, and signatures of the parent/relative, discharge card receiver, RMO, and treating doctor with date and time."
+}

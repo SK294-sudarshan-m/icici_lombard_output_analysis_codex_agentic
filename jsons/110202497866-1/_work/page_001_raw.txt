@@ -1,0 +1,86 @@
+=== PAGE 1 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4628
+Tokens Out: 665
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "PATIENT DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "MRS. SHIKHA GUPTA W/O MR.ADITYA KUMAR GUPTA",
+    "age": "29 Y",
+    "gender": "Female",
+    "uhid": "371574",
+    "ip_number": "61149",
+    "ward": "PRIVATE - BLOCK A",
+    "bed_number": "PVT-07"
+  },
+  "admission": {
+    "date_of_admission": "05/06/2026 06:04 PM",
+    "date_of_discharge": "08/06/2026 12:00PM",
+    "treating_doctor": "DR. VENKATESH AGRAWAL",
+    "department": ""
+  },
+  "hospital": {
+    "name": "M.P.BIRLA HOSPITAL SATNA",
+    "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005",
+    "contact": ""
+  },
+  "medications": [
+    {
+      "name": "TAB CLAVAM 625 MG",
+      "dosage": "BD",
+      "frequency": "",
+      "duration": "7 DAYS",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "CAP PAN D",
+      "dosage": "OD",
+      "frequency": "",
+      "duration": "7 DAYS",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "TAB SIGNOFLAM",
+      "dosage": "BD",
+      "frequency": "",
+      "duration": "5 DAYS",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "TAB SPORLAC DS",
+      "dosage": "BD",
+      "frequency": "",
+      "duration": "5 DAYS",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "SYP POYBION L",
+      "dosage": "10 ML BD",
+      "frequency": "",
+      "duration": "7 DAYS",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "SYP MOM PLUS",
+      "dosage": "15 ML HS",
+      "frequency": "",
+      "duration": "7 DAYS",
+      "quantity": "",
+      "amount": ""
+    }
+  ],
+  "raw_summary": "Patient discharge summary for Mrs. Shikha Gupta, 29-year-old female, discharged on 08/06/2026 after admission for cholelithiasis, including provisional/final diagnosis, history, clinical examination, treatment during hospitalization (Lap Chole), condition on discharge, and discharge medications."
+}

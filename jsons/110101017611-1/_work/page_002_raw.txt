@@ -1,0 +1,22 @@
+=== PAGE 2 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3918
+Tokens Out: 243
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 2,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "bill_date": "08/06/2026",
+    "document_title": "CAREGROUP SIGHT SOLUTION PRIVATE LIMITED"
+  },
+  "hospital": {
+    "name": "CAREGROUP SIGHT SOLUTION PRIVATE LIMITED",
+    "address": "Block No. 310/C&E, Village - Dabhasa, Taluka - Padra District - Vododara - 391440,Gujarat India",
+    "contact": "Phone : +91-7490-002-517\\553\\557 - Telefax : +91-2662-244242"
+  },
+  "raw_summary": "This page is a product supply certificate from Caregroup Sight Solution Private Limited for an intraocular lens supplied to Dr. Sandeep Desai at Thane, including serial number, power, and MRP, but contains no billing or insurance claim data."
+}

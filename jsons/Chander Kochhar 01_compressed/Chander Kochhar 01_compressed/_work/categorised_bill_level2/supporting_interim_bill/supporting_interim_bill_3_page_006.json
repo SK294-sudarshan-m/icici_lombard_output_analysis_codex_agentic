@@ -1,0 +1,59 @@
+{
+  "page": 6,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "IDE23264/24",
+    "bill_date": "24/02/2025",
+    "page_indicator": "",
+    "document_title": "IN-Patient Deposit Receipt"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "",
+    "gender": "Female",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "",
+    "bed_number": "110A"
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "TPA",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052. India",
+    "contact": "Tel: +91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD GENERAL INSURANCE COMPANY",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "10000.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "10000.00",
+    "balance": "",
+    "advance_paid": "10000.00"
+  },
+  "sub_bills": [],
+  "raw_summary": "This page is an in-patient deposit receipt from P.D. Hinduja Hospital for a TPA patient, showing a credit card payment of Rs. 10,000.00 received on account.",
+  "pipeline_category": "supporting_interim_bill",
+  "bill_id": "supporting_interim_bill_3",
+  "sequence_reason": "Pages 17 and 18 are a direct continuation of the bill from supporting_interim_bill_3. They share the same Invoice No. (ICO15284), Admission No. (68049), and Patient Name (CHANDER KOCHHAR). The page numbers at the bottom (17 and 18) confirm they follow page 16, completing the itemized list and showing the final Total Bill Amount and Net Payable Amount."
+}

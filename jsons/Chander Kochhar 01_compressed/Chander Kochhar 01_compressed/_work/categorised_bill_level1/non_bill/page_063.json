@@ -1,0 +1,20 @@
+{
+  "page": 63,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "document_title": "CASH UNDERTAKING FOR PAYMENT"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR"
+  },
+  "admission": {
+    "referring_doctor": "Dr. ABHAY RAUT",
+    "department": "ICU, TW/N SHARING"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "KHAR"
+  },
+  "raw_summary": "This page is a Cash Undertaking for Payment form from P. D. Hinduja Hospital, signed by Manu Kochhar for the admission of patient Chander Kochhar under Dr. Abhay Raut in ICU, TW/N Sharing. It contains declarations regarding billing class, payment obligations, and contact details, but no itemized charges or bill amounts."
+}

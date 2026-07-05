@@ -1,0 +1,290 @@
+{
+  "bill_id": "73e27d4d",
+  "case_number": "110101017483-1",
+  "bill_summary": {
+    "extracted_amount": 35000.0,
+    "calculated_amount": 35000.0,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 35000.0,
+    "calculated_after_discount": 35000.0,
+    "total_line_items": 6,
+    "amounts_match": true,
+    "overall_confidence": 1.0,
+    "case_verdict": 1,
+    "summary": "Case is in order and recommended for processing. The consolidated bill has 6 line item(s) totalling ₹35,000.00 (gross), with a net payable of ₹35,000.00. the line items reconcile with the bill's printed total. billing type assessed as Day Care. extraction confidence 1.00.",
+    "billing_type": {
+      "billing_type": "Day Care",
+      "confidence": 0.85,
+      "reasoning": "Length of stay < 24h (0h)"
+    }
+  },
+  "patient": {
+    "name": "YASMIN S MEMON",
+    "age": "",
+    "gender": "",
+    "uhid": "64399",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "hospital": {
+    "name": "Evista Eye Care Centre Pvt.Ltd.",
+    "address": "Opposite Dhantoli Park, Nagpur",
+    "contact": "Ph.0712-2459855,2467415"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD HEALTHCARE",
+    "policy_number": "100355830",
+    "member_id": "110101017483",
+    "claimed_amount": "35000.00",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "08-06-2026",
+    "date_of_discharge": "08-06-2026",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "charges": [
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Surgery or Operation charges",
+      "sub_bill_type_id": "1014407",
+      "sr_no": "",
+      "description": "Operation Charges",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "16175.00",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Operation Charges",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 1.0,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 16175.00 exactly matches image. Description 'Operation Charges' matches. bill_type 'Procedure Charges' and sub_bill_type 'Surgery or Operation charges' are valid per master list for this charge."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Operation Charges\t16175.00",
+          "match_ratio": 0.791
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 0
+    },
+    {
+      "bill_type": "Cost of Implant",
+      "bill_type_id": "1011059",
+      "sub_bill_type": "Intra Ocular Lense IOL",
+      "sub_bill_type_id": "1011079",
+      "sr_no": "",
+      "description": "Cost of IOL",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "11825.00",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Cost Of IOLs",
+        "standard_name": "implant",
+        "score": 0.964,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 11825.00 exactly matches image. Description 'Cost of IOL' matches. bill_type 'Cost of Implant' and sub_bill_type 'Intra Ocular Lense IOL' are valid per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Cost of IOL\t11825.00",
+          "match_ratio": 0.71
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 1
+    },
+    {
+      "bill_type": "Operation Theatre Charges",
+      "bill_type_id": "500539",
+      "sub_bill_type": "Cathlab",
+      "sub_bill_type_id": "1014389",
+      "sr_no": "",
+      "description": "Operation Theatre Charges",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "3000.00",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Operation Theatre Charges",
+        "standard_name": "Not in list",
+        "score": 1.0,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 3000.00 exactly matches image. Description 'Operation Theatre Charges' matches. bill_type 'Operation Theatre Charges' and sub_bill_type 'Cathlab' are valid per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Operation Theatre Charges\t3000.00",
+          "match_ratio": 0.862
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 2
+    },
+    {
+      "bill_type": "Investigation Charges",
+      "bill_type_id": "500535",
+      "sub_bill_type": "Investigation  Charges",
+      "sub_bill_type_id": "1014386",
+      "sr_no": "",
+      "description": "A-scan",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "1500.00",
+      "source_line_index": 3,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "A-Scan",
+        "standard_name": "test",
+        "score": 0.926,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 1500.00 exactly matches image. Description 'A-scan' matches. bill_type 'Investigation Charges' and sub_bill_type 'Investigation Charges' are valid per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "A-scan\t1500.00",
+          "match_ratio": 0.6
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 3
+    },
+    {
+      "bill_type": "Anesthetist Charges",
+      "bill_type_id": "500528",
+      "sub_bill_type": "Anesthetist Charges",
+      "sub_bill_type_id": "706035",
+      "sr_no": "",
+      "description": "Anaesthesia Charges",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "1500.00",
+      "source_line_index": 4,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Anaesthesia Charges",
+        "standard_name": "Not in list",
+        "score": 1.0,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 1500.00 exactly matches image. Description 'Anaesthesia Charges' matches. bill_type 'Anesthetist Charges' and sub_bill_type 'Anesthetist Charges' are valid per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Anaesthesia Charges\t1500.00",
+          "match_ratio": 0.826
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 4
+    },
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "",
+      "description": "Room charges",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "1000.00",
+      "source_line_index": 5,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Room Charges",
+        "standard_name": "bed charges",
+        "score": 0.9766,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 1000.00 exactly matches image. Description 'Room charges' matches. bill_type 'Room Charges' and sub_bill_type 'Room Charge' are valid per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Room charges\t1000.00",
+          "match_ratio": 0.75
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 5
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [],
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "overall_confidence": 1.0
+}

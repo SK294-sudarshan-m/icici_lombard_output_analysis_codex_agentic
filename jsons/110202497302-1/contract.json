@@ -1,0 +1,100 @@
+{
+  "claim_no": null,
+  "llm_remarks": null,
+  "merged_doc_uri": "",
+  "processed_time_in_secs": 78.78,
+  "stage_confidence": null,
+  "llm_case_verdict": {
+    "id": "1f80463a-e4b8-40e0-86f0-a6179819f8bd",
+    "timestamp": "2026-07-04T12:48:01.968533+00:00",
+    "bill_extraction_attempts": 1,
+    "extracted_total_amount": 67500.0,
+    "calculated_total_amount": 67500.0,
+    "calculated_difference": 0.0,
+    "calculated_match": true,
+    "bill_extraction_is_accurate": true,
+    "bill_extraction_accuracy_reason": null,
+    "i3_total_amount": 0.0,
+    "i3_total_difference": 67500.0,
+    "i3_total_match": false,
+    "non_payable_amount": 0.0,
+    "payable_amount": 67500.0,
+    "i3_non_payable_amount": 0.0,
+    "i3_payable_amount": 0.0,
+    "i3_non_payable_difference": 0.0,
+    "i3_payable_difference": 67500.0,
+    "i3_non_payable_match": true,
+    "i3_payable_match": false,
+    "nme_classification_conclusive": true,
+    "overall_confidence": 1.0,
+    "final_case_verdict": null,
+    "billing_type": "Medical Management",
+    "billing_type_confidence": 0.7,
+    "billing_type_reason": "No surgery/package/day-care indicators; DS severity=Moderate",
+    "unique_bill_count": 1,
+    "bill_item_count": 3,
+    "bills_scout_briefing": null
+  },
+  "llm_response": {
+    "bills_classified": [
+      {
+        "bill_items": [
+          {
+            "display_order": 0,
+            "sr_no": "",
+            "page_number": 3,
+            "item_name": "SPECIAL ROOM",
+            "amount": 0.0,
+            "standard_item_name": "bed charges",
+            "bill_type_id": 1000739,
+            "bill_type": "Room Charges",
+            "bill_sub_type_id": 1000746,
+            "bill_sub_type": "Room Charge",
+            "is_payable": true,
+            "closest_item_name": "Special Room",
+            "payable_value_source": "vector_direct",
+            "llm_confidence": 1.0,
+            "llm_confidence_reason": "Description 'SPECIAL ROOM' exactly matches the image. Amount is not present in the image for this row, which is correct as it's a room type header. Bill type 'Room Charges' and sub_bill_type 'Room Charge' are appropriate per bill master (1000739, 1000746).",
+            "textract_confidence": 1.0
+          },
+          {
+            "display_order": 1,
+            "sr_no": "",
+            "page_number": 3,
+            "item_name": "ELECTIVE LSCS(Packeg)",
+            "amount": 60500.0,
+            "standard_item_name": "miscellaneous charges",
+            "bill_type_id": 1000745,
+            "bill_type": "Package Charges",
+            "bill_sub_type_id": 1011542,
+            "bill_sub_type": "Package Charges",
+            "is_payable": true,
+            "closest_item_name": "Elective Lscs Package",
+            "payable_value_source": "llm_selected",
+            "llm_confidence": 1.0,
+            "llm_confidence_reason": "Description 'ELECTIVE LSCS(Packeg)' matches the image (minor spelling difference 'Packeg' vs 'Package' is acceptable). Amount 60500.00 exactly matches the image. Bill type 'Package Charges' and sub_bill_type 'Package Charges' are correct per bill master (1000745, 1011542).",
+            "textract_confidence": 1.0
+          },
+          {
+            "display_order": 2,
+            "sr_no": "",
+            "page_number": 3,
+            "item_name": "Tubectomy charges",
+            "amount": 7000.0,
+            "standard_item_name": "doctor charges - doctor charges",
+            "bill_type_id": 1014508,
+            "bill_type": "Miscellaneous",
+            "bill_sub_type_id": 1011084,
+            "bill_sub_type": "Miscellaneous Charges",
+            "is_payable": false,
+            "closest_item_name": "Tubectomy Charges",
+            "payable_value_source": "vector_direct",
+            "llm_confidence": 1.0,
+            "llm_confidence_reason": "Description 'Tubectomy charges' exactly matches the image. Amount 7000.00 exactly matches the image. Bill type 'Miscellaneous' and sub_bill_type 'Miscellaneous Charges' are appropriate per bill master (1014508, 1011084).",
+            "textract_confidence": 1.0
+          }
+        ]
+      }
+    ]
+  }
+}

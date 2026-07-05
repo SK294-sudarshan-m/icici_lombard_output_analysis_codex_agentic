@@ -1,0 +1,20 @@
+{
+  "page": 8,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "document_title": "Nursing Notes"
+  },
+  "patient": {
+    "name": "Mrs Bandla Hymavathi",
+    "age": "62 Y,1 M,17 D",
+    "gender": "Female",
+    "uhid": "893505"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD, TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "raw_summary": "Nursing notes page for patient Mrs Bandla Hymavathi, documenting admission at 12 PM, conscious on room air, taking soft diet, chemo on flow, and handover to evening staff; no billing data present."
+}

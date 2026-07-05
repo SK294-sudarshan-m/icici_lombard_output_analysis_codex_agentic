@@ -1,0 +1,442 @@
+{
+  "bill_id": "57240cb5",
+  "case_number": "110202499095-1",
+  "bill_summary": {
+    "extracted_amount": 47945.0,
+    "calculated_amount": 47945.0,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 47945.0,
+    "calculated_after_discount": 47945.0,
+    "total_line_items": 10,
+    "amounts_match": true,
+    "overall_confidence": 0.96,
+    "case_verdict": 1,
+    "summary": "Case is in order and recommended for processing. The consolidated bill has 10 line item(s) totalling ₹47,945.00 (gross), with a net payable of ₹47,945.00. the line items reconcile with the bill's printed total. billing type assessed as Surgery. extraction confidence 0.96.",
+    "billing_type": {
+      "billing_type": "Surgery",
+      "confidence": 0.95,
+      "reasoning": "OT/surgeon charges present + DS confirms procedure(s): Netra tarpan, Sthanik lep, Abhyanga swedan"
+    }
+  },
+  "patient": {
+    "name": "Mr Arnav Nilesh Rokade",
+    "age": "11 years",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "hospital": {
+    "name": "Amora Panchkarma and Wellness center",
+    "address": "Sr. No. 109/2/2, Near Shivdatta Mandir, Radhabai Raghu raskar chowk, Vrundavan, Charholi Bk, Pune, MH 412105",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "02/06/2026",
+    "date_of_discharge": "08/06/2026",
+    "length_of_stay": "7",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "Dr. Vivek Tyagi",
+    "department": ""
+  },
+  "charges": [
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1014407",
+      "sr_no": "1",
+      "description": "Abhyanga swedan",
+      "quantity": "7",
+      "unit_price": "1280",
+      "discount": "",
+      "amount": "8960",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Abhyangam - Sarvangam-Ip",
+        "standard_name": "Not in list",
+        "score": 0.5162,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount, quantity, and unit price match exactly. Description 'Abhyanga swedan' matches. Bill type 'Procedure Charges' is acceptable, but 'Surgery or Operation charges' sub_bill_type is incorrect for this Ayurvedic therapy; should be more general procedure."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "1\tAbhyanga\t7",
+          "match_ratio": 0.593
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 0
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1014412",
+      "sr_no": "2",
+      "description": "Sthanik lep",
+      "quantity": "7",
+      "unit_price": "390",
+      "discount": "",
+      "amount": "2730",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "",
+        "standard_name": "",
+        "score": 0,
+        "method": "llm_master_taxonomy"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount, quantity, and unit price match exactly. Description 'Sthanik lep' matches. Bill type 'Procedure Charges' is correct, but 'Dressing' sub_bill_type is inaccurate for this Ayurvedic application; should be general procedure."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "2\tSthanik lep\t390\t7",
+          "match_ratio": 0.733
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_master_taxonomy",
+      "display_order": 1
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1014407",
+      "sr_no": "3",
+      "description": "netra tarpan",
+      "quantity": "7",
+      "unit_price": "735",
+      "discount": "",
+      "amount": "5145",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "",
+        "standard_name": "",
+        "score": 0,
+        "method": "llm_master_taxonomy"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount, quantity, and unit price match exactly. Description 'netra tarpan' matches. Bill type 'Procedure Charges' is correct, but 'Surgery or Operation charges' sub_bill_type is misleading for this eye therapy; should be general procedure."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "3\tnetra tarpan\t735\t7",
+          "match_ratio": 0.75
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_master_taxonomy",
+      "display_order": 2
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1014411",
+      "sr_no": "4",
+      "description": "Snehpan",
+      "quantity": "4",
+      "unit_price": "440",
+      "discount": "",
+      "amount": "1760",
+      "source_line_index": 3,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "",
+        "standard_name": "",
+        "score": 0,
+        "method": "llm_master_taxonomy"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount, quantity, and unit price match exactly. Description 'Snehpan' matches. Bill type 'Procedure Charges' is correct, but 'Nebulisation' sub_bill_type is wrong for this Ayurvedic oil therapy; should be general procedure."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "4\tSnehpan\t440\t4\t1760",
+          "match_ratio": 0.519
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_master_taxonomy",
+      "display_order": 3
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500528",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "706035",
+      "sr_no": "5",
+      "description": "Virechan",
+      "quantity": "1",
+      "unit_price": "2000",
+      "discount": "",
+      "amount": "2000",
+      "source_line_index": 4,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "unknown",
+      "match_info": {
+        "matched_item": "V.Ravi Kiran",
+        "standard_name": "junk",
+        "score": 0.3148,
+        "method": "unresolved"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount, quantity, and unit price match exactly. Description 'Virechan' matches. Bill type 'Anesthetist Charges' is incorrect; this is a Panchakarma procedure, not anesthesia. Should be Procedure Charges."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "5\tVirechan\t2000\t1\t2000",
+          "match_ratio": 0.533
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "unresolved",
+      "display_order": 4
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500528",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "706035",
+      "sr_no": "6",
+      "description": "Dhara full body",
+      "quantity": "5",
+      "unit_price": "1420",
+      "discount": "",
+      "amount": "7100",
+      "source_line_index": 5,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "unknown",
+      "match_info": {
+        "matched_item": "Dhruva Woman",
+        "standard_name": "Not in list",
+        "score": 0.401,
+        "method": "unresolved"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount, quantity, and unit price match exactly. Description 'Dhara full body' matches. Bill type 'Anesthetist Charges' is incorrect; this is a Panchakarma therapy, not anesthesia. Should be Procedure Charges."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "6\tDhara full body\t5\t7100",
+          "match_ratio": 0.769
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "unresolved",
+      "display_order": 5
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500529",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1011073",
+      "sr_no": "7",
+      "description": "Anjana",
+      "quantity": "5",
+      "unit_price": "340",
+      "discount": "",
+      "amount": "1700",
+      "source_line_index": 6,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Dr. Anjana Bulusu",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.464,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount, quantity, and unit price match exactly. Description 'Anjana' matches. Bill type 'Consultation Visit Charges' is incorrect; this is a procedure, not consultation. Should be Procedure Charges."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.48
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 6
+    },
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "8",
+      "description": "Stay charges Private AC room",
+      "quantity": "7",
+      "unit_price": "2000",
+      "discount": "",
+      "amount": "14000",
+      "source_line_index": 7,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Room Charges Private AC",
+        "standard_name": "bed charges",
+        "score": 0.8473,
+        "method": "vector_consensus"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount, quantity, unit price, and description 'Stay charges Private AC room' match exactly. Bill type 'Room Charges' and sub_bill_type 'Room Charge' are correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Private AC",
+          "match_ratio": 0.526
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_consensus",
+      "display_order": 7
+    },
+    {
+      "bill_type": "Miscellaneous",
+      "bill_type_id": "1014508",
+      "sub_bill_type": "Miscellaneous Charges",
+      "sub_bill_type_id": "1011084",
+      "sr_no": "9",
+      "description": "Diet charges",
+      "quantity": "7",
+      "unit_price": "250",
+      "discount": "",
+      "amount": "1750",
+      "source_line_index": 8,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Diet Charges",
+        "standard_name": "diet - dietician charges",
+        "score": 0.9851,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount, quantity, unit price, and description 'Diet charges' match exactly. Bill type 'Miscellaneous' and sub_bill_type 'Miscellaneous Charges' are appropriate."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "9\tDiet charges\t250\t7\t1750",
+          "match_ratio": 0.649
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 8
+    },
+    {
+      "bill_type": "Consultation Visit Charges",
+      "bill_type_id": "500529",
+      "sub_bill_type": "Consultation charges",
+      "sub_bill_type_id": "1011073",
+      "sr_no": "10",
+      "description": "Dr consultation",
+      "quantity": "7",
+      "unit_price": "400",
+      "discount": "",
+      "amount": "2800",
+      "source_line_index": 9,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Dr Consultation",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.9479,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount, quantity, and unit price match exactly. Description 'Dr consultation' matches. Bill type 'Consultation Visit Charges' and sub_bill_type 'Consultation charges' are correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "10\tDr consultation\t400\t7\t2800",
+          "match_ratio": 0.682
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 9
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [],
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "overall_confidence": 0.96
+}

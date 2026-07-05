@@ -1,0 +1,80 @@
+{
+  "page": 4,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "LT1045",
+    "bill_date": "24-02-2025",
+    "page_indicator": "4",
+    "document_title": "HAYAAT CHEMIST"
+  },
+  "patient": {
+    "name": "CHANDAR KOCHMAR",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "38 ABRAY RAUT",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "HAYAAT CHEMIST",
+    "address": "SHOP #0.1. LEURGES HEAVEN BLOG. PALL NAKA. BANDRA (1) AUMBAI-400650",
+    "contact": "MOBILE #0.786000754/868/869"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [
+    {
+      "name": "CIPL 3004 FERACORT LMG RESPULES I 2ML",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "15",
+      "amount": "1485.75",
+      "source_line_index": 0
+    }
+  ],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "CIPL 3004 FERACORT LMG RESPULES I 2ML",
+      "quantity": "15",
+      "unit_price": "99.05",
+      "gross_amount": "1485.75",
+      "discount": "",
+      "amount": "1485.75",
+      "source_line_index": 0
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "1485.75",
+    "total_amount": "1485.75",
+    "discount": "148.75",
+    "tax": "83.28",
+    "net_payable": "1337.08",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Pharmacy bill from Hayaat Chemist dated 24-02-2025 for patient Chandar Kochmar, listing one medication item with total amount 1485.75, tax of 83.28, discount of 148.75, and net payable of 1337.08.",
+  "pipeline_category": "supporting_interim_bill",
+  "bill_id": "supporting_interim_bill_1",
+  "sequence_reason": "This is a standalone ambulance service bill from Jeevan Ambulance Service with no page numbers or continuation indicators, making it an independent document."
+}

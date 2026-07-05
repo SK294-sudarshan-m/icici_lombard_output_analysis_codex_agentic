@@ -1,0 +1,27 @@
+{
+  "page": 68,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Admission Record"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91",
+    "gender": "FEMAL",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "bed_number": "406"
+  },
+  "admission": {
+    "date_of_admission": "21/02/2025 20:41:46.00",
+    "referring_doctor": "ABHAY RAUT",
+    "treating_doctor": "RAUT ABHAY"
+  },
+  "hospital": {
+    "name": "P.D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "Maharashtra Mumbai 400050",
+    "contact": "9892462695"
+  },
+  "raw_summary": "This page is an Admission Record and Discharge Record form from P.D. Hinduja Hospital, containing patient demographics, admission details, responsible person information, and discharge status fields, with no billing or financial charges listed."
+}

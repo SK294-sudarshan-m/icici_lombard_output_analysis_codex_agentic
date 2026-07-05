@@ -1,0 +1,40 @@
+{
+  "page": 9,
+  "bill_category": "detailed_final_bill",
+  "is_final_bill": true,
+  "is_detailed_final": true,
+  "charges": [
+    {
+      "index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 2,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 3,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 4,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 5,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 6,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 7,
+      "charge_type": "line_item"
+    }
+  ]
+}

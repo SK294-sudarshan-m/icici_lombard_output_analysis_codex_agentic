@@ -1,0 +1,144 @@
+=== PAGE 1 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4216
+Tokens Out: 1135
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 1,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_date": "08/06/2026",
+    "document_title": "FINAL BILL"
+  },
+  "patient": {
+    "name": "By. Jessica",
+    "ip_number": "509984/1327",
+    "uhid": "110202494871"
+  },
+  "admission": {
+    "date_of_admission": "30/05/2026",
+    "date_of_discharge": "08/06/2026",
+    "length_of_stay": "9"
+  },
+  "hospital": {
+    "name": "KALYANI GENERAL HOSPITAL",
+    "address": "15, Dr. Radhakrishnan Salai, Chennai - 600 004 (South India)",
+    "contact": "Phone : 28470642, 28473306, 28475101"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD Insurance",
+    "claimed_amount": "56538.00"
+  },
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "Bed fee (9x1200) 9days General Ward",
+      "quantity": "9",
+      "unit_price": "1200.00",
+      "gross_amount": "10800.00",
+      "amount": "10800.00"
+    },
+    {
+      "sr_no": "",
+      "description": "Professional fee",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "3000.00",
+      "amount": "3000.00"
+    },
+    {
+      "sr_no": "",
+      "description": "Admission Fee(Non medical)",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "100.00",
+      "amount": "100.00"
+    },
+    {
+      "sr_no": "",
+      "description": "Consultation Fee (Paed Surgeon)",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "2500.00",
+      "amount": "2500.00"
+    },
+    {
+      "sr_no": "",
+      "description": "Lab Investigation",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "8575.00",
+      "amount": "8575.00"
+    },
+    {
+      "sr_no": "",
+      "description": "X-ray",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "500.00",
+      "amount": "500.00"
+    },
+    {
+      "sr_no": "",
+      "description": "Usg Abd",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "3600.00",
+      "amount": "3600.00"
+    },
+    {
+      "sr_no": "",
+      "description": "CT Abd",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "4000.00",
+      "amount": "4000.00"
+    },
+    {
+      "sr_no": "",
+      "description": "Spo2",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "30.00",
+      "amount": "30.00"
+    },
+    {
+      "sr_no": "",
+      "description": "Casuality Charges",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "500.00",
+      "amount": "500.00"
+    },
+    {
+      "sr_no": "",
+      "description": "Inj.prick.charges",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "820.00",
+      "amount": "820.00"
+    },
+    {
+      "sr_no": "",
+      "description": "Jelco(dispo)( non-medical)",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "1705.00",
+      "amount": "1705.00"
+    },
+    {
+      "sr_no": "",
+      "description": "Drugs",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "20408.00",
+      "amount": "20408.00"
+    }
+  ],
+  "bill_summary": {
+    "total_amount": "56538.00"
+  },
+  "raw_summary": "Final hospital bill for patient By. Jessica, discharged on 08/06/2026, with itemized charges totaling Rs. 56538.00, addressed to ICICI Lombard Insurance."
+}

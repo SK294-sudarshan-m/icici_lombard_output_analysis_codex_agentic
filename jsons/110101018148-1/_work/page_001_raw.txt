@@ -1,0 +1,192 @@
+=== PAGE 1 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 5056
+Tokens Out: 1600
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 1,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "188928",
+    "bill_date": "09/06/2026",
+    "page_indicator": "Page : 1",
+    "document_title": "DETAILED I.P. BILL"
+  },
+  "patient": {
+    "name": "SAYU PRAVEEN",
+    "ip_number": "194188"
+  },
+  "admission": {
+    "date_of_admission": "07/06/2026"
+  },
+  "hospital": {
+    "name": "HOLY GHOST MISSION HOSPITAL",
+    "address": "MUTTUCHIRA P.O., KOTTAYAM, KERALA - 686613",
+    "contact": "Tel:04829-282224,Mob:8136883204/05, Web: www.hgmhospital.org"
+  },
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "AZITHRAL 200 XL (30ML)SYP",
+      "quantity": "1",
+      "unit_price": "107.75",
+      "gross_amount": "107.75",
+      "discount": "0.00",
+      "amount": "107.75"
+    },
+    {
+      "sr_no": "2",
+      "description": "FLUVIA SYP 75 ML",
+      "quantity": "1",
+      "unit_price": "582.21",
+      "gross_amount": "582.21",
+      "discount": "0.00",
+      "amount": "582.21"
+    },
+    {
+      "sr_no": "3",
+      "description": "NASEON NASAL DROPS",
+      "quantity": "1",
+      "unit_price": "45.97",
+      "gross_amount": "45.97",
+      "discount": "0.00",
+      "amount": "45.97"
+    },
+    {
+      "sr_no": "4",
+      "description": "P-250 SYP 60ML",
+      "quantity": "1",
+      "unit_price": "42.43",
+      "gross_amount": "42.43",
+      "discount": "0.00",
+      "amount": "42.43"
+    },
+    {
+      "sr_no": "5",
+      "description": "POLYBION-- LC SYP",
+      "quantity": "1",
+      "unit_price": "140.99",
+      "gross_amount": "140.99",
+      "discount": "0.00",
+      "amount": "140.99"
+    },
+    {
+      "sr_no": "6",
+      "description": "RANTAC SYP 100ML",
+      "quantity": "1",
+      "unit_price": "165.38",
+      "gross_amount": "165.38",
+      "discount": "0.00",
+      "amount": "165.38"
+    },
+    {
+      "sr_no": "7",
+      "description": "PLATELET COUNT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "90.00",
+      "discount": "",
+      "amount": "90.00"
+    },
+    {
+      "sr_no": "8",
+      "description": "CRP",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "265.00",
+      "discount": "",
+      "amount": "265.00"
+    },
+    {
+      "sr_no": "9",
+      "description": "BLOOD ESR",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "55.00",
+      "discount": "",
+      "amount": "55.00"
+    },
+    {
+      "sr_no": "10",
+      "description": "BLOOD CBC",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "150.00",
+      "discount": "",
+      "amount": "150.00"
+    },
+    {
+      "sr_no": "11",
+      "description": "INFLUENZA ANTIGEN TEST",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "330.00",
+      "discount": "",
+      "amount": "330.00"
+    },
+    {
+      "sr_no": "12",
+      "description": "URINE RE",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "125.00",
+      "discount": "",
+      "amount": "125.00"
+    },
+    {
+      "sr_no": "13",
+      "description": "PAEDIATRIC CON.FEE.C",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "150.00",
+      "discount": "",
+      "amount": "150.00"
+    },
+    {
+      "sr_no": "14",
+      "description": "EMERGENCY/CASUALITY & REGISTRATION",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "200.00",
+      "discount": "",
+      "amount": "200.00"
+    },
+    {
+      "sr_no": "15",
+      "description": "NURSING CARE",
+      "quantity": "2",
+      "unit_price": "760.00",
+      "gross_amount": "1520.00",
+      "discount": "",
+      "amount": "1520.00"
+    },
+    {
+      "sr_no": "16",
+      "description": "PULMO AID WITH OXYGEN CHARGE",
+      "quantity": "4",
+      "unit_price": "80.00",
+      "gross_amount": "320.00",
+      "discount": "",
+      "amount": "320.00"
+    },
+    {
+      "sr_no": "17",
+      "description": "ROOM CHARGES",
+      "quantity": "2",
+      "unit_price": "1400.00",
+      "gross_amount": "2800.00",
+      "discount": "",
+      "amount": "2800.00"
+    }
+  ],
+  "bill_summary": {
+    "gross_amount": "7089.73",
+    "total_amount": "7089.73",
+    "discount": "0.00",
+    "tax": "0.00",
+    "net_payable": "7089.73"
+  },
+  "raw_summary": "Page 1 of a detailed inpatient bill from Holy Ghost Mission Hospital, listing medications, investigations, and service charges with a total payable amount of 7089.73."
+}

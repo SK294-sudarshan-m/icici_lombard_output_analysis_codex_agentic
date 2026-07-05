@@ -1,0 +1,64 @@
+=== PAGE 62 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4013
+Tokens Out: 452
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 62,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "62",
+    "document_title": "NEW PATIENT REGISTRATION FORM"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "",
+    "gender": "MALE",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "11th Road than IWI, Mumbai-400 052",
+    "contact": "For Appointments: 022 4510 8989 / For Emergency: 22 2646 9911 / 6174 6099"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "This page contains a New Patient Registration Form from P.D. Hinduja Hospital, including patient details, consent clauses, and signatures, with no billing or financial data."
+}

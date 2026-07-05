@@ -1,0 +1,409 @@
+{
+  "page": 1,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "45961",
+    "bill_date": "08-Jun-2026",
+    "page_indicator": "",
+    "document_title": "IP Bill"
+  },
+  "patient": {
+    "name": "AMMINI THANKAPPAN",
+    "age": "68Y",
+    "gender": "Female",
+    "uhid": "249109",
+    "ip_number": "45738",
+    "ward": "SINGLE NON AC SN-616",
+    "bed_number": "SN-616"
+  },
+  "admission": {
+    "date_of_admission": "02-Jun-2026 12:14 PM",
+    "date_of_discharge": "08-Jun-2026 01:49 PM",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "SR.BRIJEETHA",
+    "department": ""
+  },
+  "hospital": {
+    "name": "MAGJ HOSPITAL",
+    "address": "Mookkannoor, Angamaly- 683577",
+    "contact": "Ph: 0484 2674300/ 6674300, Mob: 8086194300, E-mail: enquiry@magjhospital.org, Web: www.magjhospital.org"
+  },
+  "insurance": {
+    "company": "ICICI Lombard",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": "ICICI Lombard"
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "3 WAY 10CMS EXTENSION(Surgicals -)",
+      "quantity": "1",
+      "unit_price": "262.50",
+      "gross_amount": "262.50",
+      "discount": ".00",
+      "amount": "262.50",
+      "source_line_index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "2",
+      "description": "HISTIN 8MG TABLET(Betahistine 8 MG)",
+      "quantity": "2",
+      "unit_price": "5.86",
+      "gross_amount": "11.72",
+      "discount": ".00",
+      "amount": "11.72",
+      "source_line_index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "3",
+      "description": "MONOCEF 1GM INJECTION(CEFTRIAXONE 1000GM SODIUM)",
+      "quantity": "1",
+      "unit_price": "66.63",
+      "gross_amount": "66.63",
+      "discount": ".00",
+      "amount": "66.63",
+      "source_line_index": 2,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "4",
+      "description": "NS 500M1 -EASY PORT(Sodium chloride 0.9 %W/V)",
+      "quantity": "1",
+      "unit_price": "93.93",
+      "gross_amount": "93.93",
+      "discount": ".00",
+      "amount": "93.93",
+      "source_line_index": 3,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "5",
+      "description": "POLYBION A INJ 2ML(THIAMINI 10MG 100MG RIBOFLAVIN 4MG PYRIDOXINE4MG 100 NICOTINAMIDE40MGCYNACOBALAMINI8MGD-PANTHENOL 6MG BENZYL ALCCHOL 0.9%W/V)",
+      "quantity": "1",
+      "unit_price": "25.78",
+      "gross_amount": "25.78",
+      "discount": ".00",
+      "amount": "25.78",
+      "source_line_index": 4,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "6",
+      "description": "SYRINGE 10ML(Surgicals -)",
+      "quantity": "2",
+      "unit_price": "13.30",
+      "gross_amount": "26.60",
+      "discount": ".00",
+      "amount": "26.60",
+      "source_line_index": 5,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "1",
+      "description": "SYRINGES 1ML(Surgicals -)",
+      "quantity": "1",
+      "unit_price": "10.23",
+      "gross_amount": "10.23",
+      "discount": ".00",
+      "amount": "10.23",
+      "source_line_index": 6
+    },
+    {
+      "sr_no": "1",
+      "description": "3 WAY 10CMS EXTENSION(Surgicals -)",
+      "quantity": "1",
+      "unit_price": "262.50",
+      "gross_amount": "262.50",
+      "discount": ".00",
+      "amount": "262.50",
+      "source_line_index": 7
+    },
+    {
+      "sr_no": "2",
+      "description": "MONOCEF 1GM INJECTION(CEFTRIAXONE 1000GM SODIUM)",
+      "quantity": "1",
+      "unit_price": "66.63",
+      "gross_amount": "66.63",
+      "discount": ".00",
+      "amount": "66.63",
+      "source_line_index": 8
+    },
+    {
+      "sr_no": "3",
+      "description": "SYRINGE 10ML(Surgicals -)",
+      "quantity": "2",
+      "unit_price": "13.30",
+      "gross_amount": "26.60",
+      "discount": ".00",
+      "amount": "26.60",
+      "source_line_index": 9
+    },
+    {
+      "sr_no": "1",
+      "description": "BIOVERT-16 MG TAB(BETAHISTINE HYDROCHLORIDE 16 MG)",
+      "quantity": "3",
+      "unit_price": "9.87",
+      "gross_amount": "29.61",
+      "discount": ".00",
+      "amount": "29.61",
+      "source_line_index": 10
+    },
+    {
+      "sr_no": "2",
+      "description": "EASYFIX TRANSPARENT(DISPOSIBLE)",
+      "quantity": "1",
+      "unit_price": "75.00",
+      "gross_amount": "75.00",
+      "discount": ".00",
+      "amount": "75.00",
+      "source_line_index": 11
+    },
+    {
+      "sr_no": "3",
+      "description": "GLOVES POWDER FREE MEDIUM",
+      "quantity": "10",
+      "unit_price": "10.00",
+      "gross_amount": "100.00",
+      "discount": ".00",
+      "amount": "100.00",
+      "source_line_index": 12
+    },
+    {
+      "sr_no": "4",
+      "description": "GLOVES POWDER FREE SMALL",
+      "quantity": "8",
+      "unit_price": "10.00",
+      "gross_amount": "80.00",
+      "discount": ".00",
+      "amount": "80.00",
+      "source_line_index": 13
+    },
+    {
+      "sr_no": "5",
+      "description": "HANDRUB 100 ML(SOLUTION)",
+      "quantity": "1",
+      "unit_price": "150.00",
+      "gross_amount": "150.00",
+      "discount": ".00",
+      "amount": "150.00",
+      "source_line_index": 14
+    },
+    {
+      "sr_no": "6",
+      "description": "IV CANNULA NO 20(Surgicals -)",
+      "quantity": "1",
+      "unit_price": "200.00",
+      "gross_amount": "200.00",
+      "discount": ".00",
+      "amount": "200.00",
+      "source_line_index": 15
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [
+    {
+      "bill_number": "C135388",
+      "bill_category": "Medicine Bill",
+      "document_title": "Medicine Bill",
+      "charges": [
+        {
+          "sr_no": "1",
+          "description": "3 WAY 10CMS EXTENSION(Surgicals -)",
+          "quantity": "1",
+          "unit_price": "262.50",
+          "gross_amount": "262.50",
+          "discount": ".00",
+          "amount": "262.50"
+        },
+        {
+          "sr_no": "2",
+          "description": "HISTIN 8MG TABLET(Betahistine 8 MG)",
+          "quantity": "2",
+          "unit_price": "5.86",
+          "gross_amount": "11.72",
+          "discount": ".00",
+          "amount": "11.72"
+        },
+        {
+          "sr_no": "3",
+          "description": "MONOCEF 1GM INJECTION(CEFTRIAXONE 1000GM SODIUM)",
+          "quantity": "1",
+          "unit_price": "66.63",
+          "gross_amount": "66.63",
+          "discount": ".00",
+          "amount": "66.63"
+        },
+        {
+          "sr_no": "4",
+          "description": "NS 500M1 -EASY PORT(Sodium chloride 0.9 %W/V)",
+          "quantity": "1",
+          "unit_price": "93.93",
+          "gross_amount": "93.93",
+          "discount": ".00",
+          "amount": "93.93"
+        },
+        {
+          "sr_no": "5",
+          "description": "POLYBION A INJ 2ML(THIAMINI 10MG 100MG RIBOFLAVIN 4MG PYRIDOXINE4MG 100 NICOTINAMIDE40MGCYNACOBALAMINI8MGD-PANTHENOL 6MG BENZYL ALCCHOL 0.9%W/V)",
+          "quantity": "1",
+          "unit_price": "25.78",
+          "gross_amount": "25.78",
+          "discount": ".00",
+          "amount": "25.78"
+        },
+        {
+          "sr_no": "6",
+          "description": "SYRINGE 10ML(Surgicals -)",
+          "quantity": "2",
+          "unit_price": "13.30",
+          "gross_amount": "26.60",
+          "discount": ".00",
+          "amount": "26.60"
+        }
+      ],
+      "bill_summary": {
+        "total_amount": "487"
+      }
+    },
+    {
+      "bill_number": "C135336",
+      "bill_category": "Medicine Bill",
+      "document_title": "Medicine Bill",
+      "charges": [
+        {
+          "sr_no": "1",
+          "description": "SYRINGES 1ML(Surgicals -)",
+          "quantity": "1",
+          "unit_price": "10.23",
+          "gross_amount": "10.23",
+          "discount": ".00",
+          "amount": "10.23"
+        }
+      ],
+      "bill_summary": {
+        "total_amount": "10"
+      }
+    },
+    {
+      "bill_number": "C135326",
+      "bill_category": "Medicine Bill",
+      "document_title": "Medicine Bill",
+      "charges": [
+        {
+          "sr_no": "1",
+          "description": "3 WAY 10CMS EXTENSION(Surgicals -)",
+          "quantity": "1",
+          "unit_price": "262.50",
+          "gross_amount": "262.50",
+          "discount": ".00",
+          "amount": "262.50"
+        },
+        {
+          "sr_no": "2",
+          "description": "MONOCEF 1GM INJECTION(CEFTRIAXONE 1000GM SODIUM)",
+          "quantity": "1",
+          "unit_price": "66.63",
+          "gross_amount": "66.63",
+          "discount": ".00",
+          "amount": "66.63"
+        },
+        {
+          "sr_no": "3",
+          "description": "SYRINGE 10ML(Surgicals -)",
+          "quantity": "2",
+          "unit_price": "13.30",
+          "gross_amount": "26.60",
+          "discount": ".00",
+          "amount": "26.60"
+        }
+      ],
+      "bill_summary": {
+        "total_amount": "356"
+      }
+    },
+    {
+      "bill_number": "C135308",
+      "bill_category": "Medicine Bill",
+      "document_title": "Medicine Bill",
+      "charges": [
+        {
+          "sr_no": "1",
+          "description": "BIOVERT-16 MG TAB(BETAHISTINE HYDROCHLORIDE 16 MG)",
+          "quantity": "3",
+          "unit_price": "9.87",
+          "gross_amount": "29.61",
+          "discount": ".00",
+          "amount": "29.61"
+        },
+        {
+          "sr_no": "2",
+          "description": "EASYFIX TRANSPARENT(DISPOSIBLE)",
+          "quantity": "1",
+          "unit_price": "75.00",
+          "gross_amount": "75.00",
+          "discount": ".00",
+          "amount": "75.00"
+        },
+        {
+          "sr_no": "3",
+          "description": "GLOVES POWDER FREE MEDIUM",
+          "quantity": "10",
+          "unit_price": "10.00",
+          "gross_amount": "100.00",
+          "discount": ".00",
+          "amount": "100.00"
+        },
+        {
+          "sr_no": "4",
+          "description": "GLOVES POWDER FREE SMALL",
+          "quantity": "8",
+          "unit_price": "10.00",
+          "gross_amount": "80.00",
+          "discount": ".00",
+          "amount": "80.00"
+        },
+        {
+          "sr_no": "5",
+          "description": "HANDRUB 100 ML(SOLUTION)",
+          "quantity": "1",
+          "unit_price": "150.00",
+          "gross_amount": "150.00",
+          "discount": ".00",
+          "amount": "150.00"
+        },
+        {
+          "sr_no": "6",
+          "description": "IV CANNULA NO 20(Surgicals -)",
+          "quantity": "1",
+          "unit_price": "200.00",
+          "gross_amount": "200.00",
+          "discount": ".00",
+          "amount": "200.00"
+        }
+      ],
+      "bill_summary": {
+        "total_amount": "1176"
+      }
+    }
+  ],
+  "raw_summary": "Page 1 of an IP bill from MAGJ Hospital for patient Ammini Thankappan, showing multiple medicine sub-bills with itemized charges, quantities, rates, and net amounts, along with patient and admission details.",
+  "bill_category": "pharmacy_bill"
+}

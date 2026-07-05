@@ -1,0 +1,47 @@
+{
+  "source_pages": [
+    2
+  ],
+  "primary_diagnosis": "EPISTOMY DELIVERY",
+  "procedures": [
+    "Episiotomy"
+  ],
+  "severity": "Mild",
+  "length_of_stay": "2",
+  "treating_doctor": "B.L. Sarada Devi",
+  "department": "Obstetrics and Gynecology",
+  "pre_existing_diseases": [],
+  "treatment": "Safe institutional delivery with episiotomy, patient condition stable and satisfactory at discharge.",
+  "medications": [
+    {
+      "name": "Tab. Cefium BD",
+      "dosage": "1[M]",
+      "frequency": "BD",
+      "duration": "1[N]"
+    },
+    {
+      "name": "Tab. Rantac BD",
+      "dosage": "1[M]",
+      "frequency": "BD",
+      "duration": "1[N]"
+    },
+    {
+      "name": "Tab. Metrogyl TID",
+      "dosage": "1[M]",
+      "frequency": "TID",
+      "duration": "1[AF]----1[N]"
+    },
+    {
+      "name": "Tab. Voveron BD",
+      "dosage": "1[M]",
+      "frequency": "BD",
+      "duration": "1[N]"
+    },
+    {
+      "name": "Syp. Cremaffin",
+      "dosage": "",
+      "frequency": "",
+      "duration": ""
+    }
+  ]
+}

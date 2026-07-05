@@ -1,0 +1,28 @@
+{
+  "bills": [
+    {
+      "bill_id": "supporting_interim_bill_1",
+      "category": "supporting_interim_bill",
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "merged_from": 9,
+      "total_charges": 216,
+      "duplicates_removed": 0,
+      "total_amount": "43087.00"
+    }
+  ],
+  "category_totals": {
+    "supporting_interim_bill": 43087.0
+  },
+  "grand_total": 43087.0,
+  "total_bills": 1
+}

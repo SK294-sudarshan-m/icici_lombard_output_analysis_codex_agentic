@@ -1,0 +1,45 @@
+{
+  "bills": [
+    {
+      "bill_id": "final_bill_1",
+      "category": "final_bill",
+      "pages": [
+        1
+      ],
+      "merged_from": 1,
+      "total_charges": 13,
+      "duplicates_removed": 0,
+      "total_amount": "56538.00"
+    },
+    {
+      "bill_id": "supporting_interim_bill_1",
+      "category": "supporting_interim_bill",
+      "pages": [
+        6
+      ],
+      "merged_from": 1,
+      "total_charges": 12,
+      "duplicates_removed": 0,
+      "total_amount": "8575"
+    },
+    {
+      "bill_id": "pharmacy_bill_1",
+      "category": "pharmacy_bill",
+      "pages": [
+        7,
+        8
+      ],
+      "merged_from": 2,
+      "total_charges": 76,
+      "duplicates_removed": 0,
+      "total_amount": "16457.18"
+    }
+  ],
+  "category_totals": {
+    "final_bill": 56538.0,
+    "supporting_interim_bill": 8575.0,
+    "pharmacy_bill": 16457.18
+  },
+  "grand_total": 81570.18,
+  "total_bills": 3
+}

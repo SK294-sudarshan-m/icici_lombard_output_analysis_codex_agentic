@@ -1,0 +1,64 @@
+{
+  "claim_no": null,
+  "llm_remarks": null,
+  "merged_doc_uri": "",
+  "processed_time_in_secs": 67.38,
+  "stage_confidence": null,
+  "llm_case_verdict": {
+    "id": "ffec685f-22b2-4c93-ae49-7e499fc4d3df",
+    "timestamp": "2026-07-04T12:53:12.961383+00:00",
+    "bill_extraction_attempts": 1,
+    "extracted_total_amount": 33900.0,
+    "calculated_total_amount": 33900.0,
+    "calculated_difference": 0.0,
+    "calculated_match": true,
+    "bill_extraction_is_accurate": true,
+    "bill_extraction_accuracy_reason": null,
+    "i3_total_amount": 0.0,
+    "i3_total_difference": 33900.0,
+    "i3_total_match": false,
+    "non_payable_amount": 0.0,
+    "payable_amount": 33900.0,
+    "i3_non_payable_amount": 0.0,
+    "i3_payable_amount": 0.0,
+    "i3_non_payable_difference": 0.0,
+    "i3_payable_difference": 33900.0,
+    "i3_non_payable_match": true,
+    "i3_payable_match": false,
+    "nme_classification_conclusive": true,
+    "overall_confidence": 1.0,
+    "final_case_verdict": null,
+    "billing_type": "Surgery",
+    "billing_type_confidence": 0.95,
+    "billing_type_reason": "OT/surgeon charges present + DS confirms procedure(s): Episiotomy",
+    "unique_bill_count": 1,
+    "bill_item_count": 1,
+    "bills_scout_briefing": null
+  },
+  "llm_response": {
+    "bills_classified": [
+      {
+        "bill_items": [
+          {
+            "display_order": 0,
+            "sr_no": "1",
+            "page_number": 1,
+            "item_name": "SURGERY PACKAGES CHARGES: NORMAL DELIVERY",
+            "amount": 33900.0,
+            "standard_item_name": "doctor charges - doctor charges",
+            "bill_type_id": 500530,
+            "bill_type": "Surgeon Charges",
+            "bill_sub_type_id": 1011539,
+            "bill_sub_type": "Procedure or Surgery or Operation Charges",
+            "is_payable": true,
+            "closest_item_name": "Normal Delivery - Surgeon Charges",
+            "payable_value_source": "llm_selected",
+            "llm_confidence": 1.0,
+            "llm_confidence_reason": "All extracted values (description, quantity, unit_price, amount) exactly match the image. The bill_type 'Surgeon Charges' and sub_bill_type 'Procedure or Surgery or Operation Charges' are appropriate for 'NORMAL DELIVERY' under 'SURGERY PACKAGES CHARGES'.",
+            "textract_confidence": 1.0
+          }
+        ]
+      }
+    ]
+  }
+}

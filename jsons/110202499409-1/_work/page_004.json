@@ -1,0 +1,25 @@
+{
+  "page": 4,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "MR.VENKATACHALAM.M",
+    "ip_number": "S2627LVS/000279",
+    "uhid": "215507"
+  },
+  "admission": {
+    "date_of_admission": "08/06/2026 10:00 AM",
+    "date_of_discharge": "08/06/2026 05:00 PM",
+    "treating_doctor": "Dr.L.V. SHANMUGHANATHAN MS.DO",
+    "department": "OPHTHALMOLOGY"
+  },
+  "hospital": {
+    "name": "L.V.S. EYE HOSPITAL",
+    "address": "13-A, Palaniappa Street, Opposite to G.H, Erode - 638 009",
+    "contact": "82200 07131, 82200 17131"
+  },
+  "raw_summary": "Discharge summary for patient MR.VENKATACHALAM.M detailing admission and discharge on 08/06/2026, diagnosis of right eye cataract, and treatment with MICS phaco and Acrysof IQ Toric Monofocal IOL implantation under topical anaesthesia."
+}

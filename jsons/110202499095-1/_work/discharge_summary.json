@@ -1,0 +1,37 @@
+{
+  "source_pages": [
+    2,
+    3,
+    4
+  ],
+  "primary_diagnosis": "Pitta dosha",
+  "procedures": [
+    "Netra tarpan",
+    "Sthanik lep",
+    "Abhyanga swedan",
+    "Snehpan",
+    "Dhara full body",
+    "Anjana",
+    "Virechan"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "6",
+  "treating_doctor": "Vivek Jyoti",
+  "department": "Ayurveda",
+  "pre_existing_diseases": [],
+  "treatment": "Ayurveda treatment including Netra tarpan, Sthanik lep, Abhyanga swedan, Snehpan, Dhara full body, Anjana, and Virechan for Pitta dosha with improvement in symptoms.",
+  "medications": [
+    {
+      "name": "Avipattikar churna",
+      "dosage": "2 gm",
+      "frequency": "twice daily before food",
+      "duration": "35 days"
+    },
+    {
+      "name": "Mahatriphala ghreetam",
+      "dosage": "1 drop",
+      "frequency": "each eye",
+      "duration": "35 days"
+    }
+  ]
+}

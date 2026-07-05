@@ -1,0 +1,25 @@
+{
+  "page": 2,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "INT2257624",
+    "page_indicator": "Page 2 of 4",
+    "document_title": "Interim Bill"
+  },
+  "patient": {
+    "name": "Mrs. NALAMOLU SATYAVATHI",
+    "ip_number": "VHMIP66521"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD G.I.C.LTD"
+  },
+  "bill_summary": {
+    "gross_amount": "79661.00",
+    "total_amount": "79661.00",
+    "tax": "0.00",
+    "net_payable": "79661.00",
+    "balance": "79661.00"
+  },
+  "raw_summary": "Page 2 of 4 of an Interim Bill for Mrs. NALAMOLU SATYAVATHI (IP No: VHMIP66521, Bill No: INT2257624) showing a total interim bill amount of 79,661.00 with no tax or advance paid, payable to ICICI Lombard G.I.C.LTD, and includes a disclaimer that the final bill may vary.",
+  "bill_category": "final_bill"
+}

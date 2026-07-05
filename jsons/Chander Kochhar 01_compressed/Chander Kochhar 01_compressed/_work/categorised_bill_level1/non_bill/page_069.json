@@ -1,0 +1,24 @@
+{
+  "page": 69,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "BEDSORE RECORD"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAB",
+    "age": "31",
+    "gender": "Female",
+    "uhid": "192673"
+  },
+  "admission": {
+    "date_of_admission": "21/02/25",
+    "department": "A & E Department"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "11th Road, River IWI, Mumbai 400 052",
+    "contact": "For Appointments: 022 4510 8989 / 6154 8969 For Emergency: 022 2646 9915 / 6174 6099"
+  },
+  "raw_summary": "This page is a Bedsore Record from P.D. Hinduja Hospital documenting a patient's pressure ulcer status upon admission, including diagnosis, treatment provided, and condition on discharge, with handwritten notes and signatures from nursing staff."
+}

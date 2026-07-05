@@ -1,0 +1,70 @@
+{
+  "page": 6,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "26000115",
+    "bill_date": "08/06/2026",
+    "page_indicator": "",
+    "document_title": "Final Bill/Receipt"
+  },
+  "patient": {
+    "name": "Mr. V PRADYUMMA YADAV",
+    "age": "13 Y",
+    "gender": "MALE",
+    "uhid": "ROH - 26 - 51660",
+    "ip_number": "ROIP - 26 - 6423",
+    "ward": "SINGLE ROOM",
+    "bed_number": "208"
+  },
+  "admission": {
+    "date_of_admission": "06/06/2026 11:01 AM",
+    "date_of_discharge": "08/06/2026 3.42 PM",
+    "length_of_stay": "",
+    "admission_type": "ICICI LOMBARD",
+    "referring_doctor": "",
+    "treating_doctor": "Dr.M.V.Hari Prasad",
+    "department": "Orthopaedics And Joint Replacement surgeon"
+  },
+  "hospital": {
+    "name": "ROOPA ORTHOPAEDIC & MULTI SPECIALITY HOSPITAL",
+    "address": "Ramayanapuvari St, Opp. High School Road Bus Stop, Sivasankarnagar, Patamata, Bandar Road, VIJAYAWADA - 520 010.",
+    "contact": "0866-2473108"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "20400.00",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "SERVICES AGREED PACKAGE",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "20400.00",
+      "discount": "",
+      "amount": "20400.00",
+      "source_line_index": 0,
+      "charge_type": "line_item"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "20400.00",
+    "total_amount": "20400.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "20400.00",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": "0.00"
+  },
+  "sub_bills": [],
+  "raw_summary": "Final bill/receipt from Roopa Orthopaedic & Multi Speciality Hospital for Mr. V Pradyumma Yadav, showing a single agreed package charge of Rs. 20,400.00 with no advance paid and net payable of Rs. 20,400.00, issued on 08/06/2026.",
+  "bill_category": "final_bill",
+  "pipeline_category": "final_bill"
+}

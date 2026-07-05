@@ -1,0 +1,17 @@
+{
+  "page": 4,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "document_title": "Following Details are mandatory for Claim Settlement"
+  },
+  "admission": {
+    "date_of_discharge": "06-JUN-26"
+  },
+  "insurance": {
+    "claimed_amount": "16400",
+    "approved_amount": "16400",
+    "tpa": "ICICI Lombard GIC Ltd."
+  },
+  "raw_summary": "This page is a pre-authorization settlement summary from ICICI Lombard, showing the final bill amount of Rs. 16400 for discharge on 06-JUN-26, with Rs. 0 paid by the patient, and includes terms and conditions for cashless authorization."
+}

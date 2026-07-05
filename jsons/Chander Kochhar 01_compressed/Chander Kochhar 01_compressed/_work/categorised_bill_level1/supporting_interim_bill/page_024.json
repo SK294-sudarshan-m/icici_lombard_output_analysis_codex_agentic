@@ -1,0 +1,44 @@
+{
+  "page": 24,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "18764",
+    "bill_date": "2025-02-21",
+    "page_indicator": "24",
+    "document_title": "AXIS BANK SALE RECEIPT"
+  },
+  "patient": {
+    "name": "MR MANU KOCHHAR"
+  },
+  "hospital": {
+    "name": "P.d. Hinduja Hospital Khar",
+    "address": "plot No. 730 And 724 Mumbai"
+  },
+  "insurance": {
+    "claimed_amount": "50000.00"
+  },
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "BASE AMOUNT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "50000.00",
+      "discount": "",
+      "amount": "50000.00",
+      "source_line_index": 0
+    }
+  ],
+  "bill_summary": {
+    "gross_amount": "50000.00",
+    "total_amount": "50000.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "50000.00",
+    "amount_paid": "50000.00",
+    "balance": "0.00",
+    "advance_paid": ""
+  },
+  "raw_summary": "This is a customer copy of an Axis Bank payment receipt for Rs.50,000.00 dated 2025-02-21, processed via Mastercard EMV with PIN at P.d. Hinduja Hospital Khar, Mumbai, under invoice number 18764.",
+  "pipeline_category": "supporting_interim_bill"
+}

@@ -1,0 +1,50 @@
+=== PAGE 3 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3811
+Tokens Out: 311
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 3,
+  "page_type": "non_bill",
+  "non_bill_type": "prescription",
+  "document_markers": {
+    "page_indicator": "Page # 3"
+  },
+  "medications": [
+    {
+      "name": "TAB.CEFUROXIME 500MG",
+      "dosage": "1-0-1",
+      "frequency": "",
+      "duration": "5 DAYS",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "TAB.ESPRA 40MG",
+      "dosage": "1-0-0",
+      "frequency": "",
+      "duration": "10 DAYS",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "SYP.TUSQ",
+      "dosage": "5ML",
+      "frequency": "TDS",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "CAP.COMBINORM PLUS",
+      "dosage": "1-0-0",
+      "frequency": "",
+      "duration": "3 DAYS",
+      "quantity": "",
+      "amount": ""
+    }
+  ],
+  "raw_summary": "Page 3 contains a discharge advice section listing prescribed medications with dosage and duration, along with a stool routine examination report showing presence of pus cells, mucus, bacteria, RBC, and cyst."
+}

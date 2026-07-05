@@ -1,0 +1,550 @@
+{
+  "schema_version": "1.0",
+  "request_id": "a3aedb42",
+  "source_filename": "110202497170-1.pdf",
+  "generated_at": "2026-07-04T12:46:43.104737+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker. Agents needing review: Administrative Review. 7 issue(s) raised (2 high, 2 medium, 3 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "Mr SHER BAHADUR SINGH",
+      "age": "66 Years 11 Months",
+      "gender": "MALE",
+      "uhid": "RTN0000089812",
+      "ip_number": "IP-001",
+      "ward": "GENERAL-WARD",
+      "bed_number": "R-202-24"
+    },
+    "admission": {
+      "date_of_admission": "08/06/2026 09:49",
+      "date_of_discharge": "8th June 2026",
+      "length_of_stay": "",
+      "admission_type": "General",
+      "referring_doctor": "",
+      "treating_doctor": "Dr. Pankaj Rupauliha",
+      "department": ""
+    },
+    "hospital": {
+      "name": "ROTARY TECHNO NETRALAYA SALTLAKE",
+      "address": "CN 5, Sector V, Kolkata 700 091, West Bengal",
+      "contact": "+91 33 3011 5000, +91 33 23673312/13/14, +91 9874763763"
+    },
+    "insurance": {
+      "company": "ICICI LOMBARD HEALTH CARE",
+      "policy_number": "4016/X/278194070/03/000",
+      "member_id": "110202497170",
+      "claimed_amount": "25000.00",
+      "approved_amount": "25000.00",
+      "tpa": ""
+    },
+    "total_pages": 2,
+    "charge_count": 1,
+    "diagnosis": "LEFT EYE - POSTERIOR SUBCAPSULAR CATARACT + NUCLEAR SCLEROSIS",
+    "treatment": "Surgical management with MICS and IOL implantation in the left eye."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 3 of 13 mandatory documents are present (23.1% complete, status critical). Critical documents missing: Authorization Letter. The claim appears to be Cashless (confidence 0.75, llm). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Authorization Letter.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Authorization Letter from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "9 mandatory document(s) missing: Pre Authorization Request Note, Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Consultation Papers, Others.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 10 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 0,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent reports 13 mandatory documents but the rubric expects 16; this mismatch invalidates the completeness percent and status. The 'Authorization Letter' is flagged as critical and missing, but no evidence in the 2-page file supports its mandatory status for this cataract surgery claim. The claim type 'Cashless' is confidently assigned without keyword evidence from the pages, which only show discharge summary and bill — insufficient to justify cashless classification.",
+        "suggestions": [
+          "Reconcile mandatory document count to 16 per rubric; adjust completeness percent and status accordingly.",
+          "Re-evaluate 'Authorization Letter' as critical — it may not be mandatory for this procedure; justify based on policy or procedure guidelines.",
+          "Downgrade claim type confidence or mark as 'Unable to detect' since no cashless indicators (e.g., pre-auth number, insurer stamp) are visible in the provided pages."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.318,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "a3aedb42",
+        "source_filename": "110202497170-1.pdf",
+        "generated_at": "2026-07-04T12:46:31.289647Z",
+        "total_pages": 2,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Cashless",
+          "detection_method": "llm",
+          "confidence": 0.75,
+          "cashless_matches": [],
+          "reimbursement_matches": []
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Claim Form",
+            "Final Hospital Bills"
+          ],
+          "missing": [
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Investigation Reports",
+            "Pharmacy or Medicine Bills",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Consultation Papers",
+            "Others"
+          ],
+          "missing_critical": [
+            "Authorization Letter"
+          ],
+          "found_count": 3,
+          "missing_count": 10,
+          "total_mandatory": 13,
+          "completeness_percent": 23.1,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Claim Form": "fuzzy",
+            "Final Hospital Bills": "structured"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Authorization Letter before adjudication.",
+            "Request the following missing documents: Authorization Letter, Pre Authorization Request Note, Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Consultation Papers, Others."
+          ]
+        },
+        "non_mandatory_found": [],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "discharge_summary",
+            "start_page": 1,
+            "end_page": 1,
+            "pages": [
+              1
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "bill_detail_statement",
+            "start_page": 2,
+            "end_page": 2,
+            "pages": [
+              2
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=SKIPPED. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.; period_compliance: admission='08/06/2026 09:49', discharge='8th June 2026' could not be parsed..",
+      "issues": [
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "period_compliance: admission='08/06/2026 09:49', discharge='8th June 2026' could not be parsed.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 3,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent correctly flagged critical checks (insured, policy_dates) as SKIPPED due to missing data, and set overall_status to WARN — which aligns with rubric rules. However, the 'identity' check is misleadingly marked PASS despite the claimant’s name being inconsistent with the policyholder (insured_name is null), which is a false negative risk. The agent should not PASS identity without confirming insured match.",
+        "suggestions": [
+          "Reclassify 'identity' check as SKIPPED or WARN if insured_name is missing — identity verification requires matching patient to insured, not just document consistency.",
+          "Clarify in evidence that 'identity' cannot be fully validated without insured_name, even if patient names match across documents."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "Mr SHER BAHADUR SINGH",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "Mr SHER BAHADUR SINGH",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "SHER BAHADUR SINGH",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_2",
+                  "patient_name": "Mr SHER BAHADUR SINGH",
+                  "score": 1.0,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "Mr SHER BAHADUR SINGH",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "SKIPPED",
+            "severity": "ADVISORY",
+            "evidence": "admission='08/06/2026 09:49', discharge='8th June 2026' could not be parsed.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_hospitalization_dates",
+              "details": "admission='08/06/2026 09:49', discharge='8th June 2026' could not be parsed."
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "period_compliance: admission='08/06/2026 09:49', discharge='8th June 2026' could not be parsed."
+        ],
+        "inputs": {
+          "patient_name": "Mr SHER BAHADUR SINGH",
+          "insured_name": null,
+          "admission_date": "08/06/2026 09:49",
+          "discharge_date": "8th June 2026",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:46:34.441527+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "pass",
+      "summary": "Medical admissibility passed: billed treatment is consistent with the clinical record. Treatment validity score 1.00; recommended action APPROVE. 1 charge(s): valid=1, partial=0, invalid=0, review=0. Treatment process appears correct: Surgical intervention (MICS + IOL) is appropriate for moderate posterior subcapsular cataract with nuclear sclerosis. Major conflicts: Treating doctor mismatch between billing and discharge summary: Dr. Pankaj Rupauliha vs Pankaj Rupauliha. PED validation: INSUFFICIENT / UNKNOWN across 0 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Treating doctor mismatch between billing and discharge summary: Dr. Pankaj Rupauliha vs Pankaj Rupauliha",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 0,
+        "total": 1
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent incorrectly marked the overall verdict as VALID despite flagging a 'doctor mismatch' conflict and having INSUFFICIENT PED validation. While the clinical appropriateness of MICS + IOL is sound, the doctor name discrepancy (even if minor) and lack of PED inputs should trigger a REVIEW status, not APPROVE. The treatment_validity_score of 1.0 is overconfident given these unresolved data gaps.",
+        "suggestions": [
+          "Downgrade overall_verdict to REVIEW due to unresolved doctor name conflict and INSUFFICIENT PED validation.",
+          "Adjust treatment_validity_score to 0.70–0.80 to reflect uncertainty from missing PED inputs and administrative mismatch.",
+          "Clarify in treatment_process_evidence that doctor name discrepancy, while not clinically invalidating, requires administrative verification before final approval."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 2.333,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "a3aedb42",
+        "generated_at": "2026-07-04T12:46:38.613715Z",
+        "overall_verdict": "VALID",
+        "treatment_validity_score": 1.0,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "FAIL",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "Treating doctor mismatch between billing and discharge summary: Dr. Pankaj Rupauliha vs Pankaj Rupauliha"
+        ],
+        "recommended_action": "APPROVE",
+        "treatment_process_correct": true,
+        "treatment_process_explanation": "Surgical intervention (MICS + IOL) is appropriate for moderate posterior subcapsular cataract with nuclear sclerosis.",
+        "treatment_process_confidence": 0.95,
+        "treatment_process_evidence": [
+          "Diagnosis supports surgical management for visual impairment.",
+          "MICS + IOL implantation is standard of care for cataract of this severity.",
+          "No contradictory lab/investigation evidence provided.",
+          "Medications align with postoperative care (antibiotic, anti-inflammatory, analgesic).",
+          "Minor doctor name discrepancy does not invalidate clinical appropriateness."
+        ],
+        "lab_evidence_count": 0,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "UNKNOWN",
+          "confidence": 0.0,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "pre_existing_diseases",
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "NO_PED_FOUND_IN_DISCHARGE_SUMMARY"
+          ],
+          "ped_items": []
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "pass",
+      "summary": "Financial adjudication passed: the bill reconciles and is fully payable. Of 25000.00 billed across 1 line item(s): payable 25000.00 (1), non-payable 0.00 (0), undetermined 0.00 (0). Recommended action APPROVE; admissible amount 25000.00. Billing type assessed as Package. Figures derived via the consolidated path.",
+      "issues": [],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent incorrectly assigned a VALID verdict despite the absence of insurer figures (claimed/sanctioned amounts), which violates Rule 4 — VALID requires alignment with sanctioned amounts when available. The payable total (25,000) is not benchmarked against any insurer-sanctioned figure, creating risk of over-payment. While arithmetic and reconciliation are correct, the verdict is premature without insurer comparison.",
+        "suggestions": [
+          "Change overall_verdict to INVESTIGATION_REQUIRED due to missing insurer figures.",
+          "Add a note explicitly stating that approval is contingent on insurer-sanctioned amount matching 25,000.00.",
+          "Flag the insurer_comparison section to require manual validation before final approval."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "a3aedb42",
+        "generated_at": "2026-07-04T12:46:40.792683Z",
+        "mode": "consolidated",
+        "overall_verdict": "VALID",
+        "recommended_action": "APPROVE",
+        "final_admissible_amount": 25000.0,
+        "totals": {
+          "total_billed": 25000.0,
+          "payable_total": 25000.0,
+          "non_payable_total": 0.0,
+          "unknown_total": 0.0,
+          "charge_count": 1,
+          "payable_count": 1,
+          "non_payable_count": 0,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 25000.0,
+          "recomputed_total": 25000.0,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 25000.0,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 25000.0,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 0.0,
+          "non_payable_vs_disallowed_match": true
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Package Charges",
+            "billed": 25000.0,
+            "payable": 25000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          }
+        ],
+        "billing_type": "Package",
+        "overall_confidence": 1.0,
+        "flagged_count": 0,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "Package MICRO COAXIAL CATARACT SURGERY MCCS/MICS+IOL(FIQ) PKG",
+            "amount": 25000.0,
+            "bill_type": "Package Charges",
+            "sub_bill_type": "Package Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          }
+        ],
+        "notes": [
+          "Bill reconciles and every line item is payable."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 2.655,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 2,
+      "medium": 2,
+      "low": 3,
+      "total": 7
+    }
+  }
+}

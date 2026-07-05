@@ -1,0 +1,20 @@
+{
+  "page": 3,
+  "bill_category": "procedure_bill",
+  "is_final_bill": true,
+  "is_detailed_final": false,
+  "charges": [
+    {
+      "index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 2,
+      "charge_type": "line_item"
+    }
+  ]
+}

@@ -1,0 +1,1340 @@
+{
+  "schema_version": "1.0",
+  "request_id": "d787f70e",
+  "source_filename": "110101016434-2.pdf",
+  "generated_at": "2026-07-04T12:42:06.548560+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker. Agents needing review: Administrative Review, Financial Adjudication. 9 issue(s) raised (2 high, 4 medium, 3 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "SUNANDA GAWALI",
+      "age": "",
+      "gender": "",
+      "uhid": "100597000",
+      "ip_number": "0591/26",
+      "ward": "ICU",
+      "bed_number": ""
+    },
+    "admission": {
+      "date_of_admission": "03-06-2026",
+      "date_of_discharge": "",
+      "length_of_stay": "",
+      "admission_type": "",
+      "referring_doctor": "",
+      "treating_doctor": "",
+      "department": ""
+    },
+    "hospital": {
+      "name": "Agarwal Maternity & General Hospital",
+      "address": "Plot No. 23, 45/1, 2 & 5, Sangharsh Chowk, Kharadi Road, Chandan Nagar, Pune - 411014.",
+      "contact": ""
+    },
+    "insurance": {
+      "company": "ICICI LOMBARD HEALTH INSURANCE CO LTD",
+      "policy_number": "",
+      "member_id": "100597000",
+      "claimed_amount": "288652.71",
+      "approved_amount": "288652.71",
+      "tpa": "ICICI LOMBARD TPA"
+    },
+    "total_pages": 1,
+    "charge_count": 34,
+    "diagnosis": "",
+    "treatment": ""
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 4 of 13 mandatory documents are present (30.8% complete, status critical). Critical documents missing: Authorization Letter. The claim appears to be Cashless (confidence 0.75, llm). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Authorization Letter.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Authorization Letter from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "8 mandatory document(s) missing: Claim Form, Pre Authorization Request Note, Investigation Reports, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 9 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 0,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent reports 13 mandatory documents but rubric requires 16; inventory integrity fails. 'Discharge Summary' and 'Consultation Papers' are claimed as found but no evidence (e.g., structured fields or page markers) supports this in a 1-page bill-only file. Claim type 'Cashless' is confidently assigned without supporting keywords or authorization indicators. Completeness status 'critical' is over-applied given only 1 page exists — this may reflect document scarcity, not necessarily missing docs.",
+        "suggestions": [
+          "Correct mandatory document count to 16 and reconcile found/missing totals accordingly.",
+          "Re-evaluate 'Discharge Summary' and 'Consultation Papers' as missing unless explicit page content or structured data confirms their presence.",
+          "Downgrade claim type confidence or mark as 'Unable to detect' since no authorization or pre-approval keywords are visible in a single bill page.",
+          "Reassess completeness status: with only 1 page, 'INCOMPLETE' may be appropriate, but 'critical' should be reserved for cases where critical docs like Final Bills or Discharge Summary are absent — here, even those are unconfirmed."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.406,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "d787f70e",
+        "source_filename": "110101016434-2.pdf",
+        "generated_at": "2026-07-04T12:41:50.128528Z",
+        "total_pages": 1,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Cashless",
+          "detection_method": "llm",
+          "confidence": 0.75,
+          "cashless_matches": [],
+          "reimbursement_matches": []
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Final Hospital Bills",
+            "Pharmacy or Medicine Bills",
+            "Consultation Papers"
+          ],
+          "missing": [
+            "Claim Form",
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Investigation Reports",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Others"
+          ],
+          "missing_critical": [
+            "Authorization Letter"
+          ],
+          "found_count": 4,
+          "missing_count": 9,
+          "total_mandatory": 13,
+          "completeness_percent": 30.8,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "fuzzy",
+            "Final Hospital Bills": "structured",
+            "Pharmacy or Medicine Bills": "fuzzy",
+            "Consultation Papers": "abbreviation"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Authorization Letter before adjudication.",
+            "Request the following missing documents: Claim Form, Authorization Letter, Pre Authorization Request Note, Investigation Reports, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others."
+          ]
+        },
+        "non_mandatory_found": [
+          "nursing charges",
+          "physiotherapy",
+          "physiotherapy charges",
+          "ecg",
+          "mri",
+          "echo"
+        ],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "bill_detail_statement",
+            "start_page": 1,
+            "end_page": 1,
+            "pages": [
+              1
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=SKIPPED. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.; period_compliance: admission='03-06-2026', discharge='' could not be parsed..",
+      "issues": [
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "period_compliance: admission='03-06-2026', discharge='' could not be parsed.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 3,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The verdict correctly flags critical checks as SKIPPED due to missing data, but misclassifies 'period_compliance' as ADVISORY severity when it should be CRITICAL — hospitalization dates are essential for policy validity. Also, 'insured' check should not be SKIPPED if patient name is present; it should attempt matching against policyholder data or explicitly FAIL if no insured name exists.",
+        "suggestions": [
+          "Reclassify 'period_compliance' check severity from ADVISORY to CRITICAL due to its impact on policy coverage validation.",
+          "Re-evaluate 'insured' check: if insured_name is null but patient_name is present, it should FAIL (not SKIPPED) unless policyholder data is confirmed absent.",
+          "Clarify in evidence why 'identity' passed despite no insured name — this may imply a false negative if insured ≠ patient."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.001,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "SUNANDA GAWALI",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "SUNANDA GAWALI",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "SUNANDA GAWALI",
+                  "score": 1.0,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "SUNANDA GAWALI",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "SKIPPED",
+            "severity": "ADVISORY",
+            "evidence": "admission='03-06-2026', discharge='' could not be parsed.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_hospitalization_dates",
+              "details": "admission='03-06-2026', discharge='' could not be parsed."
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "period_compliance: admission='03-06-2026', discharge='' could not be parsed."
+        ],
+        "inputs": {
+          "patient_name": "SUNANDA GAWALI",
+          "insured_name": null,
+          "admission_date": "03-06-2026",
+          "discharge_date": null,
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:41:54.784456+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "pass",
+      "summary": "Medical admissibility passed: billed treatment is consistent with the clinical record. Treatment validity score 1.00; recommended action APPROVE. 34 charge(s): valid=34, partial=0, invalid=0, review=0. Treatment process could not be confirmed: Insufficient clinical context to validate treatment appropriateness. PED validation: INSUFFICIENT / UNKNOWN across 0 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Treatment process not confirmed: Insufficient clinical context to validate treatment appropriateness.",
+          "severity": "medium",
+          "code": "medical.treatment_process",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 0,
+        "total": 1
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent incorrectly assigned a VALID verdict and 1.00 treatment validity score despite failing to confirm diagnosis, treatment process, or PED status — all critical for clinical admissibility. This creates a false negative risk: charges may be clinically unsupported yet approved. The treatment process is explicitly flagged as unverifiable, yet no charges were marked REVIEW or PARTIAL, violating Rule 5.",
+        "suggestions": [
+          "Downgrade overall_verdict to REVIEW and treatment_validity_score to 0.50 or lower to reflect missing clinical evidence.",
+          "Mark at least some charges as REVIEW (not VALID) due to absence of diagnosis, severity, or treatment narrative.",
+          "Ensure PED validation status triggers REVIEW action when inputs are missing, not UNKNOWN with APPROVE."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 1.77,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "d787f70e",
+        "generated_at": "2026-07-04T12:42:00.302620Z",
+        "overall_verdict": "VALID",
+        "treatment_validity_score": 1.0,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "PASS",
+          "diagnosis_present": "FAIL"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 1,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 2,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 3,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 4,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 5,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 6,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 7,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 8,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 9,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 10,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 11,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 12,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 13,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 14,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 15,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 16,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 17,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 18,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 19,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 20,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 21,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 22,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 23,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 24,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 25,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 26,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 27,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 28,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 29,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 30,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 31,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 32,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 33,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [],
+        "recommended_action": "APPROVE",
+        "treatment_process_correct": false,
+        "treatment_process_explanation": "Insufficient clinical context to validate treatment appropriateness.",
+        "treatment_process_confidence": 0.0,
+        "treatment_process_evidence": [
+          "Diagnosis not specified.",
+          "Severity not documented.",
+          "Treatment narrative missing.",
+          "No procedures or medications listed.",
+          "No lab or investigation evidence provided."
+        ],
+        "lab_evidence_count": 0,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "UNKNOWN",
+          "confidence": 0.0,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "pre_existing_diseases",
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "NO_PED_FOUND_IN_DISCHARGE_SUMMARY"
+          ],
+          "ped_items": []
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "warn",
+      "summary": "Financial adjudication is inconclusive and requires investigation. Of 288652.71 billed across 34 line item(s): payable 274252.71 (32), non-payable 2400.00 (1), undetermined 12000.00 (1). Recommended action INVESTIGATE; admissible amount 274252.71. Billing type assessed as Surgery. Figures derived via the consolidated path.",
+      "issues": [
+        {
+          "message": "1 line item(s) totalling 12000.00 have undetermined payability.",
+          "severity": "medium",
+          "code": "financial.payability_unresolved",
+          "location": null,
+          "suggestion": "Resolve bill-type / payability before final adjudication."
+        },
+        {
+          "message": "1 line item(s) were flagged for review during consolidation.",
+          "severity": "medium",
+          "code": "financial.flagged_lines",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 2,
+        "low": 0,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.85,
+        "rationale": "The agent correctly flags 12,000.00 as undetermined (line 29) and sets verdict to INVESTIGATION_REQUIRED, which is appropriate. However, the final_admissible_amount (274,252.71) incorrectly excludes the undetermined amount but includes the non-payable 2,400.00 in the payable total — this creates an over-payment risk. The payable total should be 274,252.71 minus 2,400.00 if non-payable is truly disallowed, or the non-payable amount should not be included in payable.",
+        "suggestions": [
+          "Recompute payable_total to exclude non_payable_total (2,400.00) — payable should be 271,852.71 if non-payable is truly disallowed.",
+          "Ensure final_admissible_amount equals payable_total (currently 274,252.71 includes non-payable amount).",
+          "Clarify in notes whether the 2,400.00 (Biomedical waste) is correctly classified as non-payable per policy terms, or if it should be re-evaluated."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.003,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "d787f70e",
+        "generated_at": "2026-07-04T12:42:02.732228Z",
+        "mode": "consolidated",
+        "overall_verdict": "INVESTIGATION_REQUIRED",
+        "recommended_action": "INVESTIGATE",
+        "final_admissible_amount": 274252.71,
+        "totals": {
+          "total_billed": 288652.71,
+          "payable_total": 274252.71,
+          "non_payable_total": 2400.0,
+          "unknown_total": 12000.0,
+          "charge_count": 34,
+          "payable_count": 32,
+          "non_payable_count": 1,
+          "unknown_count": 1
+        },
+        "reconciliation": {
+          "extracted_total": 288652.71,
+          "recomputed_total": 288652.71,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 288652.71,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 274252.71,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 2400.0,
+          "non_payable_vs_disallowed_match": false
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Investigation Charges",
+            "billed": 91025.0,
+            "payable": 91025.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 8
+          },
+          {
+            "bill_type": "ICU Charges",
+            "billed": 76500.0,
+            "payable": 76500.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 5
+          },
+          {
+            "bill_type": "Medicines Pharmacy Charges",
+            "billed": 31644.0,
+            "payable": 31644.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 2
+          },
+          {
+            "bill_type": "Procedure Charges",
+            "billed": 28800.0,
+            "payable": 16800.0,
+            "non_payable": 0.0,
+            "unknown": 12000.0,
+            "count": 5
+          },
+          {
+            "bill_type": "Miscellaneous",
+            "billed": 26383.71,
+            "payable": 23983.71,
+            "non_payable": 2400.0,
+            "unknown": 0.0,
+            "count": 3
+          },
+          {
+            "bill_type": "Super Specialist Visit",
+            "billed": 15000.0,
+            "payable": 15000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 2
+          },
+          {
+            "bill_type": "Consultation Visit Charges",
+            "billed": 6300.0,
+            "payable": 6300.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 3
+          },
+          {
+            "bill_type": "ICU Nursing Charges",
+            "billed": 4800.0,
+            "payable": 4800.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Alpha Bed charges",
+            "billed": 4000.0,
+            "payable": 4000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Consumables",
+            "billed": 1500.0,
+            "payable": 1500.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Consumable Charges",
+            "billed": 1450.0,
+            "payable": 1450.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Room Charges",
+            "billed": 1000.0,
+            "payable": 1000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Room Nursing Charges",
+            "billed": 250.0,
+            "payable": 250.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          }
+        ],
+        "billing_type": "Surgery",
+        "overall_confidence": 0.971,
+        "flagged_count": 1,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "ICU Bed charges",
+            "amount": 30000.0,
+            "bill_type": "ICU Charges",
+            "sub_bill_type": "Critical Care Unit/Cardiac ICU/CCU/ICCU",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 2,
+            "description": "ICU Nursing charges",
+            "amount": 4800.0,
+            "bill_type": "ICU Nursing Charges",
+            "sub_bill_type": "ICU Nursing",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 3,
+            "description": "ICU Rmo charges",
+            "amount": 9000.0,
+            "bill_type": "ICU Charges",
+            "sub_bill_type": "ICU Rent",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 4,
+            "description": "ICU Intensivist Charges",
+            "amount": 18000.0,
+            "bill_type": "ICU Charges",
+            "sub_bill_type": "ICU Rent",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 5,
+            "description": "ICU Monitoring Charges",
+            "amount": 12500.0,
+            "bill_type": "ICU Charges",
+            "sub_bill_type": "ICU Rent",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 6,
+            "description": "ICU Oxygen Charges",
+            "amount": 7000.0,
+            "bill_type": "ICU Charges",
+            "sub_bill_type": "ICU Rent",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 7,
+            "description": "Consultant Charges : Dr. Vaibhav-Chestphysician",
+            "amount": 9000.0,
+            "bill_type": "Super Specialist Visit",
+            "sub_bill_type": "Super Specialist Visit",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 8,
+            "description": "Consultant Charges : Dr.Priya-Cardiologist",
+            "amount": 6000.0,
+            "bill_type": "Super Specialist Visit",
+            "sub_bill_type": "Super Specialist Visit",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 9,
+            "description": "Consultant Charges : Dr. Salini-Dietician",
+            "amount": 3000.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 10,
+            "description": "Physiotherapy Charges",
+            "amount": 7500.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 11,
+            "description": "Consultant Charges : Dr.Sanjay-Neurologist",
+            "amount": 3000.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 12,
+            "description": "Anti Decubetus Ulcer Bed Charges",
+            "amount": 4000.0,
+            "bill_type": "Alpha Bed charges",
+            "sub_bill_type": "Water Bed",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 13,
+            "description": "Ward Bed Deluxe Charges",
+            "amount": 1000.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 14,
+            "description": "WARD NURSING CHARGES",
+            "amount": 250.0,
+            "bill_type": "Room Nursing Charges",
+            "sub_bill_type": "Hospital Nursing Charges",
+            "payability": "payable",
+            "resolve_method": "vector_consensus",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 15,
+            "description": "WARD DORCTOR VISIT CHARGES",
+            "amount": 300.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 16,
+            "description": "Ward Housekeeping Charges",
+            "amount": 150.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 17,
+            "description": "Foley's Catheter Charges",
+            "amount": 1500.0,
+            "bill_type": "Consumables",
+            "sub_bill_type": "OT Materials",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 18,
+            "description": "Nebulisation Charges",
+            "amount": 3800.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Nebulisation",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 19,
+            "description": "IV Fluid Charges",
+            "amount": 1000.0,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "vector_consensus",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 20,
+            "description": "Hospital's Drugs / Hospital's Medicines/ Pharmacy",
+            "amount": 30644.0,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 21,
+            "description": "Blood Bag Charges",
+            "amount": 1450.0,
+            "bill_type": "Consumable Charges",
+            "sub_bill_type": "Materials",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 22,
+            "description": "Laboratory charges / Investigation charges",
+            "amount": 33925.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 23,
+            "description": "Bed Side X Ray charges - Chest",
+            "amount": 6000.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 24,
+            "description": "USG / Sonography charges-Abdomen and Pelvis",
+            "amount": 3500.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 25,
+            "description": "ECG charges",
+            "amount": 6000.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 26,
+            "description": "ECG Holter 7 Days Charges",
+            "amount": 16000.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 27,
+            "description": "BSL charges",
+            "amount": 2100.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 28,
+            "description": "Bed Side 2D-ECHO Charges",
+            "amount": 4500.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 29,
+            "description": "Thrombosis Charges",
+            "amount": 12000.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Dressing",
+            "payability": "unknown",
+            "resolve_method": "unresolved",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 30,
+            "description": "Blood Transfusion Charges",
+            "amount": 1500.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Dressing",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 31,
+            "description": "MRI Brain Angiogram / CT HRCT charges",
+            "amount": 19000.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 32,
+            "description": "Casulty Emergency Resuscitation charges",
+            "amount": 4000.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Dressing",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 33,
+            "description": "Biomedical waste charges",
+            "amount": 2400.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "non_payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 34,
+            "description": "Administrative charges",
+            "amount": 23833.71,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 0.0
+          }
+        ],
+        "notes": [
+          "1 line item(s) totalling 12000.00 have undetermined payability and must be resolved before adjudication."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 2.18,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 2,
+      "medium": 4,
+      "low": 3,
+      "total": 9
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "page": 1,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "FB597",
+    "bill_date": "09-JUN-2026.",
+    "page_indicator": "",
+    "document_title": "IP FINAL BILL DETAILED"
+  },
+  "patient": {
+    "name": "MRS. K MOHANA SUDHARANI",
+    "age": "21 Y",
+    "gender": "FEMALE",
+    "uhid": "",
+    "ip_number": "INS597",
+    "ward": "DELUXE",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "07-JUN-2026.",
+    "date_of_discharge": "09-JUN-2026.",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "DR.B.L.SARADA DEVI",
+    "department": "GYNEAC"
+  },
+  "hospital": {
+    "name": "DR.B.JAWAHAR NURSING HOME",
+    "address": "Near RTC Bus Stand, Chimakurthy-523226, Andhra Pradesh",
+    "contact": "0859227258"
+  },
+  "insurance": {
+    "company": "ICICI",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "33900.00",
+    "approved_amount": "33900.00",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "SURGERY PACKAGES CHARGES: NORMAL DELIVERY",
+      "quantity": "1",
+      "unit_price": "33900.00",
+      "gross_amount": "33900.00",
+      "discount": "",
+      "amount": "33900.00",
+      "source_line_index": 0,
+      "charge_type": "line_item"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "0.00",
+    "total_amount": "33900.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "IP Final Bill from Dr. B. Jawahar Nursing Home for Mrs. K Mohana Sudharani, detailing surgery package charges for Normal Delivery amounting to Rs. 33,900.00, with ICICI approval for the same amount.",
+  "bill_category": "detailed_final_bill",
+  "pipeline_category": "detailed_final_bill",
+  "bill_id": "detailed_final_bill_1",
+  "sequence_reason": "Single page"
+}

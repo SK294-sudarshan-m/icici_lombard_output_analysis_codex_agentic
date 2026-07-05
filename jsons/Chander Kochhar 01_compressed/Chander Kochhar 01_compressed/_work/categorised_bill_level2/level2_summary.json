@@ -1,0 +1,60 @@
+{
+  "categories": {
+    "supporting_interim_bill": [
+      {
+        "bill_id": "supporting_interim_bill_1",
+        "pages": [
+          4
+        ],
+        "sequence_reason": "This is a standalone ambulance service bill from Jeevan Ambulance Service with no page numbers or continuation indicators, making it an independent document."
+      },
+      {
+        "bill_id": "supporting_interim_bill_2",
+        "pages": [
+          5
+        ],
+        "sequence_reason": "This is a standalone in-patient deposit receipt from P.D. Hinduja Hospital with no page numbers or continuation indicators, making it an independent document."
+      },
+      {
+        "bill_id": "supporting_interim_bill_3",
+        "pages": [
+          6,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "sequence_reason": "Pages 17 and 18 are a direct continuation of the bill from supporting_interim_bill_3. They share the same Invoice No. (ICO15284), Admission No. (68049), and Patient Name (CHANDER KOCHHAR). The page numbers at the bottom (17 and 18) confirm they follow page 16, completing the itemized list and showing the final Total Bill Amount and Net Payable Amount."
+      },
+      {
+        "bill_id": "supporting_interim_bill_4",
+        "pages": [
+          19
+        ],
+        "sequence_reason": "Page 19 is a standalone Service Voucher (Bill of Supply) for ambulance charges from P.D. Hinduja Hospital. It has a unique Voucher No. (ORE76483/24) and is a separate transaction from the main itemized bill, making it a new, independent group."
+      },
+      {
+        "bill_id": "supporting_interim_bill_5",
+        "pages": [
+          20,
+          21
+        ],
+        "sequence_reason": "Pages 20 and 21 are two separate In-Patient Deposit Receipts from P.D. Hinduja Hospital for the same patient (CHANDER KOCHHAR) and admission (68049), dated the same day (24/02/2025). They are distinct documents for different deposit amounts (Rs. 50,000.00 and Rs. 59,073.00) and are grouped together as they represent related financial transactions for the same admission."
+      },
+      {
+        "bill_id": "supporting_interim_bill_6",
+        "pages": [
+          24
+        ],
+        "sequence_reason": "Page 24 is a standalone credit card payment receipt from Axis Bank for the National Health and Education Society at P.D. Hinduja Hospital. It shows a payment of Rs. 50,000.00 on 2025-02-21, which corresponds to the deposit receipt on page 20 (dated 24/02/2025) for the same patient and admission. However, it is a separate financial transaction document with its own unique identifiers (Invoice No. 18764, TID, etc.) and does not continue any previous bill, making it a new, independent group."
+      }
+    ]
+  },
+  "total_tokens_in": 10059,
+  "total_tokens_out": 1029
+}

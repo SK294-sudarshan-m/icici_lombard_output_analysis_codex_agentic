@@ -1,0 +1,544 @@
+{
+  "schema_version": "1.0",
+  "request_id": "5eb8debc",
+  "source_filename": "110202497866-1.pdf",
+  "generated_at": "2026-07-04T12:48:04.330579+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker. Agents needing review: Administrative Review, Medical Admissibility, Financial Adjudication. 7 issue(s) raised (3 high, 2 medium, 2 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "MRS. SHIKHA GUPTA W/O MR.ADITYA KUMAR GUPTA",
+      "age": "29 YO M 3 D",
+      "gender": "Female",
+      "uhid": "371574",
+      "ip_number": "61149",
+      "ward": "PRIVATE ROOM AC",
+      "bed_number": "PVT-07"
+    },
+    "admission": {
+      "date_of_admission": "05/06/2026 / 6:04 PM",
+      "date_of_discharge": "08/06/2026 / 12:00 PM",
+      "length_of_stay": "",
+      "admission_type": "PRIVATE ROOM AC",
+      "referring_doctor": "",
+      "treating_doctor": "DR. VENKATESH AGRAWAL",
+      "department": ""
+    },
+    "hospital": {
+      "name": "M.P.BIRLA HOSPITAL SATNA",
+      "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005",
+      "contact": "917238907265"
+    },
+    "insurance": {
+      "company": "ICICI LOMBARD",
+      "policy_number": "",
+      "member_id": "",
+      "claimed_amount": "55200.00",
+      "approved_amount": "",
+      "tpa": ""
+    },
+    "total_pages": 3,
+    "charge_count": 0,
+    "diagnosis": "Cholelithiasis",
+    "treatment": "Laparoscopic cholecystectomy performed under general anesthesia."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 4 of 13 mandatory documents are present (30.8% complete, status critical). Critical documents missing: Authorization Letter. The claim appears to be Cashless (confidence 0.75, llm). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Authorization Letter.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Authorization Letter from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "8 mandatory document(s) missing: Pre Authorization Request Note, Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 9 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 0,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent reports 13 mandatory documents but the rubric expects 16; this mismatch invalidates the completeness percent and status. The 'Authorization Letter' is flagged as critical missing, but no evidence in the page summaries or structured data confirms its absence — it may be misclassified or not required for this claim type. The claim type 'Cashless' is confidently assigned without supporting keywords or markers in the output.",
+        "suggestions": [
+          "Reconcile mandatory document count to 16 per rubric; correct found/missing totals and recalculate completeness percent.",
+          "Re-evaluate 'Authorization Letter' as missing — provide explicit evidence from page content or structured fields, or remove from critical if not applicable.",
+          "Revise claim type detection: either provide matched keywords supporting 'Cashless' or downgrade to 'Unable to detect' if evidence is insufficient."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.289,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "5eb8debc",
+        "source_filename": "110202497866-1.pdf",
+        "generated_at": "2026-07-04T12:47:54.099490Z",
+        "total_pages": 3,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Cashless",
+          "detection_method": "llm",
+          "confidence": 0.75,
+          "cashless_matches": [],
+          "reimbursement_matches": []
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Claim Form",
+            "Final Hospital Bills",
+            "Consultation Papers"
+          ],
+          "missing": [
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Investigation Reports",
+            "Pharmacy or Medicine Bills",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Others"
+          ],
+          "missing_critical": [
+            "Authorization Letter"
+          ],
+          "found_count": 4,
+          "missing_count": 9,
+          "total_mandatory": 13,
+          "completeness_percent": 30.8,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Claim Form": "fuzzy",
+            "Final Hospital Bills": "structured",
+            "Consultation Papers": "abbreviation"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Authorization Letter before adjudication.",
+            "Request the following missing documents: Authorization Letter, Pre Authorization Request Note, Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others."
+          ]
+        },
+        "non_mandatory_found": [],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 3,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "discharge_summary",
+            "start_page": 1,
+            "end_page": 2,
+            "pages": [
+              1,
+              2
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "bill_detail_statement",
+            "start_page": 3,
+            "end_page": 3,
+            "pages": [
+              3
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=PASS. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date..",
+      "issues": [
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The verdict correctly flags critical SKIPPED checks for insured and policy_dates, justifying the WARN status. However, the 'period_compliance' check is misleading — it claims 'PASS' while relying on a hospitalization window (2026-05-06 to 2026-07-08) that cannot be validated without policy dates, creating a false sense of compliance. This risks a false negative if the policy was inactive during the claim period.",
+        "suggestions": [
+          "Reclassify 'period_compliance' as SKIPPED or WARN if policy_dates are missing — compliance cannot be verified without policy validity.",
+          "Clarify in advisory notes that 'period_compliance' is contingent on policy_dates being available and valid."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.005,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "MRS. SHIKHA GUPTA W/O MR.ADITYA KUMAR GUPTA",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "MRS. SHIKHA GUPTA W/O MR.ADITYA KUMAR GUPTA",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "MRS. SHIKHA GUPTA W/O MR.ADITYA KUMAR GUPTA",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_3",
+                  "patient_name": "MRS. SHIKHA GUPTA W/O MR.ADITYA KUMAR GUPTA",
+                  "score": 1.0,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "MRS. SHIKHA GUPTA W/O MR.ADITYA KUMAR GUPTA",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "PASS",
+            "severity": "ADVISORY",
+            "evidence": "1 document(s) checked — in-period=1, out-of-period=0, ambiguous=0.",
+            "detail": {
+              "status": "PASS",
+              "documents": [
+                {
+                  "document_name": "PACKAGE BILL",
+                  "type": "bill",
+                  "date": "8/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-06 to 2026-07-08) for type 'bill'."
+                }
+              ],
+              "counts": {
+                "IN_PERIOD": 1,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 0
+              },
+              "total_checked": 1,
+              "hospitalization": {
+                "admission": "2026-06-05",
+                "discharge": "2026-06-08"
+              },
+              "window_config": {
+                "pre_hosp_days": 30,
+                "post_hosp_days": 30
+              }
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+        ],
+        "inputs": {
+          "patient_name": "MRS. SHIKHA GUPTA W/O MR.ADITYA KUMAR GUPTA",
+          "insured_name": null,
+          "admission_date": "05/06/2026 / 6:04 PM",
+          "discharge_date": "08/06/2026 / 12:00 PM",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:47:56.894855+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "warn",
+      "summary": "Medical admissibility is inconclusive and requires investigation. Treatment validity score 0.00; recommended action INVESTIGATE. 0 charge(s): valid=0, partial=0, invalid=0, review=0. Treatment process appears correct: Laparoscopic cholecystectomy is standard for moderate cholelithiasis; medications align with post-op care. Major conflicts: Treating doctor mismatch between billing and discharge summary: DR. VENKATESH AGRAWAL vs Venkatesh Agrawal. PED validation: INSUFFICIENT / UNKNOWN across 0 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Treating doctor mismatch between billing and discharge summary: DR. VENKATESH AGRAWAL vs Venkatesh Agrawal",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 0,
+        "total": 1
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent correctly flags the doctor name mismatch as administrative and not clinically impactful, but incorrectly assigns a treatment_validity_score of 0.00 despite affirming treatment process correctness with 0.95 confidence. This inconsistency misrepresents clinical validity. Also, PED validation is appropriately marked INSUFFICIENT, but the overall verdict should reflect that no charges exist to adjudicate — a 'NO_CHARGES' or 'INVESTIGATE' is acceptable, but the score must not imply clinical invalidity.",
+        "suggestions": [
+          "Adjust treatment_validity_score to reflect clinical appropriateness (e.g., 0.95) since no charges are invalid and treatment process is validated.",
+          "Clarify in rationale that 'INVESTIGATION_REQUIRED' is due to missing charge data and administrative discrepancies, not clinical invalidity.",
+          "Ensure PED validation status 'INSUFFICIENT' does not imply clinical invalidity — it should not lower the treatment_validity_score."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 1.663,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "5eb8debc",
+        "generated_at": "2026-07-04T12:48:00.730529Z",
+        "overall_verdict": "INVESTIGATION_REQUIRED",
+        "treatment_validity_score": 0.0,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "FAIL",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [],
+        "major_conflicts": [
+          "Treating doctor mismatch between billing and discharge summary: DR. VENKATESH AGRAWAL vs Venkatesh Agrawal"
+        ],
+        "recommended_action": "INVESTIGATE",
+        "treatment_process_correct": true,
+        "treatment_process_explanation": "Laparoscopic cholecystectomy is standard for moderate cholelithiasis; medications align with post-op care.",
+        "treatment_process_confidence": 0.95,
+        "treatment_process_evidence": [
+          "Diagnosis of cholelithiasis supports cholecystectomy as definitive treatment.",
+          "Laparoscopic approach is appropriate for moderate severity.",
+          "Medications listed are consistent with post-op pain control, antibiotics, and GI support.",
+          "No lab/investigation evidence contradicts the treatment plan.",
+          "Doctor name mismatch is administrative, not clinical; does not affect treatment validity."
+        ],
+        "lab_evidence_count": 0,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "UNKNOWN",
+          "confidence": 0.0,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "pre_existing_diseases",
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "NO_PED_FOUND_IN_DISCHARGE_SUMMARY"
+          ],
+          "ped_items": []
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "warn",
+      "summary": "Financial adjudication is inconclusive and requires investigation. Of 0.00 billed across 0 line item(s): payable 0.00 (0), non-payable 0.00 (0), undetermined 0.00 (0). Recommended action INVESTIGATE; admissible amount 0.00. Figures derived via the text_only path.",
+      "issues": [
+        {
+          "message": "No billed line items were found to adjudicate.",
+          "severity": "high",
+          "code": "financial.no_charges",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 1,
+        "medium": 0,
+        "low": 0,
+        "total": 1
+      },
+      "judge": {
+        "status": "pass",
+        "score": 1.0,
+        "rationale": "The agent correctly identified zero line items and zero billed amount, resulting in zero payable, non-payable, and undetermined amounts. All totals reconcile, and the verdict INVESTIGATION_REQUIRED is appropriate given the absence of bill data. No over- or under-payment risk exists as no amounts were adjudicated.",
+        "suggestions": [],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.014,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "5eb8debc",
+        "generated_at": "2026-07-04T12:48:03.208080Z",
+        "mode": "text_only",
+        "overall_verdict": "INVESTIGATION_REQUIRED",
+        "recommended_action": "INVESTIGATE",
+        "final_admissible_amount": 0.0,
+        "totals": {
+          "total_billed": 0.0,
+          "payable_total": 0.0,
+          "non_payable_total": 0.0,
+          "unknown_total": 0.0,
+          "charge_count": 0,
+          "payable_count": 0,
+          "non_payable_count": 0,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 0.0,
+          "recomputed_total": 0.0,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 0.0,
+          "billed_vs_claimed_match": true,
+          "payable_vs_sanctioned_difference": 0.0,
+          "payable_vs_sanctioned_match": true,
+          "non_payable_vs_disallowed_difference": 0.0,
+          "non_payable_vs_disallowed_match": true
+        },
+        "by_bill_type": [],
+        "billing_type": null,
+        "overall_confidence": null,
+        "flagged_count": 0,
+        "line_items": [],
+        "notes": [
+          "No billed line items were found to adjudicate."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 1.971,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 3,
+      "medium": 2,
+      "low": 2,
+      "total": 7
+    }
+  }
+}

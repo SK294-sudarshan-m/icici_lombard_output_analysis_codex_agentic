@@ -1,0 +1,47 @@
+{
+  "bill_pages": {
+    "pharmacy_bill": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "investigation_bill": [
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "detailed_final_bill": [
+      7
+    ]
+  },
+  "non_bill_pages": {
+    "discharge_summary": [
+      8,
+      9
+    ],
+    "lab_report": [
+      10,
+      11
+    ]
+  },
+  "unclassified_pages": [],
+  "total_pages": 29
+}

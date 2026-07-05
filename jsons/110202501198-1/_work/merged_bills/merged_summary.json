@@ -1,0 +1,33 @@
+{
+  "bills": [
+    {
+      "bill_id": "detailed_final_bill_1",
+      "category": "detailed_final_bill",
+      "pages": [
+        2
+      ],
+      "merged_from": 1,
+      "total_charges": 22,
+      "duplicates_removed": 0,
+      "total_amount": "11326.77"
+    },
+    {
+      "bill_id": "final_bill_1",
+      "category": "final_bill",
+      "pages": [
+        1,
+        3
+      ],
+      "merged_from": 2,
+      "total_charges": 0,
+      "duplicates_removed": 0,
+      "total_amount": "11326.77"
+    }
+  ],
+  "category_totals": {
+    "detailed_final_bill": 11326.77,
+    "final_bill": 11326.77
+  },
+  "grand_total": 22653.54,
+  "total_bills": 2
+}

@@ -1,0 +1,72 @@
+{
+  "page": 2,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "page_indicator": "Page 2 of 3"
+  },
+  "hospital": {
+    "name": "Gurukrupa Superspeciality Hospital",
+    "address": "S.No.119/5/B, Near St. Thomas Church, Off. Mira-Bhayendar Highway, Saibaba Nagar, Mira Road (E), Thane 401107.",
+    "contact": "gshforyou@gmail.com, www.gurukrupahospitals.in"
+  },
+  "medications": [
+    {
+      "name": "TAB O2",
+      "dosage": "1/2",
+      "frequency": "AF",
+      "duration": "5 Days",
+      "quantity": "1/2",
+      "source_line_index": 0
+    },
+    {
+      "name": "TAB ZOCEF 500 MG",
+      "dosage": "1/2",
+      "frequency": "AF",
+      "duration": "5 Days",
+      "quantity": "1/2",
+      "source_line_index": 1
+    },
+    {
+      "name": "TAB SIGNOFLAM",
+      "dosage": "1",
+      "frequency": "AF",
+      "duration": "5 Days",
+      "quantity": "1",
+      "source_line_index": 2
+    },
+    {
+      "name": "TAB PAN 20 MG",
+      "dosage": "1",
+      "frequency": "BF",
+      "duration": "5 Days",
+      "quantity": "1",
+      "source_line_index": 3
+    },
+    {
+      "name": "TAB ONDEM 4 MG",
+      "dosage": "1",
+      "frequency": "BF",
+      "duration": "5 Days",
+      "quantity": "1",
+      "source_line_index": 4
+    },
+    {
+      "name": "SYP GELUSIL 2 TSF",
+      "dosage": "1",
+      "frequency": "BF",
+      "duration": "5 Days",
+      "quantity": "1",
+      "source_line_index": 5
+    },
+    {
+      "name": "SYP DUPHALAC 15 ML",
+      "dosage": "1",
+      "frequency": "AF",
+      "duration": "SOS",
+      "quantity": "1",
+      "source_line_index": 6
+    }
+  ],
+  "raw_summary": "Page 2 of a discharge summary from Gurukrupa Superspeciality Hospital detailing operative notes for laparoscopic cholecystectomy, post-operative medications with dosing instructions, and follow-up advice."
+}

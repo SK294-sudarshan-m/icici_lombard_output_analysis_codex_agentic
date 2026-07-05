@@ -1,0 +1,43 @@
+{
+  "source_pages": [
+    4,
+    5
+  ],
+  "primary_diagnosis": "Left eye cataract",
+  "procedures": [
+    "Left eye cataract surgery"
+  ],
+  "severity": "Mild",
+  "length_of_stay": "1",
+  "treating_doctor": "MTCs",
+  "department": "Ophthalmology",
+  "pre_existing_diseases": [],
+  "treatment": "Surgical management with left eye cataract surgery and IOL implantation followed by post-operative medical therapy.",
+  "medications": [
+    {
+      "name": "Eoposed eye drops",
+      "frequency": "6 times",
+      "duration": ""
+    },
+    {
+      "name": "Oxidoop eye drops",
+      "frequency": "6 times",
+      "duration": ""
+    },
+    {
+      "name": "Milflox eye drops",
+      "frequency": "6 times",
+      "duration": ""
+    },
+    {
+      "name": "Ocuwipes",
+      "dosage": "1-0-1",
+      "duration": ""
+    },
+    {
+      "name": "Tab Refizon",
+      "dosage": "1-0-1",
+      "duration": "5 days"
+    }
+  ]
+}

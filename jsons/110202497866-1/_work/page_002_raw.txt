@@ -1,0 +1,21 @@
+=== PAGE 2 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3959
+Tokens Out: 169
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 2,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "PATIENT DISCHARGE SUMMARY"
+  },
+  "hospital": {
+    "name": "M.P. BIRLA HOSPITAL SATNA",
+    "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005",
+    "contact": "(07672)-257411-12"
+  },
+  "raw_summary": "Page 2 of a Patient Discharge Summary from M.P. Birla Hospital Satna, containing consultant signature, follow-up instructions, and emergency contact details."
+}

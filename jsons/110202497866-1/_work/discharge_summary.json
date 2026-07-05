@@ -1,0 +1,54 @@
+{
+  "source_pages": [
+    1,
+    2
+  ],
+  "primary_diagnosis": "Cholelithiasis",
+  "procedures": [
+    "Lap Chole"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "3",
+  "treating_doctor": "Venkatesh Agrawal",
+  "department": "General Surgery",
+  "pre_existing_diseases": [],
+  "treatment": "Laparoscopic cholecystectomy performed under general anesthesia.",
+  "medications": [
+    {
+      "name": "Clavam",
+      "dosage": "625 MG",
+      "frequency": "BD",
+      "duration": "7 DAYS"
+    },
+    {
+      "name": "Pan D",
+      "dosage": "OD",
+      "frequency": "OD",
+      "duration": "7 DAYS"
+    },
+    {
+      "name": "Signoflam",
+      "dosage": "BD",
+      "frequency": "BD",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "Sporlac DS",
+      "dosage": "BD",
+      "frequency": "BD",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "Poybion L",
+      "dosage": "10 ML",
+      "frequency": "BD",
+      "duration": "7 DAYS"
+    },
+    {
+      "name": "Mom Plus",
+      "dosage": "15 ML",
+      "frequency": "HS",
+      "duration": "7 DAYS"
+    }
+  ]
+}

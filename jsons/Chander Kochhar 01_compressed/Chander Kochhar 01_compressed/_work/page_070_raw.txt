@@ -1,0 +1,16 @@
+=== PAGE 70 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3825
+Tokens Out: 86
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 70,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "document_title": "IMAGING DEPARTMENT - PATIENT INFORMATION FORM"
+  },
+  "raw_summary": "Patient information form from Imaging Department with handwritten responses regarding medications, pregnancy, allergies, and medical conditions; no billing or insurance data present."
+}

@@ -1,0 +1,64 @@
+{
+  "bill_id": "5eb8debc",
+  "case_number": "110202497866-1",
+  "bill_summary": {
+    "extracted_amount": 55200.0,
+    "calculated_amount": 0,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 55200.0,
+    "calculated_after_discount": 0.0,
+    "total_line_items": 0,
+    "amounts_match": false,
+    "amount_diff": -55200.0,
+    "overall_confidence": 0.0,
+    "case_verdict": 0,
+    "summary": "Case is FLAGGED and needs reviewer attention. The consolidated bill has 0 line item(s) totalling ₹55,200.00 (gross), with a net payable of ₹55,200.00. the line items (₹0.00) do NOT reconcile with the printed total (₹55,200.00), a difference of ₹-55,200.00. extraction confidence 0.00.",
+    "billing_type": {
+      "billing_type": "Medical Management",
+      "confidence": 0.7,
+      "reasoning": "No surgery/package/day-care indicators; DS severity=Moderate"
+    }
+  },
+  "patient": {
+    "name": "MRS. SHIKHA GUPTA W/O MR.ADITYA KUMAR GUPTA",
+    "age": "29 YO M 3 D",
+    "gender": "Female",
+    "uhid": "371574",
+    "ip_number": "61149",
+    "ward": "PRIVATE ROOM AC",
+    "bed_number": "PVT-07"
+  },
+  "hospital": {
+    "name": "M.P.BIRLA HOSPITAL SATNA",
+    "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005",
+    "contact": "917238907265"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "55200.00",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "05/06/2026 / 6:04 PM",
+    "date_of_discharge": "08/06/2026 / 12:00 PM",
+    "length_of_stay": "",
+    "admission_type": "PRIVATE ROOM AC",
+    "referring_doctor": "",
+    "treating_doctor": "DR. VENKATESH AGRAWAL",
+    "department": ""
+  },
+  "charges": [],
+  "returns": [],
+  "knocked_off_bills": [],
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "flagged_for_review": true,
+  "flag_reason": "Totals do not reconcile: extracted 55200.0 vs calculated 0 (diff -55200.0).",
+  "overall_confidence": 0.0
+}

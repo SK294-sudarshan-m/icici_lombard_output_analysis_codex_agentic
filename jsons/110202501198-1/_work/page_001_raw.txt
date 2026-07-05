@@ -1,0 +1,100 @@
+=== PAGE 1 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4351
+Tokens Out: 824
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 1,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "09-06-2026",
+    "page_indicator": "",
+    "document_title": "IP Bill Statement Summary"
+  },
+  "patient": {
+    "name": "Mrs Bandla Hymavathi",
+    "age": "62 Y,1 M,17 D",
+    "gender": "Female",
+    "uhid": "893505",
+    "ip_number": "SVIMS/IP-168159",
+    "ward": "SACS-20/Special Rooms AC Room Single Ward",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "09-06-2026 10:05 AM",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "Single Room",
+    "referring_doctor": "",
+    "treating_doctor": "Dr. D Bhargavi",
+    "department": "Medical Oncology"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD, TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "insurance": {
+    "company": "ICICI Lombord",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "11326.77",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "IP Consultation",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "720.00",
+      "discount": "",
+      "amount": "720.00"
+    },
+    {
+      "sr_no": "2",
+      "description": "Pharmacy",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "6906.77",
+      "discount": "",
+      "amount": "6906.77"
+    },
+    {
+      "sr_no": "3",
+      "description": "Procedure",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "1200.00",
+      "discount": "",
+      "amount": "1200.00"
+    },
+    {
+      "sr_no": "4",
+      "description": "Room Rent",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "2500.00",
+      "discount": "",
+      "amount": "2500.00"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "11326.77",
+    "total_amount": "11326.77",
+    "discount": "0.0",
+    "tax": "",
+    "net_payable": "11326.77",
+    "amount_paid": "0.0",
+    "balance": "11326.77",
+    "advance_paid": "0.0"
+  },
+  "sub_bills": [],
+  "raw_summary": "IP bill statement summary for patient Mrs Bandla Hymavathi with charges for consultation, pharmacy, procedure, and room rent totaling INR 11326.77, with no deposit or payment made, resulting in full balance due."
+}

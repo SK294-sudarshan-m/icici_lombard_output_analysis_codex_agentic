@@ -1,0 +1,3314 @@
+{
+  "bill_id": "e5761e18",
+  "case_number": "110202496923-1",
+  "bill_summary": {
+    "extracted_amount": 17712.18,
+    "calculated_amount": 17712.18,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 17712.18,
+    "calculated_after_discount": 17712.18,
+    "total_line_items": 34,
+    "amounts_match": false,
+    "amount_diff": 0.0,
+    "net_corrected": true,
+    "printed_net_payable": 24101.0,
+    "overall_confidence": 0.6,
+    "case_verdict": 0,
+    "summary": "Case is FLAGGED and needs reviewer attention. The consolidated bill has 34 line item(s) totalling ₹17,712.18 (gross), with a net payable of ₹17,712.18. the printed net (₹24,101.00) was inconsistent with the itemised total (₹17,712.18) and was recomputed. billing type assessed as Surgery. extraction confidence 0.60.",
+    "billing_type": {
+      "billing_type": "Surgery",
+      "confidence": 0.75,
+      "reasoning": "OT/surgeon charges present (no discharge summary confirmation)"
+    }
+  },
+  "patient": {
+    "name": "Mast. GLENN FLEMING PRADEEP",
+    "age": "11M-12D",
+    "gender": "MALE",
+    "uhid": "26-6986",
+    "ip_number": "267341 / IP-001",
+    "ward": "PAEDIATRIC",
+    "bed_number": "ROOM SHARING"
+  },
+  "hospital": {
+    "name": "AJ HOSPITAL",
+    "address": "KAZHAKOOTTAM",
+    "contact": "GST: 32AIKPJ3231C1ZX, PH: 0471-7144600, 9207333388"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "claimed_amount": "24,101.00",
+    "approved_amount": "24,101.00"
+  },
+  "admission": {
+    "date_of_admission": "03/06/2026 04:00 PM",
+    "date_of_discharge": "08/06/2026 10:43 AM",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "Dr HAREEZ",
+    "department": "PAEDIATRIC"
+  },
+  "charges": [
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500534",
+      "sub_bill_type": "Disposables",
+      "sub_bill_type_id": "1011077",
+      "sr_no": "",
+      "description": "POSIFLUSH / / 5267039 / 09/2028 / 62.5",
+      "quantity": "1",
+      "unit_price": "61.40",
+      "discount": "0.00",
+      "amount": "61.40",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Syringe Bd Posiflush",
+        "standard_name": "Not in list",
+        "score": 0.3419,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consumable Charges' with sub_bill_type 'Disposables' is appropriate for POSIFLUSH."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "POSIFLUSH / / 5267039 / 09/2028 / 62.5\t07/06/2026 11:19\t07/06/2026 02:30\t61.40\t1\t0.00\t61.40",
+          "match_ratio": 0.589
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 0
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "ALTACEF SUS 30ML / CEFUROXIME AXETIL / C4875013 / 10/2027 / 170.1",
+      "quantity": "1",
+      "unit_price": "168.48",
+      "discount": "0.00",
+      "amount": "168.48",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "A Cefuroxime (500Mg)",
+        "standard_name": "medicine",
+        "score": 0.559,
+        "method": "llm_normalized_selected"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 168.48,
+        "supporting_bills_total": 6388.99,
+        "difference": 6220.51,
+        "difference_pct": 97.36,
+        "tolerance_pct": 15.0,
+        "within_tolerance": false
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Medicines Pharmacy Charges' with sub_bill_type 'Medicines Pharmacy Charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "AXETIL / C4875013 / 10/2027 / 170.1",
+          "match_ratio": 0.7
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_normalized_selected",
+      "display_order": 1
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "ALTACEF SUS 30ML / CEFUROXIME AXETIL / C4875013 / 10/2027 / 170.1",
+      "quantity": "1",
+      "unit_price": "168.48",
+      "discount": "0.00",
+      "amount": "168.48",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "A Cefuroxime (500Mg)",
+        "standard_name": "medicine",
+        "score": 0.559,
+        "method": "llm_normalized_selected"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 168.48,
+        "supporting_bills_total": 6388.99,
+        "difference": 6220.51,
+        "difference_pct": 97.36,
+        "tolerance_pct": 15.0,
+        "within_tolerance": false
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Medicines Pharmacy Charges' with sub_bill_type 'Medicines Pharmacy Charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "AXETIL / C4875013 / 10/2027 / 170.1",
+          "match_ratio": 0.7
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_normalized_selected",
+      "display_order": 2
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "JUNIOR LANZOL 15 TAB / LANSOPRAZOLE / 5BA2412 / 07/2027 / 12.3",
+      "quantity": "10",
+      "unit_price": "12.18",
+      "discount": "0.00",
+      "amount": "121.80",
+      "source_line_index": 3,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Junior Lanzol 15 Tab",
+        "standard_name": "medicine",
+        "score": 0.7517,
+        "method": "llm_selected"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 121.8,
+        "supporting_bills_total": 6388.99,
+        "difference": 6267.19,
+        "difference_pct": 98.09,
+        "tolerance_pct": 15.0,
+        "within_tolerance": false
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Medicines Pharmacy Charges' with sub_bill_type 'Medicines Pharmacy Charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "LANSOPRAZOLE / 5BA2412 / 07/2027 /",
+          "match_ratio": 0.708
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 3
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "DEZACORE SYP 30ML / DEFLAZACORT / PA260165 / 06/2027 / 95",
+      "quantity": "2",
+      "unit_price": "94.10",
+      "discount": "0.00",
+      "amount": "188.20",
+      "source_line_index": 4,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "",
+        "standard_name": "",
+        "score": 0,
+        "method": "llm_master_taxonomy"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 188.2,
+        "supporting_bills_total": 6388.99,
+        "difference": 6200.79,
+        "difference_pct": 97.05,
+        "tolerance_pct": 15.0,
+        "within_tolerance": false
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Medicines Pharmacy Charges' with sub_bill_type 'Medicines Pharmacy Charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "DEZACORE SYP 30ML / DEFLAZACORT /\t08/06/2026 10:06\t08/06/2026 10:22\t94.10\t2\t0.00\t188.20",
+          "match_ratio": 0.625
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_master_taxonomy",
+      "display_order": 4
+    },
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500534",
+      "sub_bill_type": "Materials",
+      "sub_bill_type_id": "1011076",
+      "sr_no": "",
+      "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+      "quantity": "1",
+      "unit_price": "3.97",
+      "discount": "0.00",
+      "amount": "3.97",
+      "source_line_index": 5,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Sep/2030 Urobag (Romsons)",
+        "standard_name": "URINE BAG",
+        "score": 0.2951,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consumable Charges' with sub_bill_type 'Materials' is appropriate for CARRY BAG."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "CARRY BAG / / ASDF / 10/2030 / 4\t03/06/2026 05:28\t3.97\t1\t0.00\t3.97",
+          "match_ratio": 0.653
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 5
+    },
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500534",
+      "sub_bill_type": "Materials",
+      "sub_bill_type_id": "1011076",
+      "sr_no": "",
+      "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+      "quantity": "1",
+      "unit_price": "3.97",
+      "discount": "0.00",
+      "amount": "3.97",
+      "source_line_index": 6,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Sep/2030 Urobag (Romsons)",
+        "standard_name": "URINE BAG",
+        "score": 0.2951,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consumable Charges' with sub_bill_type 'Materials' is appropriate for CARRY BAG."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "CARRY BAG / / ASDF / 10/2030 / 4\t03/06/2026 05:28\t3.97\t1\t0.00\t3.97",
+          "match_ratio": 0.653
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 6
+    },
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500534",
+      "sub_bill_type": "Materials",
+      "sub_bill_type_id": "1011076",
+      "sr_no": "",
+      "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+      "quantity": "1",
+      "unit_price": "3.97",
+      "discount": "0.00",
+      "amount": "3.97",
+      "source_line_index": 7,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Sep/2030 Urobag (Romsons)",
+        "standard_name": "URINE BAG",
+        "score": 0.2951,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consumable Charges' with sub_bill_type 'Materials' is appropriate for CARRY BAG."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "CARRY BAG / / ASDF / 10/2030 / 4\t03/06/2026 05:28\t3.97\t1\t0.00\t3.97",
+          "match_ratio": 0.653
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 7
+    },
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500534",
+      "sub_bill_type": "Materials",
+      "sub_bill_type_id": "1011076",
+      "sr_no": "",
+      "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+      "quantity": "1",
+      "unit_price": "3.97",
+      "discount": "0.00",
+      "amount": "3.97",
+      "source_line_index": 8,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Sep/2030 Urobag (Romsons)",
+        "standard_name": "URINE BAG",
+        "score": 0.2951,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consumable Charges' with sub_bill_type 'Materials' is appropriate for CARRY BAG."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "CARRY BAG / / ASDF / 10/2030 / 4\t03/06/2026 05:28\t3.97\t1\t0.00\t3.97",
+          "match_ratio": 0.653
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 8
+    },
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500534",
+      "sub_bill_type": "Materials",
+      "sub_bill_type_id": "1011076",
+      "sr_no": "",
+      "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+      "quantity": "1",
+      "unit_price": "3.97",
+      "discount": "0.00",
+      "amount": "3.97",
+      "source_line_index": 9,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Sep/2030 Urobag (Romsons)",
+        "standard_name": "URINE BAG",
+        "score": 0.2951,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consumable Charges' with sub_bill_type 'Materials' is appropriate for CARRY BAG."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "CARRY BAG / / ASDF / 10/2030 / 4\t03/06/2026 05:28\t3.97\t1\t0.00\t3.97",
+          "match_ratio": 0.653
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 9
+    },
+    {
+      "bill_type": "Consumable Charges",
+      "bill_type_id": "500534",
+      "sub_bill_type": "Materials",
+      "sub_bill_type_id": "1011076",
+      "sr_no": "",
+      "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+      "quantity": "1",
+      "unit_price": "3.97",
+      "discount": "0.00",
+      "amount": "3.97",
+      "source_line_index": 10,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Sep/2030 Urobag (Romsons)",
+        "standard_name": "URINE BAG",
+        "score": 0.2951,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consumable Charges' with sub_bill_type 'Materials' is appropriate for CARRY BAG."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "CARRY BAG / / ASDF / 10/2030 / 4\t03/06/2026 05:28\t3.97\t1\t0.00\t3.97",
+          "match_ratio": 0.653
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 10
+    },
+    {
+      "bill_type": "Consultation Visit Charges",
+      "bill_type_id": "500529",
+      "sub_bill_type": "Consultation charges",
+      "sub_bill_type_id": "1011073",
+      "sr_no": "",
+      "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+      "quantity": "1",
+      "unit_price": "300.00",
+      "discount": "0.00",
+      "amount": "300.00",
+      "source_line_index": 11,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Consultation Charges Paediatric",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.7711,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consultation Visit Charges' with sub_bill_type 'Consultation charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.484
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 11
+    },
+    {
+      "bill_type": "Consultation Visit Charges",
+      "bill_type_id": "500529",
+      "sub_bill_type": "Consultation charges",
+      "sub_bill_type_id": "1011073",
+      "sr_no": "",
+      "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+      "quantity": "1",
+      "unit_price": "300.00",
+      "discount": "0.00",
+      "amount": "300.00",
+      "source_line_index": 12,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Consultation Charges Paediatric",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.7711,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consultation Visit Charges' with sub_bill_type 'Consultation charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.484
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 12
+    },
+    {
+      "bill_type": "Consultation Visit Charges",
+      "bill_type_id": "500529",
+      "sub_bill_type": "Consultation charges",
+      "sub_bill_type_id": "1011073",
+      "sr_no": "",
+      "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+      "quantity": "1",
+      "unit_price": "300.00",
+      "discount": "0.00",
+      "amount": "300.00",
+      "source_line_index": 13,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Consultation Charges Paediatric",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.7711,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consultation Visit Charges' with sub_bill_type 'Consultation charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.484
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 13
+    },
+    {
+      "bill_type": "Consultation Visit Charges",
+      "bill_type_id": "500529",
+      "sub_bill_type": "Consultation charges",
+      "sub_bill_type_id": "1011073",
+      "sr_no": "",
+      "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+      "quantity": "1",
+      "unit_price": "300.00",
+      "discount": "0.00",
+      "amount": "300.00",
+      "source_line_index": 14,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Consultation Charges Paediatric",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.7711,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consultation Visit Charges' with sub_bill_type 'Consultation charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.484
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 14
+    },
+    {
+      "bill_type": "Consultation Visit Charges",
+      "bill_type_id": "500529",
+      "sub_bill_type": "Consultation charges",
+      "sub_bill_type_id": "1011073",
+      "sr_no": "",
+      "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+      "quantity": "1",
+      "unit_price": "300.00",
+      "discount": "0.00",
+      "amount": "300.00",
+      "source_line_index": 15,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Consultation Charges Paediatric",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.7711,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consultation Visit Charges' with sub_bill_type 'Consultation charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.484
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 15
+    },
+    {
+      "bill_type": "Consultation Visit Charges",
+      "bill_type_id": "500529",
+      "sub_bill_type": "Consultation charges",
+      "sub_bill_type_id": "1011073",
+      "sr_no": "",
+      "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+      "quantity": "1",
+      "unit_price": "300.00",
+      "discount": "0.00",
+      "amount": "300.00",
+      "source_line_index": 16,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Consultation Charges Paediatric",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.7711,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Consultation Visit Charges' with sub_bill_type 'Consultation charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.484
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 16
+    },
+    {
+      "bill_type": "Room Nursing Charges",
+      "bill_type_id": "1011066",
+      "sub_bill_type": "Hospital Nursing Charges",
+      "sub_bill_type_id": "1011545",
+      "sr_no": "",
+      "description": "NURSING CHARGE",
+      "quantity": "6",
+      "unit_price": "300.00",
+      "discount": "0.00",
+      "amount": "1800.00",
+      "source_line_index": 17,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Nursing Charge",
+        "standard_name": "Not in list",
+        "score": 0.9457,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Room Nursing Charges' with sub_bill_type 'Hospital Nursing Charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "NURSING SERVICES",
+          "match_ratio": 0.667
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 17
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1014409",
+      "sr_no": "",
+      "description": "NEBULIZATION + O2",
+      "quantity": "2",
+      "unit_price": "125.00",
+      "discount": "0.00",
+      "amount": "250.00",
+      "source_line_index": 18,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Nebulization Charges With O2 (2)",
+        "standard_name": "Not in list",
+        "score": 0.7525,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Procedure Charges' with sub_bill_type 'Physiotherapy' is correct for Nebulization."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "NEBULIZATION CHARGE",
+          "match_ratio": 0.722
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 18
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1014409",
+      "sr_no": "",
+      "description": "NEBULIZATION + O2",
+      "quantity": "4",
+      "unit_price": "125.00",
+      "discount": "0.00",
+      "amount": "500.00",
+      "source_line_index": 19,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Nebulization Charges With O2 (2)",
+        "standard_name": "Not in list",
+        "score": 0.7525,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Procedure Charges' with sub_bill_type 'Physiotherapy' is correct for Nebulization."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "NEBULIZATION CHARGE",
+          "match_ratio": 0.722
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 19
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1014409",
+      "sr_no": "",
+      "description": "NEBULIZATION + O2",
+      "quantity": "5",
+      "unit_price": "125.00",
+      "discount": "0.00",
+      "amount": "625.00",
+      "source_line_index": 20,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Nebulization Charges With O2 (2)",
+        "standard_name": "Not in list",
+        "score": 0.7525,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Procedure Charges' with sub_bill_type 'Physiotherapy' is correct for Nebulization."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "NEBULIZATION CHARGE",
+          "match_ratio": 0.722
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 20
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1014409",
+      "sr_no": "",
+      "description": "NEBULIZATION + O2",
+      "quantity": "4",
+      "unit_price": "125.00",
+      "discount": "0.00",
+      "amount": "500.00",
+      "source_line_index": 21,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Nebulization Charges With O2 (2)",
+        "standard_name": "Not in list",
+        "score": 0.7525,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Procedure Charges' with sub_bill_type 'Physiotherapy' is correct for Nebulization."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "NEBULIZATION CHARGE",
+          "match_ratio": 0.722
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 21
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1014409",
+      "sr_no": "",
+      "description": "NEBULIZATION + O2",
+      "quantity": "5",
+      "unit_price": "125.00",
+      "discount": "0.00",
+      "amount": "625.00",
+      "source_line_index": 22,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Nebulization Charges With O2 (2)",
+        "standard_name": "Not in list",
+        "score": 0.7525,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Procedure Charges' with sub_bill_type 'Physiotherapy' is correct for Nebulization."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "NEBULIZATION CHARGE",
+          "match_ratio": 0.722
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 22
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Physiotherapy",
+      "sub_bill_type_id": "1014409",
+      "sr_no": "",
+      "description": "NEBULIZATION + O2 (TRIPLE)",
+      "quantity": "1",
+      "unit_price": "125.00",
+      "discount": "0.00",
+      "amount": "125.00",
+      "source_line_index": 23,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Nebulization Charges With O2 (2)",
+        "standard_name": "Not in list",
+        "score": 0.6399,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Procedure Charges' with sub_bill_type 'Physiotherapy' is correct for Nebulization."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "NEBULIZATION CHARGE",
+          "match_ratio": 0.667
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 23
+    },
+    {
+      "bill_type": "Miscellaneous",
+      "bill_type_id": "1014508",
+      "sub_bill_type": "Miscellaneous Charges",
+      "sub_bill_type_id": "1011084",
+      "sr_no": "",
+      "description": "HOUSE KEEPING",
+      "quantity": "6",
+      "unit_price": "150.00",
+      "discount": "0.00",
+      "amount": "900.0",
+      "source_line_index": 24,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Housekeeping Charges",
+        "standard_name": "Not in list",
+        "score": 0.5382,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Miscellaneous' with sub_bill_type 'Miscellaneous Charges' is appropriate for HOUSE KEEPING."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.414
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 24
+    },
+    {
+      "bill_type": "Investigation Charges",
+      "bill_type_id": "500535",
+      "sub_bill_type": "Investigation  Charges",
+      "sub_bill_type_id": "1014386",
+      "sr_no": "",
+      "description": "BLOOD R/E",
+      "quantity": "1",
+      "unit_price": "160.00",
+      "discount": "0.00",
+      "amount": "160.0",
+      "source_line_index": 25,
+      "charge_type": "line_item",
+      "page_number": 8,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Blood R/E ( Routine",
+        "standard_name": "test",
+        "score": 0.7035,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Investigation Charges' with sub_bill_type 'Investigation Charges' is correct."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.429
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 25
+    },
+    {
+      "bill_type": "Investigation Charges",
+      "bill_type_id": "500535",
+      "sub_bill_type": "Investigation  Charges",
+      "sub_bill_type_id": "1014386",
+      "sr_no": "",
+      "description": "PACKED CELL VOLUME",
+      "quantity": "1",
+      "unit_price": "100.00",
+      "discount": "0.00",
+      "amount": "100.00",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 9,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Packed Cell Volume",
+        "standard_name": "test",
+        "score": 0.9627,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Investigation Charges' is appropriate for 'PACKED CELL VOLUME'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.396
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 26
+    },
+    {
+      "bill_type": "Investigation Charges",
+      "bill_type_id": "500535",
+      "sub_bill_type": "Investigation  Charges",
+      "sub_bill_type_id": "1014386",
+      "sr_no": "",
+      "description": "PLATELET COUNT",
+      "quantity": "1",
+      "unit_price": "120.00",
+      "discount": "0.00",
+      "amount": "120.00",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 9,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Platelet Count",
+        "standard_name": "test",
+        "score": 0.933,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Investigation Charges' is appropriate for 'PLATELET COUNT'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.389
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 27
+    },
+    {
+      "bill_type": "Investigation Charges",
+      "bill_type_id": "500535",
+      "sub_bill_type": "Investigation  Charges",
+      "sub_bill_type_id": "1014386",
+      "sr_no": "",
+      "description": "C REACTIVE PROTEIN",
+      "quantity": "1",
+      "unit_price": "375.00",
+      "discount": "0.00",
+      "amount": "375.00",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 9,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "C.Reactive Protein",
+        "standard_name": "test",
+        "score": 0.9556,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Investigation Charges' is appropriate for 'C REACTIVE PROTEIN'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.396
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 28
+    },
+    {
+      "bill_type": "Investigation Charges",
+      "bill_type_id": "500535",
+      "sub_bill_type": "Investigation  Charges",
+      "sub_bill_type_id": "1014386",
+      "sr_no": "",
+      "description": "SCRUB TYPHUS CARD",
+      "quantity": "1",
+      "unit_price": "700.00",
+      "discount": "0.00",
+      "amount": "700.00",
+      "source_line_index": 3,
+      "charge_type": "line_item",
+      "page_number": 9,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Scrub Typhus Charge",
+        "standard_name": "test",
+        "score": 0.6526,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Investigation Charges' is appropriate for 'SCRUB TYPHUS CARD'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.382
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 29
+    },
+    {
+      "bill_type": "Investigation Charges",
+      "bill_type_id": "500535",
+      "sub_bill_type": "Investigation  Charges",
+      "sub_bill_type_id": "1014386",
+      "sr_no": "",
+      "description": "TYPHI DOT M",
+      "quantity": "1",
+      "unit_price": "400.00",
+      "discount": "0.00",
+      "amount": "400.00",
+      "source_line_index": 4,
+      "charge_type": "line_item",
+      "page_number": 9,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Typhi Dot (Igm)",
+        "standard_name": "test",
+        "score": 0.6297,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Investigation Charges' is appropriate for 'TYPHI DOT M'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.32
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 30
+    },
+    {
+      "bill_type": "Investigation Charges",
+      "bill_type_id": "500535",
+      "sub_bill_type": "Investigation  Charges",
+      "sub_bill_type_id": "1014386",
+      "sr_no": "",
+      "description": "DENGUE NS1 CLIA",
+      "quantity": "1",
+      "unit_price": "450.00",
+      "discount": "0.00",
+      "amount": "450.00",
+      "source_line_index": 5,
+      "charge_type": "line_item",
+      "page_number": 9,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Dengue Ns1",
+        "standard_name": "test",
+        "score": 0.6954,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Investigation Charges' is appropriate for 'DENGUE NS1 CLIA'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.353
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 31
+    },
+    {
+      "bill_type": "Investigation Charges",
+      "bill_type_id": "500535",
+      "sub_bill_type": "Investigation  Charges",
+      "sub_bill_type_id": "1014386",
+      "sr_no": "",
+      "description": "CHEST AP",
+      "quantity": "2",
+      "unit_price": "400.00",
+      "discount": "0.00",
+      "amount": "800.00",
+      "source_line_index": 6,
+      "charge_type": "line_item",
+      "page_number": 9,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Chest -Ap",
+        "standard_name": "test",
+        "score": 0.7981,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Investigation Charges' is appropriate for 'CHEST AP' (X-ray)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.4
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 32
+    },
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "",
+      "description": "ROOM SHARING",
+      "quantity": "5",
+      "unit_price": "1350.00",
+      "discount": "0.00",
+      "amount": "6750.00",
+      "source_line_index": 7,
+      "charge_type": "line_item",
+      "page_number": 9,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Room Rent Sharing",
+        "standard_name": "bed charges",
+        "score": 0.7749,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Room Charges' and sub_bill_type 'Room Charge' are correct for 'ROOM SHARING'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "ROOM RENT",
+          "match_ratio": 0.667
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 33
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [
+    {
+      "category": "final_bill",
+      "total": 24101.0,
+      "reason": "Superseded by detailed_final_bill — detailed itemized bill is authoritative over generic summary",
+      "item_count": 8,
+      "charges": [
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "MEDICINES",
+          "quantity": "",
+          "unit_price": "",
+          "discount": "",
+          "amount": "7121.17",
+          "source_line_index": 0,
+          "charge_type": "line_item",
+          "page_number": 1,
+          "bill_id": "final_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": ".Medicines",
+            "standard_name": "medicine",
+            "score": 0.9159,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consultation Visit Charges",
+          "bill_type_id": "500529",
+          "sub_bill_type": "Consultation charges",
+          "sub_bill_type_id": "1011073",
+          "sr_no": "",
+          "description": "CONSULTING FEE",
+          "quantity": "",
+          "unit_price": "",
+          "discount": "",
+          "amount": "1800.00",
+          "source_line_index": 1,
+          "charge_type": "line_item",
+          "page_number": 1,
+          "bill_id": "final_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Consulting Fee",
+            "standard_name": "doctor charges - doctor charges",
+            "score": 0.929,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Miscellaneous",
+          "bill_type_id": "1014508",
+          "sub_bill_type": "Miscellaneous Charges",
+          "sub_bill_type_id": "1011084",
+          "sr_no": "",
+          "description": "HOSPITAL CHARGES",
+          "quantity": "",
+          "unit_price": "",
+          "discount": "",
+          "amount": "900.00",
+          "source_line_index": 2,
+          "charge_type": "line_item",
+          "page_number": 1,
+          "bill_id": "final_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Non-Payable",
+          "match_info": {
+            "matched_item": "Hospital Charges",
+            "standard_name": "miscellaneous charges",
+            "score": 0.922,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Investigation Charges",
+          "bill_type_id": "500535",
+          "sub_bill_type": "Investigation  Charges",
+          "sub_bill_type_id": "1014386",
+          "sr_no": "",
+          "description": "LABORATORY SERVICES",
+          "quantity": "",
+          "unit_price": "",
+          "discount": "",
+          "amount": "2305.00",
+          "source_line_index": 3,
+          "charge_type": "line_item",
+          "page_number": 1,
+          "bill_id": "final_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Laboratory Services",
+            "standard_name": "test",
+            "score": 0.969,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Procedure Charges",
+          "bill_type_id": "500642",
+          "sub_bill_type": "Physiotherapy",
+          "sub_bill_type_id": "1014409",
+          "sr_no": "",
+          "description": "NEBULIZATION CHARGE",
+          "quantity": "",
+          "unit_price": "",
+          "discount": "",
+          "amount": "2625.00",
+          "source_line_index": 4,
+          "charge_type": "line_item",
+          "page_number": 1,
+          "bill_id": "final_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Nebulization Charge",
+            "standard_name": "Not in list",
+            "score": 0.8814,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "ICU Nursing Charges",
+          "bill_type_id": "500532",
+          "sub_bill_type": "ICU Nursing",
+          "sub_bill_type_id": "1014403",
+          "sr_no": "",
+          "description": "NURSING SERVICES",
+          "quantity": "",
+          "unit_price": "",
+          "discount": "",
+          "amount": "1800.00",
+          "source_line_index": 5,
+          "charge_type": "line_item",
+          "page_number": 1,
+          "bill_id": "final_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Nursing Services",
+            "standard_name": "miscellaneous charges",
+            "score": 0.9512,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Room Charges",
+          "bill_type_id": "1000739",
+          "sub_bill_type": "Room Charge",
+          "sub_bill_type_id": "1000746",
+          "sr_no": "",
+          "description": "ROOM RENT",
+          "quantity": "",
+          "unit_price": "",
+          "discount": "",
+          "amount": "6750.00",
+          "source_line_index": 6,
+          "charge_type": "line_item",
+          "page_number": 1,
+          "bill_id": "final_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": ": Room Rent",
+            "standard_name": "bed charges",
+            "score": 0.9627,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Investigation Charges",
+          "bill_type_id": "500535",
+          "sub_bill_type": "Investigation  Charges",
+          "sub_bill_type_id": "1014386",
+          "sr_no": "",
+          "description": "X-RAY",
+          "quantity": "",
+          "unit_price": "",
+          "discount": "",
+          "amount": "800.00",
+          "source_line_index": 7,
+          "charge_type": "line_item",
+          "page_number": 1,
+          "bill_id": "final_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "X- Ray",
+            "standard_name": "test",
+            "score": 0.9496,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        }
+      ]
+    },
+    {
+      "category": "pharmacy_bill",
+      "total": 6388.99,
+      "reason": "No final bill charge matched category 'pharmacy_bill' within 15% of amount 6388.99",
+      "item_count": 69,
+      "charges": [
+        {
+          "sr_no": "",
+          "description": "IV CANNULA FIXATOR / / CF374(SEIBERT) / 05/2027 / 89",
+          "quantity": "1",
+          "unit_price": "85.11",
+          "discount": "0.00",
+          "amount": "85.11",
+          "source_line_index": 0,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Material",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cannula Fixator IV Fix",
+            "standard_name": "tape - surgical tape",
+            "score": 0.5567,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "sr_no": "",
+          "description": "IV CANNULA NO. 24 / - / 22F1285 / 05/2027 / 191.25",
+          "quantity": "1",
+          "unit_price": "183.08",
+          "discount": "0.00",
+          "amount": "183.08",
+          "source_line_index": 1,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Material",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cannula IV",
+            "standard_name": "Not in list",
+            "score": 0.3705,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Materials",
+          "sub_bill_type_id": "1011076",
+          "sr_no": "",
+          "description": "IV SET / - / 25J18C / 12/2028 / 178",
+          "quantity": "1",
+          "unit_price": "170.27",
+          "discount": "0.00",
+          "amount": "170.27",
+          "source_line_index": 2,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "J IV Set",
+            "standard_name": "drip - drip set",
+            "score": 0.3644,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "HYPERNEB NS 3% RESPULE / - / 6T0007 / 12/2027 / 22.45",
+          "quantity": "6",
+          "unit_price": "22.24",
+          "discount": "0.00",
+          "amount": "133.44",
+          "source_line_index": 3,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Hyperneb 3% Respules (Ng)",
+            "standard_name": "medicine",
+            "score": 0.542,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "SCREEDO REPULES / BUDESONIDE / AFR25085 / 08/2027 / 24.93",
+          "quantity": "5",
+          "unit_price": "24.69",
+          "discount": "0.00",
+          "amount": "123.45",
+          "source_line_index": 4,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Screedo Resp 0.5Mg Budesonide Nebulizer Suspension 0.5Mg/2Ml /",
+            "standard_name": "medicine",
+            "score": 0.3834,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "LEVOLIN 0.63 RESPULES / LEVOSALBUTAMOL / 6L80152 / 01/2028 / 8.1",
+          "quantity": "5",
+          "unit_price": "8.02",
+          "discount": "0.00",
+          "amount": "40.10",
+          "source_line_index": 5,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Levolin - 0.63 Respules",
+            "standard_name": "medicine",
+            "score": 0.6691,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "MONOCEF 1GM INJ / CEFTRIAXONE / BPA260191 / 06/2028 / 66.63",
+          "quantity": "2",
+          "unit_price": "66.00",
+          "discount": "0.00",
+          "amount": "132.00",
+          "source_line_index": 6,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Monocef 1 Gm Injection Ceftriaxone 1 Gm Injection /",
+            "standard_name": "medicine",
+            "score": 0.7223,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "MACMIKA 100MG INJ / AMIKACIN / 1825322 / 07/2027 / 37.6",
+          "quantity": "2",
+          "unit_price": "37.24",
+          "discount": "0.00",
+          "amount": "74.48",
+          "source_line_index": 7,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Macmika 100 Inj",
+            "standard_name": "medicine",
+            "score": 0.691,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "CORT-S 100MG INJ / HYDROCORTISONE / V4471736 / 12/2027 /47.7",
+          "quantity": "2",
+          "unit_price": "46.68",
+          "discount": "0.00",
+          "amount": "93.36",
+          "source_line_index": 8,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cort S 100 Mg Injection",
+            "standard_name": "medicine",
+            "score": 0.7406,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "LEVOLIN SYP 100ML / LEVOSALBUTAMOL / 6A60211 / 01/2028 / 33.23",
+          "quantity": "1",
+          "unit_price": "32.91",
+          "discount": "0.00",
+          "amount": "32.91",
+          "source_line_index": 9,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Levolin Syp.100 Ml",
+            "standard_name": "medicine",
+            "score": 0.6662,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "DNS 500ML INFUSION / DEXTROSE&SODIUM CLORIDE / BDS5040 / 10/2027 / 91.36",
+          "quantity": "1",
+          "unit_price": "89.16",
+          "discount": "0.00",
+          "amount": "89.16",
+          "source_line_index": 10,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Dns 500Ml (Dextrose And Sodium Chloride)",
+            "standard_name": "medicine",
+            "score": 0.6876,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "2ML SYRINGE WITH NEEDLE / - / 6204 / 10/2030 / 10",
+          "quantity": "3",
+          "unit_price": "9.72",
+          "discount": "0.00",
+          "amount": "29.16",
+          "source_line_index": 11,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe With Needle",
+            "standard_name": "needle",
+            "score": 0.5815,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "5ML SYRINGE WITH NEEDLE / - / 3615 / 10/2030 / 15",
+          "quantity": "2",
+          "unit_price": "14.53",
+          "discount": "0.00",
+          "amount": "29.06",
+          "source_line_index": 12,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "5Ml Syringe .",
+            "standard_name": "Not in list",
+            "score": 0.6017,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "10ML SYRINGE WITH NEEDLE / - / 5335769 / 11/2030 / 20.5",
+          "quantity": "3",
+          "unit_price": "19.90",
+          "discount": "0.00",
+          "amount": "59.70",
+          "source_line_index": 13,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "- .: Nov/2030 Syringe 10Ml With Needle Perfectum Hmd Hmd - Batch:",
+            "standard_name": "needle",
+            "score": 0.6069,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "OT Materials",
+          "sub_bill_type_id": "1014363",
+          "sr_no": "",
+          "description": "NEEDLE 18G / - / 082518 / 07/2030 / 6.5",
+          "quantity": "2",
+          "unit_price": "6.27",
+          "discount": "0.00",
+          "amount": "12.54",
+          "source_line_index": 14,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Needle 18G -",
+            "standard_name": "needle",
+            "score": 0.4684,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "POSIFLUSH / - / 5267039 / 09/2028 / 62.5",
+          "quantity": "2",
+          "unit_price": "61.40",
+          "discount": "0.00",
+          "amount": "122.80",
+          "source_line_index": 15,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe Bd Posiflush",
+            "standard_name": "Not in list",
+            "score": 0.3331,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "JUNIOR LANZOL 15 TAB / LANSOPRAZOLE / 5BA2412 / 07/2027 / 12.3",
+          "quantity": "2",
+          "unit_price": "12.18",
+          "discount": "0.00",
+          "amount": "24.36",
+          "source_line_index": 16,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Junior Lanzol 15 Tab",
+            "standard_name": "medicine",
+            "score": 0.7517,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "JUNIOR LANZOL 15 TAB / LANSOPRAZOLE / 5BA2412 / 07/2027 / 12.3",
+          "quantity": "5",
+          "unit_price": "12.18",
+          "discount": "0.00",
+          "amount": "60.90",
+          "source_line_index": 17,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Junior Lanzol 15 Tab",
+            "standard_name": "medicine",
+            "score": 0.7517,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "sr_no": "",
+          "description": "IV CANNULA FIXATOR / - / CF374(SEIBERT) / 05/2027 / 89",
+          "quantity": "1",
+          "unit_price": "85.11",
+          "discount": "0.00",
+          "amount": "85.11",
+          "source_line_index": 18,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Material",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Iv Cannula Fixator",
+            "standard_name": "Not in list",
+            "score": 0.5159,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "sr_no": "",
+          "description": "IV CANNULA NO. 24 / - / 22F1285 / 05/2027 / 191.25",
+          "quantity": "1",
+          "unit_price": "183.08",
+          "discount": "0.00",
+          "amount": "183.08",
+          "source_line_index": 19,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Material",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cannula IV",
+            "standard_name": "Not in list",
+            "score": 0.3705,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "HYPERNEB NS 3% RESPULE / / 6T00017 / 12/2027 / 22.45",
+          "quantity": "3",
+          "unit_price": "22.24",
+          "discount": "0.00",
+          "amount": "66.72",
+          "source_line_index": 0,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Hyperneb 3% Respules (Ng)",
+            "standard_name": "medicine",
+            "score": 0.5472,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "SCREEDO REPULES / BUDESONIDE / AFR25085 / 08/2027 / 24.93",
+          "quantity": "3",
+          "unit_price": "24.69",
+          "discount": "0.00",
+          "amount": "74.07",
+          "source_line_index": 1,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Screedo Resp 0.5Mg Budesonide Nebulizer Suspension 0.5Mg/2Ml /",
+            "standard_name": "medicine",
+            "score": 0.3834,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "LEVOLIN 0.63 RESPULES / LEVOSALBUTAMOL / 6L80152 / 01/2028 / 8.1",
+          "quantity": "3",
+          "unit_price": "8.02",
+          "discount": "0.00",
+          "amount": "24.06",
+          "source_line_index": 2,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Levolin - 0.63 Respules",
+            "standard_name": "medicine",
+            "score": 0.6691,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "MONOCEF 1GM INJ / CEFTRIAXONE / BPA260191 / 06/2028 / 66.63",
+          "quantity": "1",
+          "unit_price": "66.00",
+          "discount": "0.00",
+          "amount": "66.00",
+          "source_line_index": 3,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Monocef 1 Gm Injection Ceftriaxone 1 Gm Injection /",
+            "standard_name": "medicine",
+            "score": 0.7223,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "CORT-S 100MG INJ / HYDROCORTISONE / V4471736 / 12/2027 / 47.7",
+          "quantity": "2",
+          "unit_price": "46.68",
+          "discount": "0.00",
+          "amount": "93.36",
+          "source_line_index": 4,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cort S 100 Mg Injection",
+            "standard_name": "medicine",
+            "score": 0.7546,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "2ML SYRINGE WITH NEEDLE / - / 6204 / 10/2030 / 10",
+          "quantity": "3",
+          "unit_price": "9.72",
+          "discount": "0.00",
+          "amount": "29.16",
+          "source_line_index": 5,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe With Needle",
+            "standard_name": "needle",
+            "score": 0.5815,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "5ML SYRINGE WITH NEEDLE / - / 3615 / 10/2030 / 15",
+          "quantity": "1",
+          "unit_price": "14.53",
+          "discount": "0.00",
+          "amount": "14.53",
+          "source_line_index": 6,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe With Needle",
+            "standard_name": "needle",
+            "score": 0.5767,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "10ML SYRINGE WITH NEEDLE / - / 5335769 / 11/2030 / 20.5",
+          "quantity": "2",
+          "unit_price": "19.90",
+          "discount": "0.00",
+          "amount": "39.80",
+          "source_line_index": 7,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "- .: Nov/2030 Syringe 10Ml With Needle Perfectum Hmd Hmd - Batch:",
+            "standard_name": "needle",
+            "score": 0.6069,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "OT Materials",
+          "sub_bill_type_id": "1014363",
+          "sr_no": "",
+          "description": "NEEDLE 18G / - / 082518 / 07/2030 / 6.5",
+          "quantity": "2",
+          "unit_price": "6.27",
+          "discount": "0.00",
+          "amount": "12.54",
+          "source_line_index": 8,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Needle 18G -",
+            "standard_name": "needle",
+            "score": 0.4684,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "IV CANNULA NO 26 (NEO) / - / 25E1383 / 04/2030 / 234.38",
+          "quantity": "1",
+          "unit_price": "224.61",
+          "discount": "0.00",
+          "amount": "224.61",
+          "source_line_index": 9,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Iv Cannula 26 No",
+            "standard_name": "Not in list",
+            "score": 0.407,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "sr_no": "",
+          "description": "IV CANNULA NO. 24 / - / 22F1285 / 05/2027 / 191.25",
+          "quantity": "1",
+          "unit_price": "183.08",
+          "discount": "0.00",
+          "amount": "183.08",
+          "source_line_index": 10,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Material",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cannula IV",
+            "standard_name": "Not in list",
+            "score": 0.3705,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "sr_no": "",
+          "description": "IV CANNULA NEO 24 / - / 25J2664 / 10/2030 / 250",
+          "quantity": "1",
+          "unit_price": "239.03",
+          "discount": "0.00",
+          "amount": "239.03",
+          "source_line_index": 11,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Material",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Neonovo Iv Cannula",
+            "standard_name": "Not in list",
+            "score": 0.5527,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "sr_no": "",
+          "description": "IV CANNULA FIXATOR / - / CF374(SEIBERT) / 05/2027 / 89",
+          "quantity": "1",
+          "unit_price": "85.11",
+          "discount": "0.00",
+          "amount": "85.11",
+          "source_line_index": 12,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Material",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cannula Fixator IV Fix",
+            "standard_name": "tape - surgical tape",
+            "score": 0.5685,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "NEBULISATION MASK (P) / - / 1105125N / 11/2030 / 350",
+          "quantity": "1",
+          "unit_price": "350.00",
+          "discount": "0.00",
+          "amount": "350.00",
+          "source_line_index": 13,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Non-Payable",
+          "match_info": {
+            "matched_item": "Nebulisation Mask",
+            "standard_name": "Not in list",
+            "score": 0.5355,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "MONOCEF 1GM INJ / CEFTRIAXONE / BPA260191 / 06/2028 / 66.63",
+          "quantity": "1",
+          "unit_price": "66.00",
+          "discount": "0.00",
+          "amount": "66.00",
+          "source_line_index": 14,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Monocef 1 Gm Injection Ceftriaxone 1 Gm Injection /",
+            "standard_name": "medicine",
+            "score": 0.7223,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "MACMIKA 100MG INJ / AMIKACIN / 1825322 / 07/2027 / 37.6",
+          "quantity": "2",
+          "unit_price": "37.24",
+          "discount": "0.00",
+          "amount": "74.48",
+          "source_line_index": 15,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Macmika 100 Inj",
+            "standard_name": "medicine",
+            "score": 0.691,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "CORT-S 100MG INJ / HYDROCORTISONE / V4471736 / 12/2027 / 47.7",
+          "quantity": "2",
+          "unit_price": "46.68",
+          "discount": "0.00",
+          "amount": "93.36",
+          "source_line_index": 16,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cort S 100 Mg Injection",
+            "standard_name": "medicine",
+            "score": 0.7546,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "JUNIOR LANZOL 15 TAB / LANSOPRAZOLE / 5BA2412 / 07/2027 / 12.3",
+          "quantity": "2",
+          "unit_price": "12.18",
+          "discount": "0.00",
+          "amount": "24.36",
+          "source_line_index": 17,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Junior Lanzol 15 Tab",
+            "standard_name": "medicine",
+            "score": 0.7517,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "LEVOLIN 0.63 RESPULES / LEVOSALBUTAMOL / 6L80152 / 01/2028 / 8.1",
+          "quantity": "5",
+          "unit_price": "8.02",
+          "discount": "0.00",
+          "amount": "40.10",
+          "source_line_index": 18,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Levolin - 0.63 Respules",
+            "standard_name": "medicine",
+            "score": 0.6691,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "SCREEDO REPULES / BUDESONIDE / AFR25085 / 08/2027 / 24.93",
+          "quantity": "5",
+          "unit_price": "24.69",
+          "discount": "0.00",
+          "amount": "123.45",
+          "source_line_index": 19,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Screedo Resp 0.5Mg Budesonide Nebulizer Suspension 0.5Mg/2Ml /",
+            "standard_name": "medicine",
+            "score": 0.3834,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "HYPERNEB NS 3% RESPULE / - / 6T0007 / 12/2027 / 22.45",
+          "quantity": "5",
+          "unit_price": "22.24",
+          "discount": "0.00",
+          "amount": "111.20",
+          "source_line_index": 20,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Hyperneb 3% Respules (Ng)",
+            "standard_name": "medicine",
+            "score": 0.542,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Investigation Charges",
+          "bill_type_id": "500535",
+          "sub_bill_type": "Investigation  Charges",
+          "sub_bill_type_id": "1014386",
+          "sr_no": "",
+          "description": "ANTIFLU SYP 75ML / OSELTAMIVIR / 5A6060792 / 06/2027 / 867.75",
+          "quantity": "1",
+          "unit_price": "859.49",
+          "discount": "0.00",
+          "amount": "859.49",
+          "source_line_index": 21,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syp.Antiflu 75Ml",
+            "standard_name": "medicine",
+            "score": 0.6855,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "2ML SYRINGE WITH NEEDLE / - / 6204 / 10/2030 / 10",
+          "quantity": "3",
+          "unit_price": "9.72",
+          "discount": "0.00",
+          "amount": "29.16",
+          "source_line_index": 22,
+          "charge_type": "line_item",
+          "page_number": 6,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe With Needle",
+            "standard_name": "needle",
+            "score": 0.5815,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "5ML SYRINGE WITH NEEDLE / - / 3615 / 10/2030 / 15",
+          "quantity": "2",
+          "unit_price": "14.53",
+          "discount": "0.00",
+          "amount": "29.06",
+          "source_line_index": 0,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe With Needle",
+            "standard_name": "needle",
+            "score": 0.5767,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "10ML SYRINGE WITH NEEDLE / - / 5335769 / 11/2030 / 20.5",
+          "quantity": "3",
+          "unit_price": "19.90",
+          "discount": "0.00",
+          "amount": "59.70",
+          "source_line_index": 1,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "- .: Nov/2030 Syringe 10Ml With Needle Perfectum Hmd Hmd - Batch:",
+            "standard_name": "needle",
+            "score": 0.6069,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "OT Materials",
+          "sub_bill_type_id": "1014363",
+          "sr_no": "",
+          "description": "NEEDLE 18G / - / 082518 / 07/2030 / 6.5",
+          "quantity": "2",
+          "unit_price": "6.27",
+          "discount": "0.00",
+          "amount": "12.54",
+          "source_line_index": 2,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Needle 18G -",
+            "standard_name": "needle",
+            "score": 0.4684,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "POSIFLUSH / - / 5267039 / 09/2028 / 62.5",
+          "quantity": "1",
+          "unit_price": "61.40",
+          "discount": "0.00",
+          "amount": "61.40",
+          "source_line_index": 3,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe Bd Posiflush",
+            "standard_name": "Not in list",
+            "score": 0.3331,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "MACMIKA 100MG INJ / AMIKACIN / 1825322 / 07/2027 / 37.6",
+          "quantity": "1",
+          "unit_price": "37.24",
+          "discount": "0.00",
+          "amount": "37.24",
+          "source_line_index": 4,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Macmika 100 Inj",
+            "standard_name": "medicine",
+            "score": 0.691,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "CORT-S 100MG INJ / HYDROCORTISONE / V4471736 / 12/2027 / 47.7",
+          "quantity": "1",
+          "unit_price": "46.68",
+          "discount": "0.00",
+          "amount": "46.68",
+          "source_line_index": 5,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cort S 100 Mg Injection",
+            "standard_name": "medicine",
+            "score": 0.7546,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "JUNIOR LANZOL 15 TAB / LANSOPRAZOLE / 5BA2412 / 07/2027 / 12.3",
+          "quantity": "1",
+          "unit_price": "12.18",
+          "discount": "0.00",
+          "amount": "12.18",
+          "source_line_index": 6,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Junior Lanzol 15 Tab",
+            "standard_name": "medicine",
+            "score": 0.7517,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "SCREEDO REPULES / BUDESONIDE / AFR25085 / 08/2027 / 24.93",
+          "quantity": "5",
+          "unit_price": "24.69",
+          "discount": "0.00",
+          "amount": "123.45",
+          "source_line_index": 7,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Screedo Resp 0.5Mg Budesonide Nebulizer Suspension 0.5Mg/2Ml /",
+            "standard_name": "medicine",
+            "score": 0.3834,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "2ML SYRINGE WITH NEEDLE / - / 6204 / 10/2030 / 10",
+          "quantity": "2",
+          "unit_price": "9.72",
+          "discount": "0.00",
+          "amount": "19.44",
+          "source_line_index": 8,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe With Needle",
+            "standard_name": "needle",
+            "score": 0.5815,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "5ML SYRINGE WITH NEEDLE / - / 3615 / 10/2030 / 15",
+          "quantity": "2",
+          "unit_price": "14.53",
+          "discount": "0.00",
+          "amount": "29.06",
+          "source_line_index": 9,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "5Ml Syringe .",
+            "standard_name": "Not in list",
+            "score": 0.6017,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "10ML SYRINGE WITH NEEDLE / - / 5335769 / 11/2030 / 20.5",
+          "quantity": "3",
+          "unit_price": "19.90",
+          "discount": "0.00",
+          "amount": "59.70",
+          "source_line_index": 10,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "- .: Nov/2030 Syringe 10Ml With Needle Perfectum Hmd Hmd - Batch:",
+            "standard_name": "needle",
+            "score": 0.6069,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "OT Materials",
+          "sub_bill_type_id": "1014363",
+          "sr_no": "",
+          "description": "NEEDLE 18G / - / 082518 / 07/2030 / 6.5",
+          "quantity": "3",
+          "unit_price": "6.27",
+          "discount": "0.00",
+          "amount": "18.81",
+          "source_line_index": 11,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Needle 18G -",
+            "standard_name": "needle",
+            "score": 0.4684,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "POSIFLUSH / - / 5267039 / 09/2028 / 62.5",
+          "quantity": "1",
+          "unit_price": "61.40",
+          "discount": "0.00",
+          "amount": "61.40",
+          "source_line_index": 12,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe Bd Posiflush",
+            "standard_name": "Not in list",
+            "score": 0.3331,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "sr_no": "",
+          "description": "EXAMINATION GLOVE M / - / 01305 / 04/2029 / 12",
+          "quantity": "4",
+          "unit_price": "11.56",
+          "discount": "0.00",
+          "amount": "46.24",
+          "source_line_index": 13,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Disposables",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Non-Payable",
+          "match_info": {
+            "matched_item": "Examination Gloves M",
+            "standard_name": "gloves - examination gloves",
+            "score": 0.5776,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "sr_no": "",
+          "description": "IV CANNULA FIXATOR / - / CF374(SEIBERT) / 05/2027 / 89",
+          "quantity": "1",
+          "unit_price": "85.11",
+          "discount": "0.00",
+          "amount": "85.11",
+          "source_line_index": 14,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Material",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cannula Fixator IV Fix",
+            "standard_name": "tape - surgical tape",
+            "score": 0.5685,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "sr_no": "",
+          "description": "IV CANNULA NO. 24 / - / 25L3354 / 11/2030 / 271",
+          "quantity": "1",
+          "unit_price": "259.03",
+          "discount": "0.00",
+          "amount": "259.03",
+          "source_line_index": 15,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Material",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cannula IV",
+            "standard_name": "Not in list",
+            "score": 0.4817,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "IV CANNULA NO 26 (NEO) / - / 25E1383 / 04/2030 / 234.38",
+          "quantity": "1",
+          "unit_price": "224.61",
+          "discount": "0.00",
+          "amount": "224.61",
+          "source_line_index": 16,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Iv Cannula 26 No",
+            "standard_name": "Not in list",
+            "score": 0.407,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "MONOCEF 1GM INJ / CEFTRIAXONE / BPA260191 / 06/2028 / 66.63",
+          "quantity": "1",
+          "unit_price": "66.00",
+          "discount": "0.00",
+          "amount": "66.00",
+          "source_line_index": 17,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Monocef 1 Gm Injection Ceftriaxone 1 Gm Injection /",
+            "standard_name": "medicine",
+            "score": 0.7223,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "MACMIKA 100MG INJ / AMIKACIN / 1825322 / 07/2027 / 37.6",
+          "quantity": "2",
+          "unit_price": "37.24",
+          "discount": "0.00",
+          "amount": "74.48",
+          "source_line_index": 18,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Macmika 100 Inj",
+            "standard_name": "medicine",
+            "score": 0.691,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "CORT-S 100MG INJ / HYDROCORTISONE / V4471736 / 12/2027 / 47.7",
+          "quantity": "2",
+          "unit_price": "46.68",
+          "discount": "0.00",
+          "amount": "93.36",
+          "source_line_index": 19,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Cort S 100 Mg Injection",
+            "standard_name": "medicine",
+            "score": 0.7546,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "LEVOLIN 0.63 RESPULES / LEVOSALBUTAMOL / 6L80152 / 01/2028 / 8.1",
+          "quantity": "5",
+          "unit_price": "8.02",
+          "discount": "0.00",
+          "amount": "40.10",
+          "source_line_index": 20,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Levolin - 0.63 Respules",
+            "standard_name": "medicine",
+            "score": 0.6691,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "HYPERNEB NS 3% RESPULE / - / 6T00018 / 12/2027 / 22.45",
+          "quantity": "5",
+          "unit_price": "22.24",
+          "discount": "0.00",
+          "amount": "111.20",
+          "source_line_index": 21,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Hyperneb 3% Respules (Ng)",
+            "standard_name": "medicine",
+            "score": 0.5478,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "2ML SYRINGE WITH NEEDLE / - / 6204 / 10/2030 / 10",
+          "quantity": "3",
+          "unit_price": "9.72",
+          "discount": "0.00",
+          "amount": "29.16",
+          "source_line_index": 22,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe With Needle",
+            "standard_name": "needle",
+            "score": 0.5815,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "5ML SYRINGE WITH NEEDLE / - / 3615 / 10/2030 / 15",
+          "quantity": "2",
+          "unit_price": "14.53",
+          "discount": "0.00",
+          "amount": "29.06",
+          "source_line_index": 23,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Syringe With Needle",
+            "standard_name": "needle",
+            "score": 0.5767,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "10ML SYRINGE WITH NEEDLE / - / 5335769 / 11/2030 / 20.5",
+          "quantity": "3",
+          "unit_price": "19.90",
+          "discount": "0.00",
+          "amount": "59.70",
+          "source_line_index": 24,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "- .: Nov/2030 Syringe 10Ml With Needle Perfectum Hmd Hmd - Batch:",
+            "standard_name": "needle",
+            "score": 0.6069,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "OT Materials",
+          "sub_bill_type_id": "1014363",
+          "sr_no": "",
+          "description": "NEEDLE 18G / - / 082518 / 07/2030 / 6.5",
+          "quantity": "2",
+          "unit_price": "6.27",
+          "discount": "0.00",
+          "amount": "12.54",
+          "source_line_index": 25,
+          "charge_type": "line_item",
+          "page_number": 7,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Needle 18G -",
+            "standard_name": "needle",
+            "score": 0.4684,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        }
+      ]
+    }
+  ],
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "flagged_for_review": true,
+  "flag_reason": "Printed net 24101.0 was inconsistent with the itemized total 17712.18 and was recomputed.",
+  "overall_confidence": 0.6
+}

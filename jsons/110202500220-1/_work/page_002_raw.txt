@@ -1,0 +1,54 @@
+=== PAGE 2 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4160
+Tokens Out: 473
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 2,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "K MOHANA SUDHARANI",
+    "age": "21 Years",
+    "gender": "Female",
+    "uhid": "INS597",
+    "ward": "Deluxe Room"
+  },
+  "admission": {
+    "date_of_admission": "07/06/2026",
+    "date_of_discharge": "09/06/2026",
+    "treating_doctor": "B.L.Sarada Devi M.B.B.S, D.G.O"
+  },
+  "hospital": {
+    "name": "Jawahar Nursing Home",
+    "address": "Near RTC Bus-stand, Main Road, chimakurthy, Prakasam Dist., Andhra Pradesh, Pin-523226",
+    "contact": "Ph : 08592 272528"
+  },
+  "medications": [
+    {
+      "name": "Tab. Ceftum BD",
+      "dosage": "1[M] 1[N]"
+    },
+    {
+      "name": "Tab. Rantac BD",
+      "dosage": "1[M] 1[N]"
+    },
+    {
+      "name": "Tab. Metrogyl TID",
+      "dosage": "1[M] 1[AF] 1[N]"
+    },
+    {
+      "name": "Tab. Voveron BD",
+      "dosage": "1[M] 1[N]"
+    },
+    {
+      "name": "Syp. Cremaffin"
+    }
+  ],
+  "raw_summary": "Discharge summary for patient K Mohana Sudharani, 21-year-old female, who underwent episiotomy delivery at Jawahar Nursing Home, delivered a male baby weighing 2.700 kgs, and was discharged on 09/06/2026 with prescribed medications."
+}

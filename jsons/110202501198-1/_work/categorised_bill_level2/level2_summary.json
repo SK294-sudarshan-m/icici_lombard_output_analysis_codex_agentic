@@ -1,0 +1,25 @@
+{
+  "categories": {
+    "detailed_final_bill": [
+      {
+        "bill_id": "detailed_final_bill_1",
+        "pages": [
+          2
+        ],
+        "sequence_reason": "Single page"
+      }
+    ],
+    "final_bill": [
+      {
+        "bill_id": "final_bill_1",
+        "pages": [
+          1,
+          3
+        ],
+        "sequence_reason": "The pages share identical patient information, hospital header, and financial totals (Gross Amount, Net Amount, Balance To Pay). Page 1 contains the IP Bill Statement Summary with itemized charges, while Page 3 repeats the Payment Details section, indicating it is a continuation or duplicate of the final summary. The page numbers 1 and 3 suggest a missing page 2, but both pages are part of the same logical bill as they reference the same transaction and patient."
+      }
+    ]
+  },
+  "total_tokens_in": 2225,
+  "total_tokens_out": 136
+}

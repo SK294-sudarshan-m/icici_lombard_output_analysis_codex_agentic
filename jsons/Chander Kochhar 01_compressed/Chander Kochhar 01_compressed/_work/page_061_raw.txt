@@ -1,0 +1,64 @@
+=== PAGE 61 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4384
+Tokens Out: 385
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 61,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "61",
+    "document_title": "CENTRAL KYC REGISTRY | Know Your Customer (KYC) Application Form | Individual"
+  },
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "This page contains a Central KYC Registry Know Your Customer (KYC) Application Form for an individual, with handwritten entries for personal details, proof of identity, proof of address, and contact information, and is not a bill or medical document."
+}

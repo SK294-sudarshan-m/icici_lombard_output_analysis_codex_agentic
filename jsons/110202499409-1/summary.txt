@@ -1,0 +1,12 @@
+PDF: 110202499409-1.pdf
+request_id: b44fbd70
+status: completed
+pages: 6
+line_items: 8
+extracted_amount: 43000.0
+payable (after discount): 43000.0
+amounts_match: True
+overall_confidence: 0.97
+billing_type: Day Care
+adjudication_overall: fail
+summary: Case is in order and recommended for processing. The consolidated bill has 8 line item(s) totalling ₹43,000.00 (gross), with a net payable of ₹43,000.00. the line items reconcile with the bill's printed total. 2 line item(s) are flagged for review. billing type assessed as Day Care. extraction confidence 0.97.

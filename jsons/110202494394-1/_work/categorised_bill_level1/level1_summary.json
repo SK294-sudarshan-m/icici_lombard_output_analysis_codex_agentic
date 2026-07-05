@@ -1,0 +1,23 @@
+{
+  "bill_pages": {
+    "final_bill": [
+      2,
+      3
+    ],
+    "pharmacy_bill": [
+      4,
+      5
+    ]
+  },
+  "non_bill_pages": {
+    "pre_auth_letter": [
+      1
+    ],
+    "discharge_summary": [
+      6,
+      7
+    ]
+  },
+  "unclassified_pages": [],
+  "total_pages": 7
+}

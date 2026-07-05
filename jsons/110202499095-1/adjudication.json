@@ -1,0 +1,816 @@
+{
+  "schema_version": "1.0",
+  "request_id": "57240cb5",
+  "source_filename": "110202499095-1.pdf",
+  "generated_at": "2026-07-04T12:51:17.839001+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker. Agents needing review: Administrative Review, Financial Adjudication. 8 issue(s) raised (3 high, 3 medium, 2 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "Mr Arnav Nilesh Rokade",
+      "age": "11 years",
+      "gender": "Male",
+      "uhid": "",
+      "ip_number": "06/16/2026",
+      "ward": "",
+      "bed_number": "4/12"
+    },
+    "admission": {
+      "date_of_admission": "02/06/2026",
+      "date_of_discharge": "08/06/2026",
+      "length_of_stay": "7",
+      "admission_type": "",
+      "referring_doctor": "",
+      "treating_doctor": "Dr. Vivek Tyagi",
+      "department": ""
+    },
+    "hospital": {
+      "name": "Amora Panchkarma and Wellness center",
+      "address": "Sr. No. 109/2/2, Near Shivdatta Mandir, Radhabai Raghu raskar chowk, Vrundavan, Charholi Bk, Pune, MH 412105",
+      "contact": "9997738731"
+    },
+    "insurance": {
+      "company": "",
+      "policy_number": "",
+      "member_id": "",
+      "claimed_amount": "",
+      "approved_amount": "",
+      "tpa": ""
+    },
+    "total_pages": 4,
+    "charge_count": 10,
+    "diagnosis": "Pitta dosha",
+    "treatment": "Ayurveda treatment including Netra tarpan, Sthanik lep, Abhyanga swedan, Snehpan, Dhara full body, Anjana, and Virechan for Pitta dosha with improvement in symptoms."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 4 of 16 mandatory documents are present (25.0% complete, status critical). Critical documents missing: Payment Receipts, Identity Proof - Aadhar. The claim appears to be Reimbursement (confidence 0.75, llm). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Payment Receipts.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Payment Receipts from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "Critical mandatory document missing: Identity Proof - Aadhar.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Identity Proof - Aadhar from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "10 mandatory document(s) missing: Claim Form, Authorization Letter, Pre Authorization Request Note, Investigation Reports, Pharmacy or Medicine Bills, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others, Identity Proof - Non Aadhar.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 12 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 3,
+        "medium": 1,
+        "low": 0,
+        "total": 4
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent correctly identifies 4 mandatory documents found, but misclassifies 'Indoor Case Papers' and 'Consultation Papers' as present without clear evidence in the page summaries or structured data — only discharge summaries and a bill are explicitly identified. The claim type 'Reimbursement' lacks supporting keyword evidence. The completeness status 'critical' is appropriate given 12 missing, but the verdict should reflect that only 2 critical documents are missing, not 12, and the file may be salvageable with targeted requests.",
+        "suggestions": [
+          "Re-evaluate 'Indoor Case Papers' and 'Consultation Papers' — only 'Discharge Summary' and 'Final Hospital Bills' are clearly supported by page types.",
+          "Revise claim type to 'Unable to detect' unless explicit reimbursement keywords (e.g., 'reimbursement form', 'claim submission') are present.",
+          "Adjust completeness status to 'warn' if only 2 critical documents are missing and core clinical docs are present, or clarify why 12 missing justifies 'critical'."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.352,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "57240cb5",
+        "source_filename": "110202499095-1.pdf",
+        "generated_at": "2026-07-04T12:51:03.410424Z",
+        "total_pages": 4,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Reimbursement",
+          "detection_method": "llm",
+          "confidence": 0.75,
+          "cashless_matches": [],
+          "reimbursement_matches": []
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Final Hospital Bills",
+            "Indoor Case Papers",
+            "Consultation Papers"
+          ],
+          "missing": [
+            "Claim Form",
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Investigation Reports",
+            "Payment Receipts",
+            "Pharmacy or Medicine Bills",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Identity Proof - Aadhar",
+            "Others",
+            "Identity Proof - Non Aadhar"
+          ],
+          "missing_critical": [
+            "Payment Receipts",
+            "Identity Proof - Aadhar"
+          ],
+          "found_count": 4,
+          "missing_count": 12,
+          "total_mandatory": 16,
+          "completeness_percent": 25.0,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Final Hospital Bills": "structured",
+            "Indoor Case Papers": "variation",
+            "Consultation Papers": "abbreviation"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Payment Receipts, Identity Proof - Aadhar before adjudication.",
+            "Request the following missing documents: Claim Form, Authorization Letter, Pre Authorization Request Note, Investigation Reports, Payment Receipts, Pharmacy or Medicine Bills, Implants Invoice, Implants Label or Sticker, Prescription Papers, Identity Proof - Aadhar, Others, Identity Proof - Non Aadhar."
+          ]
+        },
+        "non_mandatory_found": [],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 3,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 4,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "unknown",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "bill_detail_statement",
+            "start_page": 1,
+            "end_page": 1,
+            "pages": [
+              1
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "discharge_summary",
+            "start_page": 2,
+            "end_page": 4,
+            "pages": [
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=PASS. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date..",
+      "issues": [
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The verdict correctly flags critical SKIPPED checks for 'insured' and 'policy_dates' and assigns overall WARN status, avoiding false positives. However, it fails to enforce Rule 2: a CRITICAL check that is SKIPPED should not be treated as non-blocking — the advisory_issues list is insufficient; these should be elevated to blocking_issues since they prevent verification of core eligibility. The evidence for 'identity' is strong, but the verdict structure under-represents risk.",
+        "suggestions": [
+          "Reclassify 'insured' and 'policy_dates' SKIPPED checks as blocking_issues, not advisory_issues, to reflect their critical impact on claim validity.",
+          "Update overall_status logic to treat any CRITICAL SKIPPED check as a blocking condition requiring human escalation, not just advisory review."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "Mr Arnav Nilesh Rokade",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "Mr Arnav Nilesh Rokade",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "Mr Arnav Nilesh Rokade",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_2",
+                  "patient_name": "Arnav Nilesh Rokade",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_3",
+                  "patient_name": "Arnav Nilesh Rohade",
+                  "score": 0.947,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "Mr Arnav Nilesh Rokade",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "PASS",
+            "severity": "ADVISORY",
+            "evidence": "1 document(s) checked — in-period=1, out-of-period=0, ambiguous=0.",
+            "detail": {
+              "status": "PASS",
+              "documents": [
+                {
+                  "document_name": "Detailed breakup of bill",
+                  "type": "bill",
+                  "date": "08.06.2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                }
+              ],
+              "counts": {
+                "IN_PERIOD": 1,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 0
+              },
+              "total_checked": 1,
+              "hospitalization": {
+                "admission": "2026-06-02",
+                "discharge": "2026-06-08"
+              },
+              "window_config": {
+                "pre_hosp_days": 30,
+                "post_hosp_days": 30
+              }
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+        ],
+        "inputs": {
+          "patient_name": "Mr Arnav Nilesh Rokade",
+          "insured_name": null,
+          "admission_date": "02/06/2026",
+          "discharge_date": "08/06/2026",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:51:08.329280+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "pass",
+      "summary": "Medical admissibility passed: billed treatment is consistent with the clinical record. Treatment validity score 1.00; recommended action APPROVE. 10 charge(s): valid=10, partial=0, invalid=0, review=0. Treatment process appears correct: Ayurvedic interventions align with Pitta dosha management; no clinical contradiction despite administrative name discrepancy. Major conflicts: Treating doctor mismatch between billing and discharge summary: Dr. Vivek Tyagi vs Vivek Jyoti. PED validation: INSUFFICIENT / UNKNOWN across 0 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Treating doctor mismatch between billing and discharge summary: Dr. Vivek Tyagi vs Vivek Jyoti",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 0,
+        "total": 1
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent incorrectly assigned all 10 charges as VALID despite a documented doctor name mismatch (Dr. Vivek Tyagi vs Vivek Jyoti) flagged in major conflicts — this should trigger REVIEW for verification, not automatic approval. The treatment_validity_score of 1.00 is unjustified given the unresolved administrative discrepancy and lack of PED validation inputs. While Ayurvedic alignment with Pitta dosha is plausible, the absence of policy or PED data should not result in a blanket APPROVE without flagging INSUFFICIENT for underwriting review.",
+        "suggestions": [
+          "Reclassify at least one charge as REVIEW due to doctor name mismatch until verified.",
+          "Downgrade treatment_validity_score to 0.70–0.80 to reflect unresolved administrative conflict.",
+          "Explicitly recommend 'REVIEW' instead of 'APPROVE' given INSUFFICIENT PED validation and unresolved doctor discrepancy."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 1.995,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "57240cb5",
+        "generated_at": "2026-07-04T12:51:12.499213Z",
+        "overall_verdict": "VALID",
+        "treatment_validity_score": 1.0,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "FAIL",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 1,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 2,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 3,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 4,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 5,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 6,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 7,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 8,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 9,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "Treating doctor mismatch between billing and discharge summary: Dr. Vivek Tyagi vs Vivek Jyoti"
+        ],
+        "recommended_action": "APPROVE",
+        "treatment_process_correct": true,
+        "treatment_process_explanation": "Ayurvedic interventions align with Pitta dosha management; no clinical contradiction despite administrative name discrepancy.",
+        "treatment_process_confidence": 0.85,
+        "treatment_process_evidence": [
+          "Procedures (Netra tarpan, Virechan, etc.) are standard for Pitta dosha in Ayurveda.",
+          "Medications (Avipattikar churna, Mahatriphala ghreetam) are Pitta-pacifying.",
+          "No lab/investigation evidence required for Ayurvedic diagnosis per traditional practice.",
+          "Doctor name mismatch is administrative, not clinical; does not invalidate treatment appropriateness."
+        ],
+        "lab_evidence_count": 0,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "UNKNOWN",
+          "confidence": 0.0,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "pre_existing_diseases",
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "NO_PED_FOUND_IN_DISCHARGE_SUMMARY"
+          ],
+          "ped_items": []
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "warn",
+      "summary": "Financial adjudication is inconclusive and requires investigation. Of 47945.00 billed across 10 line item(s): payable 38845.00 (8), non-payable 0.00 (0), undetermined 9100.00 (2). Recommended action INVESTIGATE; admissible amount 38845.00. Billing type assessed as Surgery. Figures derived via the consolidated path.",
+      "issues": [
+        {
+          "message": "2 line item(s) totalling 9100.00 have undetermined payability.",
+          "severity": "medium",
+          "code": "financial.payability_unresolved",
+          "location": null,
+          "suggestion": "Resolve bill-type / payability before final adjudication."
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 0,
+        "total": 1
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.85,
+        "rationale": "The agent correctly flags 2 undetermined line items (Virechan and Dhara full body, totaling 9100.00) and assigns INVESTIGATION_REQUIRED, which is appropriate. However, the final_admissible_amount (38845.00) is presented as payable despite the presence of undetermined amounts, which risks under-payment if those items are later found payable. The verdict should not imply any admissible amount until all unknowns are resolved.",
+        "suggestions": [
+          "Do not report a final_admissible_amount when any line item is marked 'unknown'; instead, state 'admissible amount pending resolution of unknown items'.",
+          "Reinforce in notes that the 9100.00 is not payable until investigation concludes, to prevent premature settlement."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "57240cb5",
+        "generated_at": "2026-07-04T12:51:15.626165Z",
+        "mode": "consolidated",
+        "overall_verdict": "INVESTIGATION_REQUIRED",
+        "recommended_action": "INVESTIGATE",
+        "final_admissible_amount": 38845.0,
+        "totals": {
+          "total_billed": 47945.0,
+          "payable_total": 38845.0,
+          "non_payable_total": 0.0,
+          "unknown_total": 9100.0,
+          "charge_count": 10,
+          "payable_count": 8,
+          "non_payable_count": 0,
+          "unknown_count": 2
+        },
+        "reconciliation": {
+          "extracted_total": 47945.0,
+          "recomputed_total": 47945.0,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 47945.0,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 38845.0,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 0.0,
+          "non_payable_vs_disallowed_match": true
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Procedure Charges",
+            "billed": 29395.0,
+            "payable": 20295.0,
+            "non_payable": 0.0,
+            "unknown": 9100.0,
+            "count": 7
+          },
+          {
+            "bill_type": "Room Charges",
+            "billed": 14000.0,
+            "payable": 14000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Consultation Visit Charges",
+            "billed": 2800.0,
+            "payable": 2800.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Miscellaneous",
+            "billed": 1750.0,
+            "payable": 1750.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          }
+        ],
+        "billing_type": "Surgery",
+        "overall_confidence": 0.96,
+        "flagged_count": 0,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "Abhyanga swedan",
+            "amount": 8960.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 0.95
+          },
+          {
+            "line_item_id": 2,
+            "description": "Sthanik lep",
+            "amount": 2730.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 0.95
+          },
+          {
+            "line_item_id": 3,
+            "description": "netra tarpan",
+            "amount": 5145.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 0.95
+          },
+          {
+            "line_item_id": 4,
+            "description": "Snehpan",
+            "amount": 1760.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 0.95
+          },
+          {
+            "line_item_id": 5,
+            "description": "Virechan",
+            "amount": 2000.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "unknown",
+            "resolve_method": "unresolved",
+            "confidence": 0.95
+          },
+          {
+            "line_item_id": 6,
+            "description": "Dhara full body",
+            "amount": 7100.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "unknown",
+            "resolve_method": "unresolved",
+            "confidence": 0.95
+          },
+          {
+            "line_item_id": 7,
+            "description": "Anjana",
+            "amount": 1700.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 0.95
+          },
+          {
+            "line_item_id": 8,
+            "description": "Stay charges Private AC room",
+            "amount": 14000.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "vector_consensus",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 9,
+            "description": "Diet charges",
+            "amount": 1750.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 10,
+            "description": "Dr consultation",
+            "amount": 2800.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 0.95
+          }
+        ],
+        "notes": [
+          "2 line item(s) totalling 9100.00 have undetermined payability and must be resolved before adjudication."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 2.351,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 3,
+      "medium": 3,
+      "low": 2,
+      "total": 8
+    }
+  }
+}

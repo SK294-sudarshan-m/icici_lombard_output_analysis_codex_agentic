@@ -1,0 +1,32 @@
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "Mrs. Anshu Singh",
+    "age": "33Y 0M 0D",
+    "gender": "Female",
+    "uhid": "7460 / 2026-2027",
+    "ip_number": "134 / 2026-2027",
+    "ward": "Deluxe",
+    "bed_number": "102"
+  },
+  "admission": {
+    "date_of_admission": "06 Jun 2026 05:00 PM",
+    "date_of_discharge": "08 Jun 2026",
+    "length_of_stay": "2 days",
+    "admission_type": "Elective",
+    "referring_doctor": "Self",
+    "treating_doctor": "Dr. Gaurav Prakash Sawant",
+    "department": "Surgery"
+  },
+  "hospital": {
+    "name": "OSCAR HITECH MULTISPECIALITY HOSPITAL",
+    "address": "Laxmi Niwas, Near Borivali Phatak, S V Road, Daulat Nagar, Borivali East, Mumbai - 400066",
+    "contact": "Tel No.: 0222893255/02228932266/8425986919 | Email: oscarhitechhospital@gmail.com"
+  },
+  "raw_summary": "Discharge summary for Mrs. Anshu Singh, 33-year-old female, admitted on 06 Jun 2026 for abdominal pain and nausea, diagnosed with calculus cholecystitis, underwent laparoscopic cholecystectomy, and discharged on 08 Jun 2026 after uneventful recovery."
+}

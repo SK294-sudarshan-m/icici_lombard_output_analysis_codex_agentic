@@ -1,0 +1,12 @@
+PDF: 110202497302-1.pdf
+request_id: 3dbb70df
+status: completed
+pages: 3
+line_items: 3
+extracted_amount: 67500.0
+payable (after discount): 67500.0
+amounts_match: True
+overall_confidence: 1.0
+billing_type: Medical Management
+adjudication_overall: fail
+summary: Case is in order and recommended for processing. The consolidated bill has 3 line item(s) totalling ₹67,500.00 (gross), with a net payable of ₹67,500.00. the line items reconcile with the bill's printed total. billing type assessed as Medical Management. extraction confidence 1.00.

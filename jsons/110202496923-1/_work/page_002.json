@@ -1,0 +1,26 @@
+{
+  "page": 2,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "Mast. GLENN FLEMING PRADEEP",
+    "age": "11",
+    "gender": "MALE",
+    "uhid": "26-6986"
+  },
+  "admission": {
+    "date_of_admission": "03/06/2026",
+    "date_of_discharge": "08/06/2026",
+    "treating_doctor": "Dr. HAREEZ",
+    "department": "DEPARTMENT OF PAEDIATRIC"
+  },
+  "hospital": {
+    "name": "A J HOSPITAL",
+    "address": "KAZHAKOOTTAM",
+    "contact": "GST: 32AIKPJ3231C1ZX, PH: 0471-7144600, 9207333388"
+  },
+  "raw_summary": "Page 2 of a discharge summary from A J Hospital, Kazhakoottam, for a 11-year-old male patient diagnosed with AC Bronchiolitis, detailing admission/discharge dates, clinical findings, treatment course, and blood investigation results."
+}

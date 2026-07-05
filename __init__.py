@@ -1,5 +1,10 @@
-"""Evidence-first analyzer for consolidated claim case verdicts."""
+"""Full-artifact, project-model-driven claim case-verdict analyzer."""
 
-from .agent import main
+
+def main(argv=None):
+    """Lazily dispatch to the standalone CLI without importing it at package load."""
+    from .agent import main as _main
+
+    return _main(argv)
 
 __all__ = ["main"]

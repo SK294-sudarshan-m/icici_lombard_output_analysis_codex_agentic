@@ -1,0 +1,62 @@
+{
+  "source_pages": [
+    6,
+    7
+  ],
+  "primary_diagnosis": "RIGHT SUURATIVE OTITIS MEDIAL WITH O/O MASTOIDITIS",
+  "procedures": [
+    "RIGHT MODIFIED RADICAL MASTOIDECTOMY + INTERLAY TYMPANOPLASTY (REVISION)"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "1",
+  "treating_doctor": "SANTANU BHATTACHARJEE",
+  "department": "Otorhinolaryngology",
+  "pre_existing_diseases": [
+    "RIGHT EAR SURGERY IN CHILDHOOD"
+  ],
+  "treatment": "Surgical management with right modified radical mastoidectomy and interlay tympanoplasty under local anaesthesia.",
+  "medications": [
+    {
+      "name": "Fadox CV",
+      "dosage": "1 TAB",
+      "frequency": "TWICE DAILY AFTER FOOD",
+      "duration": "FOR 10 DAYS"
+    },
+    {
+      "name": "Bullzo",
+      "dosage": "600mg",
+      "frequency": "1 TAB TWICE DAILY AFTER FOOD",
+      "duration": "FOR 10 DAYS"
+    },
+    {
+      "name": "Fenadol PS",
+      "dosage": "1 TAB",
+      "frequency": "TWICE DAILY AFTER FOOD",
+      "duration": "FOR 10 DAYS"
+    },
+    {
+      "name": "Roshamin DSSR",
+      "dosage": "1 CAP",
+      "frequency": "TWICE DAILY BEFORE FOOD",
+      "duration": "FOR 10 DAYS"
+    },
+    {
+      "name": "Frenase X Nasal Drop",
+      "dosage": "",
+      "frequency": "3 TIMES BOTH NASAL CAVITY",
+      "duration": "FOR 10 DAYS"
+    },
+    {
+      "name": "Fexodol M",
+      "dosage": "1 TAB",
+      "frequency": "ONCE DAILY AT NIGHT",
+      "duration": "FOR 10 DAYS"
+    },
+    {
+      "name": "Lorfast AM",
+      "dosage": "1 TAB",
+      "frequency": "TWICE DAILY AFTER FOOD",
+      "duration": "FOR 10 DAYS"
+    }
+  ]
+}

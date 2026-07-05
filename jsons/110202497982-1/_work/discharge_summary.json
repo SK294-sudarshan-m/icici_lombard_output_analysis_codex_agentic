@@ -1,0 +1,75 @@
+{
+  "source_pages": [
+    1
+  ],
+  "primary_diagnosis": "Acute Gastroenteritis",
+  "procedures": [],
+  "severity": "Moderate",
+  "length_of_stay": "4",
+  "treating_doctor": "Jishy George",
+  "department": "General Medicine",
+  "pre_existing_diseases": [],
+  "treatment": "Conservative management with IV antibiotics and supportive care.",
+  "medications": [
+    {
+      "name": "Cefaperazone",
+      "dosage": "1GM IV in 100ML NS",
+      "frequency": "BD",
+      "duration": "5 days"
+    },
+    {
+      "name": "Calpol",
+      "dosage": "650MG",
+      "frequency": "1-1-1",
+      "duration": ""
+    },
+    {
+      "name": "Pantop",
+      "dosage": "40MG IV",
+      "frequency": "OD",
+      "duration": "5 days"
+    },
+    {
+      "name": "Combinorm Plus",
+      "dosage": "",
+      "frequency": "1-0-0",
+      "duration": ""
+    },
+    {
+      "name": "Tusq X Plus",
+      "dosage": "5ML",
+      "frequency": "BD",
+      "duration": ""
+    },
+    {
+      "name": "Allegra",
+      "dosage": "180MG",
+      "frequency": "1-0-0",
+      "duration": ""
+    },
+    {
+      "name": "Enuff",
+      "dosage": "",
+      "frequency": "1-1-1",
+      "duration": ""
+    },
+    {
+      "name": "Emeset",
+      "dosage": "4MG",
+      "frequency": "1-0-1",
+      "duration": ""
+    },
+    {
+      "name": "IV Fluids",
+      "dosage": "",
+      "frequency": "",
+      "duration": ""
+    },
+    {
+      "name": "Betadine Mouth Gargle",
+      "dosage": "",
+      "frequency": "1-1-1",
+      "duration": ""
+    }
+  ]
+}

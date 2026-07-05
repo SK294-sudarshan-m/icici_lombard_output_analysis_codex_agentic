@@ -1,0 +1,784 @@
+{
+  "schema_version": "1.0",
+  "request_id": "1c0840d2",
+  "source_filename": "110101016808-1.pdf",
+  "generated_at": "2026-07-04T12:41:26.882052+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker. Agents needing review: Administrative Review. 7 issue(s) raised (3 high, 2 medium, 2 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "Mrs. Anshu Singh",
+      "age": "33Y",
+      "gender": "Female",
+      "uhid": "2026-2027 | 7460",
+      "ip_number": "134 / 2026-2027",
+      "ward": "General_Ward",
+      "bed_number": "102"
+    },
+    "admission": {
+      "date_of_admission": "06/06/2026 05:00 PM",
+      "date_of_discharge": "08 Jun 2026",
+      "length_of_stay": "2 days",
+      "admission_type": "Deluxe",
+      "referring_doctor": "Self",
+      "treating_doctor": "Dr.Gaurav Prakash Sawant",
+      "department": "Surgery"
+    },
+    "hospital": {
+      "name": "OSCAR HITECH MULTISPECIALITY HOSPITAL",
+      "address": "Laxmi Niwas, Near Borivali Phatak, S.V Road, Daulat Nagar, Borivali East, Mumbai - 400066",
+      "contact": "Tel No.: 02228932255/02228932266/8425986919 | Email: oscarhitechhospital@gmail.com"
+    },
+    "insurance": {
+      "company": "",
+      "policy_number": "",
+      "member_id": "",
+      "claimed_amount": "",
+      "approved_amount": "",
+      "tpa": ""
+    },
+    "total_pages": 5,
+    "charge_count": 8,
+    "diagnosis": "CALCULUS CHOLECYSTITIS",
+    "treatment": "Laparoscopic cholecystectomy performed with postoperative IV antibiotics and supportive care."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 4 of 16 mandatory documents are present (25.0% complete, status critical). Critical documents missing: Payment Receipts, Identity Proof - Aadhar. The claim appears to be Reimbursement (confidence 0.75, llm). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Payment Receipts.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Payment Receipts from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "Critical mandatory document missing: Identity Proof - Aadhar.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Identity Proof - Aadhar from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "10 mandatory document(s) missing: Authorization Letter, Pre Authorization Request Note, Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others, Identity Proof - Non Aadhar.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 12 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 3,
+        "medium": 1,
+        "low": 0,
+        "total": 4
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent correctly identifies only 4 of 16 mandatory documents, triggering a critical status and INCOMPLETE verdict. However, it falsely reports 'Claim Form' and 'Consultation Papers' as found without clear evidence in the page summaries or structured data — these are not substantiated by the provided page classifications (only Discharge Summary and Bill Detail Statement are explicitly identified). The claim type 'Reimbursement' is confidently assigned without supporting keywords or evidence in the digest.",
+        "suggestions": [
+          "Re-evaluate 'Claim Form' and 'Consultation Papers' — remove them from 'found' unless explicitly detected in page content or structured fields.",
+          "Revise claim type detection: either lower confidence or mark as 'Unable to detect' if no keywords (e.g., 'reimbursement', 'cashless authorization') are present in the document text or metadata."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.347,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "1c0840d2",
+        "source_filename": "110101016808-1.pdf",
+        "generated_at": "2026-07-04T12:41:10.970347Z",
+        "total_pages": 5,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Reimbursement",
+          "detection_method": "llm",
+          "confidence": 0.75,
+          "cashless_matches": [],
+          "reimbursement_matches": []
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Claim Form",
+            "Final Hospital Bills",
+            "Consultation Papers"
+          ],
+          "missing": [
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Investigation Reports",
+            "Payment Receipts",
+            "Pharmacy or Medicine Bills",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Identity Proof - Aadhar",
+            "Others",
+            "Identity Proof - Non Aadhar"
+          ],
+          "missing_critical": [
+            "Payment Receipts",
+            "Identity Proof - Aadhar"
+          ],
+          "found_count": 4,
+          "missing_count": 12,
+          "total_mandatory": 16,
+          "completeness_percent": 25.0,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Claim Form": "fuzzy",
+            "Final Hospital Bills": "structured",
+            "Consultation Papers": "abbreviation"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Payment Receipts, Identity Proof - Aadhar before adjudication.",
+            "Request the following missing documents: Authorization Letter, Pre Authorization Request Note, Investigation Reports, Payment Receipts, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Identity Proof - Aadhar, Others, Identity Proof - Non Aadhar."
+          ]
+        },
+        "non_mandatory_found": [
+          "operative note"
+        ],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 3,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 4,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 5,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "discharge_summary",
+            "start_page": 1,
+            "end_page": 3,
+            "pages": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "bill_detail_statement",
+            "start_page": 4,
+            "end_page": 5,
+            "pages": [
+              4,
+              5
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=PASS. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date..",
+      "issues": [
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent correctly flagged critical checks (insured, policy_dates) as SKIPPED due to missing data, and set overall_status to WARN — aligning with Rule 1. However, the 'identity' check is misleadingly marked PASS despite the absence of any insured name to match against; this risks a false negative if the patient is not the insured. The evidence for identity should reflect that only intra-document name consistency was verified, not insured-patient alignment.",
+        "suggestions": [
+          "Revise 'identity' check status to WARN or SKIPPED with explicit note: 'Patient name verified internally, but insured name missing — cannot confirm patient is insured.'",
+          "Clarify in 'identity' evidence that no insured name was available for cross-verification, to prevent misinterpretation of a full PASS."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "Mrs. Anshu Singh",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "Mrs. Anshu Singh",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "Mrs. Anshu Singh",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_4",
+                  "patient_name": "Mrs. Anshu Singh",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_5",
+                  "patient_name": "Mrs. Anshu Singh",
+                  "score": 1.0,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "Mrs. Anshu Singh",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "PASS",
+            "severity": "ADVISORY",
+            "evidence": "2 document(s) checked — in-period=2, out-of-period=0, ambiguous=0.",
+            "detail": {
+              "status": "PASS",
+              "documents": [
+                {
+                  "document_name": "IN-PATIENT BILL - PROVISIONAL",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-07 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "IN-PATIENT BILL - PROVISIONAL",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-07 to 2026-07-08) for type 'bill'."
+                }
+              ],
+              "counts": {
+                "IN_PERIOD": 2,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 0
+              },
+              "total_checked": 2,
+              "hospitalization": {
+                "admission": "2026-06-06",
+                "discharge": "2026-06-08"
+              },
+              "window_config": {
+                "pre_hosp_days": 30,
+                "post_hosp_days": 30
+              }
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+        ],
+        "inputs": {
+          "patient_name": "Mrs. Anshu Singh",
+          "insured_name": null,
+          "admission_date": "06/06/2026 05:00 PM",
+          "discharge_date": "08 Jun 2026",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:41:14.809425+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "pass",
+      "summary": "Medical admissibility passed: billed treatment is consistent with the clinical record. Treatment validity score 1.00; recommended action APPROVE. 8 charge(s): valid=8, partial=0, invalid=0, review=0. Treatment process appears correct: Laparoscopic cholecystectomy is standard for calculus cholecystitis; antibiotics and supportive care align with postoperative management. Major conflicts: Treating doctor mismatch between billing and discharge summary: Dr.Gaurav Prakash Sawant vs Gaurav Prakash Sawant. PED validation: INSUFFICIENT / UNKNOWN across 0 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Treating doctor mismatch between billing and discharge summary: Dr.Gaurav Prakash Sawant vs Gaurav Prakash Sawant",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 0,
+        "total": 1
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.85,
+        "rationale": "The agent correctly identified a doctor name mismatch as a non-clinical administrative issue and approved all charges as VALID, but failed to flag the PED validation as a critical REVIEW due to missing policy inputs — this risks a false negative if PED was undeclared. The overall verdict and treatment_validity_score of 1.0 are overconfident given the INSUFFICIENT PED status and lack of lab evidence.",
+        "suggestions": [
+          "Downgrade overall_verdict to REVIEW and treatment_validity_score to 0.70 to reflect PED uncertainty.",
+          "Add a major conflict note: 'PED validation incomplete — policy inputs missing; requires underwriting review before final approval.'",
+          "Ensure PED validation status triggers REVIEW action when missing policy_start_date or policy_wording, per Rule 4."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 1.981,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "1c0840d2",
+        "generated_at": "2026-07-04T12:41:19.422040Z",
+        "overall_verdict": "VALID",
+        "treatment_validity_score": 1.0,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "FAIL",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 1,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 2,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 3,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 4,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 5,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 6,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 7,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "Treating doctor mismatch between billing and discharge summary: Dr.Gaurav Prakash Sawant vs Gaurav Prakash Sawant"
+        ],
+        "recommended_action": "APPROVE",
+        "treatment_process_correct": true,
+        "treatment_process_explanation": "Laparoscopic cholecystectomy is standard for calculus cholecystitis; antibiotics and supportive care align with postoperative management.",
+        "treatment_process_confidence": 0.95,
+        "treatment_process_evidence": [
+          "Diagnosis of calculus cholecystitis supports cholecystectomy as definitive treatment.",
+          "Procedures listed are standard steps in laparoscopic cholecystectomy.",
+          "Postoperative antibiotics (Ceftum) and analgesia (Diclogesic) are appropriate for moderate severity.",
+          "No contradictory lab/investigation evidence provided to challenge treatment appropriateness.",
+          "Doctor name mismatch is administrative, not clinical; does not invalidate treatment process."
+        ],
+        "lab_evidence_count": 0,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "UNKNOWN",
+          "confidence": 0.0,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "pre_existing_diseases",
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "NO_PED_FOUND_IN_DISCHARGE_SUMMARY"
+          ],
+          "ped_items": []
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "pass",
+      "summary": "Financial adjudication passed: the bill reconciles and is fully payable. Of 65000.00 billed across 8 line item(s): payable 65000.00 (8), non-payable 0.00 (0), undetermined 0.00 (0). Recommended action APPROVE; admissible amount 65000.00. Billing type assessed as Surgery. Figures derived via the consolidated path.",
+      "issues": [],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent incorrectly marked all 8 line items as payable despite 6 of them (Room and Nursing Charges) having zero billed amounts — these should not be classified as 'payable' but rather as non-applicable or excluded. The insurer comparison flags a mismatch (billed vs claimed = 65000.0) but the verdict remains VALID without justification, violating Rule 4 and 5. The payable total is mathematically correct but semantically misleading.",
+        "suggestions": [
+          "Reclassify zero-amount line items (IDs 2-7) as 'non_payable' or 'excluded' with rationale, not 'payable'.",
+          "Revise overall verdict to PARTIAL or INVESTIGATION_REQUIRED to reflect the insurer comparison mismatch and semantic misclassification.",
+          "Add a note explaining why zero-amount items were included in payable count and how they align with policy terms."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "1c0840d2",
+        "generated_at": "2026-07-04T12:41:21.931782Z",
+        "mode": "consolidated",
+        "overall_verdict": "VALID",
+        "recommended_action": "APPROVE",
+        "final_admissible_amount": 65000.0,
+        "totals": {
+          "total_billed": 65000.0,
+          "payable_total": 65000.0,
+          "non_payable_total": 0.0,
+          "unknown_total": 0.0,
+          "charge_count": 8,
+          "payable_count": 8,
+          "non_payable_count": 0,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 65000.0,
+          "recomputed_total": 65000.0,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 65000.0,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 65000.0,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 0.0,
+          "non_payable_vs_disallowed_match": true
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Surgeon Charges",
+            "billed": 64500.0,
+            "payable": 64500.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Miscellaneous",
+            "billed": 500.0,
+            "payable": 500.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Room Charges",
+            "billed": 0.0,
+            "payable": 0.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 3
+          },
+          {
+            "bill_type": "Room Nursing Charges",
+            "billed": 0.0,
+            "payable": 0.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 3
+          }
+        ],
+        "billing_type": "Surgery",
+        "overall_confidence": 1.0,
+        "flagged_count": 0,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "REGISTRATION CHARGES",
+            "amount": 500.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Registration",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 2,
+            "description": "BED NO. 102 General_Ward For The Date 06/06/2026",
+            "amount": 0.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 3,
+            "description": "BED NO. 102 General_Ward For The Date 07/06/2026",
+            "amount": 0.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 4,
+            "description": "BED NO. 102 General_Ward For The Date 08/06/2026",
+            "amount": 0.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 5,
+            "description": "NURSING CHG. 102 General_Ward For The Date 06/06/2026",
+            "amount": 0.0,
+            "bill_type": "Room Nursing Charges",
+            "sub_bill_type": "Hospital Nursing Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 6,
+            "description": "NURSING CHG. 102 General_Ward For The Date 07/06/2026",
+            "amount": 0.0,
+            "bill_type": "Room Nursing Charges",
+            "sub_bill_type": "Hospital Nursing Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 7,
+            "description": "NURSING CHG. 102 General_Ward For The Date 08/06/2026",
+            "amount": 0.0,
+            "bill_type": "Room Nursing Charges",
+            "sub_bill_type": "Hospital Nursing Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 8,
+            "description": "Cholecystectomy (LAP)",
+            "amount": 64500.0,
+            "bill_type": "Surgeon Charges",
+            "sub_bill_type": "Procedure or Surgery or Operation Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          }
+        ],
+        "notes": [
+          "Bill reconciles and every line item is payable."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 2.332,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 3,
+      "medium": 2,
+      "low": 2,
+      "total": 7
+    }
+  }
+}

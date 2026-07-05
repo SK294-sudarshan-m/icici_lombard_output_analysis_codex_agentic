@@ -1,0 +1,47 @@
+{
+  "page": 19,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "ORE76483/24",
+    "bill_date": "24/02/2025",
+    "page_indicator": "19",
+    "document_title": "SERVICE VOUCHER BILL OF SUPPLY"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91 Yrs",
+    "gender": "F",
+    "uhid": "192673"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "Tel: +91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "AMBULANCE CHARGES",
+      "quantity": "1",
+      "unit_price": "2320.00",
+      "gross_amount": "2320.00",
+      "discount": "0.00",
+      "amount": "2320.00",
+      "source_line_index": 0
+    }
+  ],
+  "bill_summary": {
+    "gross_amount": "2320.00",
+    "total_amount": "2320.00",
+    "discount": "0.00",
+    "tax": "0.00",
+    "net_payable": "2320.00",
+    "amount_paid": "2320.00",
+    "balance": "0.00",
+    "advance_paid": "0.00"
+  },
+  "raw_summary": "Service voucher bill for ambulance charges of Rs. 2,320.00 issued by P.D. Hinduja Hospital to patient Chander Kochhar on 24/02/2025, with GST exempt under SAC code 999311.",
+  "pipeline_category": "supporting_interim_bill",
+  "bill_id": "supporting_interim_bill_4",
+  "sequence_reason": "Page 19 is a standalone Service Voucher (Bill of Supply) for ambulance charges from P.D. Hinduja Hospital. It has a unique Voucher No. (ORE76483/24) and is a separate transaction from the main itemized bill, making it a new, independent group."
+}

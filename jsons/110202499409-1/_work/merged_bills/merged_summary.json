@@ -1,0 +1,32 @@
+{
+  "bills": [
+    {
+      "bill_id": "pharmacy_bill_1",
+      "category": "pharmacy_bill",
+      "pages": [
+        3
+      ],
+      "merged_from": 1,
+      "total_charges": 12,
+      "duplicates_removed": 0,
+      "total_amount": "4000.00"
+    },
+    {
+      "bill_id": "final_bill_1",
+      "category": "final_bill",
+      "pages": [
+        1
+      ],
+      "merged_from": 1,
+      "total_charges": 8,
+      "duplicates_removed": 0,
+      "total_amount": "43000"
+    }
+  ],
+  "category_totals": {
+    "pharmacy_bill": 4000.0,
+    "final_bill": 43000.0
+  },
+  "grand_total": 47000.0,
+  "total_bills": 2
+}

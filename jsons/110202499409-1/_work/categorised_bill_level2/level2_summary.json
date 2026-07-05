@@ -1,0 +1,24 @@
+{
+  "categories": {
+    "pharmacy_bill": [
+      {
+        "bill_id": "pharmacy_bill_1",
+        "pages": [
+          3
+        ],
+        "sequence_reason": "Single page"
+      }
+    ],
+    "final_bill": [
+      {
+        "bill_id": "final_bill_1",
+        "pages": [
+          1
+        ],
+        "sequence_reason": "Single page"
+      }
+    ]
+  },
+  "total_tokens_in": 0,
+  "total_tokens_out": 0
+}

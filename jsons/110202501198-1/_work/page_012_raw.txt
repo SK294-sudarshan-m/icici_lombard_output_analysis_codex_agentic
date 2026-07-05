@@ -1,0 +1,31 @@
+=== PAGE 12 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3260
+Tokens Out: 274
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 12,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Nursing Admission Assessment"
+  },
+  "patient": {
+    "name": "Mrs Bandla Hymavathi",
+    "age": "62 Y,1 M,17 D",
+    "gender": "Female",
+    "uhid": "893505"
+  },
+  "admission": {
+    "date_of_admission": "09-06-2026 11:00:00",
+    "admission_type": "IP"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD, TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "raw_summary": "Nursing Admission Assessment form for patient Mrs Bandla Hymavathi, including admission details, accompaniment, language, and clinical assessments such as fall risk and denture status."
+}

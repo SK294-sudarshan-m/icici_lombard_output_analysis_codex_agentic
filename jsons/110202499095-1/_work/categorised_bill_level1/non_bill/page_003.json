@@ -1,0 +1,31 @@
+{
+  "page": 3,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "MEDICAL CASE SHEET"
+  },
+  "patient": {
+    "name": "Arnav Nilesh Rohade",
+    "age": "11",
+    "gender": "Male",
+    "ip_number": "06/16/2026",
+    "ward": "",
+    "bed_number": "4/12"
+  },
+  "admission": {
+    "date_of_admission": "2/6/26",
+    "date_of_discharge": "8/6/20",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "Amora Panchkarma and wellness center",
+    "address": "Sr.No. 109/2/2, Near Shivdatta Mandir, Radhabai Raghu Raskar Chowk, Vrundavan, Charholi Bk, Pune 412105",
+    "contact": "9997738731"
+  },
+  "raw_summary": "Medical case sheet for patient Arnav Nilesh Rohade detailing admission/discharge dates, presenting complaints (indigestion, dry eyes), examination vitals, provisional diagnosis (Pitta-dosh), and daily Ayurvedic treatments administered from 2/6/26 to 5/6/26."
+}

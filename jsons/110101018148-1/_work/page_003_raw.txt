@@ -1,0 +1,36 @@
+=== PAGE 3 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4185
+Tokens Out: 388
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 3,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "SAYU PRAVEEN",
+    "age": "3 Y",
+    "gender": "Female",
+    "uhid": "522395",
+    "ip_number": "194188"
+  },
+  "admission": {
+    "date_of_admission": "07/06/2026",
+    "date_of_discharge": "09/06/2026",
+    "length_of_stay": "2 days",
+    "admitting_doctor": "DR. UTHARA MOHAN",
+    "treating_doctor": "DR. UTHARA MOHAN",
+    "department": "DEPARTMENT OF PAEDIATRICS"
+  },
+  "hospital": {
+    "name": "HOLY GHOST MISSION HOSPITAL",
+    "address": "Muttuchira P.O, Kottayam Dst., Kerala-686613, India",
+    "contact": "Ph : 04829-216600, 9497216600"
+  },
+  "raw_summary": "Page 1 of 3 of a discharge summary from Holy Ghost Mission Hospital for a 3-year-old female patient named Sayu Praveen, admitted on 07/06/2026 and discharged on 09/06/2026 with a final diagnosis of Influenza Like Illness, including presenting complaints, physical findings, and consultant details."
+}

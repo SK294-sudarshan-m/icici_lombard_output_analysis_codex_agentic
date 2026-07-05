@@ -1,0 +1,100 @@
+{
+  "claim_no": null,
+  "llm_remarks": null,
+  "merged_doc_uri": "",
+  "processed_time_in_secs": 88.25,
+  "stage_confidence": null,
+  "llm_case_verdict": {
+    "id": "e1da0aeb-0afb-4cbc-bcc1-c4f86857be8a",
+    "timestamp": "2026-07-04T12:40:39.005695+00:00",
+    "bill_extraction_attempts": 1,
+    "extracted_total_amount": 87200.0,
+    "calculated_total_amount": 87200.0,
+    "calculated_difference": 0.0,
+    "calculated_match": true,
+    "bill_extraction_is_accurate": true,
+    "bill_extraction_accuracy_reason": null,
+    "i3_total_amount": 0.0,
+    "i3_total_difference": 87200.0,
+    "i3_total_match": false,
+    "non_payable_amount": 0.0,
+    "payable_amount": 87200.0,
+    "i3_non_payable_amount": 0.0,
+    "i3_payable_amount": 0.0,
+    "i3_non_payable_difference": 0.0,
+    "i3_payable_difference": 87200.0,
+    "i3_non_payable_match": true,
+    "i3_payable_match": false,
+    "nme_classification_conclusive": true,
+    "overall_confidence": 1.0,
+    "final_case_verdict": null,
+    "billing_type": "Surgery",
+    "billing_type_confidence": 0.95,
+    "billing_type_reason": "OT/surgeon charges present + DS confirms procedure(s): LAPAROSCOPIC CHOLECYSTECTOMY",
+    "unique_bill_count": 1,
+    "bill_item_count": 3,
+    "bills_scout_briefing": null
+  },
+  "llm_response": {
+    "bills_classified": [
+      {
+        "bill_items": [
+          {
+            "display_order": 0,
+            "sr_no": "1",
+            "page_number": 4,
+            "item_name": "REGISTRATION FEES",
+            "amount": 500.0,
+            "standard_item_name": "admission - registration charges",
+            "bill_type_id": 1014508,
+            "bill_type": "Miscellaneous",
+            "bill_sub_type_id": 1000788,
+            "bill_sub_type": "Registration",
+            "is_payable": true,
+            "closest_item_name": "Registration Charges",
+            "payable_value_source": "llm_selected",
+            "llm_confidence": 1.0,
+            "llm_confidence_reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Miscellaneous' and sub_bill_type 'Registration' are valid per bill master (1014508, 1000788).",
+            "textract_confidence": 1.0
+          },
+          {
+            "display_order": 1,
+            "sr_no": "2",
+            "page_number": 4,
+            "item_name": "HISTOPATH BIG",
+            "amount": 7000.0,
+            "standard_item_name": "test",
+            "bill_type_id": 500535,
+            "bill_type": "Investigation Charges",
+            "bill_sub_type_id": 1014386,
+            "bill_sub_type": "Investigation  Charges",
+            "is_payable": true,
+            "closest_item_name": "Histopath (Large)",
+            "payable_value_source": "llm_selected",
+            "llm_confidence": 1.0,
+            "llm_confidence_reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Investigation Charges' and sub_bill_type 'Investigation Charges' are valid per bill master (500535, 1014386).",
+            "textract_confidence": 1.0
+          },
+          {
+            "display_order": 2,
+            "sr_no": "3",
+            "page_number": 4,
+            "item_name": "CHOLECYSTECTOMY (LAP)",
+            "amount": 79700.0,
+            "standard_item_name": "Not in list",
+            "bill_type_id": 500642,
+            "bill_type": "Procedure Charges",
+            "bill_sub_type_id": 1014412,
+            "bill_sub_type": "Surgery or Operation charges",
+            "is_payable": true,
+            "closest_item_name": "Lap Cholecystectomy",
+            "payable_value_source": "llm_selected",
+            "llm_confidence": 1.0,
+            "llm_confidence_reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Procedure Charges' is correct, but sub_bill_type 'Dressing' is incorrect; it should be 'Surgery or Operation charges' per bill master (500642, 1014407).",
+            "textract_confidence": 1.0
+          }
+        ]
+      }
+    ]
+  }
+}

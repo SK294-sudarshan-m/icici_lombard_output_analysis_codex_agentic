@@ -1,0 +1,104 @@
+{
+  "source_pages": [
+    1,
+    2
+  ],
+  "primary_diagnosis": "G2P1L1 With full term pregnancy with previous CS for elective CS",
+  "procedures": [
+    "Elective Cesarean Section",
+    "Elective LSCS",
+    "B/L Tubectomy"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "5",
+  "treating_doctor": "Aishwarya Hunashyal",
+  "department": "Obstetrics and Gynecology",
+  "pre_existing_diseases": [],
+  "treatment": "Conservative management with IV antibiotics, uterotonics, and supportive care post-elective cesarean section.",
+  "medications": [
+    {
+      "name": "IVF NS",
+      "dosage": "DNS, RL",
+      "frequency": "X 2 DAYS"
+    },
+    {
+      "name": "PAN",
+      "dosage": "40MG",
+      "route": "IV",
+      "frequency": "BD",
+      "duration": "3 DAYS"
+    },
+    {
+      "name": "XONE",
+      "dosage": "1 GM",
+      "route": "IV",
+      "frequency": "BD",
+      "duration": "3 DAYS"
+    },
+    {
+      "name": "PAUSE",
+      "route": "IV STAT"
+    },
+    {
+      "name": "EMESET",
+      "dosage": "4MG",
+      "route": "IV",
+      "frequency": "BD",
+      "duration": "3 DAYS"
+    },
+    {
+      "name": "NEOMOL",
+      "dosage": "100ML",
+      "route": "IV SOS"
+    },
+    {
+      "name": "JONAC SUPPOSITORY",
+      "route": "SOS"
+    },
+    {
+      "name": "DOMADOL",
+      "route": "IM STAT"
+    },
+    {
+      "name": "ENTEROGERMIN",
+      "route": "BD",
+      "duration": "3 DAYS"
+    },
+    {
+      "name": "AUGPEN 625MG TABLET",
+      "dosage": "1 - 0 - 1",
+      "frequency": "daily",
+      "duration": "5 Days"
+    },
+    {
+      "name": "CHYMOCET TABLET",
+      "dosage": "1 - 0 - 1",
+      "frequency": "daily",
+      "duration": "5 days"
+    },
+    {
+      "name": "UGESIC SUBLINGUAL TABLET",
+      "dosage": "1 - 0 - 1",
+      "frequency": "daily",
+      "duration": "3 Days"
+    },
+    {
+      "name": "ULGEL TABLET",
+      "dosage": "1 - 1 - 1",
+      "frequency": "daily",
+      "duration": "3 Days"
+    },
+    {
+      "name": "P RD",
+      "dosage": "1 - 0 - 1",
+      "frequency": "daily",
+      "duration": "5 Days"
+    },
+    {
+      "name": "INDIBACT CAPSULES",
+      "dosage": "1 - 0 - 1",
+      "frequency": "daily",
+      "duration": "5 days"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "page": 10,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "ICO15284",
+    "bill_date": "24/02/2025 11:36:58AM",
+    "page_indicator": "Page No : 1",
+    "document_title": "INPATIENT FINAL BILL (Summary)"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91 Y",
+    "gender": "F",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "",
+    "bed_number": "110A"
+  },
+  "admission": {
+    "date_of_admission": "21/02/2025 08:41:00PM",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "TPA",
+    "referring_doctor": "",
+    "treating_doctor": "DR. ABHAY RAUT",
+    "department": ""
+  },
+  "hospital": {
+    "name": "P.D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "B91, COZI HOME, PALI HILL, BANDRA WEST, MUMBAI-400050, MAHARASHTRA",
+    "contact": "+91 22 6174 6000 / 2646 9999"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD GENERAL INSURANCE COMPANY LTD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "189771.25",
+    "approved_amount": "",
+    "tpa": "ICICI LOMBARD GENERAL INSURANCE COMPANY LTD"
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "BED CHARGES",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "0.00",
+      "discount": "",
+      "amount": "30950.00",
+      "source_line_index": 0
+    },
+    {
+      "sr_no": "",
+      "description": "406- ICU",
+      "quantity": "1.00",
+      "unit_price": "18000.00",
+      "gross_amount": "18000.00",
+      "discount": "",
+      "amount": "18000.00",
+      "source_line_index": 1
+    },
+    {
+      "sr_no": "",
+      "description": "",
+      "quantity": "1.00",
+      "unit_price": "4200.00",
+      "gross_amount": "4200.00",
+      "discount": "",
+      "amount": "4200.00",
+      "source_line_index": 2
+    },
+    {
+      "sr_no": "",
+      "description": "",
+      "quantity": "1.00",
+      "unit_price": "4200.00",
+      "gross_amount": "4200.00",
+      "discount": "",
+      "amount": "4200.00",
+      "source_line_index": 3
+    },
+    {
+      "sr_no": "",
+      "description": "",
+      "quantity": "1.00",
+      "unit_price": "4550.00",
+      "gross_amount": "4550.00",
+      "discount": "",
+      "amount": "4550.00",
+      "source_line_index": 4
+    },
+    {
+      "sr_no": "",
+      "description": "CARDIOLOGY",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "0.00",
+      "discount": "",
+      "amount": "7600.00",
+      "source_line_index": 5
+    },
+    {
+      "sr_no": "",
+      "description": "DIETETICS",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "0.00",
+      "discount": "",
+      "amount": "1350.00",
+      "source_line_index": 6
+    },
+    {
+      "sr_no": "",
+      "description": "DOCTOR FEES",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "0.00",
+      "discount": "",
+      "amount": "17400.00",
+      "source_line_index": 7
+    },
+    {
+      "sr_no": "",
+      "description": "KUWELKER MAHESH",
+      "quantity": "1.00",
+      "unit_price": "2500.00",
+      "gross_amount": "2500.00",
+      "discount": "",
+      "amount": "2500.00",
+      "source_line_index": 8
+    },
+    {
+      "sr_no": "",
+      "description": "PINTO LANCELOT",
+      "quantity": "3.00",
+      "unit_price": "2500.00",
+      "gross_amount": "7500.00",
+      "discount": "",
+      "amount": "7500.00",
+      "source_line_index": 9
+    },
+    {
+      "sr_no": "",
+      "description": "RAUT ABHAY",
+      "quantity": "3.00",
+      "unit_price": "1700.00",
+      "gross_amount": "5100.00",
+      "discount": "",
+      "amount": "5100.00",
+      "source_line_index": 10
+    },
+    {
+      "sr_no": "",
+      "description": "RAUT ABHAY",
+      "quantity": "1.00",
+      "unit_price": "2300.00",
+      "gross_amount": "2300.00",
+      "discount": "",
+      "amount": "2300.00",
+      "source_line_index": 11
+    },
+    {
+      "sr_no": "",
+      "description": "HOSPITAL SERVICES",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "0.00",
+      "discount": "",
+      "amount": "10120.00",
+      "source_line_index": 12
+    },
+    {
+      "sr_no": "",
+      "description": "IMAGING",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "0.00",
+      "discount": "",
+      "amount": "44800.00",
+      "source_line_index": 13
+    },
+    {
+      "sr_no": "",
+      "description": "LAB MEDICINE",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "0.00",
+      "discount": "",
+      "amount": "34720.00",
+      "source_line_index": 14
+    },
+    {
+      "sr_no": "",
+      "description": "MATERIALS MGMT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "0.00",
+      "discount": "",
+      "amount": "1500.00",
+      "source_line_index": 15
+    },
+    {
+      "sr_no": "",
+      "description": "DEPT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "0.00",
+      "discount": "",
+      "amount": "",
+      "source_line_index": 16
+    },
+    {
+      "sr_no": "",
+      "description": "PHARMACY",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "0.00",
+      "discount": "",
+      "amount": "42379.25",
+      "source_line_index": 17
+    }
+  ],
+  "returns": [
+    {
+      "description": "PHARMACY Returns",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "-1048.00",
+      "source_line_index": 0
+    }
+  ],
+  "bill_summary": {
+    "gross_amount": "189771.25",
+    "total_amount": "189771.25",
+    "discount": "0.00",
+    "tax": "",
+    "net_payable": "189771.25",
+    "amount_paid": "0.00",
+    "balance": "189771.25",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Inpatient final bill summary for patient Chander Kochhar, aged 91, admitted on 21/02/2025, billed on 24/02/2025, with total net payable amount of ₹189,771.25, covered under ICICI Lombard General Insurance TPA, including bed charges, doctor fees, pharmacy, imaging, and lab services with one pharmacy return."
+}

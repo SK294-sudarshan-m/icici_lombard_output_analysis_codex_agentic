@@ -1,0 +1,30 @@
+=== PAGE 76 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3606
+Tokens Out: 297
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 76,
+  "page_type": "non_bill",
+  "non_bill_type": "diagnostic_report",
+  "document_markers": {
+    "bill_number": "16B-2024-042831",
+    "bill_date": "17/03/2025",
+    "page_indicator": "Page 1 of 1",
+    "document_title": "Bio-Chemistry"
+  },
+  "patient": {
+    "name": "Ms. CHANDER KOCHHAR",
+    "age": "91 Year(s)",
+    "gender": "Female",
+    "uhid": "HFH407578"
+  },
+  "hospital": {
+    "name": "HOLY FAMILY HOSPITAL",
+    "address": "St. Andrew's Road, Bandra, Mumbai - 400 050",
+    "contact": "62670555"
+  },
+  "raw_summary": "Biochemistry diagnostic report for Ms. Chander Kochhar showing CPK test result of 22 U/L with reference interval 30.00 - 135.00, collected and reported on 17/03/2025, with bill number 16B-2024-042831."
+}

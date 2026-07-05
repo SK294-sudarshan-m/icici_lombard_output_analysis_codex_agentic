@@ -1,0 +1,23 @@
+{
+  "categories": {
+    "supporting_interim_bill": [
+      {
+        "bill_id": "supporting_interim_bill_1",
+        "pages": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "sequence_reason": "The new pages 9, 10, and 11 are a direct continuation of the existing bill group. Page 9 is labeled 'Page 3 of 4', which logically follows 'Page 2 of 4' from page 8. Page 10 is 'Page 4 of 4', completing the sequence. Page 11 is the final summary page for the same bill, showing the total amount of 43087.00, which matches the cumulative totals from the previous pages. All pages share the same hospital, patient class, and date range, confirming they are part of a single, continuous final bill document."
+      }
+    ]
+  },
+  "total_tokens_in": 13876,
+  "total_tokens_out": 532
+}

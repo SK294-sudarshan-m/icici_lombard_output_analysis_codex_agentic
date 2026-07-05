@@ -1,0 +1,12 @@
+PDF: 110101017679-1.pdf
+request_id: 84344f67
+status: completed
+pages: 8
+line_items: 1
+extracted_amount: 20400.0
+payable (after discount): 20400.0
+amounts_match: True
+overall_confidence: 1.0
+billing_type: Package
+adjudication_overall: fail
+summary: Case is in order and recommended for processing. The consolidated bill has 1 line item(s) totalling ₹20,400.00 (gross), with a net payable of ₹20,400.00. the line items reconcile with the bill's printed total. billing type assessed as Package. extraction confidence 1.00.

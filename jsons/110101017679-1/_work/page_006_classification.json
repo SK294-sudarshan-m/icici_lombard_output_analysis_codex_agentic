@@ -1,0 +1,12 @@
+{
+  "page": 6,
+  "bill_category": "Package Charges",
+  "is_final_bill": true,
+  "is_detailed_final": false,
+  "charges": [
+    {
+      "index": 0,
+      "charge_type": "line_item"
+    }
+  ]
+}

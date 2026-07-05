@@ -1,0 +1,66 @@
+{
+  "page": 6,
+  "page_type": "bill",
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "raw_summary": "Page 6 contains a consolidated bill summary with a net payable of 8017.00 and three sub-bills for diagnostic lab services (total 1460.00) and one for radiology (140.00), each with itemized charges and bill numbers.",
+  "extraction_recall_warning": "Extracted 0 charges but the page appears to have many more line items — possible missed rows, review this page.",
+  "page_sub_id": "6-4",
+  "bill_category": "investigation_bill",
+  "pipeline_category": "investigation_bill",
+  "document_markers": {
+    "bill_number": "574136",
+    "document_title": "DETAILS OF DIAGNOSTIC RADIOLOGY/NON-LAB SERVICES",
+    "bill_date": "",
+    "page_indicator": ""
+  },
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "ECG",
+      "quantity": "1",
+      "unit_price": "140.00",
+      "gross_amount": "140.00",
+      "discount": ".00",
+      "amount": "140.00",
+      "charge_type": "line_item"
+    }
+  ],
+  "returns": [],
+  "medications": [],
+  "bill_summary": {
+    "total_amount": "140"
+  },
+  "_split_from_page": 6,
+  "bill_id": "investigation_bill_1",
+  "sequence_reason": "All five provided images are identical copies of the same page (Page 6), showing a complete statement with a final 'End of Statement' line and no continuation indicators. Therefore, they represent a single logical bill, and only one instance is needed for the sequence."
+}

@@ -1,0 +1,100 @@
+{
+  "page": 6,
+  "bill_category": "pharmacy_bill",
+  "is_final_bill": false,
+  "is_detailed_final": false,
+  "charges": [
+    {
+      "index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 2,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 3,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 4,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 5,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 6,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 7,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 8,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 9,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 10,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 11,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 12,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 13,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 14,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 15,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 16,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 17,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 18,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 19,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 20,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 21,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 22,
+      "charge_type": "line_item"
+    }
+  ]
+}

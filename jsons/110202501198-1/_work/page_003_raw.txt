@@ -1,0 +1,63 @@
+=== PAGE 3 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4139
+Tokens Out: 469
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 3,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "09-06-2026",
+    "page_indicator": "",
+    "document_title": "Payment Details"
+  },
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD, TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "11326.77",
+    "total_amount": "11326.77",
+    "discount": "0.0",
+    "tax": "",
+    "net_payable": "11326.77",
+    "amount_paid": "0.0",
+    "balance": "11326.77",
+    "advance_paid": "0.0"
+  },
+  "sub_bills": [],
+  "raw_summary": "Payment details page showing gross amount, net amount, and balance to pay of 11326.77 INR, with no deposit or amount paid, printed on 09-06-2026."
+}

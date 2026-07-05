@@ -1,0 +1,21 @@
+=== PAGE 4 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4266
+Tokens Out: 193
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 4,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "KALYANI GENERAL HOSPITAL"
+  },
+  "hospital": {
+    "name": "KALYANI GENERAL HOSPITAL",
+    "address": "15, Dr. Radhakrishnan Salai, Chennai - 600 004 (South India)",
+    "contact": "Phone : 28470642, 28473306, 28475101 Website : www.csikalyanihospital.com"
+  },
+  "raw_summary": "Page contains USG abdomen findings over three dates and a clinical course summary including medications and pediatric surgeon's opinion for a child diagnosed with acalculous cholecystitis."
+}

@@ -1,0 +1,47 @@
+=== PAGE 3 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4269
+Tokens Out: 442
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 3,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "page_indicator": "Page 2 of 3"
+  },
+  "hospital": {
+    "name": "AJ HOSPITAL KAZHAKOOTTAM",
+    "contact": "GST: 32AIKPJ3231C1ZX, PH: 0471-7144600, 9207333388"
+  },
+  "medications": [
+    {
+      "name": "SYP ALTACEF (125/5)",
+      "dosage": "3ML- 0 -3ML",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "SYP ANTIFLU",
+      "dosage": "1.5ML -0-1.5ML",
+      "duration": "4 DAYS"
+    },
+    {
+      "name": "SYP LEVOLIN",
+      "dosage": "1.5ML -0-1.5ML",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "TAB JUNIOR LANZOL 15",
+      "dosage": "1-0-1",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "SYP DEZACOR",
+      "dosage": "2.5ML -2.5ML -2.5ML",
+      "duration": "3 DAYS"
+    }
+  ],
+  "raw_summary": "Page 2 of 3 of a discharge summary from AJ Hospital Kazhakootam, listing laboratory test results (EOSINOPHILS, BASOPHIL, MONOCYTE, ESR, C REACTIVE PROTEIN, DENGUE NS1 CLIA, PACKED CELL VOLUME, PLATELET COUNT, SCRUB TYPHUS CARD, TYPHI DOT M) and discharge medications with dosage and duration."
+}

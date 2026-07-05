@@ -1,0 +1,111 @@
+{
+  "source_pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "primary_diagnosis": "Right Knee ACL Insufficiency",
+  "procedures": [
+    "Right Knee arthroscopic ACL reconstruction"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "2",
+  "treating_doctor": "Anant Joshi",
+  "department": "Orthopaedics",
+  "pre_existing_diseases": [],
+  "treatment": "Surgical reconstruction of ACL with arthroscopic evaluation and post-operative medical management.",
+  "medications": [
+    {
+      "name": "Xarelto",
+      "dosage": "10mg",
+      "frequency": "Oral at 9pm",
+      "duration": "from 2nd day of surgery"
+    },
+    {
+      "name": "Supacef",
+      "dosage": "1.5 g",
+      "frequency": "IV at 8 am and 8 pm",
+      "duration": ""
+    },
+    {
+      "name": "Perfalgan",
+      "dosage": "1 g",
+      "frequency": "IV at 8 am - 2 pm - 8 pm",
+      "duration": ""
+    },
+    {
+      "name": "Cp. Becosules",
+      "dosage": "Oral",
+      "frequency": "at 10 am",
+      "duration": ""
+    },
+    {
+      "name": "Tb. Enzoflam",
+      "dosage": "Oral",
+      "frequency": "at 10 am and 9 pm",
+      "duration": ""
+    },
+    {
+      "name": "Tb. Pan (40 mg)",
+      "dosage": "Oral",
+      "frequency": "at 8 am and 8 pm",
+      "duration": ""
+    },
+    {
+      "name": "Tb. Restyl (0.25mg)",
+      "dosage": "Oral",
+      "frequency": "at 9 pm",
+      "duration": ""
+    },
+    {
+      "name": "Inj Dynapar Aq sos",
+      "dosage": "",
+      "frequency": "",
+      "duration": ""
+    },
+    {
+      "name": "Tb. Xarelto (10mg)",
+      "dosage": "Oral",
+      "frequency": "0-0-1",
+      "duration": "5 days"
+    },
+    {
+      "name": "Tb. Augmentin (625mg)",
+      "dosage": "",
+      "frequency": "1-0-1",
+      "duration": "5 days"
+    },
+    {
+      "name": "Dynapar",
+      "dosage": "",
+      "frequency": "IV at 8 PM",
+      "duration": ""
+    },
+    {
+      "name": "Pan",
+      "dosage": "40 mg",
+      "frequency": "Oral at 8 PM",
+      "duration": ""
+    },
+    {
+      "name": "Enzoflam",
+      "dosage": "Oral",
+      "frequency": "9 pm",
+      "duration": ""
+    },
+    {
+      "name": "Restyl",
+      "dosage": "0.25mg",
+      "frequency": "Oral at 9 pm",
+      "duration": ""
+    },
+    {
+      "name": "Becosules",
+      "dosage": "Oral",
+      "frequency": "10 am",
+      "duration": ""
+    }
+  ]
+}

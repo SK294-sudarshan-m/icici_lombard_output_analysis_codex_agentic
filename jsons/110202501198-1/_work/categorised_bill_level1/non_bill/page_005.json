@@ -1,0 +1,40 @@
+{
+  "page": 5,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "page_indicator": "2/3"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD,TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "medications": [
+    {
+      "name": "Tab ONDANSETRON 8mg SOS",
+      "dosage": "8mg",
+      "frequency": "SOS",
+      "duration": "",
+      "quantity": "6",
+      "source_line_index": 0
+    },
+    {
+      "name": "Tab TRAMADOL 37.5mg+PARACETMOL 325mg SOS",
+      "dosage": "37.5mg+325mg",
+      "frequency": "SOS",
+      "duration": "",
+      "quantity": "10",
+      "source_line_index": 1
+    },
+    {
+      "name": "Tab PANTOPRAZOLE 40mg OD",
+      "dosage": "40mg",
+      "frequency": "OD",
+      "duration": "",
+      "quantity": "10",
+      "source_line_index": 2
+    }
+  ],
+  "raw_summary": "Page 2 of 3 of a discharge summary from Sri Venkateswara Institute of Medical Sciences, listing prescribed medications, condition at discharge, follow-up advice, and contact details for emergency and outpatient care."
+}

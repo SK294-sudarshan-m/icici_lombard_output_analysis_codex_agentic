@@ -1,0 +1,63 @@
+=== PAGE 3 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4209
+Tokens Out: 579
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 3,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "4410",
+    "bill_date": "8/06/2026",
+    "page_indicator": "",
+    "document_title": "PACKAGE BILL"
+  },
+  "patient": {
+    "name": "MRS. SHIKHA GUPTA W/O MR.ADITYA KUMAR GUPTA",
+    "age": "29 YO M 3 D",
+    "gender": "Female",
+    "uhid": "371574",
+    "ip_number": "61149",
+    "ward": "PRIVATE ROOM AC",
+    "bed_number": "PVT-07"
+  },
+  "admission": {
+    "date_of_admission": "05/06/2026 / 6:04 PM",
+    "date_of_discharge": "08/06/2026 / 12:00 PM",
+    "length_of_stay": "",
+    "admission_type": "PRIVATE ROOM AC",
+    "referring_doctor": "",
+    "treating_doctor": "DR. VENKATESH AGRAWAL",
+    "department": ""
+  },
+  "hospital": {
+    "name": "M.P.BIRLA HOSPITAL SATNA",
+    "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005",
+    "contact": "917238907265"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "55200.00",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "55,200.00",
+    "total_amount": "55,200.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "55,200.00",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Package bill for Mrs. Shikha Gupta for a laparoscopic cholecystectomy procedure, showing patient details, admission/discharge dates, package value of ₹55,200.00, and no additional outside package services or items."
+}

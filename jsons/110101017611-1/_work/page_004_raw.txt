@@ -1,0 +1,53 @@
+=== PAGE 4 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4164
+Tokens Out: 430
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 4,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARE CARD"
+  },
+  "patient": {
+    "name": "Surekha Bhosale",
+    "age": "47 yrs",
+    "gender": "F"
+  },
+  "admission": {
+    "date_of_admission": "08/06/2028",
+    "date_of_discharge": "08/06/2026",
+    "discharge_status": "Discharge to Home"
+  },
+  "hospital": {
+    "name": "LAXMI JYOT EYE HOSPITAL",
+    "address": "A 101. Dharmveer Building. Opp. Municipal School No.7 Uthalsar Naka Thane (West) 400 601",
+    "contact": "Tel.: 2547 3811 M 7304964553"
+  },
+  "medications": [
+    {
+      "name": "Enpred Eye drops",
+      "frequency": "6 times"
+    },
+    {
+      "name": "Oxidrop Eye drops",
+      "frequency": "6 times"
+    },
+    {
+      "name": "Milflox Eye drops",
+      "frequency": "6 times"
+    },
+    {
+      "name": "Ocuwipes",
+      "frequency": "1-0-1"
+    },
+    {
+      "name": "Tab. Reffron",
+      "frequency": "1-0-1 (5 days)"
+    }
+  ],
+  "raw_summary": "Discharge card from Laxmi Jyot Eye Hospital for patient Surekha Bhosale, detailing diagnosis (left eye cataract), operation performed (left eye cataract surgery), IOL implant details, and post-discharge medication instructions."
+}

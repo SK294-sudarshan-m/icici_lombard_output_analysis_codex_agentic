@@ -1,0 +1,272 @@
+{
+  "page": 6,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "FIN27-06452",
+    "bill_date": "08/06/2026",
+    "page_indicator": "Page 2 of 5",
+    "document_title": "AJ HOSPITAL KAZHAKOOTTAM"
+  },
+  "hospital": {
+    "name": "AJ HOSPITAL KAZHAKOOTTAM",
+    "address": "",
+    "contact": "GST: 32AIKPJ3231C1ZX, PH: 0471-7144600, 9207333388"
+  },
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "HYPERNEB NS 3% RESPULE / / 6T00017 / 12/2027 / 22.45",
+      "quantity": "3",
+      "unit_price": "22.24",
+      "gross_amount": "66.72",
+      "discount": "0.00",
+      "amount": "66.72",
+      "source_line_index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "SCREEDO REPULES / BUDESONIDE / AFR25085 / 08/2027 / 24.93",
+      "quantity": "3",
+      "unit_price": "24.69",
+      "gross_amount": "74.07",
+      "discount": "0.00",
+      "amount": "74.07",
+      "source_line_index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "LEVOLIN 0.63 RESPULES / LEVOSALBUTAMOL / 6L80152 / 01/2028 / 8.1",
+      "quantity": "3",
+      "unit_price": "8.02",
+      "gross_amount": "24.06",
+      "discount": "0.00",
+      "amount": "24.06",
+      "source_line_index": 2,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "MONOCEF 1GM INJ / CEFTRIAXONE / BPA260191 / 06/2028 / 66.63",
+      "quantity": "1",
+      "unit_price": "66.00",
+      "gross_amount": "66.00",
+      "discount": "0.00",
+      "amount": "66.00",
+      "source_line_index": 3,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "CORT-S 100MG INJ / HYDROCORTISONE / V4471736 / 12/2027 / 47.7",
+      "quantity": "2",
+      "unit_price": "46.68",
+      "gross_amount": "93.36",
+      "discount": "0.00",
+      "amount": "93.36",
+      "source_line_index": 4,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "2ML SYRINGE WITH NEEDLE / - / 6204 / 10/2030 / 10",
+      "quantity": "3",
+      "unit_price": "9.72",
+      "gross_amount": "29.16",
+      "discount": "0.00",
+      "amount": "29.16",
+      "source_line_index": 5,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "5ML SYRINGE WITH NEEDLE / - / 3615 / 10/2030 / 15",
+      "quantity": "1",
+      "unit_price": "14.53",
+      "gross_amount": "14.53",
+      "discount": "0.00",
+      "amount": "14.53",
+      "source_line_index": 6,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "10ML SYRINGE WITH NEEDLE / - / 5335769 / 11/2030 / 20.5",
+      "quantity": "2",
+      "unit_price": "19.90",
+      "gross_amount": "39.80",
+      "discount": "0.00",
+      "amount": "39.80",
+      "source_line_index": 7,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "NEEDLE 18G / - / 082518 / 07/2030 / 6.5",
+      "quantity": "2",
+      "unit_price": "6.27",
+      "gross_amount": "12.54",
+      "discount": "0.00",
+      "amount": "12.54",
+      "source_line_index": 8,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "IV CANNULA NO 26 (NEO) / - / 25E1383 / 04/2030 / 234.38",
+      "quantity": "1",
+      "unit_price": "224.61",
+      "gross_amount": "224.61",
+      "discount": "0.00",
+      "amount": "224.61",
+      "source_line_index": 9,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "IV CANNULA NO. 24 / - / 22F1285 / 05/2027 / 191.25",
+      "quantity": "1",
+      "unit_price": "183.08",
+      "gross_amount": "183.08",
+      "discount": "0.00",
+      "amount": "183.08",
+      "source_line_index": 10,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "IV CANNULA NEO 24 / - / 25J2664 / 10/2030 / 250",
+      "quantity": "1",
+      "unit_price": "239.03",
+      "gross_amount": "239.03",
+      "discount": "0.00",
+      "amount": "239.03",
+      "source_line_index": 11,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "IV CANNULA FIXATOR / - / CF374(SEIBERT) / 05/2027 / 89",
+      "quantity": "1",
+      "unit_price": "85.11",
+      "gross_amount": "85.11",
+      "discount": "0.00",
+      "amount": "85.11",
+      "source_line_index": 12,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "NEBULISATION MASK (P) / - / 1105125N / 11/2030 / 350",
+      "quantity": "1",
+      "unit_price": "350.00",
+      "gross_amount": "350.00",
+      "discount": "0.00",
+      "amount": "350.00",
+      "source_line_index": 13,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "MONOCEF 1GM INJ / CEFTRIAXONE / BPA260191 / 06/2028 / 66.63",
+      "quantity": "1",
+      "unit_price": "66.00",
+      "gross_amount": "66.00",
+      "discount": "0.00",
+      "amount": "66.00",
+      "source_line_index": 14,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "MACMIKA 100MG INJ / AMIKACIN / 1825322 / 07/2027 / 37.6",
+      "quantity": "2",
+      "unit_price": "37.24",
+      "gross_amount": "74.48",
+      "discount": "0.00",
+      "amount": "74.48",
+      "source_line_index": 15,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "CORT-S 100MG INJ / HYDROCORTISONE / V4471736 / 12/2027 / 47.7",
+      "quantity": "2",
+      "unit_price": "46.68",
+      "gross_amount": "93.36",
+      "discount": "0.00",
+      "amount": "93.36",
+      "source_line_index": 16,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "JUNIOR LANZOL 15 TAB / LANSOPRAZOLE / 5BA2412 / 07/2027 / 12.3",
+      "quantity": "2",
+      "unit_price": "12.18",
+      "gross_amount": "24.36",
+      "discount": "0.00",
+      "amount": "24.36",
+      "source_line_index": 17,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "LEVOLIN 0.63 RESPULES / LEVOSALBUTAMOL / 6L80152 / 01/2028 / 8.1",
+      "quantity": "5",
+      "unit_price": "8.02",
+      "gross_amount": "40.10",
+      "discount": "0.00",
+      "amount": "40.10",
+      "source_line_index": 18,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "SCREEDO REPULES / BUDESONIDE / AFR25085 / 08/2027 / 24.93",
+      "quantity": "5",
+      "unit_price": "24.69",
+      "gross_amount": "123.45",
+      "discount": "0.00",
+      "amount": "123.45",
+      "source_line_index": 19,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "HYPERNEB NS 3% RESPULE / - / 6T0007 / 12/2027 / 22.45",
+      "quantity": "5",
+      "unit_price": "22.24",
+      "gross_amount": "111.20",
+      "discount": "0.00",
+      "amount": "111.20",
+      "source_line_index": 20,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "ANTIFLU SYP 75ML / OSELTAMIVIR / 5A6060792 / 06/2027 / 867.75",
+      "quantity": "1",
+      "unit_price": "859.49",
+      "gross_amount": "859.49",
+      "discount": "0.00",
+      "amount": "859.49",
+      "source_line_index": 21,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "2ML SYRINGE WITH NEEDLE / - / 6204 / 10/2030 / 10",
+      "quantity": "3",
+      "unit_price": "9.72",
+      "gross_amount": "29.16",
+      "discount": "0.00",
+      "amount": "29.16",
+      "source_line_index": 22,
+      "charge_type": "line_item"
+    }
+  ],
+  "raw_summary": "Page 2 of 5 of a hospital bill from AJ Hospital Kazhakootam, dated 08/06/2026, listing detailed charges for medications and medical supplies with quantities, rates, and totals for services rendered between 04/06/2026 and 05/06/2026.",
+  "bill_category": "pharmacy_bill"
+}

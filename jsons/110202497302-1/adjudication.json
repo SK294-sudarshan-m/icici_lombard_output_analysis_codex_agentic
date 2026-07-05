@@ -1,0 +1,625 @@
+{
+  "schema_version": "1.0",
+  "request_id": "3dbb70df",
+  "source_filename": "110202497302-1.pdf",
+  "generated_at": "2026-07-04T12:48:13.309061+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker. Agents needing review: Administrative Review, Financial Adjudication. 6 issue(s) raised (2 high, 2 medium, 2 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "SUNEETA SHRIKANT GUNDAKAL",
+      "age": "27y",
+      "gender": "Female",
+      "uhid": "17634",
+      "ip_number": "26.6.15/369",
+      "ward": "",
+      "bed_number": ""
+    },
+    "admission": {
+      "date_of_admission": "03-06-2026",
+      "date_of_discharge": "08-06-2026",
+      "length_of_stay": "",
+      "admission_type": "Elective CS",
+      "referring_doctor": "",
+      "treating_doctor": "DR AISHWARYA HUNASHYAL",
+      "department": ""
+    },
+    "hospital": {
+      "name": "TAVARGERI NURSING HOME PVT. LTD.",
+      "address": "Near K.C. Park Post Office, DHARWAD - 580 008.",
+      "contact": "0836 - 2448359"
+    },
+    "insurance": {
+      "company": "ICICI LOMBARD",
+      "policy_number": "",
+      "member_id": "",
+      "claimed_amount": "",
+      "approved_amount": "",
+      "tpa": "ICICI LOMBARD"
+    },
+    "total_pages": 3,
+    "charge_count": 3,
+    "diagnosis": "G2P1L1 With full term pregnancy with previous CS for elective CS",
+    "treatment": "Conservative management with IV antibiotics, uterotonics, and supportive care post-elective cesarean section."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 2 of 13 mandatory documents are present (15.4% complete, status critical). Critical documents missing: Authorization Letter. The claim appears to be Cashless (confidence 0.75, llm). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Authorization Letter.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Authorization Letter from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "10 mandatory document(s) missing: Claim Form, Pre Authorization Request Note, Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Consultation Papers, Others.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 11 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 0,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent reports 13 mandatory documents but the rubric expects 16; this violates inventory integrity. It incorrectly classifies page 2 as a 'pharmacy_bill' while labeling it as 'discharge_summary' in non_bill_type — suggesting a misclassification that may falsely mark 'Pharmacy or Medicine Bills' as missing. The claim type 'Cashless' lacks keyword evidence in the digest or page summaries, reducing confidence below acceptable levels for a 0.75 assertion.",
+        "suggestions": [
+          "Reconcile mandatory document count to 16 per rubric and adjust found/missing totals accordingly.",
+          "Re-evaluate page 2: if it contains pharmacy charges, mark it as 'pharmacy_bill' consistently; if not, correct the classification to avoid false missing flags.",
+          "Downgrade claim type confidence to 'Unable to detect' unless explicit cashless keywords (e.g., 'pre-authorization', 'cashless approval') are present in the document text."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.328,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "3dbb70df",
+        "source_filename": "110202497302-1.pdf",
+        "generated_at": "2026-07-04T12:48:02.305508Z",
+        "total_pages": 3,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Cashless",
+          "detection_method": "llm",
+          "confidence": 0.75,
+          "cashless_matches": [],
+          "reimbursement_matches": []
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Final Hospital Bills"
+          ],
+          "missing": [
+            "Claim Form",
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Investigation Reports",
+            "Pharmacy or Medicine Bills",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Consultation Papers",
+            "Others"
+          ],
+          "missing_critical": [
+            "Authorization Letter"
+          ],
+          "found_count": 2,
+          "missing_count": 11,
+          "total_mandatory": 13,
+          "completeness_percent": 15.4,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Final Hospital Bills": "structured"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Authorization Letter before adjudication.",
+            "Request the following missing documents: Claim Form, Authorization Letter, Pre Authorization Request Note, Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Consultation Papers, Others."
+          ]
+        },
+        "non_mandatory_found": [],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "pharmacy_bill",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 3,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "discharge_summary",
+            "start_page": 1,
+            "end_page": 1,
+            "pages": [
+              1
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "pharmacy_bill",
+            "start_page": 2,
+            "end_page": 2,
+            "pages": [
+              2
+            ]
+          },
+          {
+            "document_id": "DOC-0003",
+            "document_type": "bill_detail_statement",
+            "start_page": 3,
+            "end_page": 3,
+            "pages": [
+              3
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=PASS. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date..",
+      "issues": [
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The verdict correctly flags critical SKIPPED checks for insured and policy_dates, justifying the WARN status. However, the 'period_compliance' check is misleadingly marked PASS with zero documents checked — it should be SKIPPED or WARN to reflect absence of data, not a clean pass. This risks false negatives if interpreted as compliance.",
+        "suggestions": [
+          "Change 'period_compliance' status from PASS to SKIPPED or WARN, with explicit note: 'No dated documents available for period validation.'",
+          "Clarify in advisory_issues that 'period_compliance' is not validated due to missing documents, not confirmed compliant."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.001,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "SUNEETA SHRIKANT GUNDAKAL",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "SUNEETA SHRIKANT GUNDAKAL",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "Suneeta Shrikant Gundakal",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_3",
+                  "patient_name": "SUNEETA SHRIKANT GUNDAKAL",
+                  "score": 1.0,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "SUNEETA SHRIKANT GUNDAKAL",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "PASS",
+            "severity": "ADVISORY",
+            "evidence": "0 document(s) checked — in-period=0, out-of-period=0, ambiguous=0.",
+            "detail": {
+              "status": "PASS",
+              "documents": [],
+              "counts": {
+                "IN_PERIOD": 0,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 0
+              },
+              "total_checked": 0,
+              "hospitalization": {
+                "admission": "2026-06-03",
+                "discharge": "2026-06-08"
+              },
+              "details": "No dated documents to check."
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+        ],
+        "inputs": {
+          "patient_name": "SUNEETA SHRIKANT GUNDAKAL",
+          "insured_name": null,
+          "admission_date": "03-06-2026",
+          "discharge_date": "08-06-2026",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:48:04.829955+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "pass",
+      "summary": "Medical admissibility passed: billed treatment is consistent with the clinical record. Treatment validity score 1.00; recommended action APPROVE. 3 charge(s): valid=3, partial=0, invalid=0, review=0. Treatment process appears correct: Treatment aligns with post-cesarean care including infection prophylaxis, pain control, and uterine involution support; no clinical contradictions noted. Major conflicts: Treating doctor mismatch between billing and discharge summary: DR AISHWARYA HUNASHYAL vs Aishwarya Hunashyal. PED validation: INSUFFICIENT / UNKNOWN across 0 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Treating doctor mismatch between billing and discharge summary: DR AISHWARYA HUNASHYAL vs Aishwarya Hunashyal",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 0,
+        "total": 1
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent correctly flagged a doctor name mismatch but failed to escalate it to REVIEW or trigger administrative validation, risking a false negative if the mismatch indicates billing fraud or misattribution. PED validation is appropriately marked INSUFFICIENT, but the overall verdict of VALID despite this unresolved conflict and lack of policy inputs is premature. Treatment validity score of 1.0 is overconfident given the unresolved doctor discrepancy and missing PED policy evidence.",
+        "suggestions": [
+          "Escalate the doctor name mismatch to REVIEW status and flag for administrative verification before final approval.",
+          "Downgrade overall_verdict to REVIEW until PED policy inputs (waiting period, wording) are obtained or confirmed absent.",
+          "Adjust treatment_validity_score to 0.85 to reflect unresolved clinical/administrative conflicts."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 2.213,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "3dbb70df",
+        "generated_at": "2026-07-04T12:48:08.856507Z",
+        "overall_verdict": "VALID",
+        "treatment_validity_score": 1.0,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "FAIL",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 1,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 2,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "Treating doctor mismatch between billing and discharge summary: DR AISHWARYA HUNASHYAL vs Aishwarya Hunashyal"
+        ],
+        "recommended_action": "APPROVE",
+        "treatment_process_correct": true,
+        "treatment_process_explanation": "Treatment aligns with post-cesarean care including infection prophylaxis, pain control, and uterine involution support; no clinical contradictions noted.",
+        "treatment_process_confidence": 0.9,
+        "treatment_process_evidence": [
+          "Diagnosis supports elective CS and post-op conservative management.",
+          "IV antibiotics (Xone, Augpen) appropriate for surgical prophylaxis.",
+          "Uterotonics (Pause) and antiemetics (Emeset) standard post-CS care.",
+          "No lab/investigation evidence contradicts treatment choices.",
+          "Medication list consistent with postpartum recovery and pain management.",
+          "B/L tubectomy billed as concurrent procedure, clinically acceptable in elective CS setting."
+        ],
+        "lab_evidence_count": 0,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "UNKNOWN",
+          "confidence": 0.0,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "pre_existing_diseases",
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "NO_PED_FOUND_IN_DISCHARGE_SUMMARY"
+          ],
+          "ped_items": []
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "warn",
+      "summary": "Financial adjudication is partial: the bill is adjudicable with deductions. Of 67500.00 billed across 3 line item(s): payable 60500.00 (2), non-payable 7000.00 (1), undetermined 0.00 (0). Recommended action APPROVE_WITH_DEDUCTIONS; admissible amount 60500.00. Billing type assessed as Medical Management. Figures derived via the consolidated path.",
+      "issues": [],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent correctly reconciles the billed amount (67500.00) and assigns 60500.00 as payable and 7000.00 as non-payable, with no undetermined items. However, the line item for 'SPECIAL ROOM' is listed as payable but billed at 0.00, which is logically inconsistent — a zero-amount item should not be flagged as payable. Additionally, the insurer comparison flags mismatches but lacks context; since no insurer figures are provided, the agent should not imply a mismatch without justification.",
+        "suggestions": [
+          "Reclassify the 'SPECIAL ROOM' line item (amount 0.00) as 'non_payable' or 'unknown' to avoid misleading payability assignment.",
+          "Revise insurer comparison notes to clarify that mismatches are expected due to absence of insurer figures, not errors."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "3dbb70df",
+        "generated_at": "2026-07-04T12:48:10.953681Z",
+        "mode": "consolidated",
+        "overall_verdict": "PARTIAL",
+        "recommended_action": "APPROVE_WITH_DEDUCTIONS",
+        "final_admissible_amount": 60500.0,
+        "totals": {
+          "total_billed": 67500.0,
+          "payable_total": 60500.0,
+          "non_payable_total": 7000.0,
+          "unknown_total": 0.0,
+          "charge_count": 3,
+          "payable_count": 2,
+          "non_payable_count": 1,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 67500.0,
+          "recomputed_total": 67500.0,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 67500.0,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 60500.0,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 7000.0,
+          "non_payable_vs_disallowed_match": false
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Package Charges",
+            "billed": 60500.0,
+            "payable": 60500.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Miscellaneous",
+            "billed": 7000.0,
+            "payable": 0.0,
+            "non_payable": 7000.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Room Charges",
+            "billed": 0.0,
+            "payable": 0.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          }
+        ],
+        "billing_type": "Medical Management",
+        "overall_confidence": 1.0,
+        "flagged_count": 0,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "SPECIAL ROOM",
+            "amount": 0.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 2,
+            "description": "ELECTIVE LSCS(Packeg)",
+            "amount": 60500.0,
+            "bill_type": "Package Charges",
+            "sub_bill_type": "Package Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 3,
+            "description": "Tubectomy charges",
+            "amount": 7000.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "non_payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          }
+        ],
+        "notes": [
+          "1 line item(s) totalling 7000.00 are non-payable and have been deducted."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 2.544,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 2,
+      "medium": 2,
+      "low": 2,
+      "total": 6
+    }
+  }
+}

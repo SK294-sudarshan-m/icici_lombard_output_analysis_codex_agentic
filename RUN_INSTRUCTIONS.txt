@@ -1,0 +1,289 @@
+CASE VERDICT ANALYSIS AGENT - EXACT RUN INSTRUCTIONS
+=====================================================
+
+IMPORTANT
+---------
+Yes, you run "python agent.py", but only after changing into the
+case_verdict_analysis_agent folder.
+
+The new model-generated report is written to output_agent.
+The existing output_codex folder is preserved and is never used as input.
+
+
+1. OPEN POWERSHELL AND CHANGE TO THE AGENT FOLDER
+--------------------------------------------------
+
+cd "C:\Users\User\Desktop\icici-lombard-claims-extraction-uat\case_verdict_analysis_agent"
+
+Confirm the expected folders exist:
+
+Get-ChildItem .
+
+You should see at least:
+
+  agent.py
+  model_corpus.py
+  cloud_embeddings.py
+  build_report.mjs
+  jsons
+  input_pdfs
+  output_agent
+  output_codex
+
+
+2. CREATE/ACTIVATE THE PROJECT PYTHON ENVIRONMENT
+--------------------------------------------------
+
+If the project environment is already active, skip the creation commands and
+continue with the dependency check below.
+
+From the case_verdict_analysis_agent folder:
+
+python -m venv .venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r ..\requirements.txt
+
+Confirm the required project packages load:
+
+python -c "import boto3, fitz, pydantic_settings; print('Python dependencies OK')"
+
+Do not install sentence-transformers, Transformers, Ollama, FAISS, sklearn,
+Torch, or any other local language/embedding model for this agent.
+
+
+3. CONFIRM THE INPUTS
+---------------------
+
+All output-case artifacts must be under:
+
+  .\jsons\<AL-number>\...
+
+The agent recursively reads every nested file, including every _work folder,
+every JSON leaf, every raw TXT line, OCR/classification/page artifacts, merged
+bills, consolidated JSON, contracts and adjudication JSON.
+
+Ground-truth PDFs must be under:
+
+  .\input_pdfs\
+
+Do not place the old Codex report in jsons. The folder .\output_codex is not read.
+
+Optional input count check for the current supplied dataset:
+
+(Get-ChildItem .\jsons -Recurse -File | Measure-Object).Count
+
+The current supplied dataset should return 1375 files.
+
+
+4. CHECK THE MODELS LOADED FROM THE PROJECT CONFIG
+---------------------------------------------------
+
+Run:
+
+python agent.py --check-model-config
+
+Expected model configuration:
+
+  language_model_id : qwen.qwen3-vl-235b-a22b
+  embedding_model_id: amazon.titan-embed-text-v2:0
+  region            : ap-south-1
+  local_model       : false
+
+The values come from the parent project's config.py/settings. The agent does not
+accept model-ID overrides.
+
+
+5. CHECK AWS/BEDROCK ACCESS BEFORE THE FULL RUN
+-----------------------------------------------
+
+Run:
+
+python agent.py --check-model-access
+
+This makes one safe Titan embedding call and one safe Qwen JSON call.
+
+Only continue when this command exits successfully and prints:
+
+  embedding_dimension
+  language_model_response with status "ok"
+
+No API key or secret-key argument is required or supported. Credentials must come
+from the normal approved project boto3 chain: an IAM role, an approved AWS profile,
+or the project's managed runtime environment.
+
+If your organisation uses an approved named AWS profile, select it before running:
+
+$env:AWS_PROFILE = "<APPROVED_PROJECT_PROFILE>"
+$env:PIPELINE_AWS_REGION = "ap-south-1"
+
+If that profile uses AWS SSO, log in using the organisation-approved command first:
+
+aws sso login --profile <APPROVED_PROJECT_PROFILE>
+
+Do not paste access keys or secret keys into agent.py, config files, commands,
+commits, tickets, logs, or chat.
+
+At the time these instructions were created, this workstation's only "default"
+shared-credentials profile returned an invalid security token. The full run will
+correctly stop until that project AWS profile/role is valid.
+
+
+6. RUN THE FULL AGENT
+---------------------
+
+After --check-model-access succeeds, run:
+
+python agent.py
+
+That one command performs the full workflow:
+
+  1. Discovers every case in jsons.
+  2. Reads every nested artifact.
+  3. Flattens every nested JSON leaf path.
+  4. Includes every raw/page line after identity redaction.
+  5. Sends every evidence chunk to the configured Qwen Bedrock model.
+  6. Hierarchically reduces all chunk analyses.
+  7. Uses configured Titan embeddings to compare verdict-0 cases with verdict-1
+     controls.
+  8. Uses Qwen to generate exactly the seven requested Excel columns.
+  9. Creates the Excel workbook using build_report.mjs.
+
+The current corpus produces approximately 193 mandatory map chunks at the default
+chunk size. The run can take time and incurs Bedrock usage. Do not close the shell
+while it is running.
+
+
+7. EXPECTED OUTPUT FILES
+------------------------
+
+After a successful run, look in:
+
+  .\output_agent\
+
+The main report is:
+
+  .\output_agent\case_verdict_analysis_agent.xlsx
+
+Supporting audit files are:
+
+  .\output_agent\case_verdict_analysis_agent_rows.json
+  .\output_agent\case_verdict_analysis_agent_audit.json
+  .\output_agent\case_verdict_analysis_agent_preview.png
+  .\output_agent\case_verdict_analysis_agent.xlsx.inspect.ndjson
+  .\output_agent\model_cache\...
+
+The Excel columns are generated by the configured Qwen model and remain in this
+exact order:
+
+  AL-number
+  case_verdict
+  what caused case verdict 0
+  how it happened
+  where it happened(step in pipeline)
+  why it happened(actual reasons)
+  what can be improved
+
+
+8. VERIFY THAT THE RUN USED ALL INPUTS
+---------------------------------------
+
+Run this after successful completion:
+
+$audit = Get-Content .\output_agent\case_verdict_analysis_agent_audit.json -Raw | ConvertFrom-Json
+$audit.input_manifest
+$audit.model_analysis.all_json_fields_and_raw_artifacts_model_processed
+$audit.output_codex_preserved
+$audit.output_codex_used_as_input
+
+Expected values for the two important coverage flags:
+
+  all_json_fields_and_raw_artifacts_model_processed = True
+  output_codex_preserved                            = True
+  output_codex_used_as_input                        = False
+
+For per-case coverage:
+
+$audit.model_analysis.corpus_coverage | ConvertTo-Json -Depth 6
+
+Each case should show:
+
+  all_artifacts_represented = True
+
+
+9. USE AN EXPLICIT NODE/ARTIFACT-TOOL RUNTIME IF AUTO-DETECTION FAILS
+---------------------------------------------------------------------
+
+In the current Codex desktop environment, Node.js and @oai/artifact-tool are found
+automatically. In another approved developer runtime, pass their installed paths:
+
+python agent.py `
+  --node "C:\path\to\node.exe" `
+  --artifact-node-modules "C:\path\to\node_modules"
+
+The node_modules path must already contain:
+
+  @oai\artifact-tool
+
+Do not replace the workbook builder with an unapproved local model or another
+analysis engine. These arguments only select the JavaScript workbook runtime.
+
+
+10. TROUBLESHOOTING
+-------------------
+
+A. Error: invalid security token / configured Bedrock call failed
+
+  - Do not add keys to the source code.
+  - Activate the approved project IAM role/profile/SSO session.
+  - Run "python agent.py --check-model-access" again.
+  - Only run the full agent after the access check passes.
+
+B. Bedrock throttling or connection errors
+
+Run with one model worker:
+
+python agent.py --model-workers 1
+
+C. Model input/context-size error
+
+Use smaller chunks (this increases the number of model calls but retains every
+field and line):
+
+python agent.py --chunk-chars 30000 --model-workers 2
+
+D. @oai/artifact-tool or Node.js not found
+
+Use the explicit --node and --artifact-node-modules command shown in section 9.
+
+E. No consolidated cases found
+
+Confirm each case folder under jsons contains a case-level consolidated_final.json
+outside _work.
+
+F. Exit codes
+
+  0 = successful run
+  1 = runtime/workbook/dependency error
+  2 = model access, corpus validation, or strict model-output validation failure
+
+On exit code 2 the agent does not substitute Codex or a local model and does not
+produce a fake replacement workbook.
+
+
+11. RUN FROM THE PROJECT ROOT INSTEAD (ALTERNATIVE)
+---------------------------------------------------
+
+If your shell is in:
+
+  C:\Users\User\Desktop\icici-lombard-claims-extraction-uat
+
+use:
+
+python .\case_verdict_analysis_agent\agent.py --check-model-config
+python .\case_verdict_analysis_agent\agent.py --check-model-access
+python .\case_verdict_analysis_agent\agent.py
+
+Do not run "python agent.py" from the project root because agent.py is inside the
+case_verdict_analysis_agent folder.

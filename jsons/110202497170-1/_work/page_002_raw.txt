@@ -1,0 +1,73 @@
+=== PAGE 2 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4504
+Tokens Out: 785
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 2,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "INV-DRAFT-RTN-26000695",
+    "bill_date": "June 8, 2026 10:40",
+    "page_indicator": "Page 1 of 1",
+    "document_title": "PROVISIONAL BILL"
+  },
+  "patient": {
+    "name": "Mr SHER BAHADUR SINGH",
+    "age": "66 Years 11 Months",
+    "gender": "MALE",
+    "uhid": "RTN0000089812",
+    "ip_number": "IP-001",
+    "ward": "GENERAL-WARD",
+    "bed_number": "R-202-24"
+  },
+  "admission": {
+    "date_of_admission": "08/06/2026 09:49",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "General",
+    "referring_doctor": "",
+    "treating_doctor": "Dr. Pankaj Rupauliha",
+    "department": ""
+  },
+  "hospital": {
+    "name": "ROTARY TECHNO NETRALAYA SALTLAKE",
+    "address": "CN 5, Sector V, Kolkata 700 091, West Bengal",
+    "contact": "+91 33 3011 5000, +91 33 23673312/13/14, +91 9874763763"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD HEALTH CARE",
+    "policy_number": "4016/X/278194070/03/000",
+    "member_id": "110202497170",
+    "claimed_amount": "25000.00",
+    "approved_amount": "25000.00",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "Package MICRO COAXIAL CATARACT SURGERY MCCS/MICS+IOL(FIQ) PKG",
+      "quantity": "1",
+      "unit_price": "25,000.00",
+      "gross_amount": "25,000.00",
+      "discount": "0.00",
+      "amount": "25,000.00"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "25,000.00",
+    "total_amount": "25,000.00",
+    "discount": "0.00",
+    "tax": "",
+    "net_payable": "0.00",
+    "amount_paid": "25,000.00",
+    "balance": "0.00",
+    "advance_paid": "0.00"
+  },
+  "sub_bills": [],
+  "raw_summary": "Provisional bill for Mr. Sher Bahadur Singh for cataract surgery package, showing a total charge of Rs. 25,000.00 fully covered by ICICI Lombard Health Care, resulting in zero patient payable amount."
+}

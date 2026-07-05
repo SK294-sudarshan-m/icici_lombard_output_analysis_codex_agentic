@@ -1,0 +1,2158 @@
+{
+  "schema_version": "1.0",
+  "request_id": "a2f66ffd",
+  "source_filename": "110202494871-1.pdf",
+  "generated_at": "2026-07-04T12:46:53.962118+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker. Agents needing review: Administrative Review, Medical Admissibility, Financial Adjudication. 9 issue(s) raised (3 high, 4 medium, 2 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "By. Jessica",
+      "age": "8Years",
+      "gender": "Female",
+      "uhid": "110202494871",
+      "ip_number": "509984/1327",
+      "ward": "",
+      "bed_number": ""
+    },
+    "admission": {
+      "date_of_admission": "30/05/2026",
+      "date_of_discharge": "08/06/2026",
+      "length_of_stay": "9",
+      "admission_type": "",
+      "referring_doctor": "",
+      "treating_doctor": "",
+      "department": ""
+    },
+    "hospital": {
+      "name": "KALYANI GENERAL HOSPITAL",
+      "address": "15, Dr. Radhakrishnan Salai, Chennai - 600 004 (South India)",
+      "contact": "Phone : 28470642, 28473306, 28475101"
+    },
+    "insurance": {
+      "company": "ICICI LOMBARD Insurance",
+      "policy_number": "",
+      "member_id": "",
+      "claimed_amount": "56538.00",
+      "approved_amount": "",
+      "tpa": ""
+    },
+    "total_pages": 10,
+    "charge_count": 120,
+    "diagnosis": "Urosepsis",
+    "treatment": "Conservative management with IV antibiotics and supportive care."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 6 of 16 mandatory documents are present (37.5% complete, status critical). Critical documents missing: Payment Receipts, Identity Proof - Aadhar. The claim appears to be Reimbursement (confidence 0.75, llm). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Payment Receipts.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Payment Receipts from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "Critical mandatory document missing: Identity Proof - Aadhar.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Identity Proof - Aadhar from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "8 mandatory document(s) missing: Authorization Letter, Pre Authorization Request Note, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others, Identity Proof - Non Aadhar.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 10 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 3,
+        "medium": 1,
+        "low": 0,
+        "total": 4
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent incorrectly flags 'Identity Proof - Aadhar' as missing without evidence it was ever expected or referenced in the claim; no PII or identity verification markers appear in the digest or page summaries. Also, 'Payment Receipts' is marked critical missing, but the 6 bill pages (pages 1,3,6-8) likely include payment evidence — the agent fails to link bill_detail_statement to payment receipts. Completeness status is overly harsh given 6/16 found, but the verdict should not be INCOMPLETE without confirming true absence of critical docs.",
+        "suggestions": [
+          "Re-evaluate 'Identity Proof - Aadhar' — if no policy or claim form references it, it may not be mandatory for this reimbursement claim.",
+          "Map 'bill_detail_statement' pages to 'Payment Receipts' if they contain payment confirmation, settled amounts, or transaction IDs.",
+          "Adjust completeness status to 'warn' if only 2-4 truly critical documents are missing, not 10 based on unverified assumptions."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.333,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "a2f66ffd",
+        "source_filename": "110202494871-1.pdf",
+        "generated_at": "2026-07-04T12:46:02.354356Z",
+        "total_pages": 10,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Reimbursement",
+          "detection_method": "llm",
+          "confidence": 0.75,
+          "cashless_matches": [],
+          "reimbursement_matches": []
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Claim Form",
+            "Final Hospital Bills",
+            "Investigation Reports",
+            "Pharmacy or Medicine Bills",
+            "Consultation Papers"
+          ],
+          "missing": [
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Payment Receipts",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Identity Proof - Aadhar",
+            "Others",
+            "Identity Proof - Non Aadhar"
+          ],
+          "missing_critical": [
+            "Payment Receipts",
+            "Identity Proof - Aadhar"
+          ],
+          "found_count": 6,
+          "missing_count": 10,
+          "total_mandatory": 16,
+          "completeness_percent": 37.5,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Claim Form": "fuzzy",
+            "Final Hospital Bills": "structured",
+            "Investigation Reports": "variation",
+            "Pharmacy or Medicine Bills": "fuzzy",
+            "Consultation Papers": "abbreviation"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Payment Receipts, Identity Proof - Aadhar before adjudication.",
+            "Request the following missing documents: Authorization Letter, Pre Authorization Request Note, Payment Receipts, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Identity Proof - Aadhar, Others, Identity Proof - Non Aadhar."
+          ]
+        },
+        "non_mandatory_found": [
+          "x-ray"
+        ],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 3,
+            "document_type": "bill_detail_statement",
+            "page_type": "non_bill",
+            "non_bill_type": "lab_report",
+            "low_content": false
+          },
+          {
+            "page_no": 4,
+            "document_type": "unknown",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 5,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 6,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 7,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 8,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "bill_detail_statement",
+            "start_page": 1,
+            "end_page": 1,
+            "pages": [
+              1
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "discharge_summary",
+            "start_page": 2,
+            "end_page": 2,
+            "pages": [
+              2
+            ]
+          },
+          {
+            "document_id": "DOC-0003",
+            "document_type": "bill_detail_statement",
+            "start_page": 3,
+            "end_page": 3,
+            "pages": [
+              3
+            ]
+          },
+          {
+            "document_id": "DOC-0004",
+            "document_type": "discharge_summary",
+            "start_page": 5,
+            "end_page": 5,
+            "pages": [
+              5
+            ]
+          },
+          {
+            "document_id": "DOC-0005",
+            "document_type": "bill_detail_statement",
+            "start_page": 6,
+            "end_page": 8,
+            "pages": [
+              6,
+              7,
+              8
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=PASS. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date..",
+      "issues": [
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The verdict correctly flags critical SKIPPED checks for 'insured' and 'policy_dates', preventing false positives, but misclassifies 'period_compliance' as PASS with advisory severity — it should be WARN since it relies on incomplete policy data. The overall_status=WARN is appropriate, but the advisory label on period_compliance underplays risk given missing policy dates.",
+        "suggestions": [
+          "Reclassify 'period_compliance' check as WARN (not PASS) since policy validity is unverified — its compliance cannot be reliably assessed.",
+          "Clarify in advisory_issues that 'period_compliance' is contingent on unverified policy dates, making its PASS status provisional."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "By. Jessica",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "By. Jessica",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "By. Jessica",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_2",
+                  "patient_name": "JESSICA",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_6",
+                  "patient_name": "By.Jessica",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_6",
+                  "patient_name": "By.Jessica",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_6",
+                  "patient_name": "By.Jessica",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_7",
+                  "patient_name": "JESSICA P",
+                  "score": 0.875,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "By. Jessica",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "PASS",
+            "severity": "ADVISORY",
+            "evidence": "1 document(s) checked — in-period=1, out-of-period=0, ambiguous=0.",
+            "detail": {
+              "status": "PASS",
+              "documents": [
+                {
+                  "document_name": "FINAL BILL",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-04-30 to 2026-07-08) for type 'bill'."
+                }
+              ],
+              "counts": {
+                "IN_PERIOD": 1,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 0
+              },
+              "total_checked": 1,
+              "hospitalization": {
+                "admission": "2026-05-30",
+                "discharge": "2026-06-08"
+              },
+              "window_config": {
+                "pre_hosp_days": 30,
+                "post_hosp_days": 30
+              }
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+        ],
+        "inputs": {
+          "patient_name": "By. Jessica",
+          "insured_name": null,
+          "admission_date": "30/05/2026",
+          "discharge_date": "08/06/2026",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:46:05.767470+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "warn",
+      "summary": "Medical admissibility is partial: most charges are supported but some need review. Treatment validity score 0.86; recommended action PARTIAL_APPROVE. 120 charge(s): valid=90, partial=26, invalid=0, review=4. Treatment process could not be confirmed: Excessive duplication of non-essential items, inappropriate routes (suppositories in sepsis), and lack of clinical justification for repeated labs/probiotics/antibiotics. Major conflicts: 55 line items appear duplicated by description and amount. PED validation: INSUFFICIENT / UNKNOWN across 0 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "4 charge(s) require manual review.",
+          "severity": "medium",
+          "code": "medical.charge_review",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "55 line items appear duplicated by description and amount",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Treatment process not confirmed: Excessive duplication of non-essential items, inappropriate routes (suppositories in sepsis), and lack of clinical justification for repeated labs/probiotics/antibiotics.",
+          "severity": "medium",
+          "code": "medical.treatment_process",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 3,
+        "low": 0,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.78,
+        "rationale": "The agent correctly flags duplications and inappropriate routes (e.g., suppositories in sepsis), but over-relies on 'PARTIAL' for items like syringes and NS 100ML without proving clinical excess; some 'REVIEW' items (e.g., Neomol) should be 'PARTIAL' with clearer clinical rationale. PED validation is correctly marked INSUFFICIENT, but the treatment-process explanation lacks specificity on which labs or antibiotics lacked justification.",
+        "suggestions": [
+          "Reclassify 'REVIEW' for Neomol suppositories to 'PARTIAL' with explicit clinical rationale (e.g., 'suboptimal route in sepsis; IV/PO preferred') to avoid under-flagging.",
+          "Clarify 'excessive duplication' claims by specifying which line items exceed clinical norms (e.g., 'NS 100ML billed 8x without documented fluid deficit').",
+          "Add lab evidence references (e.g., 'CBC trends not provided to justify repeated PCV/PLT') to strengthen treatment-process explanation."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 39.957,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "a2f66ffd",
+        "generated_at": "2026-07-04T12:46:47.644071Z",
+        "overall_verdict": "PARTIAL",
+        "treatment_validity_score": 0.8583,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "PASS",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 1,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 2,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 3,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 4,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 5,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 6,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 7,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 8,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 9,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 10,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 11,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 12,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 13,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; JELCO not clinically justified for urosepsis without procedure context.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 14,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; EASY FIX lacks clinical linkage to urosepsis management.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 15,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; CLEAN GLOVE is routine, not specific to urosepsis severity.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 16,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 17,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 18,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; JELCO repeated without procedural justification.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 19,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; EASY FIX not tied to documented procedures or severity.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 20,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; CLEAN GLOVE is standard, not clinically escalated for urosepsis.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 21,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 22,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 23,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 24,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 25,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; EASY FIX lacks clinical necessity documentation.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 26,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; CLEAN GLOVE is non-specific and overbilled.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 27,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; JELCO repeated without procedure or severity justification.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 28,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; EASY FIX not clinically indicated for urosepsis.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 29,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; CLEAN GLOVE is routine, not severity-linked.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 30,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 31,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge; CLEAN GLOVE lacks clinical specificity for urosepsis.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 32,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 33,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 34,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 35,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 36,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge for PCV,PLT; no clinical justification for repeat testing in context of urosepsis.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 37,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 38,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 39,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 40,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge for PCV,PLT; no clinical justification for repeat testing in context of urosepsis.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 41,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 42,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 43,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 44,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 45,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 46,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 47,
+            "status": "VALID",
+            "reason": "XONE 1GM INJ aligns with IV antibiotic therapy for moderate urosepsis.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 48,
+            "status": "VALID",
+            "reason": "Pantoprazole IV supports GI prophylaxis in sepsis; consistent with discharge meds.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 49,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 50,
+            "status": "VALID",
+            "reason": "NS 100ML supports fluid resuscitation in urosepsis; standard supportive care.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 51,
+            "status": "VALID",
+            "reason": "10ml syringe is standard for IV administration; no evidence of overuse.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 52,
+            "status": "VALID",
+            "reason": "2ml syringes used for precise dosing of IV meds; consistent with treatment.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 53,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 54,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 55,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 56,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 57,
+            "status": "REVIEW",
+            "reason": "Neomol suppository not clearly indicated for urosepsis; no supporting clinical rationale.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 58,
+            "status": "REVIEW",
+            "reason": "Neomol 80 suppository lacks clear indication for urosepsis; no supporting rationale.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 59,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 60,
+            "status": "VALID",
+            "reason": "Pantoprazole IV supports GI prophylaxis; consistent with discharge meds.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 61,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 62,
+            "status": "VALID",
+            "reason": "NS 100ML supports fluid resuscitation; standard in urosepsis management.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 63,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 64,
+            "status": "VALID",
+            "reason": "2ml syringes used for precise dosing; consistent with IV medication administration.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 65,
+            "status": "REVIEW",
+            "reason": "Syringe use not explicitly justified in treatment narrative or procedures.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 66,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 67,
+            "status": "PARTIAL",
+            "reason": "Probiotic (Bifilac) not standard for urosepsis; may support gut flora but not primary treatment.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 68,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 69,
+            "status": "PARTIAL",
+            "reason": "Neomol suppository (paracetamol) may be for fever/pain, but IV route preferred in sepsis; frequency unclear.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 70,
+            "status": "PARTIAL",
+            "reason": "Neomol 250mg suppository; dose/frequency not aligned with standard sepsis protocol; oral/IV preferred.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 71,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 72,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 73,
+            "status": "VALID",
+            "reason": "Dextrose (DNS) supports hydration and energy in sepsis; consistent with supportive care.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 74,
+            "status": "PARTIAL",
+            "reason": "Duplicate Neomol 250mg suppository; excessive frequency not justified for moderate urosepsis.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 75,
+            "status": "PARTIAL",
+            "reason": "Duplicate Neomol 80 suppository; suppository route suboptimal in sepsis; IV/PO preferred.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 76,
+            "status": "PARTIAL",
+            "reason": "Duplicate Bifilac sachet; probiotic not core to urosepsis management.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 77,
+            "status": "VALID",
+            "reason": "Xone 1GM (Ceftriaxone) is appropriate IV antibiotic for urosepsis; matches discharge meds.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 78,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 79,
+            "status": "VALID",
+            "reason": "Xone 1GM injection consistent with IV antibiotic protocol for urosepsis.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 80,
+            "status": "VALID",
+            "reason": "NS 100ml supports IV fluid resuscitation in sepsis; standard supportive care.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 81,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 82,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 83,
+            "status": "PARTIAL",
+            "reason": "Duplicate Bifilac sachet; probiotic not essential in urosepsis; quantity may be excessive.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 84,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 85,
+            "status": "VALID",
+            "reason": "Piptaz indicated for urosepsis; consistent with discharge meds.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 86,
+            "status": "PARTIAL",
+            "reason": "Duplicate of line 85; possible overbilling.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 87,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 88,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 89,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 90,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 91,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 92,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 93,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 94,
+            "status": "VALID",
+            "reason": "Pantoprazole IV used for GI protection in sepsis; supported by discharge meds.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 95,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 96,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 97,
+            "status": "VALID",
+            "reason": "Meropenem appropriate for moderate urosepsis; matches discharge meds.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 98,
+            "status": "REVIEW",
+            "reason": "Bifilac not standard in urosepsis; no clear clinical justification.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 99,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 100,
+            "status": "VALID",
+            "reason": "Dextrose for supportive care in sepsis; standard supportive therapy.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 101,
+            "status": "VALID",
+            "reason": "Syringes are consumables for IV administration; reasonable quantity.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 102,
+            "status": "VALID",
+            "reason": "Syringes are consumables for IV administration; reasonable quantity.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 103,
+            "status": "PARTIAL",
+            "reason": "Meropenem quantity high; possible duplication or overuse without clear escalation.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 104,
+            "status": "VALID",
+            "reason": "Pantoprazole IV consistent with discharge meds and GI protection in sepsis.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 105,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 106,
+            "status": "VALID",
+            "reason": "Normal saline for fluid resuscitation in sepsis; standard supportive care.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 107,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 108,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 109,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 110,
+            "status": "PARTIAL",
+            "reason": "Meropenem repeated; possible duplication or excessive dosing without clear clinical escalation.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 111,
+            "status": "VALID",
+            "reason": "NS 100ML supports IV hydration in urosepsis; consistent with conservative management.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 112,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 113,
+            "status": "PARTIAL",
+            "reason": "Duplicate NS 100ML charge; quantity may exceed clinical need for moderate urosepsis.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 114,
+            "status": "VALID",
+            "reason": "Pantoprazole IV indicated for GI protection during IV antibiotics in sepsis.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 115,
+            "status": "VALID",
+            "reason": "10ml syringes used for IV medication administration; reasonable quantity.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 116,
+            "status": "VALID",
+            "reason": "2ml syringes appropriate for precise dosing of IV meds; consistent with treatment.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 117,
+            "status": "VALID",
+            "reason": "Meropenem indicated for moderate urosepsis; supported by discharge meds and severity.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 118,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 119,
+            "status": "PARTIAL",
+            "reason": "Duplicate NS 100ML charge; likely redundant with prior NS billing.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "55 line items appear duplicated by description and amount"
+        ],
+        "recommended_action": "PARTIAL_APPROVE",
+        "treatment_process_correct": false,
+        "treatment_process_explanation": "Excessive duplication of non-essential items, inappropriate routes (suppositories in sepsis), and lack of clinical justification for repeated labs/probiotics/antibiotics.",
+        "treatment_process_confidence": 0.65,
+        "treatment_process_evidence": [
+          "Duplicate charges for JELCO, EASY FIX, CLEAN GLOVE without procedural or severity justification.",
+          "Repeated PCV/PLT tests without clinical rationale in urosepsis context.",
+          "Neomol suppositories (paracetamol) suboptimal route in sepsis; IV/PO preferred.",
+          "Bifilac probiotic not standard in urosepsis management; no clear indication.",
+          "Meropenem and NS 100ML duplicated with possible overuse without escalation documentation.",
+          "No lab evidence supports need for repeated or excessive interventions listed."
+        ],
+        "lab_evidence_count": 1,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "UNKNOWN",
+          "confidence": 0.0,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "pre_existing_diseases",
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "NO_PED_FOUND_IN_DISCHARGE_SUMMARY"
+          ],
+          "ped_items": []
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "warn",
+      "summary": "Financial adjudication is partial: the bill is adjudicable with deductions. Of 56538.00 billed across 13 line item(s): payable 54833.00 (12), non-payable 1705.00 (1), undetermined 0.00 (0). Recommended action APPROVE_WITH_DEDUCTIONS; admissible amount 54833.00. Billing type assessed as Surgery. Figures derived via the consolidated path.",
+      "issues": [],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.85,
+        "rationale": "The agent correctly reconciles the bill (56538.0 total, 54833.0 payable, 1705.0 non-payable) and assigns payability consistently across line items. However, the billing type is assessed as 'Surgery' despite the diagnosis being 'Urosepsis' — a medical condition not typically requiring surgery — which may misalign with policy coverage rules and warrants re-evaluation. Also, the insurer comparison flags mismatches but lacks context; if no insurer figures exist, the verdict should not imply a mismatch without justification.",
+        "suggestions": [
+          "Reassess billing type: 'Surgery' is inconsistent with diagnosis 'Urosepsis'; consider 'Medical' or 'Critical Care' unless surgical intervention is documented.",
+          "Clarify insurer comparison: if no insurer figures are available, explicitly state 'insurer figures not provided' instead of implying mismatches.",
+          "Add note explaining why 'Jelco(dispo)' is non-payable under policy terms to strengthen audit trail."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "a2f66ffd",
+        "generated_at": "2026-07-04T12:46:51.241468Z",
+        "mode": "consolidated",
+        "overall_verdict": "PARTIAL",
+        "recommended_action": "APPROVE_WITH_DEDUCTIONS",
+        "final_admissible_amount": 54833.0,
+        "totals": {
+          "total_billed": 56538.0,
+          "payable_total": 54833.0,
+          "non_payable_total": 1705.0,
+          "unknown_total": 0.0,
+          "charge_count": 13,
+          "payable_count": 12,
+          "non_payable_count": 1,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 56538.0,
+          "recomputed_total": 56538.0,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 56538.0,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 54833.0,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 1705.0,
+          "non_payable_vs_disallowed_match": false
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Medicines Pharmacy Charges",
+            "billed": 21228.0,
+            "payable": 21228.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 2
+          },
+          {
+            "bill_type": "Investigation Charges",
+            "billed": 16705.0,
+            "payable": 16705.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 5
+          },
+          {
+            "bill_type": "Room Charges",
+            "billed": 10800.0,
+            "payable": 10800.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Consultation Visit Charges",
+            "billed": 5500.0,
+            "payable": 5500.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 2
+          },
+          {
+            "bill_type": "Consumable Charges",
+            "billed": 1705.0,
+            "payable": 0.0,
+            "non_payable": 1705.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Miscellaneous",
+            "billed": 600.0,
+            "payable": 600.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 2
+          }
+        ],
+        "billing_type": "Surgery",
+        "overall_confidence": 1.0,
+        "flagged_count": 0,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "Bed fee (9x1200) 9days General Ward",
+            "amount": 10800.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 2,
+            "description": "Professional fee",
+            "amount": 3000.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 3,
+            "description": "Admission Fee(Non medical)",
+            "amount": 100.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Admission",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 4,
+            "description": "Consultation Fee (Paed Surgeon)",
+            "amount": 2500.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 5,
+            "description": "Lab Investigation",
+            "amount": 8575.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 6,
+            "description": "X-ray",
+            "amount": 500.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 7,
+            "description": "Usg Abd",
+            "amount": 3600.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 8,
+            "description": "CT Abd",
+            "amount": 4000.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_consensus",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 9,
+            "description": "Spo2",
+            "amount": 30.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 10,
+            "description": "Casuality Charges",
+            "amount": 500.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 11,
+            "description": "Inj.prick.charges",
+            "amount": 820.0,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 12,
+            "description": "Jelco(dispo)( non-medical)",
+            "amount": 1705.0,
+            "bill_type": "Consumable Charges",
+            "sub_bill_type": "Disposables",
+            "payability": "non_payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 13,
+            "description": "Drugs",
+            "amount": 20408.0,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          }
+        ],
+        "notes": [
+          "1 line item(s) totalling 1705.00 are non-payable and have been deducted."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 40.294,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 3,
+      "medium": 4,
+      "low": 2,
+      "total": 9
+    }
+  }
+}

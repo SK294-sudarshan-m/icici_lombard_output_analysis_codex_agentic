@@ -1,0 +1,36 @@
+{
+  "categories": {
+    "final_bill": [
+      {
+        "bill_id": "final_bill_1",
+        "pages": [
+          1
+        ],
+        "sequence_reason": "Single page"
+      }
+    ],
+    "pharmacy_bill": [
+      {
+        "bill_id": "pharmacy_bill_1",
+        "pages": [
+          5,
+          6,
+          7
+        ],
+        "sequence_reason": "The pages are explicitly numbered 'Page 1 of 5', 'Page 2 of 5', and 'Page 3 of 5' respectively, indicating they are consecutive parts of the same multi-page bill. The content, a detailed list of pharmacy items, continues logically from one page to the next without interruption or reset."
+      }
+    ],
+    "detailed_final_bill": [
+      {
+        "bill_id": "detailed_final_bill_1",
+        "pages": [
+          8,
+          9
+        ],
+        "sequence_reason": "Page 8 is labeled 'Page 4 of 5' and Page 9 is labeled 'Page 5 of 5', indicating they are consecutive pages of the same bill. The content on Page 8 ends with 'LABORATORY SERVICES TOTAL' and 'NEBULIZATION CHARGE TOTAL', and Page 9 continues with 'LABORATORY SERVICES', 'X-RAY', 'ROOM RENT', and concludes with the final 'TOTAL HOSPITAL CHARGES FOR SERVICES/ITEMS' and payment summary, showing a clear continuation of the bill's structure."
+      }
+    ]
+  },
+  "total_tokens_in": 5430,
+  "total_tokens_out": 272
+}

@@ -1,0 +1,21 @@
+=== PAGE 35 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4395
+Tokens Out: 167
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 35,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "RADIOMETER ABL800 BASIC"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91",
+    "gender": "Female"
+  },
+  "raw_summary": "Two arterial blood gas reports from Radiometer ABL800 Basic for patient Chander Kochhar, dated 21/02/2025 and 22/02/2025, showing blood gas, oximetry, electrolyte, metabolite, acid-base, and oxygen status values with reference ranges."
+}

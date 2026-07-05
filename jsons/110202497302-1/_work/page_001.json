@@ -1,0 +1,78 @@
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Discharge Summary"
+  },
+  "patient": {
+    "name": "Suneeta Shrikant Gundakal",
+    "age": "27y",
+    "gender": "Female",
+    "uhid": "17634"
+  },
+  "admission": {
+    "date_of_admission": "03-Jun-2026",
+    "date_of_discharge": "08-Jun-2026",
+    "admission_type": "Elective CS",
+    "treating_doctor": "DR AISHWARYA HUNASHYAL"
+  },
+  "hospital": {
+    "name": "Tavargeri Nursing Home Pvt. Ltd.",
+    "address": "Near Kittur Channamma Park Post Office, Dharwad - 580 008",
+    "contact": "OPD: 0836-2747603, Hosp: 0836-2448359"
+  },
+  "medications": [
+    {
+      "name": "IVF NS, DNS, RL",
+      "duration": "2 DAYS",
+      "source_line_index": 0
+    },
+    {
+      "name": "INJ PAN 40MG IV BD",
+      "duration": "3 DAYS",
+      "source_line_index": 1
+    },
+    {
+      "name": "INJ XONE 1 GM IV BD",
+      "duration": "3 DAYS",
+      "source_line_index": 2
+    },
+    {
+      "name": "INJ PAUSE IV STAT",
+      "duration": "STAT",
+      "source_line_index": 3
+    },
+    {
+      "name": "INJ EMESET 4MG IV BD",
+      "duration": "3 DAYS",
+      "source_line_index": 4
+    },
+    {
+      "name": "INJ NEOMOL 100ML IV SOS",
+      "duration": "SOS",
+      "source_line_index": 5
+    },
+    {
+      "name": "INJ NEOMOL 3AMP WITH 100ML NS IV SOS",
+      "duration": "SOS",
+      "source_line_index": 6
+    },
+    {
+      "name": "JONAC SUPPOSITORY SOS",
+      "duration": "SOS",
+      "source_line_index": 7
+    },
+    {
+      "name": "INJ DOMADOL IM STAT",
+      "duration": "STAT",
+      "source_line_index": 8
+    },
+    {
+      "name": "ENTEROGERMIN BD",
+      "duration": "3DAYS",
+      "source_line_index": 9
+    }
+  ],
+  "raw_summary": "Discharge summary for a 27-year-old female patient admitted for elective cesarean section, detailing diagnosis, physical findings, investigations, and medications administered during hospitalization from June 3 to June 8, 2026."
+}

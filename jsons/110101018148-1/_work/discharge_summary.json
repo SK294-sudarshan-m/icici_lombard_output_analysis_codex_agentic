@@ -1,0 +1,42 @@
+{
+  "source_pages": [
+    3,
+    4
+  ],
+  "primary_diagnosis": "INFLUENZA LIKE ILLNESS",
+  "procedures": [],
+  "severity": "Mild",
+  "length_of_stay": "2",
+  "treating_doctor": "UTHARA MOHAN",
+  "department": "Paediatrics",
+  "pre_existing_diseases": [
+    "Febrile seizure"
+  ],
+  "treatment": "Conservative management with antipyretics and supportive care.",
+  "medications": [
+    {
+      "name": "SYP FLUVIA",
+      "dosage": "3.5 ML",
+      "frequency": "1-0-1",
+      "duration": "3 DAYS"
+    },
+    {
+      "name": "SYP RANTAC",
+      "dosage": "2.5 ML",
+      "frequency": "1-0-1",
+      "duration": "3 DAYS"
+    },
+    {
+      "name": "SYP AZITHRAL (200/5)",
+      "dosage": "3.5 ML",
+      "frequency": "1-0-0",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "SYP POLYBION LC",
+      "dosage": "3.5 ML",
+      "frequency": "1-0-0",
+      "duration": "5 DAYS"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "categories": {
+    "procedure_bill": [
+      {
+        "bill_id": "procedure_bill_1",
+        "pages": [
+          2
+        ],
+        "sequence_reason": "Single page"
+      }
+    ]
+  },
+  "total_tokens_in": 0,
+  "total_tokens_out": 0
+}

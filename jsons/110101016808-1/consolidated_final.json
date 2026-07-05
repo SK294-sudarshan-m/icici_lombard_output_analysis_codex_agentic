@@ -1,0 +1,366 @@
+{
+  "bill_id": "1c0840d2",
+  "case_number": "110101016808-1",
+  "bill_summary": {
+    "extracted_amount": 65000.0,
+    "calculated_amount": 65000.0,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 65000.0,
+    "calculated_after_discount": 65000.0,
+    "total_line_items": 8,
+    "amounts_match": true,
+    "overall_confidence": 1.0,
+    "case_verdict": 1,
+    "summary": "Case is in order and recommended for processing. The consolidated bill has 8 line item(s) totalling ₹65,000.00 (gross), with a net payable of ₹65,000.00. the line items reconcile with the bill's printed total. billing type assessed as Surgery. extraction confidence 1.00.",
+    "billing_type": {
+      "billing_type": "Surgery",
+      "confidence": 0.95,
+      "reasoning": "OT/surgeon charges present + DS confirms procedure(s): LAPAROSCOPIC CHOLECYSTECTOMY, Cystic duct and artery were clipped and divided, Gall bladder separated from Gall bladder fossa"
+    }
+  },
+  "patient": {
+    "name": "Mrs. Anshu Singh",
+    "age": "33Y",
+    "gender": "Female",
+    "uhid": "2026-2027 | 7460",
+    "ip_number": "134 / 2026-2027",
+    "ward": "General_Ward",
+    "bed_number": "102"
+  },
+  "hospital": {
+    "name": "OSCAR HITECH MULTISPECIALITY HOSPITAL",
+    "address": "Laxmi Niwas, Near Borivali Phatak, S.V Road, Daulat Nagar, Borivali East, Mumbai - 400066",
+    "contact": "Tel No.: 02228932255/02228932266/8425986919 | Email: oscarhitechhospital@gmail.com"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "06/06/2026 05:00 PM",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "Deluxe",
+    "referring_doctor": "",
+    "treating_doctor": "Dr.Gaurav Prakash Sawant",
+    "department": ""
+  },
+  "charges": [
+    {
+      "bill_type": "Miscellaneous",
+      "bill_type_id": "1014508",
+      "sub_bill_type": "Registration",
+      "sub_bill_type_id": "1000788",
+      "sr_no": "1",
+      "description": "REGISTRATION CHARGES",
+      "quantity": "1",
+      "unit_price": "500.00",
+      "discount": "",
+      "amount": "500.00",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Registration Charges",
+        "standard_name": "admission - registration charges",
+        "score": 0.853,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Miscellaneous' with sub_bill_type 'Registration' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "REGISTRATION CHARGES",
+          "match_ratio": 1.0
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 0
+    },
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "2",
+      "description": "BED NO. 102 General_Ward For The Date 06/06/2026",
+      "quantity": "1",
+      "unit_price": "0.00",
+      "discount": "",
+      "amount": "0.00",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Bed General Ward",
+        "standard_name": "bed charges",
+        "score": 0.5183,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Room Charges' with sub_bill_type 'Room Charge' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "2\tBED NO. 102 General_Ward For The Date\t1\t0.00\tHV\t0.00",
+          "match_ratio": 0.784
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 1
+    },
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "3",
+      "description": "BED NO. 102 General_Ward For The Date 07/06/2026",
+      "quantity": "1",
+      "unit_price": "0.00",
+      "discount": "",
+      "amount": "0.00",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Bed General Ward",
+        "standard_name": "bed charges",
+        "score": 0.5088,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Room Charges' with sub_bill_type 'Room Charge' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "2\tBED NO. 102 General_Ward For The Date\t1\t0.00\tHV\t0.00",
+          "match_ratio": 0.784
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 2
+    },
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "4",
+      "description": "BED NO. 102 General_Ward For The Date 08/06/2026",
+      "quantity": "1",
+      "unit_price": "0.00",
+      "discount": "",
+      "amount": "0.00",
+      "source_line_index": 3,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Bed General Ward",
+        "standard_name": "bed charges",
+        "score": 0.5182,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type 'Room Charges' with sub_bill_type 'Room Charge' is correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "2\tBED NO. 102 General_Ward For The Date\t1\t0.00\tHV\t0.00",
+          "match_ratio": 0.784
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 3
+    },
+    {
+      "bill_type": "Room Nursing Charges",
+      "bill_type_id": "500532",
+      "sub_bill_type": "Hospital Nursing Charges",
+      "sub_bill_type_id": "1014403",
+      "sr_no": "5",
+      "description": "NURSING CHG. 102 General_Ward For The Date 06/06/2026",
+      "quantity": "1",
+      "unit_price": "0.00",
+      "discount": "",
+      "amount": "0.00",
+      "source_line_index": 4,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Ward Nursing General",
+        "standard_name": "Not in list",
+        "score": 0.4325,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. However, bill type 'ICU Nursing Charges' is incorrect; it should be 'Room Nursing Charges' as this is General Ward, not ICU. Sub bill type should be 'Hospital Nursing Charges'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "6\tNURSING CHG. 102 General_Ward For The\t1\t0.00\t/H\t0.00",
+          "match_ratio": 0.766
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 4
+    },
+    {
+      "bill_type": "Room Nursing Charges",
+      "bill_type_id": "500532",
+      "sub_bill_type": "Hospital Nursing Charges",
+      "sub_bill_type_id": "1014403",
+      "sr_no": "6",
+      "description": "NURSING CHG. 102 General_Ward For The Date 07/06/2026",
+      "quantity": "1",
+      "unit_price": "0.00",
+      "discount": "",
+      "amount": "0.00",
+      "source_line_index": 5,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Ward Nursing General",
+        "standard_name": "Not in list",
+        "score": 0.4201,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. However, bill type 'ICU Nursing Charges' is incorrect; it should be 'Room Nursing Charges' as this is General Ward, not ICU. Sub bill type should be 'Hospital Nursing Charges'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "6\tNURSING CHG. 102 General_Ward For The\t1\t0.00\t/H\t0.00",
+          "match_ratio": 0.766
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 5
+    },
+    {
+      "bill_type": "Room Nursing Charges",
+      "bill_type_id": "500532",
+      "sub_bill_type": "Hospital Nursing Charges",
+      "sub_bill_type_id": "1014403",
+      "sr_no": "7",
+      "description": "NURSING CHG. 102 General_Ward For The Date 08/06/2026",
+      "quantity": "1",
+      "unit_price": "0.00",
+      "discount": "",
+      "amount": "0.00",
+      "source_line_index": 6,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Ward Nursing General",
+        "standard_name": "Not in list",
+        "score": 0.4368,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. However, bill type 'ICU Nursing Charges' is incorrect; it should be 'Room Nursing Charges' as this is General Ward, not ICU. Sub bill type should be 'Hospital Nursing Charges'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "6\tNURSING CHG. 102 General_Ward For The\t1\t0.00\t/H\t0.00",
+          "match_ratio": 0.766
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 6
+    },
+    {
+      "bill_type": "Surgeon Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Procedure or Surgery or Operation Charges",
+      "sub_bill_type_id": "1014412",
+      "sr_no": "8",
+      "description": "Cholecystectomy (LAP)",
+      "quantity": "1",
+      "unit_price": "64500.00",
+      "discount": "",
+      "amount": "64500.00",
+      "source_line_index": 7,
+      "charge_type": "line_item",
+      "page_number": 4,
+      "bill_id": "detailed_final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Lap Cholecystectomy",
+        "standard_name": "Not in list",
+        "score": 0.8517,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. However, bill type 'Procedure Charges' with sub_bill_type 'Dressing' is incorrect; it should be 'Surgeon Charges' with sub_bill_type 'Procedure or Surgery or Operation Charges' as this is a surgical procedure (LAP)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "8\tCholecystectomy (LAP)\t1\t64500.00\t₹ 64500.00",
+          "match_ratio": 0.636
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 7
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [],
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "overall_confidence": 1.0
+}

@@ -1,0 +1,32 @@
+=== PAGE 25 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3644
+Tokens Out: 310
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 25,
+  "page_type": "non_bill",
+  "non_bill_type": "diagnostic_report",
+  "document_markers": {
+    "document_title": "DEPARTMENT OF IMAGING"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 Y",
+    "gender": "F",
+    "uhid": "192673",
+    "ip_number": "68160"
+  },
+  "admission": {
+    "referring_doctor": "ABHAY RAUT",
+    "department": "IMAGING"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052",
+    "contact": "+91 22 6174 6000 / 2646 9999"
+  },
+  "raw_summary": "Diagnostic imaging report for a portable chest X-ray showing findings including cardiomegaly, nasogastric tube in situ, clear lung fields, tracheal calcification, and T10 vertebral compression, validated by Dr. Praveen Jayaswal."
+}

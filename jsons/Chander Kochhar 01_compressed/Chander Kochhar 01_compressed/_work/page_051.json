@@ -1,0 +1,29 @@
+{
+  "page": 51,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "GENERAL BODY PROFILE"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 YEARS",
+    "gender": "FEMALE",
+    "uhid": "192673",
+    "ip_number": "68049"
+  },
+  "admission": {
+    "date_of_admission": "21/02/2025",
+    "referring_doctor": "DR ABHAY RAUT",
+    "department": "DEPARTMENT OF LABORATORY MEDICINE CLINICAL CHEMISTRY & IMMUNOLOGY"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P.D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "+91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "insurance": {
+    "tpa": "TPA"
+  },
+  "raw_summary": "Lab report page showing General Body Profile test results for patient Kochhar Chander, including Random Plasma Glucose, Blood Urea Nitrogen, and Creatinine with units and reference intervals, issued by P.D. Hinduja Hospital."
+}

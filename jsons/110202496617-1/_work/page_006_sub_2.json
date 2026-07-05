@@ -1,0 +1,72 @@
+{
+  "page": 6,
+  "page_type": "bill",
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "M.P.BIRLA HOSPITAL SATNA",
+    "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "raw_summary": "Page 4 of 5 of an in-patient pharmacy medicine report from M.P. Birla Hospital Satna, dated 08/06/2026, listing multiple pharmacy charges across four separate document numbers (1937065, 1937143, 1937288, 1937328) with a grand total of 15,494.81.",
+  "extraction_recall_warning": "Extracted 0 charges but the page appears to have many more line items — possible missed rows, review this page.",
+  "page_sub_id": "6-2",
+  "bill_category": "PHARMACY",
+  "pipeline_category": "PHARMACY",
+  "document_markers": {
+    "bill_number": "Doc No: 1937143",
+    "document_title": "Charge : 17 - PHARMACY",
+    "bill_date": "08/06/2026",
+    "page_indicator": ""
+  },
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "TEGADREM 1633 3M",
+      "quantity": "1.00",
+      "unit_price": "120.00",
+      "gross_amount": "120.00",
+      "discount": "0.00",
+      "amount": "120.00"
+    },
+    {
+      "sr_no": "",
+      "description": "IV CANNULA 20 NO.",
+      "quantity": "1.00",
+      "unit_price": "110.00",
+      "gross_amount": "110.00",
+      "discount": "0.00",
+      "amount": "110.00"
+    }
+  ],
+  "returns": [],
+  "medications": [],
+  "bill_summary": {
+    "total_amount": "230.00"
+  },
+  "_split_from_page": 6
+}

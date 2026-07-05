@@ -1,0 +1,29 @@
+{
+  "page": 4,
+  "page_type": "non_bill",
+  "non_bill_type": "prescription",
+  "document_markers": {
+    "page_indicator": "Page 3 of 3"
+  },
+  "patient": {
+    "age": "6",
+    "gender": "f/b"
+  },
+  "hospital": {
+    "name": "A J HOSPITAL",
+    "address": "KAZHAKOOTTAM",
+    "contact": "0471-7144600, 9207333388"
+  },
+  "medications": [
+    {
+      "name": "",
+      "dosage": "2.5ML -0-2.5ML",
+      "frequency": "",
+      "duration": "3 DAYS",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 0
+    }
+  ],
+  "raw_summary": "Prescription page from A J Hospital, Kazhakoottam, for a 6-year-old female/baby, with dosage instructions and approval by Dr. Hareez, Consultant Paediatrician."
+}

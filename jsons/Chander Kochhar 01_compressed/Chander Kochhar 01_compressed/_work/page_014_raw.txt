@@ -1,0 +1,262 @@
+=== PAGE 14 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4607
+Tokens Out: 2355
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 14,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "ICO15284",
+    "bill_date": "24/02/2025 11:36:58",
+    "page_indicator": "Page No: 3",
+    "document_title": ""
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91 Y",
+    "gender": "F",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "AUTO 4 PLUS",
+      "quantity": "1.0000",
+      "unit_price": "3100.00",
+      "gross_amount": "3100.00",
+      "discount": "0.00",
+      "amount": "3100.00"
+    },
+    {
+      "sr_no": "",
+      "description": "CRP",
+      "quantity": "1.0000",
+      "unit_price": "1420.00",
+      "gross_amount": "1420.00",
+      "discount": "0.00",
+      "amount": "1420.00"
+    },
+    {
+      "sr_no": "",
+      "description": "COMPLETE BLOOD COUNT",
+      "quantity": "1.0000",
+      "unit_price": "800.00",
+      "gross_amount": "800.00",
+      "discount": "0.00",
+      "amount": "800.00"
+    },
+    {
+      "sr_no": "9",
+      "description": "MATERIALS MGMT DEPT",
+      "quantity": "",
+      "unit_price": "1,500.00",
+      "gross_amount": "1,500.00",
+      "discount": "0.00",
+      "amount": "1,500.00"
+    },
+    {
+      "sr_no": "",
+      "description": "INFECTION CONTROL PROTOCOL CHARGES - ICU",
+      "quantity": "1.0000",
+      "unit_price": "900.00",
+      "gross_amount": "900.00",
+      "discount": "0.00",
+      "amount": "900.00"
+    },
+    {
+      "sr_no": "",
+      "description": "INFECTION CONTROL PROTOCOL CHARGES - WARD",
+      "quantity": "1.0000",
+      "unit_price": "300.00",
+      "gross_amount": "300.00",
+      "discount": "0.00",
+      "amount": "300.00"
+    },
+    {
+      "sr_no": "",
+      "description": "INFECTION CONTROL PROTOCOL CHARGES - WARD",
+      "quantity": "1.0000",
+      "unit_price": "300.00",
+      "gross_amount": "300.00",
+      "discount": "0.00",
+      "amount": "300.00"
+    },
+    {
+      "sr_no": "10",
+      "description": "PHARMACY",
+      "quantity": "",
+      "unit_price": "42,379.25",
+      "gross_amount": "42,379.25",
+      "discount": "0.00",
+      "amount": "42,379.25"
+    },
+    {
+      "sr_no": "",
+      "description": "FLEXIDRIP NS 100ML I.V.",
+      "quantity": "1.0000",
+      "unit_price": "47.10",
+      "gross_amount": "47.10",
+      "discount": "0.00",
+      "amount": "47.10"
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSABLE SYRINGE 10ML LUER LOCK WITH NEEDLE (BD)",
+      "quantity": "1.0000",
+      "unit_price": "47,00",
+      "gross_amount": "47,00",
+      "discount": "0.00",
+      "amount": "47.00"
+    },
+    {
+      "sr_no": "",
+      "description": "ACCUSURE SAFETY LANCET (28G) MICROGENE PACK OF100",
+      "quantity": "1.0000",
+      "unit_price": "20.00",
+      "gross_amount": "20.00",
+      "discount": "0.00",
+      "amount": "20.00"
+    },
+    {
+      "sr_no": "",
+      "description": "FACE MASK NON VENTED SMALL (RT046S)-FISHER& PAYKAL",
+      "quantity": "1.0000",
+      "unit_price": "5350.00",
+      "gross_amount": "5350.00",
+      "discount": "0.00",
+      "amount": "5350.00"
+    },
+    {
+      "sr_no": "",
+      "description": "ECG ELECTRODE ADULT RAXON",
+      "quantity": "10.0000",
+      "unit_price": "36.00",
+      "gross_amount": "360.00",
+      "discount": "0.00",
+      "amount": "360.00"
+    },
+    {
+      "sr_no": "",
+      "description": "POLYFLUSH PRE FILLED SYRINGE 10ML K",
+      "quantity": "2.0000",
+      "unit_price": "83.00",
+      "gross_amount": "166.00",
+      "discount": "0,00",
+      "amount": "166.00"
+    },
+    {
+      "sr_no": "",
+      "description": "CLEXANE 40MG/0.4ML PFS INJ.",
+      "quantity": "1.0000",
+      "unit_price": "470.27",
+      "gross_amount": "470.27",
+      "discount": "0,00",
+      "amount": "470.27"
+    },
+    {
+      "sr_no": "",
+      "description": "TEGADERM 7CM X 8.5CM (3M)- 1633",
+      "quantity": "1.0000",
+      "unit_price": "214.00",
+      "gross_amount": "214.00",
+      "discount": "0,00",
+      "amount": "214,00"
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSABLE NEEDLE 26G HALF ROMSON",
+      "quantity": "1,0000",
+      "unit_price": "3.00",
+      "gross_amount": "3.00",
+      "discount": "0.00",
+      "amount": "3.00"
+    },
+    {
+      "sr_no": "",
+      "description": "HME FILTER 3010 (AIRWAYS)",
+      "quantity": "1.0000",
+      "unit_price": "740.00",
+      "gross_amount": "740.00",
+      "discount": "0.00",
+      "amount": "740,00"
+    },
+    {
+      "sr_no": "",
+      "description": "ABG SYRINGE 3ML (BD)",
+      "quantity": "1.0000",
+      "unit_price": "130.50",
+      "gross_amount": "130.50",
+      "discount": "0.00",
+      "amount": "130.50"
+    },
+    {
+      "sr_no": "",
+      "description": "NEBULISERS MASK ADULT (1885 HUDSON)",
+      "quantity": "1.0000",
+      "unit_price": "410.00",
+      "gross_amount": "410.00",
+      "discount": "0.00",
+      "amount": "410.00"
+    },
+    {
+      "sr_no": "",
+      "description": "OXYGEN SUPPLY TUBING -RESPICARE (1014)",
+      "quantity": "1.0000",
+      "unit_price": "95.00",
+      "gross_amount": "95.00",
+      "discount": "0.00",
+      "amount": "95.00"
+    },
+    {
+      "sr_no": "",
+      "description": "SULBAGREAT 1.5GM INJECTION",
+      "quantity": "2.0000",
+      "unit_price": "883.30",
+      "gross_amount": "1766.60",
+      "discount": "0.00",
+      "amount": "1766.60"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Page 14 of a hospital bill showing itemized charges for laboratory tests, materials management, and pharmacy items for patient Chander Kochhar, with invoice number ICO15284 dated 24/02/2025."
+}

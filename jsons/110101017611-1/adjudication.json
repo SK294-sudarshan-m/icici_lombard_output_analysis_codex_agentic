@@ -1,0 +1,646 @@
+{
+  "schema_version": "1.0",
+  "request_id": "84542610",
+  "source_filename": "110101017611-1.pdf",
+  "generated_at": "2026-07-04T12:42:08.349961+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker. Agents needing review: Administrative Review. 6 issue(s) raised (2 high, 2 medium, 2 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "Surekha Bhosale",
+      "age": "47",
+      "gender": "Female",
+      "uhid": "LJN_08942",
+      "ip_number": "IPD_6506",
+      "ward": "",
+      "bed_number": ""
+    },
+    "admission": {
+      "date_of_admission": "2026-06-08 10:00 AM",
+      "date_of_discharge": "2026-06-08 14:00 PM",
+      "length_of_stay": "",
+      "admission_type": "",
+      "referring_doctor": "",
+      "treating_doctor": "Dr. Sandeep Saildesai",
+      "department": ""
+    },
+    "hospital": {
+      "name": "Laxmi Jyot Eye Hospital",
+      "address": "101, Dharamveer Building, Opp Municipal School No. 7, Uthalsar Naka, Thane West 400 601",
+      "contact": "Tel: 2547 3811 / Website : laxmijyotnetralaya.com"
+    },
+    "insurance": {
+      "company": "",
+      "policy_number": "",
+      "member_id": "",
+      "claimed_amount": "",
+      "approved_amount": "",
+      "tpa": ""
+    },
+    "total_pages": 5,
+    "charge_count": 2,
+    "diagnosis": "Left eye cataract",
+    "treatment": "Surgical management with left eye cataract surgery and IOL implantation followed by post-operative medical therapy."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 6 of 16 mandatory documents are present (37.5% complete, status critical). Critical documents missing: Identity Proof - Aadhar. The claim appears to be Reimbursement (confidence 0.90, keyword_matching). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Identity Proof - Aadhar.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Identity Proof - Aadhar from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "9 mandatory document(s) missing: Authorization Letter, Pre Authorization Request Note, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Label or Sticker, Prescription Papers, Consultation Papers, Others, Identity Proof - Non Aadhar.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 10 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 0,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent incorrectly flags 'Identity Proof - Aadhar' as critical and missing without evidence it was ever required or requested; no PII or policyholder identity is visible in the digest. Also, 'Implants Invoice' is marked found but page 5 is misclassified as discharge summary, not an implant invoice. Completeness status is over-penalized — 6/16 found is critical per rubric, but the claim type (reimbursement) may not require all 16 documents, and the agent fails to contextualize mandatory lists by claim type.",
+        "suggestions": [
+          "Re-evaluate mandatory document list per claim type — reimbursement claims may not require 'Authorization Letter' or 'Pre Authorization Request Note'.",
+          "Correct page 5 classification: if it’s a bill, it should not be labeled as discharge summary; verify if 'Implants Invoice' is actually present.",
+          "Remove 'Identity Proof - Aadhar' from critical missing unless explicitly mandated for this claim type or policy; do not assume identity proof is mandatory without policy context."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.003,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "84542610",
+        "source_filename": "110101017611-1.pdf",
+        "generated_at": "2026-07-04T12:41:53.587660Z",
+        "total_pages": 5,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Reimbursement",
+          "detection_method": "keyword_matching",
+          "confidence": 0.9,
+          "cashless_matches": [],
+          "reimbursement_matches": [
+            "receipt"
+          ]
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Claim Form",
+            "Final Hospital Bills",
+            "Investigation Reports",
+            "Payment Receipts",
+            "Implants Invoice"
+          ],
+          "missing": [
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Pharmacy or Medicine Bills",
+            "Indoor Case Papers",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Consultation Papers",
+            "Identity Proof - Aadhar",
+            "Others",
+            "Identity Proof - Non Aadhar"
+          ],
+          "missing_critical": [
+            "Identity Proof - Aadhar"
+          ],
+          "found_count": 6,
+          "missing_count": 10,
+          "total_mandatory": 16,
+          "completeness_percent": 37.5,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Claim Form": "fuzzy",
+            "Final Hospital Bills": "structured",
+            "Investigation Reports": "variation",
+            "Payment Receipts": "variation",
+            "Implants Invoice": "variation"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Identity Proof - Aadhar before adjudication.",
+            "Request the following missing documents: Authorization Letter, Pre Authorization Request Note, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Label or Sticker, Prescription Papers, Consultation Papers, Identity Proof - Aadhar, Others, Identity Proof - Non Aadhar."
+          ]
+        },
+        "non_mandatory_found": [
+          "diagnostic report",
+          "operative note"
+        ],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "unknown",
+            "page_type": "non_bill",
+            "non_bill_type": "diagnostic_report",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "unknown",
+            "page_type": "non_bill",
+            "non_bill_type": "unknown",
+            "low_content": false
+          },
+          {
+            "page_no": 3,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 4,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 5,
+            "document_type": "bill_detail_statement",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "bill_detail_statement",
+            "start_page": 3,
+            "end_page": 3,
+            "pages": [
+              3
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "discharge_summary",
+            "start_page": 4,
+            "end_page": 4,
+            "pages": [
+              4
+            ]
+          },
+          {
+            "document_id": "DOC-0003",
+            "document_type": "bill_detail_statement",
+            "start_page": 5,
+            "end_page": 5,
+            "pages": [
+              5
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=PASS. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date..",
+      "issues": [
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The verdict correctly flags critical SKIPPED checks for 'insured' and 'policy_dates' and assigns overall WARN status, avoiding false positives. However, it fails to elevate the 'insured' check to a blocking issue since verifying insured identity is CRITICAL and cannot be skipped without risking false negatives. The evidence for 'identity' is over-assertive — matching patient names across documents doesn’t prove insured match if insured_name is null.",
+        "suggestions": [
+          "Reclassify 'insured' check from SKIPPED to FAIL with severity CRITICAL — missing insured_name prevents verification and must block the claim.",
+          "Revise 'identity' evidence to clarify that name matching alone is insufficient without insured_name confirmation.",
+          "Ensure 'overall_status' reflects that CRITICAL checks are not merely advisory — if any CRITICAL check is not PASS, status must be at least WARN, and if any is FAIL, status must be FAIL."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.016,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "Surekha Bhosale",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "Surekha Bhosale",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "Surekha Bhosale",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_3",
+                  "patient_name": "Surekha Bhosale",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_4",
+                  "patient_name": "Surekha Bhosale",
+                  "score": 1.0,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "Surekha Bhosale",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "PASS",
+            "severity": "ADVISORY",
+            "evidence": "2 document(s) checked — in-period=2, out-of-period=0, ambiguous=0.",
+            "detail": {
+              "status": "PASS",
+              "documents": [
+                {
+                  "document_name": "CAREGROUP SIGHT SOLUTION PRIVATE LIMITED",
+                  "type": "unknown",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-09 to 2026-07-08) for type 'unknown'."
+                },
+                {
+                  "document_name": "Invoice Cum Receipt",
+                  "type": "bill",
+                  "date": "08-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-09 to 2026-07-08) for type 'bill'."
+                }
+              ],
+              "counts": {
+                "IN_PERIOD": 2,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 0
+              },
+              "total_checked": 2,
+              "hospitalization": {
+                "admission": "2026-06-08",
+                "discharge": "2026-06-08"
+              },
+              "window_config": {
+                "pre_hosp_days": 30,
+                "post_hosp_days": 30
+              }
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+        ],
+        "inputs": {
+          "patient_name": "Surekha Bhosale",
+          "insured_name": null,
+          "admission_date": "2026-06-08 10:00 AM",
+          "discharge_date": "2026-06-08 14:00 PM",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:41:56.888283+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "pass",
+      "summary": "Medical admissibility passed: billed treatment is consistent with the clinical record. Treatment validity score 1.00; recommended action APPROVE. 2 charge(s): valid=2, partial=0, invalid=0, review=0. Treatment process appears correct: Cataract surgery with IOL implantation is appropriate for mild cataract when visually significant; post-op medications align with standard care. Major conflicts: Treating doctor mismatch between billing and discharge summary: Dr. Sandeep Saildesai vs MTCs. PED validation: INSUFFICIENT / UNKNOWN across 0 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Treating doctor mismatch between billing and discharge summary: Dr. Sandeep Saildesai vs MTCs",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 0,
+        "total": 1
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent correctly identified a treating doctor mismatch but dismissed it as administrative without escalating to REVIEW, risking a false negative if the mismatch indicates a billing fraud or misattribution. PED validation is marked INSUFFICIENT/UNKNOWN appropriately, but the overall verdict of VALID despite this unresolved conflict and lack of policy inputs is premature. Treatment validity score of 1.00 is overconfident given the unresolved doctor discrepancy and missing PED policy data.",
+        "suggestions": [
+          "Change overall_verdict to REVIEW due to unresolved treating doctor mismatch and insufficient PED inputs.",
+          "Downgrade treatment_validity_score to 0.70 to reflect unresolved clinical/administrative conflicts.",
+          "Add a charge-level REVIEW decision for at least one line item pending resolution of doctor attribution and policy PED terms."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 2.772,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "84542610",
+        "generated_at": "2026-07-04T12:42:02.518646Z",
+        "overall_verdict": "VALID",
+        "treatment_validity_score": 1.0,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "FAIL",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 1,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "Treating doctor mismatch between billing and discharge summary: Dr. Sandeep Saildesai vs MTCs"
+        ],
+        "recommended_action": "APPROVE",
+        "treatment_process_correct": true,
+        "treatment_process_explanation": "Cataract surgery with IOL implantation is appropriate for mild cataract when visually significant; post-op medications align with standard care.",
+        "treatment_process_confidence": 0.85,
+        "treatment_process_evidence": [
+          "A-Scan report confirms biometric data for left eye IOL calculation, supporting surgical planning.",
+          "Post-op medications (Enpred, Oxidrop, Milflox, Ocuwipes, Tab. Reffron) are consistent with standard anti-inflammatory and antibiotic prophylaxis.",
+          "No clinical contradiction in treatment sequence; surgery followed by medical therapy is standard.",
+          "Doctor mismatch is administrative, not clinical; does not invalidate treatment appropriateness."
+        ],
+        "lab_evidence_count": 1,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "UNKNOWN",
+          "confidence": 0.0,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "pre_existing_diseases",
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "NO_PED_FOUND_IN_DISCHARGE_SUMMARY"
+          ],
+          "ped_items": []
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "pass",
+      "summary": "Financial adjudication passed: the bill reconciles and is fully payable. Of 55000.00 billed across 2 line item(s): payable 55000.00 (2), non-payable 0.00 (0), undetermined 0.00 (0). Recommended action APPROVE; admissible amount 55000.00. Billing type assessed as Medical Management. Figures derived via the consolidated path.",
+      "issues": [],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent incorrectly assigned a VALID verdict despite the absence of insurer figures (claimed/sanctioned amounts), which violates Rule 4 — VALID requires payable total to match sanctioned amount when insurer data exists. Although the bill reconciles and all line items are marked payable, the lack of insurer comparison justification makes the verdict premature. The payable total (55000.0) cannot be validated against policy limits or pre-approval without insurer data.",
+        "suggestions": [
+          "Change overall_verdict to INVESTIGATION_REQUIRED due to missing insurer figures and unverified alignment with sanctioned amount.",
+          "Add a note explicitly stating that insurer figures are unavailable and therefore payable amount cannot be validated against policy terms.",
+          "Re-evaluate whether 'Medical Management' billing type is appropriate without clinical or policy context — consider flagging for administrative review if policy limits or pre-authorization are unknown."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "84542610",
+        "generated_at": "2026-07-04T12:42:04.833757Z",
+        "mode": "consolidated",
+        "overall_verdict": "VALID",
+        "recommended_action": "APPROVE",
+        "final_admissible_amount": 55000.0,
+        "totals": {
+          "total_billed": 55000.0,
+          "payable_total": 55000.0,
+          "non_payable_total": 0.0,
+          "unknown_total": 0.0,
+          "charge_count": 2,
+          "payable_count": 2,
+          "non_payable_count": 0,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 55000.0,
+          "recomputed_total": 55000.0,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 55000.0,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 55000.0,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 0.0,
+          "non_payable_vs_disallowed_match": true
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Cost of Implant",
+            "billed": 40000.0,
+            "payable": 40000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Package Charges",
+            "billed": 15000.0,
+            "payable": 15000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          }
+        ],
+        "billing_type": "Medical Management",
+        "overall_confidence": 1.0,
+        "flagged_count": 0,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "PPN OPH 01 B",
+            "amount": 15000.0,
+            "bill_type": "Package Charges",
+            "sub_bill_type": "Package Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 2,
+            "description": "IOL Cost",
+            "amount": 40000.0,
+            "bill_type": "Cost of Implant",
+            "sub_bill_type": "Intra Ocular Lense IOL",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          }
+        ],
+        "notes": [
+          "Bill reconciles and every line item is payable."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 2.793,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 2,
+      "medium": 2,
+      "low": 2,
+      "total": 6
+    }
+  }
+}

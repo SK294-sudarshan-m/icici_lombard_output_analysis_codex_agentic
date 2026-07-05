@@ -1,0 +1,34 @@
+{
+  "categories": {
+    "final_bill": [
+      {
+        "bill_id": "final_bill_1",
+        "pages": [
+          1
+        ],
+        "sequence_reason": "Single page"
+      }
+    ],
+    "supporting_interim_bill": [
+      {
+        "bill_id": "supporting_interim_bill_1",
+        "pages": [
+          6
+        ],
+        "sequence_reason": "All three provided images are identical copies of the same page, showing no content continuity, running totals, or page numbering to suggest they are part of a multi-page sequence. Therefore, they represent a single logical bill with only one unique page."
+      }
+    ],
+    "pharmacy_bill": [
+      {
+        "bill_id": "pharmacy_bill_1",
+        "pages": [
+          7,
+          8
+        ],
+        "sequence_reason": "Content continuity: Line items on page 7 end at S.NO 40, and page 8 continues sequentially from S.NO 41 to 79. The total amount on page 8 (20,408.31) represents the cumulative total for all items listed across both pages, confirming they are part of the same logical bill."
+      }
+    ]
+  },
+  "total_tokens_in": 5619,
+  "total_tokens_out": 205
+}

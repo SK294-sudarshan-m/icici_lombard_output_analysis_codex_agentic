@@ -1,0 +1,26 @@
+{
+  "categories": {
+    "final_bill": [
+      {
+        "bill_id": "final_bill_1",
+        "pages": [
+          1,
+          2
+        ],
+        "sequence_reason": "Page 1 is explicitly labeled 'Page 1 of 4' and contains the patient's details and a breakdown of charges totaling \u20b979,661.00. Page 2 is labeled 'Page 2 of 4' and shows a summary with the same total amount, confirming it is the next page in the same document. The content flows logically from a detailed itemization to a summary."
+      }
+    ],
+    "detailed_final_bill": [
+      {
+        "bill_id": "detailed_final_bill_1",
+        "pages": [
+          3,
+          4
+        ],
+        "sequence_reason": "Page 3 is labeled 'Page 3 of 4' and Page 4 is labeled 'Page 4 of 4', indicating they are consecutive pages of the same document. The 'Payer Payable Total' on Page 4 (79,661.00) appears to be the final total for the entire bill, which logically follows the itemized charges on Page 3. The content flows from detailed service charges on Page 3 to the final summary and patient payable section on Page 4."
+      }
+    ]
+  },
+  "total_tokens_in": 4280,
+  "total_tokens_out": 275
+}

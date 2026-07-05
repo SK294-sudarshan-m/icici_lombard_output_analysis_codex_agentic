@@ -1,0 +1,244 @@
+=== PAGE 15 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4672
+Tokens Out: 2278
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 15,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "ICO15284",
+    "bill_date": "24/02/2025 11:36:58",
+    "page_indicator": "15",
+    "document_title": ""
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91 Y",
+    "gender": "F",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": "CHANDER KOCHHAR"
+  },
+  "hospital": {
+    "name": "",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "DUOLIN 3 RESPULES",
+      "quantity": "1.0000",
+      "unit_price": "24.94",
+      "gross_amount": "24.94",
+      "discount": "0.00",
+      "amount": "24.94"
+    },
+    {
+      "sr_no": "",
+      "description": "VASOFIX SAFETY 18G (B.BRAUN)",
+      "quantity": "1.0000",
+      "unit_price": "350.00",
+      "gross_amount": "350.00",
+      "discount": "0.00",
+      "amount": "350.00"
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSABLE SYRINGE 5ML LUER LOCK WITH NEEDLE (BD)",
+      "quantity": "1.0000",
+      "unit_price": "31.00",
+      "gross_amount": "31.00",
+      "discount": "0.00",
+      "amount": "31.00"
+    },
+    {
+      "sr_no": "",
+      "description": "VENTILATOR CIRCUIT PLAIN EXPANDABLE ADULT INTRASURGICAL CODE NO 2151",
+      "quantity": "1.0000",
+      "unit_price": "1100.00",
+      "gross_amount": "1100.00",
+      "discount": "0.00",
+      "amount": "1100.00"
+    },
+    {
+      "sr_no": "",
+      "description": "DURA PATCH E DRESSING 4 X4- CODE 187660 (DUODERM ) BOX OF 5",
+      "quantity": "1.0000",
+      "unit_price": "372.26",
+      "gross_amount": "372.26",
+      "discount": "0.00",
+      "amount": "372.26"
+    },
+    {
+      "sr_no": "",
+      "description": "BUDECORT 0.5MG RESPULES",
+      "quantity": "1.0000",
+      "unit_price": "26.65",
+      "gross_amount": "26.65",
+      "discount": "0,00",
+      "amount": "26,65"
+    },
+    {
+      "sr_no": "",
+      "description": "Q SYTE (BD)",
+      "quantity": "2.0000",
+      "unit_price": "200.00",
+      "gross_amount": "400.00",
+      "discount": "0,00",
+      "amount": "400.00"
+    },
+    {
+      "sr_no": "",
+      "description": "CORT-S INJ.",
+      "quantity": "1,0000",
+      "unit_price": "46.90",
+      "gross_amount": "46.90",
+      "discount": "0.00",
+      "amount": "46.90"
+    },
+    {
+      "sr_no": "",
+      "description": "SOLID GEL TAB ELECTRODES FOR PHILIPS TC30 ECG MACHINE(13943B)",
+      "quantity": "12.0000",
+      "unit_price": "10.59",
+      "gross_amount": "127.08",
+      "discount": "0.00",
+      "amount": "127.08"
+    },
+    {
+      "sr_no": "",
+      "description": "INTRAFIX SAFESET B.C.V. LL,180CM- 4063001(B.BRAUN)",
+      "quantity": "1,0000",
+      "unit_price": "408.00",
+      "gross_amount": "408.00",
+      "discount": "0,00",
+      "amount": "408,00"
+    },
+    {
+      "sr_no": "",
+      "description": "VEIN 0 LINE (3 WAY EXTENSION ) 10CM (GS-3034) . ROMSON",
+      "quantity": "1.0000",
+      "unit_price": "360.00",
+      "gross_amount": "360.00",
+      "discount": "0.00",
+      "amount": "360.00"
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSABLE NEEDLE 24G l' (BD)",
+      "quantity": "2.0000",
+      "unit_price": "4.50",
+      "gross_amount": "9.00",
+      "discount": "0,00",
+      "amount": "9.00"
+    },
+    {
+      "sr_no": "",
+      "description": "NASAL CANULLA TWIN 1000 (AIRWAYS)",
+      "quantity": "1.0000",
+      "unit_price": "390.00",
+      "gross_amount": "390.00",
+      "discount": "0.00",
+      "amount": "390.00"
+    },
+    {
+      "sr_no": "",
+      "description": "ECO SURE WIPES LPO",
+      "quantity": "2.0000",
+      "unit_price": "520.00",
+      "gross_amount": "1040.00",
+      "discount": "0,00",
+      "amount": "1040,00"
+    },
+    {
+      "sr_no": "",
+      "description": "GLUCOMETER ACCUSURE SOUL BLOOD STRIPS PACK OF 25 MICROGENE",
+      "quantity": "1.0000",
+      "unit_price": "34,00",
+      "gross_amount": "34,00",
+      "discount": "0.00",
+      "amount": "34,00"
+    },
+    {
+      "sr_no": "",
+      "description": "GLUCOMETER ACCUSURE SOUL BLOOD STRIPS PACK OF 25 MICROGENE",
+      "quantity": "1.0000",
+      "unit_price": "34.00",
+      "gross_amount": "34.00",
+      "discount": "0,00",
+      "amount": "34.00"
+    },
+    {
+      "sr_no": "",
+      "description": "FLEXIDRIP NS 100ML I.V.",
+      "quantity": "4.0000",
+      "unit_price": "47.10",
+      "gross_amount": "188.40",
+      "discount": "0.00",
+      "amount": "188.40"
+    },
+    {
+      "sr_no": "",
+      "description": "FLEXIDRIP NS 100ML I.V.",
+      "quantity": "1.0000",
+      "unit_price": "47.10",
+      "gross_amount": "47.10",
+      "discount": "0.00",
+      "amount": "47.10"
+    },
+    {
+      "sr_no": "",
+      "description": "MEPILEX BORDER SACRUM 22X25CM",
+      "quantity": "1.0000",
+      "unit_price": "2000.00",
+      "gross_amount": "2000.00",
+      "discount": "0.00",
+      "amount": "2000.00"
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSABLE SYRINGE 10ML LUER LOCK WITH NEEDLE (BD)",
+      "quantity": "10.0000",
+      "unit_price": "47.00",
+      "gross_amount": "470.00",
+      "discount": "0.00",
+      "amount": "470.00"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Page 15 of a hospital bill (Invoice No: ICO15284) dated 24/02/2025 for patient Chander Kochhar (91Y/F), listing 21 line items of medical supplies and equipment with quantities, unit rates, and patient/spouse amounts, with a note that GST is not applicable."
+}

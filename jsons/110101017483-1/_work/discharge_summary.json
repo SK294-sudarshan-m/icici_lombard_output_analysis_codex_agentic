@@ -1,0 +1,20 @@
+{
+  "source_pages": [
+    1
+  ],
+  "primary_diagnosis": "RE Cataract",
+  "procedures": [
+    "Phaco + IOL Right Eye Surgery"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "0",
+  "treating_doctor": "Sanjay Jaiswal",
+  "department": "Ophthalmology",
+  "pre_existing_diseases": [
+    "Hypertensive",
+    "Asthmatic",
+    "IHD"
+  ],
+  "treatment": "Surgical management with phacoemulsification and intraocular lens implantation in right eye.",
+  "medications": []
+}

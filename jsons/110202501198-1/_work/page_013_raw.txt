@@ -1,0 +1,32 @@
+=== PAGE 13 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3295
+Tokens Out: 272
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 13,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Nursing Assessment Form"
+  },
+  "patient": {
+    "name": "Mrs Bandla Hymavathi",
+    "age": "62 Y,1 M,17 D",
+    "gender": "Female",
+    "uhid": "893505",
+    "ip_number": "I IP"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD, TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "admission": {
+    "treating_doctor": "Dr. D Bhargavi",
+    "department": "Medical Oncology"
+  },
+  "raw_summary": "Nursing assessment form for patient Mrs Bandla Hymavathi showing no prior hospitalization, no allergies, pain score of 0, and independent ability to perform all activities of daily life."
+}

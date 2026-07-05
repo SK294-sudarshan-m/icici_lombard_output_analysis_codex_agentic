@@ -1,0 +1,21 @@
+{
+  "total_pages": 2,
+  "total_tokens_in": 8756,
+  "total_tokens_out": 1334,
+  "pages": [
+    {
+      "page": 1,
+      "elapsed": 12.46,
+      "tokens_in": 4252,
+      "tokens_out": 549,
+      "page_type": "non_bill"
+    },
+    {
+      "page": 2,
+      "elapsed": 15.88,
+      "tokens_in": 4504,
+      "tokens_out": 785,
+      "page_type": "bill"
+    }
+  ]
+}

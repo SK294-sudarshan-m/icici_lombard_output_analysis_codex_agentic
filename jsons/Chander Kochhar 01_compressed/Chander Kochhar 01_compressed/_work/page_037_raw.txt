@@ -1,0 +1,34 @@
+=== PAGE 37 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3756
+Tokens Out: 383
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 37,
+  "page_type": "non_bill",
+  "non_bill_type": "diagnostic_report",
+  "document_markers": {
+    "document_title": "CT ANGIOGRAPHY PULMONARY"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91Y",
+    "gender": "F",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "406"
+  },
+  "admission": {
+    "date_of_admission": "21/02/2025 11:28PM",
+    "referring_doctor": "ABHAY RAUT",
+    "department": "IMAGING"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "+91 22 6174 6000 / 4888 4000 | Fax: +91 22 2646 1845 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com/khar"
+  },
+  "raw_summary": "Diagnostic report for CT pulmonary angiography showing findings including central filling defects in lower lobe arteries, ground-glass opacities, enlarged lymph nodes, cardiomegaly, and a calcified thyroid nodule, with no pleural or pericardial effusions."
+}

@@ -1,0 +1,37 @@
+=== PAGE 13 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4899
+Tokens Out: 349
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 13,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "document_title": "ADMISSION FORM"
+  },
+  "patient": {
+    "name": "Mrs. NALAMOLU SATYAVATHI",
+    "age": "57 Yrs",
+    "gender": "Female",
+    "uhid": "APVHM.0000050571",
+    "ip_number": "VHMIP66521",
+    "ward": "RECLINER",
+    "bed_number": "RC-02"
+  },
+  "admission": {
+    "date_of_admission": "08-Jun-26 10:25:21 AM",
+    "referring_doctor": "Dr.Satya Srinivas Appala-608258 (Medical Oncology)",
+    "treating_doctor": "Dr.Satya Srinivas Appala (Medical Oncology)",
+    "department": "Medical Oncology"
+  },
+  "hospital": {
+    "name": "Curie City Cancer Centre, Vijayawada"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD G.I.C.LTD"
+  },
+  "raw_summary": "Admission form for Mrs. NALAMOLU SATYAVATHI with IP number VHMIP66521, admitted on 08-Jun-26, showing previous IP episodes and a credit acknowledgement slip from ICICI Lombard for this admission."
+}

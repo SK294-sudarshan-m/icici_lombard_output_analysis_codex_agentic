@@ -1,0 +1,30 @@
+{
+  "page": 8,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "AMMINI THANKAPPAN 2213/18",
+    "age": "68Y 7M 16D",
+    "gender": "Female",
+    "uhid": "249109",
+    "ip_number": "45738",
+    "ward": "SINGLE NON AC",
+    "bed_number": "SN-616"
+  },
+  "admission": {
+    "date_of_admission": "02-Jun-2026 12:14 PM",
+    "date_of_discharge": "08-Jun-2026 12:34 PM",
+    "length_of_stay": "6 days",
+    "treating_doctor": "SR.BRIJEETHA",
+    "department": "DEPARTMENT OF GENERAL MEDICINE"
+  },
+  "hospital": {
+    "name": "MAGJ HOSPITAL",
+    "address": "Mookkannoor, Angamaly- 683577",
+    "contact": "Ph: 0484 2674300/ 6674300, Mob: 8086194300, E-mail: enquiry@magjhospital.org, Web: www.magjhospital.org"
+  },
+  "raw_summary": "Discharge summary for patient Ammini Thankappan detailing admission for urinary tract infection and benign paroxysmal positional vertigo, including case history, physical findings, treatment medications, and hospital course."
+}

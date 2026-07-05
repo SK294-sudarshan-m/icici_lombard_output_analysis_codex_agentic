@@ -1,0 +1,33 @@
+=== PAGE 34 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3702
+Tokens Out: 337
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 34,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "DEPARTMENT OF LABORATORY MEDICINE SEROLOGY"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 YEARS",
+    "gender": "FEMALE",
+    "uhid": "192673",
+    "ip_number": "68049"
+  },
+  "admission": {
+    "date_of_admission": "23/02/2025",
+    "referring_doctor": "DR ABHAY RAUT",
+    "department": "DEPARTMENT OF LABORATORY MEDICINE"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "+91 22 6174 6000 / 2646 9999"
+  },
+  "raw_summary": "Lab report for CRP test showing result of 66.13 mg/L (High) for patient Kochhar Chander, age 91, female, with sample collected on 23/02/2025, issued by P.D. Hinduja Hospital."
+}

@@ -1,0 +1,144 @@
+{
+  "page": 6,
+  "page_type": "bill",
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "M.P.BIRLA HOSPITAL SATNA",
+    "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "raw_summary": "Page 4 of 5 of an in-patient pharmacy medicine report from M.P. Birla Hospital Satna, dated 08/06/2026, listing multiple pharmacy charges across four separate document numbers (1937065, 1937143, 1937288, 1937328) with a grand total of 15,494.81.",
+  "extraction_recall_warning": "Extracted 0 charges but the page appears to have many more line items — possible missed rows, review this page.",
+  "page_sub_id": "6-4",
+  "bill_category": "PHARMACY",
+  "pipeline_category": "PHARMACY",
+  "document_markers": {
+    "bill_number": "Doc No: 1937328",
+    "document_title": "Charge : 17 - PHARMACY",
+    "bill_date": "08/06/2026",
+    "page_indicator": ""
+  },
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "TEGADREM 1633 3M",
+      "quantity": "1.00",
+      "unit_price": "120.00",
+      "gross_amount": "120.00",
+      "discount": "0.00",
+      "amount": "120.00"
+    },
+    {
+      "sr_no": "",
+      "description": "IV CANNULA 20 NO.",
+      "quantity": "1.00",
+      "unit_price": "110.00",
+      "gross_amount": "110.00",
+      "discount": "0.00",
+      "amount": "110.00"
+    },
+    {
+      "sr_no": "",
+      "description": "EXAMINATION GLOVES",
+      "quantity": "10.00",
+      "unit_price": "11.16",
+      "gross_amount": "111.60",
+      "discount": "0.00",
+      "amount": "111.60"
+    },
+    {
+      "sr_no": "",
+      "description": "DEXTROSE 10% 500 ML",
+      "quantity": "2.00",
+      "unit_price": "30.00",
+      "gross_amount": "60.00",
+      "discount": "0.00",
+      "amount": "60.00"
+    },
+    {
+      "sr_no": "",
+      "description": "NORMAL SALINE. 100ML",
+      "quantity": "4.00",
+      "unit_price": "19.00",
+      "gross_amount": "76.00",
+      "discount": "0.00",
+      "amount": "76.00"
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSSABLE SYRING (10ML)",
+      "quantity": "4.00",
+      "unit_price": "14.00",
+      "gross_amount": "56.00",
+      "discount": "0.00",
+      "amount": "56.00"
+    },
+    {
+      "sr_no": "",
+      "description": "HEPAGARD 10ML INJ",
+      "quantity": "2.00",
+      "unit_price": "435.00",
+      "gross_amount": "870.00",
+      "discount": "0.00",
+      "amount": "870.00"
+    },
+    {
+      "sr_no": "",
+      "description": "MUCOMIX 5ML INJ (SAMARTH)",
+      "quantity": "3.00",
+      "unit_price": "124.05",
+      "gross_amount": "372.15",
+      "discount": "0.00",
+      "amount": "372.15"
+    },
+    {
+      "sr_no": "",
+      "description": "EMESET 2ML INJ.",
+      "quantity": "3.00",
+      "unit_price": "12.72",
+      "gross_amount": "38.16",
+      "discount": "0.00",
+      "amount": "38.16"
+    },
+    {
+      "sr_no": "",
+      "description": "PAN 40MG INJ",
+      "quantity": "1.00",
+      "unit_price": "53.90",
+      "gross_amount": "53.90",
+      "discount": "0.00",
+      "amount": "53.90"
+    }
+  ],
+  "returns": [],
+  "medications": [],
+  "bill_summary": {
+    "total_amount": "1867.81"
+  },
+  "_split_from_page": 6
+}

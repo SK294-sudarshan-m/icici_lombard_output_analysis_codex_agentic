@@ -1,0 +1,316 @@
+{
+  "page": 6,
+  "page_type": "bill",
+  "patient": {
+    "name": "By.Jessica",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "509984/1327",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "KALYANI GENERAL HOSPITAL",
+    "address": "15, Dr. Radhakrishnan Salai, Chennai - 600 004 (South India)",
+    "contact": "Phone : 28470642, 28473306, 28475101"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "raw_summary": "Page 6 contains two separate bill sections: 'DISPOSABLE BREAKUP' with 19 line items totaling 1705, and 'LAB DETAILS' with 12 line items totaling 8575, both for patient By.Jessica (OP/IP: 509984/1327) at Kalyani General Hospital.",
+  "page_sub_id": "6-2",
+  "bill_category": "Consumable Charges",
+  "pipeline_category": "supporting_interim_bill",
+  "document_markers": {
+    "bill_number": "",
+    "document_title": "LAB DETAILS",
+    "bill_date": "",
+    "page_indicator": ""
+  },
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "CBC,OT,PT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "775",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Cbc Ot",
+        "standard_name": "test",
+        "score": 0.4686,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "ELE,CRP,DENGUE",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "1875",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Esr(6),Crp(6),Mp,Widal,Dengue,Scrub",
+        "standard_name": "test",
+        "score": 0.5185,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "URINE ROUTINE, URINE CLS",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "700",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "URINE CS",
+        "standard_name": "test",
+        "score": 0.593,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "RMT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "330",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Rmt (Rapid Malaria)",
+        "standard_name": "test",
+        "score": 0.7228,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "PCV,PLT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "185",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Pcv.",
+        "standard_name": "test",
+        "score": 0.6172,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "LFT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "675",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "vector_consensus",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "L.F.T",
+        "standard_name": "test",
+        "score": 0.8074,
+        "method": "vector_consensus"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "DENGUEIGM,LEPTO IGM",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "1850",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Dengue Igm",
+        "standard_name": "test",
+        "score": 0.7064,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "LEPTO IGM",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "700",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Leptospira Igm",
+        "standard_name": "test",
+        "score": 0.6581,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "PCV,PLT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "185",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Pcv.",
+        "standard_name": "test",
+        "score": 0.6172,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "CRP",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "250",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "vector_direct",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Crp",
+        "standard_name": "test",
+        "score": 0.9526,
+        "method": "vector_direct"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "URINE ROUTINE",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "125",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Urine Routine (Urine",
+        "standard_name": "test",
+        "score": 0.7978,
+        "method": "llm_selected"
+      }
+    },
+    {
+      "sr_no": "",
+      "description": "LFT,CRP",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "925",
+      "page_number": 6,
+      "bill_id": "supporting_interim_bill_1",
+      "bill_type": "Investigation Charges",
+      "sub_bill_type": "Investigation  Charges",
+      "bill_type_resolve_method": "llm_selected",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Lft Cbp Crp",
+        "standard_name": "test",
+        "score": 0.6099,
+        "method": "llm_selected"
+      }
+    }
+  ],
+  "returns": [],
+  "medications": [],
+  "bill_summary": {
+    "total_amount": "8575"
+  },
+  "_split_from_page": 6,
+  "bill_id": "supporting_interim_bill_1",
+  "sequence_reason": "All three provided images are identical copies of the same page, showing no content continuity, running totals, or page numbering to suggest they are part of a multi-page sequence. Therefore, they represent a single logical bill with only one unique page.",
+  "source_pages": [
+    6
+  ],
+  "merged_from": 1,
+  "merge_stats": {
+    "total_charges": 12,
+    "summary_rows_removed": 0,
+    "duplicates_removed": 0
+  }
+}

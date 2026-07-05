@@ -1,0 +1,64 @@
+=== PAGE 57 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4112
+Tokens Out: 487
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 57,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "bill_number": "192673",
+    "bill_date": "22/02/2025",
+    "page_indicator": "22",
+    "document_title": "TPA UNDERTAKING"
+  },
+  "patient": {
+    "name": "MANU KOCHHAR",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "Dr. ABHAY RAUT",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "13th Road, Khar (W), Mumbai - 400 052",
+    "contact": "022 2646 9911 / 6174 6099"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "This is a TPA Undertaking form from D. Hinduja Hospital dated 22/02/2025, signed by patient Manu Kochhar, acknowledging terms of cashless admission, security deposit, and financial responsibility in case of authorization withdrawal or claim rejection by the TPA/Insurance Co."
+}

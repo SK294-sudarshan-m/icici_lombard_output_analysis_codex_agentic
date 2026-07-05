@@ -1,0 +1,103 @@
+=== PAGE 2 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4342
+Tokens Out: 748
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 2,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "hospital": {
+    "name": "sportsmed MUMBAI LLP",
+    "address": "2nd Floor, Parel Premises, Opp. Motilal Oswal Towers, Parel ST Bus Depot Building, Junction of Sayani & Gokhale Road South, Parel West, Mumbai 400 025",
+    "contact": "T: 022 49227777 / 3100 8333 | E: info@sportsmed.in | www.sportsmed.in"
+  },
+  "medications": [
+    {
+      "name": "Cp. Becosules",
+      "dosage": "Oral at 10 am",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tb. Enzoflam",
+      "dosage": "Oral at 10 am and 9 pm",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tb. Pan (40 mg)",
+      "dosage": "Oral at 8 am and 8 pm",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tb. Restyl (0.25mg)",
+      "dosage": "Oral at 9 pm",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Inj Dynapar Aq",
+      "dosage": "sos",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tb. Xarelto (10mg)",
+      "dosage": "Oral",
+      "frequency": "0-0-1",
+      "duration": "5 days",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tb. Augmentin (625mg)",
+      "dosage": "",
+      "frequency": "1-0-1",
+      "duration": "5 days",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Cp. Becosules",
+      "dosage": "",
+      "frequency": "0-0-1",
+      "duration": "8 days",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tb. Enzoflam",
+      "dosage": "",
+      "frequency": "1-0-1",
+      "duration": "5 days",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tb. Pan (40 mg)",
+      "dosage": "",
+      "frequency": "1-0-1",
+      "duration": "5 days",
+      "quantity": "",
+      "amount": ""
+    }
+  ],
+  "raw_summary": "Discharge summary from Sportsmed Mumbai LLP detailing post-operative medications, treatment advice, physiotherapy instructions, and discharge condition for a patient recovering post-surgery."
+}

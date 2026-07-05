@@ -1,0 +1,664 @@
+{
+  "schema_version": "1.0",
+  "request_id": "84344f67",
+  "source_filename": "110101017679-1.pdf",
+  "generated_at": "2026-07-04T12:42:42.024983+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker, Administrative Review. 8 issue(s) raised (2 high, 4 medium, 2 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "Mr. V PRADYUMMA YADAV",
+      "age": "13 Y",
+      "gender": "MALE",
+      "uhid": "ROH - 26 - 51660",
+      "ip_number": "ROIP - 26 - 6423",
+      "ward": "SINGLE ROOM",
+      "bed_number": "208"
+    },
+    "admission": {
+      "date_of_admission": "06/06/2026 11:01 AM",
+      "date_of_discharge": "08/06/2026 3.42 PM",
+      "length_of_stay": "0",
+      "admission_type": "ICICI LOMBARD",
+      "referring_doctor": "",
+      "treating_doctor": "Dr.M.V.Hari Prasad",
+      "department": "Orthopaedics And Joint Replacement surgeon"
+    },
+    "hospital": {
+      "name": "ROOPA ORTHOPAEDIC & MULTI SPECIALITY HOSPITAL",
+      "address": "Ramayanapuvari St, Opp. High School Road Bus Stop, Sivasankarnagar, Patamata, Bandar Road, VIJAYAWADA - 520 010.",
+      "contact": "0866-2473108"
+    },
+    "insurance": {
+      "company": "ICICI LOMBARD",
+      "policy_number": "4193I/APRN/408802883/00/000",
+      "member_id": "8900080375161",
+      "claimed_amount": "20400.00",
+      "approved_amount": "16400",
+      "tpa": "ICICI Lombard GIC Ltd."
+    },
+    "total_pages": 8,
+    "charge_count": 1,
+    "diagnosis": "UNITED BOTH BONE FRACTURE LEFT FOREARM",
+    "treatment": "Surgical management with implant removal."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 6 of 13 mandatory documents are present (46.2% complete, status critical). Missing: Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Consultation Papers, Others. The claim appears to be Cashless (confidence 0.90, keyword_matching). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "7 mandatory document(s) missing: Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Consultation Papers, Others.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 7 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 1,
+        "medium": 1,
+        "low": 0,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent reports 13 mandatory documents but the rubric expects 16, violating inventory integrity. 'Prescription Papers' is marked as found based on page 8’s 'prescription' label, but this may not satisfy the mandatory 'Consultation Papers' requirement. The completeness status (critical) is appropriate for 7 missing, but the total mandatory count mismatch undermines reliability.",
+        "suggestions": [
+          "Reconcile mandatory document count to 16 per rubric; verify if 'Consultation Papers' and 'Prescription Papers' are distinct or conflated.",
+          "Re-evaluate 'Prescription Papers' as potentially insufficient to satisfy 'Consultation Papers' unless clinical notes are present.",
+          "Correct total_mandatory to 16 and adjust completeness_percent accordingly."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.003,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "84344f67",
+        "source_filename": "110101017679-1.pdf",
+        "generated_at": "2026-07-04T12:42:22.711926Z",
+        "total_pages": 8,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Cashless",
+          "detection_method": "keyword_matching",
+          "confidence": 0.9,
+          "cashless_matches": [
+            "cashless",
+            "pre-auth",
+            "authorization letter"
+          ],
+          "reimbursement_matches": [
+            "receipt"
+          ]
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Claim Form",
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Final Hospital Bills",
+            "Prescription Papers"
+          ],
+          "missing": [
+            "Investigation Reports",
+            "Pharmacy or Medicine Bills",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Consultation Papers",
+            "Others"
+          ],
+          "missing_critical": [],
+          "found_count": 6,
+          "missing_count": 7,
+          "total_mandatory": 13,
+          "completeness_percent": 46.2,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Claim Form": "fuzzy",
+            "Authorization Letter": "exact",
+            "Pre Authorization Request Note": "fuzzy",
+            "Final Hospital Bills": "structured",
+            "Prescription Papers": "variation"
+          },
+          "recommendations": [
+            "Request the following missing documents: Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Consultation Papers, Others."
+          ]
+        },
+        "non_mandatory_found": [],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "insurance_authorization",
+            "page_type": "non_bill",
+            "non_bill_type": "pre_auth_letter",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "bill_detail_statement",
+            "page_type": "non_bill",
+            "non_bill_type": "pre_auth_letter",
+            "low_content": false
+          },
+          {
+            "page_no": 3,
+            "document_type": "bill_detail_statement",
+            "page_type": "non_bill",
+            "non_bill_type": "pre_auth_letter",
+            "low_content": false
+          },
+          {
+            "page_no": 4,
+            "document_type": "bill_detail_statement",
+            "page_type": "non_bill",
+            "non_bill_type": "pre_auth_letter",
+            "low_content": false
+          },
+          {
+            "page_no": 5,
+            "document_type": "bill_detail_statement",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 6,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 7,
+            "document_type": "bill_detail_statement",
+            "page_type": "non_bill",
+            "non_bill_type": "unknown",
+            "low_content": false
+          },
+          {
+            "page_no": 8,
+            "document_type": "unknown",
+            "page_type": "non_bill",
+            "non_bill_type": "prescription",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "insurance_authorization",
+            "start_page": 1,
+            "end_page": 1,
+            "pages": [
+              1
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "bill_detail_statement",
+            "start_page": 2,
+            "end_page": 7,
+            "pages": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "fail",
+      "summary": "Administrative admissibility failed: one or more critical checks did not pass. Checks: identity=FAIL, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=PASS. Blocking issues: identity: 2 doc name mismatch(es), 0 ID mismatch(es).. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date..",
+      "issues": [
+        {
+          "message": "identity: 2 doc name mismatch(es), 0 ID mismatch(es).",
+          "severity": "high",
+          "code": "admin.blocking",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 1,
+        "medium": 0,
+        "low": 2,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The overall FAIL verdict is justified due to the identity check failure, but the insured and policy_dates checks are incorrectly marked as SKIPPED instead of FAIL — both are CRITICAL and missing required inputs, which constitutes a false negative risk. The identity check’s evidence is detailed but should clarify whether the 0.8-score mismatches are truly unresolvable or just OCR/typo artifacts. Period compliance is correctly PASS but irrelevant without policy dates.",
+        "suggestions": [
+          "Change 'insured' and 'policy_dates' from SKIPPED to FAIL with severity CRITICAL — missing inputs for critical checks must block the claim, not be skipped.",
+          "Add advisory note to identity check: 'Consider manual review for OCR/typo artifacts in page_7 and page_8 names (e.g., Iradyummer Yadov → V Pradyumma Yadav) before final rejection.'",
+          "Clarify in blocking_issues that policy_dates and insured are also blockers, not just identity."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "FAIL",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "FAIL",
+            "severity": "CRITICAL",
+            "evidence": "2 doc name mismatch(es), 0 ID mismatch(es).",
+            "detail": {
+              "status": "FAIL",
+              "reference_name": "Mr. V PRADYUMMA YADAV",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "Mr. V PRADYUMMA YADAV",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "V PRADYUMNA YADAV",
+                  "score": 0.941,
+                  "match": true
+                },
+                {
+                  "document_name": "page_5",
+                  "patient_name": "V PRADYUMMA YADAV",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_6",
+                  "patient_name": "Mr. V PRADYUMMA YADAV",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_7",
+                  "patient_name": "Iradyummer Yadov",
+                  "score": 0.8,
+                  "match": false
+                },
+                {
+                  "document_name": "page_8",
+                  "patient_name": "pradhunar yadav",
+                  "score": 0.8,
+                  "match": false
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": [
+                {
+                  "document_name": "page_7",
+                  "patient_name": "Iradyummer Yadov",
+                  "score": 0.8,
+                  "match": false
+                },
+                {
+                  "document_name": "page_8",
+                  "patient_name": "pradhunar yadav",
+                  "score": 0.8,
+                  "match": false
+                }
+              ],
+              "details": "2 doc name mismatch(es), 0 ID mismatch(es)."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "Mr. V PRADYUMMA YADAV",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "PASS",
+            "severity": "ADVISORY",
+            "evidence": "1 document(s) checked — in-period=1, out-of-period=0, ambiguous=0.",
+            "detail": {
+              "status": "PASS",
+              "documents": [
+                {
+                  "document_name": "Final Bill/Receipt",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-07 to 2026-07-08) for type 'bill'."
+                }
+              ],
+              "counts": {
+                "IN_PERIOD": 1,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 0
+              },
+              "total_checked": 1,
+              "hospitalization": {
+                "admission": "2026-06-06",
+                "discharge": "2026-06-08"
+              },
+              "window_config": {
+                "pre_hosp_days": 30,
+                "post_hosp_days": 30
+              }
+            }
+          }
+        ],
+        "blocking_issues": [
+          "identity: 2 doc name mismatch(es), 0 ID mismatch(es)."
+        ],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+        ],
+        "inputs": {
+          "patient_name": "Mr. V PRADYUMMA YADAV",
+          "insured_name": null,
+          "admission_date": "06/06/2026 11:01 AM",
+          "discharge_date": "08/06/2026 3.42 PM",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:42:26.164775+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "pass",
+      "summary": "Medical admissibility passed: billed treatment is consistent with the clinical record. Treatment validity score 1.00; recommended action APPROVE. 1 charge(s): valid=1, partial=0, invalid=0, review=0. Treatment process could not be confirmed: Implant removal is not clinically indicated for an active fracture; it is typically performed after union, which lacks supporting evidence. Major conflicts: Length of stay mismatch between billing and discharge summary: 0 vs 2; Treating doctor mismatch between billing and discharge summary: Dr.M.V.Hari Prasad vs M.V. Hari Prasad. PED validation: INSUFFICIENT / UNKNOWN across 0 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Length of stay mismatch between billing and discharge summary: 0 vs 2",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Treating doctor mismatch between billing and discharge summary: Dr.M.V.Hari Prasad vs M.V. Hari Prasad",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Treatment process not confirmed: Implant removal is not clinically indicated for an active fracture; it is typically performed after union, which lacks supporting evidence.",
+          "severity": "medium",
+          "code": "medical.treatment_process",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 3,
+        "low": 0,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent incorrectly marked the charge as VALID despite flagging critical clinical contradictions — implant removal is not indicated for an active fracture without evidence of union, and LOS/doctor mismatches suggest procedural or documentation fraud. The treatment_validity_score of 1.00 is unjustified given the low treatment_process_confidence (0.3) and lack of supporting evidence. This creates a false negative risk by approving a clinically unsupported charge.",
+        "suggestions": [
+          "Reclassify the charge as REVIEW or PARTIAL due to lack of clinical justification for implant removal in active fracture.",
+          "Adjust treatment_validity_score to reflect treatment_process_confidence (e.g., 0.3–0.5) and align overall_verdict with charge decision.",
+          "Add explicit clinical reasoning in charge_decisions explaining why implant removal contradicts diagnosis, rather than relying on deterministic rules."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 1.864,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "84344f67",
+        "generated_at": "2026-07-04T12:42:31.180812Z",
+        "overall_verdict": "VALID",
+        "treatment_validity_score": 1.0,
+        "episode_checks": {
+          "los_consistency": "FAIL",
+          "doctor_consistency": "FAIL",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "Length of stay mismatch between billing and discharge summary: 0 vs 2",
+          "Treating doctor mismatch between billing and discharge summary: Dr.M.V.Hari Prasad vs M.V. Hari Prasad"
+        ],
+        "recommended_action": "APPROVE",
+        "treatment_process_correct": false,
+        "treatment_process_explanation": "Implant removal is not clinically indicated for an active fracture; it is typically performed after union, which lacks supporting evidence.",
+        "treatment_process_confidence": 0.3,
+        "treatment_process_evidence": [
+          "Diagnosis is active fracture, not healed bone requiring implant removal.",
+          "No lab or imaging evidence provided to confirm fracture union prior to removal.",
+          "Medications suggest post-op or infection prophylaxis, not acute fracture management.",
+          "Billing and documentation inconsistencies raise suspicion of procedural mismatch."
+        ],
+        "lab_evidence_count": 0,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "UNKNOWN",
+          "confidence": 0.0,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "pre_existing_diseases",
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "NO_PED_FOUND_IN_DISCHARGE_SUMMARY"
+          ],
+          "ped_items": []
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "pass",
+      "summary": "Financial adjudication passed: the bill reconciles and is fully payable. Of 20400.00 billed across 1 line item(s): payable 20400.00 (1), non-payable 0.00 (0), undetermined 0.00 (0). Recommended action APPROVE; admissible amount 20400.00. Billing type assessed as Package. Figures derived via the consolidated path.",
+      "issues": [],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent marked the entire 20400.00 as payable with no non-payable or undetermined items, but the insurer comparison shows no claimed or sanctioned figures — meaning the payable amount cannot be validated against policy terms. A VALID verdict is inappropriate without insurer figures to confirm alignment; it should be PARTIAL or INVESTIGATION_REQUIRED to flag the missing comparison. The reconciliation is mathematically sound, but the verdict overreaches.",
+        "suggestions": [
+          "Change overall_verdict to INVESTIGATION_REQUIRED due to absence of insurer figures for validation.",
+          "Add a note explaining that payable amount cannot be confirmed without sanctioned amount from insurer records.",
+          "Reclassify recommended_action to 'HOLD_FOR_REVIEW' until insurer figures are available."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "84344f67",
+        "generated_at": "2026-07-04T12:42:34.957505Z",
+        "mode": "consolidated",
+        "overall_verdict": "VALID",
+        "recommended_action": "APPROVE",
+        "final_admissible_amount": 20400.0,
+        "totals": {
+          "total_billed": 20400.0,
+          "payable_total": 20400.0,
+          "non_payable_total": 0.0,
+          "unknown_total": 0.0,
+          "charge_count": 1,
+          "payable_count": 1,
+          "non_payable_count": 0,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 20400.0,
+          "recomputed_total": 20400.0,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 20400.0,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 20400.0,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 0.0,
+          "non_payable_vs_disallowed_match": true
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Package Charges",
+            "billed": 20400.0,
+            "payable": 20400.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          }
+        ],
+        "billing_type": "Package",
+        "overall_confidence": 1.0,
+        "flagged_count": 0,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "SERVICES AGREED PACKAGE",
+            "amount": 20400.0,
+            "bill_type": "Package Charges",
+            "sub_bill_type": "Package Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          }
+        ],
+        "notes": [
+          "Bill reconciles and every line item is payable."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 1.871,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 2,
+      "medium": 4,
+      "low": 2,
+      "total": 8
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "page": 5,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Discharge Summary"
+  },
+  "patient": {
+    "name": "V PRADYUMMA YADAV",
+    "age": "13",
+    "gender": "Male",
+    "uhid": "ROH - 26 51660",
+    "ip_number": "ROIP - 26 6423",
+    "ward": "",
+    "bed_number": "208"
+  },
+  "admission": {
+    "date_of_admission": "06/06/2026 11:01 am",
+    "date_of_discharge": "08/06/2026 15:00 pm",
+    "length_of_stay": "",
+    "admission_type": "Organisation",
+    "referring_doctor": "",
+    "treating_doctor": "Dr M.V.Hari Prasad",
+    "department": "Orthopaedics And Joint Replacement"
+  },
+  "hospital": {
+    "name": "ROOPA ORTHOPAEDIC & MULTI SPECIALITY HOSPITAL",
+    "address": "Ramayanapuvari St, Opp. High School Road Bus Stop, Sivasankarnagar, Patamata, Bandar Road, VIJAYAWADA - 520 010.",
+    "contact": "0866-2473108, 80081 08333"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [
+    {
+      "name": "TAB K CEF BD",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 0
+    },
+    {
+      "name": "TAB REACTIN BD",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 1
+    },
+    {
+      "name": "TAB RANTAC BD",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 2
+    }
+  ],
+  "raw_summary": "Discharge summary for a 13-year-old male patient V Pradyumma Yadav, admitted for implant removal surgery following a united both bone fracture of the left forearm, discharged after 2 days with stable vitals and advised medications."
+}

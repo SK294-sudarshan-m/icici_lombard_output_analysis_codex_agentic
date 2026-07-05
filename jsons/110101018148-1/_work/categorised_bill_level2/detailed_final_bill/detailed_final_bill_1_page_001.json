@@ -1,0 +1,223 @@
+{
+  "page": 1,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "188928",
+    "bill_date": "09/06/2026",
+    "page_indicator": "Page : 1",
+    "document_title": "DETAILED I.P. BILL"
+  },
+  "patient": {
+    "name": "SAYU PRAVEEN",
+    "ip_number": "194188"
+  },
+  "admission": {
+    "date_of_admission": "07/06/2026"
+  },
+  "hospital": {
+    "name": "HOLY GHOST MISSION HOSPITAL",
+    "address": "MUTTUCHIRA P.O., KOTTAYAM, KERALA - 686613",
+    "contact": "Tel:04829-282224,Mob:8136883204/05, Web: www.hgmhospital.org"
+  },
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "AZITHRAL 200 XL (30ML)SYP",
+      "quantity": "1",
+      "unit_price": "107.75",
+      "gross_amount": "107.75",
+      "discount": "0.00",
+      "amount": "107.75",
+      "source_line_index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "2",
+      "description": "FLUVIA SYP 75 ML",
+      "quantity": "1",
+      "unit_price": "582.21",
+      "gross_amount": "582.21",
+      "discount": "0.00",
+      "amount": "582.21",
+      "source_line_index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "3",
+      "description": "NASEON NASAL DROPS",
+      "quantity": "1",
+      "unit_price": "45.97",
+      "gross_amount": "45.97",
+      "discount": "0.00",
+      "amount": "45.97",
+      "source_line_index": 2,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "4",
+      "description": "P-250 SYP 60ML",
+      "quantity": "1",
+      "unit_price": "42.43",
+      "gross_amount": "42.43",
+      "discount": "0.00",
+      "amount": "42.43",
+      "source_line_index": 3,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "5",
+      "description": "POLYBION-- LC SYP",
+      "quantity": "1",
+      "unit_price": "140.99",
+      "gross_amount": "140.99",
+      "discount": "0.00",
+      "amount": "140.99",
+      "source_line_index": 4,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "6",
+      "description": "RANTAC SYP 100ML",
+      "quantity": "1",
+      "unit_price": "165.38",
+      "gross_amount": "165.38",
+      "discount": "0.00",
+      "amount": "165.38",
+      "source_line_index": 5,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "7",
+      "description": "PLATELET COUNT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "90.00",
+      "discount": "",
+      "amount": "90.00",
+      "source_line_index": 6,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "8",
+      "description": "CRP",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "265.00",
+      "discount": "",
+      "amount": "265.00",
+      "source_line_index": 7,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "9",
+      "description": "BLOOD ESR",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "55.00",
+      "discount": "",
+      "amount": "55.00",
+      "source_line_index": 8,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "10",
+      "description": "BLOOD CBC",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "150.00",
+      "discount": "",
+      "amount": "150.00",
+      "source_line_index": 9,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "11",
+      "description": "INFLUENZA ANTIGEN TEST",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "330.00",
+      "discount": "",
+      "amount": "330.00",
+      "source_line_index": 10,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "12",
+      "description": "URINE RE",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "125.00",
+      "discount": "",
+      "amount": "125.00",
+      "source_line_index": 11,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "13",
+      "description": "PAEDIATRIC CON.FEE.C",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "150.00",
+      "discount": "",
+      "amount": "150.00",
+      "source_line_index": 12,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "14",
+      "description": "EMERGENCY/CASUALITY & REGISTRATION",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "200.00",
+      "discount": "",
+      "amount": "200.00",
+      "source_line_index": 13,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "15",
+      "description": "NURSING CARE",
+      "quantity": "2",
+      "unit_price": "760.00",
+      "gross_amount": "1520.00",
+      "discount": "",
+      "amount": "1520.00",
+      "source_line_index": 14,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "16",
+      "description": "PULMO AID WITH OXYGEN CHARGE",
+      "quantity": "4",
+      "unit_price": "80.00",
+      "gross_amount": "320.00",
+      "discount": "",
+      "amount": "320.00",
+      "source_line_index": 15,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "17",
+      "description": "ROOM CHARGES",
+      "quantity": "2",
+      "unit_price": "1400.00",
+      "gross_amount": "2800.00",
+      "discount": "",
+      "amount": "2800.00",
+      "source_line_index": 16,
+      "charge_type": "line_item"
+    }
+  ],
+  "bill_summary": {
+    "gross_amount": "7089.73",
+    "total_amount": "7089.73",
+    "discount": "0.00",
+    "tax": "0.00",
+    "net_payable": "7089.73"
+  },
+  "raw_summary": "Page 1 of a detailed inpatient bill from Holy Ghost Mission Hospital, listing medications, investigations, and service charges with a total payable amount of 7089.73.",
+  "bill_category": "detailed_final_bill",
+  "pipeline_category": "detailed_final_bill",
+  "bill_id": "detailed_final_bill_1",
+  "sequence_reason": "Both pages share the same bill number (188928), patient name (SAYU PRAVEEN), and admission details. Page 1 lists itemized charges for medicines, investigations, and services, ending with a subtotal. Page 2 displays the grand total, which matches the sum of the subtotals from Page 1, and includes the final amount due and signature, indicating it is the concluding page of the same bill."
+}

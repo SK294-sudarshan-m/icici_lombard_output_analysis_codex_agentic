@@ -1,0 +1,65 @@
+{
+  "source_pages": [
+    2,
+    4,
+    5
+  ],
+  "primary_diagnosis": "Urosepsis",
+  "procedures": [],
+  "severity": "Moderate",
+  "length_of_stay": "8",
+  "treating_doctor": "Senthil Ganesh",
+  "department": "Paediatric Surgery",
+  "pre_existing_diseases": [],
+  "treatment": "Conservative management with IV antibiotics and supportive care.",
+  "medications": [
+    {
+      "name": "Ceftriaxone",
+      "dosage": "IV",
+      "frequency": "Not specified",
+      "duration": "Not specified"
+    },
+    {
+      "name": "Azithromycin",
+      "dosage": "Oral",
+      "frequency": "Not specified",
+      "duration": "Not specified"
+    },
+    {
+      "name": "Piptaz",
+      "dosage": "IV",
+      "frequency": "Not specified",
+      "duration": "Not specified"
+    },
+    {
+      "name": "Amikacin",
+      "dosage": "IV",
+      "frequency": "Not specified",
+      "duration": "Not specified"
+    },
+    {
+      "name": "Meropenem",
+      "dosage": "IV",
+      "frequency": "Not specified",
+      "duration": "5 days"
+    },
+    {
+      "name": "Faropenem",
+      "dosage": "100mg/5ml",
+      "frequency": "5ml-5ml-5ml",
+      "duration": "5 days"
+    },
+    {
+      "name": "FourtsB",
+      "dosage": "",
+      "frequency": "5ml-0-0",
+      "duration": "1 month"
+    },
+    {
+      "name": "Pantoprazole",
+      "dosage": "20mg",
+      "frequency": "1-0-0",
+      "duration": "5 days"
+    }
+  ]
+}

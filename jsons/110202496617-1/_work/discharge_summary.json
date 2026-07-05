@@ -1,0 +1,54 @@
+{
+  "source_pages": [
+    1,
+    2
+  ],
+  "primary_diagnosis": "Acute Febrile Illness // Viral Hepatitis - HAV(+)",
+  "procedures": [],
+  "severity": "Moderate",
+  "length_of_stay": "4",
+  "treating_doctor": "Ashish Mishra",
+  "department": "Medicine",
+  "pre_existing_diseases": [
+    "Viral Hepatitis - HAV(+)"
+  ],
+  "treatment": "Conservative management with appropriate medical treatment including IV fluids and supportive care, with regular monitoring of vitals, blood glucose, input-output, and other relevant parameters.",
+  "medications": [
+    {
+      "name": "Tab Ursocol 300mg",
+      "dosage": "1-1-1",
+      "frequency": "X 10 DAYS",
+      "duration": "10 days"
+    },
+    {
+      "name": "Tab Nexpro 40mg",
+      "dosage": "1-0-0",
+      "frequency": "X 10 DAYS (EMPTY STOMACH)",
+      "duration": "10 days"
+    },
+    {
+      "name": "Tab Domstal DT",
+      "dosage": "1-1-1",
+      "frequency": "X 3 DAYS",
+      "duration": "3 days"
+    },
+    {
+      "name": "Tab Calpol 650mg",
+      "dosage": "S O S",
+      "frequency": "S O S",
+      "duration": ""
+    },
+    {
+      "name": "P/W Glucon-D",
+      "dosage": "2 SCOOPS",
+      "frequency": "2 SCOOPS X 10 DAYS",
+      "duration": "10 days"
+    },
+    {
+      "name": "Syp Duphalac (20 ML)",
+      "dosage": "S O S",
+      "frequency": "S O S",
+      "duration": ""
+    }
+  ]
+}

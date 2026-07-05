@@ -1,0 +1,162 @@
+{
+  "bill_id": "3dbb70df",
+  "case_number": "110202497302-1",
+  "bill_summary": {
+    "extracted_amount": 67500.0,
+    "calculated_amount": 67500.0,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 67500.0,
+    "calculated_after_discount": 67500.0,
+    "total_line_items": 3,
+    "amounts_match": true,
+    "overall_confidence": 1.0,
+    "case_verdict": 1,
+    "summary": "Case is in order and recommended for processing. The consolidated bill has 3 line item(s) totalling ₹67,500.00 (gross), with a net payable of ₹67,500.00. the line items reconcile with the bill's printed total. billing type assessed as Medical Management. extraction confidence 1.00.",
+    "billing_type": {
+      "billing_type": "Medical Management",
+      "confidence": 0.7,
+      "reasoning": "No surgery/package/day-care indicators; DS severity=Moderate"
+    }
+  },
+  "patient": {
+    "name": "SUNEETA SHRIKANT GUNDAKAL",
+    "ip_number": "26.6.15/369"
+  },
+  "hospital": {
+    "name": "TAVARGERI NURSING HOME PVT. LTD.",
+    "address": "Near K.C. Park Post Office, DHARWAD - 580 008.",
+    "contact": "0836 - 2448359"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "tpa": "ICICI LOMBARD"
+  },
+  "admission": {
+    "date_of_admission": "03-06-2026",
+    "date_of_discharge": "08-06-2026"
+  },
+  "charges": [
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "",
+      "description": "SPECIAL ROOM",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Special Room",
+        "standard_name": "bed charges",
+        "score": 0.9637,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Description 'SPECIAL ROOM' exactly matches the image. Amount is not present in the image for this row, which is correct as it's a room type header. Bill type 'Room Charges' and sub_bill_type 'Room Charge' are appropriate per bill master (1000739, 1000746)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "SPECIAL ROOM",
+          "match_ratio": 1.0
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 0
+    },
+    {
+      "bill_type": "Package Charges",
+      "bill_type_id": "1000745",
+      "sub_bill_type": "Package Charges",
+      "sub_bill_type_id": "1011542",
+      "sr_no": "",
+      "description": "ELECTIVE LSCS(Packeg)",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "60500.00",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Elective Lscs Package",
+        "standard_name": "miscellaneous charges",
+        "score": 0.6956,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Description 'ELECTIVE LSCS(Packeg)' matches the image (minor spelling difference 'Packeg' vs 'Package' is acceptable). Amount 60500.00 exactly matches the image. Bill type 'Package Charges' and sub_bill_type 'Package Charges' are correct per bill master (1000745, 1011542)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "ELECTIVE LSCS(Packeg)",
+          "match_ratio": 1.0
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 1
+    },
+    {
+      "bill_type": "Miscellaneous",
+      "bill_type_id": "1014508",
+      "sub_bill_type": "Miscellaneous Charges",
+      "sub_bill_type_id": "1011084",
+      "sr_no": "",
+      "description": "Tubectomy charges",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "7000.00",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "payability": "Non-Payable",
+      "match_info": {
+        "matched_item": "Tubectomy Charges",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.9962,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Description 'Tubectomy charges' exactly matches the image. Amount 7000.00 exactly matches the image. Bill type 'Miscellaneous' and sub_bill_type 'Miscellaneous Charges' are appropriate per bill master (1014508, 1011084)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "Tubectomy charges\t7000.00",
+          "match_ratio": 0.81
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 2
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [],
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "overall_confidence": 1.0
+}

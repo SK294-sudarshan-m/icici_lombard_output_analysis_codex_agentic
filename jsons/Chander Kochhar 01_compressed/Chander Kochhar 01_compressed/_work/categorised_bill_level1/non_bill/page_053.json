@@ -1,0 +1,28 @@
+{
+  "page": 53,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "DEPARTMENT OF LABORATORY MEDICINE CLINICAL CHEMISTRY & IMMUNOLOGY"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 YEARS",
+    "gender": "FEMALE",
+    "uhid": "192673",
+    "ip_number": "68049"
+  },
+  "admission": {
+    "date_of_admission": "21/02/2025",
+    "referring_doctor": "DR ABHAY RAUT"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052. India",
+    "contact": "Tel: +91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1045 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "insurance": {
+    "tpa": "TPA"
+  },
+  "raw_summary": "Laboratory report from P. D. Hinduja Hospital showing General Body Profile test results for patient Kochhar Chander, including Sodium, Potassium, Chloride, and Bicarbonate (TCO2) levels with reference intervals, dated February 21, 2025."
+}

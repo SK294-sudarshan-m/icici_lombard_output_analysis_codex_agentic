@@ -1,0 +1,20 @@
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "diagnostic_report",
+  "document_markers": {
+    "document_title": "A- SCAN REPORT"
+  },
+  "patient": {
+    "name": "Surekha Bhosale",
+    "age": "47",
+    "gender": "F",
+    "uhid": "2026/06/105986"
+  },
+  "hospital": {
+    "name": "LAXMI JYOT EYE HOSPITAL AND CHARITABLE CENTRE",
+    "address": "1st Floor, Dharmaveer Building, Uthalsar, Naka, Thane-west",
+    "contact": "Ph. No. 25473811"
+  },
+  "raw_summary": "A-Scan diagnostic report from Laxmi Jyot Eye Hospital for patient Surekha Bhosale, age 47, showing biometric measurements for the left eye including K1, K2, axial length, A Constant, and IOL Power."
+}

@@ -1,0 +1,14 @@
+{
+  "page": 9,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "page_indicator": "9"
+  },
+  "insurance": {
+    "company": "ICICI Lombard GIC",
+    "claimed_amount": "189771",
+    "approved_amount": "80698"
+  },
+  "raw_summary": "Pre-authorization letter from ICICI Lombard GIC showing approval events with requested and sanctioned amounts, hospital tariff details, and remarks on non-payables and exhausted sum insured."
+}

@@ -1,0 +1,24 @@
+{
+  "categories": {
+    "implant_bill": [
+      {
+        "bill_id": "implant_bill_1",
+        "pages": [
+          7
+        ],
+        "sequence_reason": "Single page"
+      }
+    ],
+    "final_bill": [
+      {
+        "bill_id": "final_bill_1",
+        "pages": [
+          6
+        ],
+        "sequence_reason": "Single page"
+      }
+    ]
+  },
+  "total_tokens_in": 0,
+  "total_tokens_out": 0
+}

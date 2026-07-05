@@ -1,0 +1,50 @@
+=== PAGE 4 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4204
+Tokens Out: 368
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 4,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "page_indicator": "Page 2 of 3"
+  },
+  "medications": [
+    {
+      "name": "SYP FLUVIA 3.5 ML",
+      "dosage": "1-0-1 X 3 DAYS",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "SYP RANTAC 2.5 ML",
+      "dosage": "1-0-1 X 3 DAYS",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "SYP AZITHRAL (200/5) 3.5 ML",
+      "dosage": "1-0-0 X 5 DAYS",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "SYP POLYBION LC 3.5 ML",
+      "dosage": "1-0-0 X 5 DAYS",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    }
+  ],
+  "raw_summary": "This page contains a discharge summary with investigations (Entry Nos 198837 and 198928), course in hospital, condition at discharge, medication on discharge, and follow-up advice, signed by Dr. Uthara Mohan at H.G.M Hospital, Muttuchira, Kottayam."
+}

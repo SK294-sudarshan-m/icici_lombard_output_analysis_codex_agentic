@@ -1,0 +1,595 @@
+=== PAGE 9 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 6493
+Tokens Out: 4255
+Attempt: 2
+
+--- RESPONSE ---
+{
+  "page": 9,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "",
+    "document_title": "Final Bill"
+  },
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "M.P.BIRLA HOSPITAL SATNA",
+    "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "1935721",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "53.90"
+    },
+    {
+      "sr_no": "1935815",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "120.00"
+    },
+    {
+      "sr_no": "1935815",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "110.00"
+    },
+    {
+      "sr_no": "1935957",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "184.80"
+    },
+    {
+      "sr_no": "1936219",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "120.00"
+    },
+    {
+      "sr_no": "1936219",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "110.00"
+    },
+    {
+      "sr_no": "1936219",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "90.00"
+    },
+    {
+      "sr_no": "1936219",
+      "description": "PHARMACY CHARGES",
+      "quantity": "5",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "12.30"
+    },
+    {
+      "sr_no": "1936219",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "76.00"
+    },
+    {
+      "sr_no": "1936219",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "56.00"
+    },
+    {
+      "sr_no": "1936219",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "870.00"
+    },
+    {
+      "sr_no": "1936219",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "378.57"
+    },
+    {
+      "sr_no": "1936219",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "38.16"
+    },
+    {
+      "sr_no": "1936219",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "53.90"
+    },
+    {
+      "sr_no": "1936309",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "225.53"
+    },
+    {
+      "sr_no": "1936641",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "90.00"
+    },
+    {
+      "sr_no": "1936641",
+      "description": "PHARMACY CHARGES",
+      "quantity": "10",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "111.60"
+    },
+    {
+      "sr_no": "1936641",
+      "description": "PHARMACY CHARGES",
+      "quantity": "5",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "231.00"
+    },
+    {
+      "sr_no": "1936641",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "30.00"
+    },
+    {
+      "sr_no": "1936641",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "57.00"
+    },
+    {
+      "sr_no": "1936641",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "52.00"
+    },
+    {
+      "sr_no": "1936641",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "870.00"
+    },
+    {
+      "sr_no": "1936641",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "378.57"
+    },
+    {
+      "sr_no": "1936641",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "38.16"
+    },
+    {
+      "sr_no": "1936641",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "53.90"
+    },
+    {
+      "sr_no": "1936914",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "39.00"
+    },
+    {
+      "sr_no": "1936914",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "328.12"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "120.00"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "110.00"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "90.00"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "10",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "111.60"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "60.00"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "76.00"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "56.00"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "378.57"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "870.00"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "38.16"
+    },
+    {
+      "sr_no": "1937065",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "53.90"
+    },
+    {
+      "sr_no": "1937143",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "120.00"
+    },
+    {
+      "sr_no": "1937143",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "110.00"
+    },
+    {
+      "sr_no": "1937288",
+      "description": "PHARMACY CHARGES",
+      "quantity": "5",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "12.30"
+    },
+    {
+      "sr_no": "1937288",
+      "description": "PHARMACY CHARGES",
+      "quantity": "5",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "231.00"
+    },
+    {
+      "sr_no": "1937328",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "120.00"
+    },
+    {
+      "sr_no": "1937328",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "110.00"
+    },
+    {
+      "sr_no": "1937328",
+      "description": "PHARMACY CHARGES",
+      "quantity": "10",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "111.60"
+    },
+    {
+      "sr_no": "1937328",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "60.00"
+    },
+    {
+      "sr_no": "1937328",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "76.00"
+    },
+    {
+      "sr_no": "1937328",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "56.00"
+    },
+    {
+      "sr_no": "1937328",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "870.00"
+    },
+    {
+      "sr_no": "1937328",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "372.15"
+    },
+    {
+      "sr_no": "1937328",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "38.16"
+    },
+    {
+      "sr_no": "1937328",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "53.90"
+    },
+    {
+      "sr_no": "1350110",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "-30.00"
+    },
+    {
+      "sr_no": "1350110",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "-28.00"
+    },
+    {
+      "sr_no": "1350110",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "-8.00"
+    },
+    {
+      "sr_no": "1350110",
+      "description": "PHARMACY CHARGES",
+      "quantity": "8",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "-89.28"
+    },
+    {
+      "sr_no": "1350110",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "-435.00"
+    },
+    {
+      "sr_no": "1350110",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "-126.19"
+    },
+    {
+      "sr_no": "1350110",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "-220.00"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Page 9 of a hospital final bill from M.P. Birla Hospital Satna, listing pharmacy charges with voucher numbers, dates, quantities, and amounts, including negative amounts indicating returns or adjustments."
+}

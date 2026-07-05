@@ -1,0 +1,16 @@
+{
+  "categories": {
+    "detailed_final_bill": [
+      {
+        "bill_id": "detailed_final_bill_1",
+        "pages": [
+          1,
+          2
+        ],
+        "sequence_reason": "Both pages share the same bill number (188928), patient name (SAYU PRAVEEN), and admission details. Page 1 lists itemized charges for medicines, investigations, and services, ending with a subtotal. Page 2 displays the grand total, which matches the sum of the subtotals from Page 1, and includes the final amount due and signature, indicating it is the concluding page of the same bill."
+      }
+    ]
+  },
+  "total_tokens_in": 2231,
+  "total_tokens_out": 134
+}

@@ -1,0 +1,146 @@
+{
+  "page": 1,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "FIN27-06452",
+    "bill_date": "08/06/2026 10:49 AM",
+    "page_indicator": "Page 1 of 1",
+    "document_title": "INPATIENT BILL"
+  },
+  "patient": {
+    "name": "Mast. GLENN FLEMING PRADEEP",
+    "age": "11M-12D",
+    "gender": "MALE",
+    "uhid": "26-6986",
+    "ip_number": "267341 / IP-001",
+    "ward": "PAEDIATRIC",
+    "bed_number": "ROOM SHARING"
+  },
+  "admission": {
+    "date_of_admission": "03/06/2026 04:00 PM",
+    "date_of_discharge": "08/06/2026 10:43 AM",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "Dr HAREEZ",
+    "department": "PAEDIATRIC"
+  },
+  "hospital": {
+    "name": "AJ HOSPITAL",
+    "address": "KAZHAKOOTTAM",
+    "contact": "GST: 32AIKPJ3231C1ZX, PH: 0471-7144600, 9207333388"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "24101.00",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "MEDICINES",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "7121.17",
+      "discount": "",
+      "amount": "7121.17",
+      "source_line_index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "CONSULTING FEE",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "1800.00",
+      "discount": "",
+      "amount": "1800.00",
+      "source_line_index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "HOSPITAL CHARGES",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "900.00",
+      "discount": "",
+      "amount": "900.00",
+      "source_line_index": 2,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "LABORATORY SERVICES",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "2305.00",
+      "discount": "",
+      "amount": "2305.00",
+      "source_line_index": 3,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "NEBULIZATION CHARGE",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "2625.00",
+      "discount": "",
+      "amount": "2625.00",
+      "source_line_index": 4,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "NURSING SERVICES",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "1800.00",
+      "discount": "",
+      "amount": "1800.00",
+      "source_line_index": 5,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "ROOM RENT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "6750.00",
+      "discount": "",
+      "amount": "6750.00",
+      "source_line_index": 6,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "X-RAY",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "800.00",
+      "discount": "",
+      "amount": "800.00",
+      "source_line_index": 7,
+      "charge_type": "line_item"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "24101.17",
+    "total_amount": "24101.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "24101.00",
+    "amount_paid": "",
+    "balance": "24101.00",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Inpatient bill from AJ Hospital, Kazhakoottam for patient Mast. Glenn Fleming Pradeep, showing itemized charges totaling Rs. 24,101.00, with no discount or tax applied, and corporate insurance from ICICI Lombard listed as source with zero outstanding.",
+  "bill_category": "final_bill"
+}

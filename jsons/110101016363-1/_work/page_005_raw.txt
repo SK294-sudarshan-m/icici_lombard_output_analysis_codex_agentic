@@ -1,0 +1,16 @@
+=== PAGE 5 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4341
+Tokens Out: 105
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 5,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Indoor Nursing Records"
+  },
+  "raw_summary": "This page contains indoor nursing records with clinical notes, medications administered, vital signs, and remarks for dates 08-Jun-2026 and 09-Jun-2026, showing patient monitoring and treatment given by nursing staff."
+}

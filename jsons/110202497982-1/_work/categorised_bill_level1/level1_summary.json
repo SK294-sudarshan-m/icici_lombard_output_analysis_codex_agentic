@@ -1,0 +1,21 @@
+{
+  "bill_pages": {
+    "detailed_final_bill": [
+      4,
+      5
+    ]
+  },
+  "non_bill_pages": {
+    "discharge_summary": [
+      1
+    ],
+    "lab_report": [
+      2
+    ],
+    "prescription": [
+      3
+    ]
+  },
+  "unclassified_pages": [],
+  "total_pages": 5
+}

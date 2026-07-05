@@ -1,0 +1,14 @@
+{
+  "bill_pages": {
+    "detailed_final_bill": [
+      1
+    ]
+  },
+  "non_bill_pages": {
+    "discharge_summary": [
+      2
+    ]
+  },
+  "unclassified_pages": [],
+  "total_pages": 2
+}

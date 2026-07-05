@@ -1,0 +1,287 @@
+{
+  "page": 17,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "ICO15284",
+    "bill_date": "24/02/2025 11:36:58",
+    "page_indicator": "Page No: 6",
+    "document_title": ""
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91",
+    "gender": "F",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "CLOHEX MOUTH RINSE BOTL",
+      "quantity": "1.0000",
+      "unit_price": "179.75",
+      "gross_amount": "179.75",
+      "discount": "0.00",
+      "amount": "179.75",
+      "source_line_index": 0
+    },
+    {
+      "sr_no": "",
+      "description": "ELIQUIS 5 MG TAB",
+      "quantity": "1.0000",
+      "unit_price": "543.00",
+      "gross_amount": "543.00",
+      "discount": "000",
+      "amount": "543.00",
+      "source_line_index": 1
+    },
+    {
+      "sr_no": "",
+      "description": "KABIMOL FREEFLEX 100ML",
+      "quantity": "1.0000",
+      "unit_price": "725.00",
+      "gross_amount": "725.00",
+      "discount": "000",
+      "amount": "725.00",
+      "source_line_index": 2
+    },
+    {
+      "sr_no": "",
+      "description": "KABIMOL FREEFLEX 100ML",
+      "quantity": "1.0000",
+      "unit_price": "725.00",
+      "gross_amount": "725.00",
+      "discount": "000",
+      "amount": "725.00",
+      "source_line_index": 3
+    },
+    {
+      "sr_no": "",
+      "description": "KABILYTE FREEFLEX 500ML",
+      "quantity": "5.0000",
+      "unit_price": "343.00",
+      "gross_amount": "1715.00",
+      "discount": "000",
+      "amount": "1710.00",
+      "source_line_index": 4
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSABLE NEEDLE 16G I AND HALF (ROMSONS)",
+      "quantity": "5.0000",
+      "unit_price": "4.00",
+      "gross_amount": "20.00",
+      "discount": "000",
+      "amount": "20.00",
+      "source_line_index": 5
+    },
+    {
+      "sr_no": "",
+      "description": "MEPILEX BORDER SACRUM 16 X 20 CM",
+      "quantity": "1.0000",
+      "unit_price": "1432.00",
+      "gross_amount": "1432.00",
+      "discount": "0.00",
+      "amount": "1432.00",
+      "source_line_index": 6
+    },
+    {
+      "sr_no": "",
+      "description": "OLIVON OIL 100ML",
+      "quantity": "1.0000",
+      "unit_price": "190.00",
+      "gross_amount": "190.00",
+      "discount": "000",
+      "amount": "190.00",
+      "source_line_index": 7
+    },
+    {
+      "sr_no": "",
+      "description": "ECO SURE WIPES LPO",
+      "quantity": "1.0000",
+      "unit_price": "520.00",
+      "gross_amount": "520.00",
+      "discount": "000",
+      "amount": "520.00",
+      "source_line_index": 8
+    },
+    {
+      "sr_no": "",
+      "description": "GLUCOMETER ACCUSURE SOUL BLOOD STRIPS PACK OF 25 MICROGENE",
+      "quantity": "1.0000",
+      "unit_price": "34.00",
+      "gross_amount": "34.00",
+      "discount": "0.00",
+      "amount": "34.00",
+      "source_line_index": 9
+    },
+    {
+      "sr_no": "",
+      "description": "FLEXIDRIP NS 100ML I.V.",
+      "quantity": "1,0000",
+      "unit_price": "47.10",
+      "gross_amount": "47.10",
+      "discount": "0.00",
+      "amount": "47.10",
+      "source_line_index": 10
+    },
+    {
+      "sr_no": "",
+      "description": "NEXIVA 20G (BD)",
+      "quantity": "1.0000",
+      "unit_price": "1062.50",
+      "gross_amount": "1062.50",
+      "discount": "000",
+      "amount": "1062.50",
+      "source_line_index": 11
+    },
+    {
+      "sr_no": "",
+      "description": "KOSMOCARE DIAPER ADULT LARGE IX2",
+      "quantity": "2.0000",
+      "unit_price": "160.00",
+      "gross_amount": "320.00",
+      "discount": "0.00",
+      "amount": "320.00",
+      "source_line_index": 12
+    },
+    {
+      "sr_no": "",
+      "description": "ACCUSURE SAFETY LANCET (28G) MICROGENE PACK OF100",
+      "quantity": "1.0000",
+      "unit_price": "20.00",
+      "gross_amount": "20.00",
+      "discount": "000",
+      "amount": "20.00",
+      "source_line_index": 13
+    },
+    {
+      "sr_no": "",
+      "description": "VASOFIX SAFETY 20G (B.BRAUN)",
+      "quantity": "1.0000",
+      "unit_price": "350.00",
+      "gross_amount": "350.00",
+      "discount": "000",
+      "amount": "350.00",
+      "source_line_index": 14
+    },
+    {
+      "sr_no": "",
+      "description": "PANTOCID 40 MG INJ",
+      "quantity": "1.0000",
+      "unit_price": "56.50",
+      "gross_amount": "56.50",
+      "discount": "000",
+      "amount": "56.50",
+      "source_line_index": 15
+    },
+    {
+      "sr_no": "",
+      "description": "IV. 3000,, 7CM X 9CM (SMITH & NEPHEW)",
+      "quantity": "1.0000",
+      "unit_price": "135.52",
+      "gross_amount": "135.52",
+      "discount": "0.00",
+      "amount": "135.52",
+      "source_line_index": 16
+    },
+    {
+      "sr_no": "",
+      "description": "UNDER PADS 60CM x 90CM (I X 2 PADS -ISH",
+      "quantity": "3.0000",
+      "unit_price": "300.00",
+      "gross_amount": "900.00",
+      "discount": "0.00",
+      "amount": "900.00",
+      "source_line_index": 17
+    },
+    {
+      "sr_no": "",
+      "description": "SULBAGREAT 1.5GM INJECTION",
+      "quantity": "1.0000",
+      "unit_price": "883.30",
+      "gross_amount": "883.30",
+      "discount": "0.00",
+      "amount": "883.30",
+      "source_line_index": 18
+    },
+    {
+      "sr_no": "",
+      "description": "FORACORT 0.5MG RESPULES",
+      "quantity": "1.0000",
+      "unit_price": "80.12",
+      "gross_amount": "80.12",
+      "discount": "0.00",
+      "amount": "80.12",
+      "source_line_index": 19
+    },
+    {
+      "sr_no": "",
+      "description": "NEBZMART-G SMARTULES",
+      "quantity": "1.0000",
+      "unit_price": "56.70",
+      "gross_amount": "56.70",
+      "discount": "0.00",
+      "amount": "56.70",
+      "source_line_index": 20
+    },
+    {
+      "sr_no": "",
+      "description": "INTRAFIX SAFESET B.C.V. LL,180CM - 4063001(B.BRAUN)",
+      "quantity": "1.0000",
+      "unit_price": "408.00",
+      "gross_amount": "408.00",
+      "discount": "0.00",
+      "amount": "408.00",
+      "source_line_index": 21
+    },
+    {
+      "sr_no": "",
+      "description": "KABILYTE FREEFLEX 500ML",
+      "quantity": "2.0000",
+      "unit_price": "343.00",
+      "gross_amount": "686.00",
+      "discount": "0.00",
+      "amount": "686.00",
+      "source_line_index": 22
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Page 17 of a hospital bill (Invoice No: ICO15284) dated 24/02/2025 for patient Chander Kochhar (Age 91, Female), listing 25 line items of medical supplies and consumables with quantities, unit rates, and sponsor amounts, with no visible bill summary totals on this page."
+}

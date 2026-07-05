@@ -1,0 +1,36 @@
+{
+  "page": 2,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "188928",
+    "bill_date": "09/06/2026",
+    "page_indicator": "Page : 2",
+    "document_title": "DETAILED I.P. BILL"
+  },
+  "patient": {
+    "name": "SAYU PRAVEEN",
+    "ip_number": "194188"
+  },
+  "admission": {
+    "date_of_admission": "07/06/2026"
+  },
+  "hospital": {
+    "name": "HOLY GHOST MISSION HOSPITAL",
+    "address": "MUTTUCHIRA P.O., KOTTAYAM, KERALA - 686613",
+    "contact": "Tel:04829-282224,Mob:8136883204/05"
+  },
+  "charges": [],
+  "bill_summary": {
+    "gross_amount": "7089.73",
+    "total_amount": "7090.00",
+    "discount": "0.00",
+    "tax": "0.00",
+    "net_payable": "7090.00",
+    "amount_paid": "0.00",
+    "balance": "7090.00",
+    "advance_paid": "0.00"
+  },
+  "raw_summary": "Page 2 of a detailed inpatient bill from Holy Ghost Mission Hospital showing patient details, admission date, and a summary of charges with a rounded total of 7090.00, with no amount paid.",
+  "bill_category": "detailed_final_bill",
+  "pipeline_category": "detailed_final_bill"
+}

@@ -1,0 +1,38 @@
+=== PAGE 1 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4125
+Tokens Out: 370
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "document_title": "ENHANCEMENT (FINAL BILL WITH DISCHARGE CERTIFICATE)"
+  },
+  "patient": {
+    "name": "AMARDEEP KUMAR",
+    "age": "30",
+    "gender": "MALE",
+    "uhid": "IL72991322200",
+    "ip_number": "00"
+  },
+  "admission": {
+    "date_of_admission": "07-JUN-26",
+    "date_of_discharge": "10-JUN-26",
+    "length_of_stay": "4"
+  },
+  "hospital": {
+    "name": "Life Line Diagnostics Centre Cum Nursing Home",
+    "address": "4A, Wood Street, Kolkata, West Bengal-700016"
+  },
+  "insurance": {
+    "company": "ICICI Lombard",
+    "policy_number": "4016/111550300/10/000",
+    "member_id": "8900080233386",
+    "approved_amount": "121500"
+  },
+  "raw_summary": "Pre-authorization letter from ICICI Lombard approving a cashless claim for patient Amardeep Kumar, authorizing payment of Rs. 121500 for hospitalization at Life Line Diagnostics Centre Cum Nursing Home from 07-JUN-26 to 10-JUN-26 under policy ICICI BANK LTD."
+}

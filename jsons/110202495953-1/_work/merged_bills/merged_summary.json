@@ -1,0 +1,73 @@
+{
+  "bills": [
+    {
+      "bill_id": "detailed_final_bill_1",
+      "category": "detailed_final_bill",
+      "pages": [
+        7
+      ],
+      "merged_from": 1,
+      "total_charges": 11,
+      "duplicates_removed": 0,
+      "total_amount": "27817"
+    },
+    {
+      "bill_id": "investigation_bill_1",
+      "category": "investigation_bill",
+      "pages": [
+        6
+      ],
+      "merged_from": 1,
+      "total_charges": 1,
+      "duplicates_removed": 0,
+      "total_amount": "140"
+    },
+    {
+      "bill_id": "pharmacy_bill_1",
+      "category": "pharmacy_bill",
+      "pages": [
+        1
+      ],
+      "merged_from": 1,
+      "total_charges": 6,
+      "duplicates_removed": 0,
+      "total_amount": "1176"
+    },
+    {
+      "bill_id": "pharmacy_bill_2",
+      "category": "pharmacy_bill",
+      "pages": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "merged_from": 5,
+      "total_charges": 30,
+      "duplicates_removed": 0,
+      "total_amount": "1661.05"
+    },
+    {
+      "bill_id": "pharmacy_bill_3",
+      "category": "pharmacy_bill",
+      "pages": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "merged_from": 4,
+      "total_charges": 45,
+      "duplicates_removed": 0,
+      "total_amount": "2517.7"
+    }
+  ],
+  "category_totals": {
+    "detailed_final_bill": 27817.0,
+    "investigation_bill": 140.0,
+    "pharmacy_bill": 5354.75
+  },
+  "grand_total": 33311.75,
+  "total_bills": 5
+}

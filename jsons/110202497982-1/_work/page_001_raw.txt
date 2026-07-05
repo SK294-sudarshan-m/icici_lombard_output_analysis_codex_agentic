@@ -1,0 +1,88 @@
+=== PAGE 1 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4342
+Tokens Out: 678
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "RAPHEAL VINISTEN P G",
+    "age": "44 YEARS",
+    "uhid": "J3822",
+    "ip_number": "77356",
+    "ward": "GENERAL MEDICINE",
+    "bed_number": "30"
+  },
+  "admission": {
+    "date_of_admission": "04.06.2026",
+    "date_of_discharge": "08.06.2026",
+    "department": "GENERAL MEDICINE"
+  },
+  "hospital": {
+    "name": "JISHY HOSPITAL",
+    "address": "MUNDAMVELI, KOCHI - 682 507.",
+    "contact": "Phone : 0484 2231740, 2232504 Email : jishyhospital@gmail.com"
+  },
+  "medications": [
+    {
+      "name": "INJ.CEFAPERAZONE",
+      "dosage": "1GM IV IN 100ML NS",
+      "frequency": "BD",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "TAB.CALPOL",
+      "dosage": "650MG",
+      "frequency": "1-1-1"
+    },
+    {
+      "name": "INJ.PANTOP",
+      "dosage": "40MG IV",
+      "frequency": "OD",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "TAB.COMBINORM PLUS",
+      "dosage": "",
+      "frequency": "1-0-0"
+    },
+    {
+      "name": "SYP.TUSQ X PLUS",
+      "dosage": "5ML",
+      "frequency": "BD"
+    },
+    {
+      "name": "TAB.ALLEGRA",
+      "dosage": "180MG",
+      "frequency": "1-0-0"
+    },
+    {
+      "name": "CAP.ENUFF",
+      "dosage": "",
+      "frequency": "1-1-1"
+    },
+    {
+      "name": "TAB.EMESET",
+      "dosage": "4MG",
+      "frequency": "1-0-1"
+    },
+    {
+      "name": "IV FLUIDS",
+      "dosage": "",
+      "frequency": ""
+    },
+    {
+      "name": "BETADINE MOUTH GARGLE",
+      "dosage": "",
+      "frequency": "1-1-1"
+    }
+  ],
+  "raw_summary": "Discharge summary for patient Rapheal Vinisten P G, 44 years, admitted with acute gastroenteritis, viral fever, and lower respiratory tract infection, treated with IV antibiotics and supportive care, discharged after 4 days with clinical improvement."
+}

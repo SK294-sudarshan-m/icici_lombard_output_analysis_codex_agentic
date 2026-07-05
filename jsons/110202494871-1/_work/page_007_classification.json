@@ -1,0 +1,164 @@
+{
+  "page": 7,
+  "bill_category": "Medicines Pharmacy Charges",
+  "is_final_bill": false,
+  "is_detailed_final": false,
+  "charges": [
+    {
+      "index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 2,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 3,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 4,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 5,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 6,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 7,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 8,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 9,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 10,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 11,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 12,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 13,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 14,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 15,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 16,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 17,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 18,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 19,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 20,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 21,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 22,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 23,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 24,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 25,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 26,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 27,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 28,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 29,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 30,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 31,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 32,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 33,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 34,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 35,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 36,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 37,
+      "charge_type": "line_item"
+    },
+    {
+      "index": 38,
+      "charge_type": "line_item"
+    }
+  ]
+}

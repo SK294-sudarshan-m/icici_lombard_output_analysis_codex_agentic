@@ -1,0 +1,1497 @@
+{
+  "schema_version": "1.0",
+  "request_id": "d027e9a7",
+  "source_filename": "110202494394-1.pdf",
+  "generated_at": "2026-07-04T12:45:30.664567+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker. Agents needing review: Administrative Review, Medical Admissibility. 13 issue(s) raised (3 high, 6 medium, 4 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "AMARDEEP KUMAR",
+      "age": "31-Y 1-M 8-D",
+      "gender": "MALE",
+      "uhid": "79364-LH/2606",
+      "ip_number": "48505-IPD/2606",
+      "ward": "GEN.R-WARD",
+      "bed_number": "RW-10"
+    },
+    "admission": {
+      "date_of_admission": "07/06/2026",
+      "date_of_discharge": "08/06/2026",
+      "length_of_stay": "1",
+      "admission_type": "",
+      "referring_doctor": "SANTANU BHATTACHARJEE, MBBS DLO RESEARCH",
+      "treating_doctor": "SANTANU BHATTACHARJEE MBBS DLO RESEARCH SCHOOL ICMR",
+      "department": ""
+    },
+    "hospital": {
+      "name": "Life Line DIAGNOSTIC CENTRE CUM NURSING HOME (A Unit of : Navjeevan Nursing Home Pvt. Ltd.)",
+      "address": "4A, Wood Street, Kolkata - 700 016",
+      "contact": "Phone : 4026 7400, 3500 6100, E-mail : lifeline_dcnh@yahoo.co.in"
+    },
+    "insurance": {
+      "company": "ICICI LOMBARD",
+      "policy_number": "4016/111550300/10/000",
+      "member_id": "8900080233386",
+      "claimed_amount": "76278.00",
+      "approved_amount": "121500",
+      "tpa": ""
+    },
+    "total_pages": 7,
+    "charge_count": 51,
+    "diagnosis": "RIGHT SUURATIVE OTITIS MEDIAL WITH O/O MASTOIDITIS",
+    "treatment": "Surgical management with right modified radical mastoidectomy and interlay tympanoplasty under local anaesthesia."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 7 of 13 mandatory documents are present (53.8% complete, status critical). Missing: Investigation Reports, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others. The claim appears to be Cashless (confidence 0.90, keyword_matching). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "6 mandatory document(s) missing: Investigation Reports, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 6 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 1,
+        "medium": 1,
+        "low": 0,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent reports 13 mandatory documents but the rubric expects 16, violating inventory integrity. 'Prescription Papers' and 'Consultation Papers' are likely duplicates or misclassified — the latter is found but the former is missing despite likely being the same document. The claim type is confidently labeled 'Cashless' based on keyword matches, but no 'Authorization Letter' or 'Pre-Auth' content is visible in page summaries to substantiate this. Completeness status (critical) is appropriate for 6 missing, but the verdict should be PARTIAL, not INCOMPLETE, since core documents like Discharge Summary and Bills are present.",
+        "suggestions": [
+          "Reconcile mandatory document count to 16 per rubric; clarify if 'Consultation Papers' and 'Prescription Papers' are distinct or conflated.",
+          "Re-evaluate 'Cashless' claim type — validate keyword matches against actual page content (e.g., page 1 is labeled 'pre_auth_letter' but lacks visible authorization text).",
+          "Adjust verdict from INCOMPLETE to PARTIAL since critical documents (Discharge Summary, Final Bills) are present and the file is not severely incomplete."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.005,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "d027e9a7",
+        "source_filename": "110202494394-1.pdf",
+        "generated_at": "2026-07-04T12:44:58.351777Z",
+        "total_pages": 7,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Cashless",
+          "detection_method": "keyword_matching",
+          "confidence": 0.9,
+          "cashless_matches": [
+            "cashless",
+            "pre-auth",
+            "authorization letter"
+          ],
+          "reimbursement_matches": [
+            "amount paid"
+          ]
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Claim Form",
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Final Hospital Bills",
+            "Pharmacy or Medicine Bills",
+            "Consultation Papers"
+          ],
+          "missing": [
+            "Investigation Reports",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Others"
+          ],
+          "missing_critical": [],
+          "found_count": 7,
+          "missing_count": 6,
+          "total_mandatory": 13,
+          "completeness_percent": 53.8,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Claim Form": "fuzzy",
+            "Authorization Letter": "exact",
+            "Pre Authorization Request Note": "abbreviation",
+            "Final Hospital Bills": "structured",
+            "Pharmacy or Medicine Bills": "variation",
+            "Consultation Papers": "abbreviation"
+          },
+          "recommendations": [
+            "Request the following missing documents: Investigation Reports, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others."
+          ]
+        },
+        "non_mandatory_found": [],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "insurance_authorization",
+            "page_type": "non_bill",
+            "non_bill_type": "pre_auth_letter",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 3,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 4,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 5,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 6,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 7,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "insurance_authorization",
+            "start_page": 1,
+            "end_page": 1,
+            "pages": [
+              1
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "bill_detail_statement",
+            "start_page": 2,
+            "end_page": 5,
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "document_id": "DOC-0003",
+            "document_type": "discharge_summary",
+            "start_page": 6,
+            "end_page": 7,
+            "pages": [
+              6,
+              7
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=FLAG. Advisory notes: period_compliance: O.T. MEDICINE BILL — Unparseable date '07-06-26'.; insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.; period_compliance: 4 document(s) checked — in-period=3, out-of-period=0, ambiguous=1..",
+      "issues": [
+        {
+          "message": "period_compliance: O.T. MEDICINE BILL — Unparseable date '07-06-26'.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "period_compliance: 4 document(s) checked — in-period=3, out-of-period=0, ambiguous=1.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 4,
+        "total": 4
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The verdict correctly flags critical checks as SKIPPED (insured, policy_dates) and assigns WARN status, avoiding false positives. However, it mislabels 'period_compliance' as ADVISORY when it contains an unparseable date — a material risk that should elevate severity to CRITICAL. Also, 'identity' is over-confirmed as PASS despite no insured name to cross-verify against policyholder, creating a false negative risk.",
+        "suggestions": [
+          "Reclassify 'period_compliance' from ADVISORY to CRITICAL due to unparseable date affecting claim validity.",
+          "Re-evaluate 'identity' status: without insured_name, identity match cannot be fully validated — should be SKIPPED or FLAG, not PASS.",
+          "Clarify in advisory notes that 'insured' SKIPPED implies inability to confirm policyholder match, not just missing name."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "AMARDEEP KUMAR",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "AMARDEEP KUMAR",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "AMARDEEP KUMAR",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_2",
+                  "patient_name": "AMARDEEP KUMAR",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_3",
+                  "patient_name": "AMARDEEP KUMAR",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_4",
+                  "patient_name": "AMARDEEP KUMAR",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_5",
+                  "patient_name": "AMARDEEP KUMAR(S.BHATTACHARJEE)",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_6",
+                  "patient_name": "AMARDEEP KUMAR",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_7",
+                  "patient_name": "AMARDEEP KUMAR",
+                  "score": 1.0,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "AMARDEEP KUMAR",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "FLAG",
+            "severity": "ADVISORY",
+            "evidence": "4 document(s) checked — in-period=3, out-of-period=0, ambiguous=1.",
+            "detail": {
+              "status": "FLAG",
+              "documents": [
+                {
+                  "document_name": "FINAL BILL",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-08 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "FINAL BILL",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-08 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "O.T. MEDICINE BILL",
+                  "type": "bill",
+                  "date": "07-06-26",
+                  "flag": "AMBIGUOUS",
+                  "reason": "Unparseable date '07-06-26'."
+                },
+                {
+                  "document_name": "TAX INVOICE",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-08 to 2026-07-08) for type 'bill'."
+                }
+              ],
+              "counts": {
+                "IN_PERIOD": 3,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 1
+              },
+              "total_checked": 4,
+              "hospitalization": {
+                "admission": "2026-06-07",
+                "discharge": "2026-06-08"
+              },
+              "window_config": {
+                "pre_hosp_days": 30,
+                "post_hosp_days": 30
+              }
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "period_compliance: O.T. MEDICINE BILL — Unparseable date '07-06-26'.",
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "period_compliance: 4 document(s) checked — in-period=3, out-of-period=0, ambiguous=1."
+        ],
+        "inputs": {
+          "patient_name": "AMARDEEP KUMAR",
+          "insured_name": null,
+          "admission_date": "07/06/2026",
+          "discharge_date": "08/06/2026",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:45:01.462073+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "warn",
+      "summary": "Medical admissibility is partial: most charges are supported but some need review. Treatment validity score 0.85; recommended action PARTIAL_APPROVE. 51 charge(s): valid=42, partial=3, invalid=2, review=4. Treatment process could not be confirmed: Surgical intervention under local anesthesia for moderate suppurative otitis media with mastoiditis is clinically inappropriate; general anesthesia is standard for such procedures. Major conflicts: Treating doctor mismatch between billing and discharge summary: SANTANU BHATTACHARJEE MBBS DLO RESEARCH SCHOOL ICMR vs SANTANU BHATTACHARJEE; 16 line items appear duplicated by description and amount. PED validation: INSUFFICIENT / MANUAL_REVIEW across 1 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Charge #3 is INVALID: Records management is administrative, not clinically justified per policy exclusion.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[3]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #12 is INVALID: Records management charge not clinically justified for surgical otitis media treatment.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[12]",
+          "suggestion": null
+        },
+        {
+          "message": "4 charge(s) require manual review.",
+          "severity": "medium",
+          "code": "medical.charge_review",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Treating doctor mismatch between billing and discharge summary: SANTANU BHATTACHARJEE MBBS DLO RESEARCH SCHOOL ICMR vs SANTANU BHATTACHARJEE",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "16 line items appear duplicated by description and amount",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Treatment process not confirmed: Surgical intervention under local anesthesia for moderate suppurative otitis media with mastoiditis is clinically inappropriate; general anesthesia is standard for such procedures.",
+          "severity": "medium",
+          "code": "medical.treatment_process",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "PED validation requires manual review (ambiguous or undeclared evidence).",
+          "severity": "medium",
+          "code": "medical.ped_review",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 2,
+        "medium": 5,
+        "low": 0,
+        "total": 7
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.78,
+        "rationale": "The agent correctly flags doctor mismatch and duplicate charges, but incorrectly invalidates 'Records management' without citing a specific policy exclusion clause (violating Rule 3). The treatment process critique is valid, but the overall verdict 'PARTIAL' is inconsistent with 42/51 charges marked VALID and only 2 INVALID — this should be 'REVIEW' given the unresolved anesthesia appropriateness and PED ambiguity. PED validation correctly flags missing inputs but should not have marked any item as 'REVIEW' without policy wording.",
+        "suggestions": [
+          "Reclassify 'Records management' charges as REVIEW (not INVALID) pending exclusion clause verification.",
+          "Adjust overall verdict to 'REVIEW' to reflect unresolved clinical appropriateness and PED policy gaps.",
+          "Clarify PED item 'RIGHT EAR SURGERY IN CHILDHOOD' as 'INSUFFICIENT' instead of 'REVIEW' due to missing policy inputs."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 17.046,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "d027e9a7",
+        "generated_at": "2026-07-04T12:45:25.027572Z",
+        "overall_verdict": "PARTIAL",
+        "treatment_validity_score": 0.8529,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "FAIL",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Bed charge aligns with inpatient surgical management for moderate otitis media with mastoiditis.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 1,
+            "status": "REVIEW",
+            "reason": "Vague description 'EASY FIX' lacks clinical justification; no procedure or policy link.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 2,
+            "status": "VALID",
+            "reason": "Medicine charge consistent with post-op discharge meds for otitis/mastoiditis.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 3,
+            "status": "INVALID",
+            "reason": "Records management is administrative, not clinically justified per policy exclusion.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 4,
+            "status": "VALID",
+            "reason": "RMO charge supports post-op monitoring for moderate severity case.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 5,
+            "status": "REVIEW",
+            "reason": "High fee for surgeon; doctor name mismatch raises billing integrity concern.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 6,
+            "status": "VALID",
+            "reason": "OT charge justified by documented mastoidectomy and tympanoplasty under local anesthesia.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 7,
+            "status": "VALID",
+            "reason": "OT medicine charge supports intraoperative needs for surgical procedure.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 8,
+            "status": "PARTIAL",
+            "reason": "Duplicate of line 0; quantity/amount identical, suggests billing error or overcharge.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 9,
+            "status": "REVIEW",
+            "reason": "Duplicate of line 1; 'EASY FIX' remains clinically unjustified and ambiguous.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 10,
+            "status": "PARTIAL",
+            "reason": "Duplicate of line 2; medicine charge valid but duplication suggests billing error.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 11,
+            "status": "PARTIAL",
+            "reason": "Duplicate of line 4; RMO charge valid but duplication raises overbilling concern.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 12,
+            "status": "INVALID",
+            "reason": "Records management charge not clinically justified for surgical otitis media treatment.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 13,
+            "status": "REVIEW",
+            "reason": "Doctor name mismatch noted; billing vs discharge summary inconsistency requires verification.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 14,
+            "status": "VALID",
+            "reason": "OT charge aligns with 2-hour surgical procedure (mastoidectomy + tympanoplasty).",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 15,
+            "status": "VALID",
+            "reason": "OT medicine charge supports surgical procedure under local anaesthesia.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 16,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 17,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 18,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 19,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 20,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 21,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 22,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 23,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 24,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 25,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 26,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 27,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 28,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 29,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 30,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 31,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 32,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 33,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 34,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 35,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 36,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 37,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 38,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 39,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 40,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 41,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 42,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 43,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 44,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 45,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 46,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 47,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 48,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 49,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 50,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "Treating doctor mismatch between billing and discharge summary: SANTANU BHATTACHARJEE MBBS DLO RESEARCH SCHOOL ICMR vs SANTANU BHATTACHARJEE",
+          "16 line items appear duplicated by description and amount"
+        ],
+        "recommended_action": "PARTIAL_APPROVE",
+        "treatment_process_correct": false,
+        "treatment_process_explanation": "Surgical intervention under local anesthesia for moderate suppurative otitis media with mastoiditis is clinically inappropriate; general anesthesia is standard for such procedures.",
+        "treatment_process_confidence": 0.85,
+        "treatment_process_evidence": [
+          "Diagnosis indicates moderate suppurative otitis media with mastoiditis, requiring adequate surgical access and patient immobility.",
+          "Modified radical mastoidectomy + tympanoplasty is a major otologic procedure typically performed under general anesthesia.",
+          "No lab/investigation evidence provided to justify deviation from standard anesthesia protocol.",
+          "Billing inconsistencies and duplicate charges suggest procedural or documentation integrity issues."
+        ],
+        "lab_evidence_count": 0,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "MANUAL_REVIEW",
+          "confidence": 0.75,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "DECLARATION_SOURCE_MISSING",
+            "DISCHARGE_SUMMARY_SOURCE_AVAILABLE",
+            "POLICY_WORDING_SOURCE_MISSING",
+            "WAITING_PERIOD_RULE_MISSING",
+            "PED_LLM_REFINEMENT_USED"
+          ],
+          "ped_items": [
+            {
+              "ped_name": "RIGHT EAR SURGERY IN CHILDHOOD",
+              "declared_status": "UNKNOWN",
+              "treatment_linkage": "POSSIBLE",
+              "policy_decision": "REVIEW",
+              "waiting_period_applies": null,
+              "standard_waiting_applies": null,
+              "specific_waiting_applies": null,
+              "moratorium_applies": null,
+              "continuity_benefit_used": null,
+              "decision_source": "LLM_AGENT",
+              "linked_treatment": [
+                "RIGHT SUURATIVE OTITIS MEDIAL WITH O/O MASTOIDITIS",
+                "Surgical management with right modified radical mastoidectomy and interlay tympanoplasty under local anaesthesia.",
+                "RIGHT MODIFIED RADICAL MASTOIDECTOMY + INTERLAY TYMPANOPLASTY (REVISION)"
+              ],
+              "confidence": 0.75,
+              "reason_codes": [
+                "DECLARATION_SOURCE_MISSING",
+                "CLINICAL_LINKAGE_AMBIGUOUS",
+                "POLICY_WORDING_MISSING"
+              ],
+              "evidence_references": [
+                {
+                  "source_type": "DISCHARGE_SUMMARY",
+                  "source_file": "discharge_summary",
+                  "page": null,
+                  "snippet": "PED extracted: RIGHT EAR SURGERY IN CHILDHOOD",
+                  "line_item_id": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "pass",
+      "summary": "Financial adjudication passed: the bill reconciles and is fully payable. Of 151956.82 billed across 16 line item(s): payable 151956.82 (16), non-payable 0.00 (0), undetermined 0.00 (0). Recommended action APPROVE; admissible amount 151956.82. Billing type assessed as Surgery. Figures derived via the consolidated path.",
+      "issues": [],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent marked all 16 line items as payable with 100% confidence, but the insurer comparison shows no claimed or sanctioned figures (all zero), making the payable total of 151956.82 unverified against policy limits. The verdict should be INVESTIGATION_REQUIRED due to lack of insurer validation, not VALID. Also, the billing type 'Surgery' is asserted without policy or contract reference, which risks overpayment if not aligned with coverage terms.",
+        "suggestions": [
+          "Reclassify verdict to INVESTIGATION_REQUIRED due to absence of insurer-sanctioned figures for validation.",
+          "Flag the 'Surgery' billing type as unverified without policy contract reference or coverage confirmation.",
+          "Add a note that payable amounts must be cross-checked against policy sub-limits or co-pay clauses before final approval."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "d027e9a7",
+        "generated_at": "2026-07-04T12:45:28.002441Z",
+        "mode": "consolidated",
+        "overall_verdict": "VALID",
+        "recommended_action": "APPROVE",
+        "final_admissible_amount": 151956.82,
+        "totals": {
+          "total_billed": 151956.82,
+          "payable_total": 151956.82,
+          "non_payable_total": 0.0,
+          "unknown_total": 0.0,
+          "charge_count": 16,
+          "payable_count": 16,
+          "non_payable_count": 0,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 151956.82,
+          "recomputed_total": 151956.82,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 151956.82,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 151956.82,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 0.0,
+          "non_payable_vs_disallowed_match": true
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Surgeon Charges",
+            "billed": 60000.0,
+            "payable": 60000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Assistant Doctor Charges",
+            "billed": 60000.0,
+            "payable": 60000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Miscellaneous",
+            "billed": 17900.0,
+            "payable": 17900.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 5
+          },
+          {
+            "bill_type": "Medicines Pharmacy Charges",
+            "billed": 7756.82,
+            "payable": 7756.82,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 6
+          },
+          {
+            "bill_type": "Room Charges",
+            "billed": 6000.0,
+            "payable": 6000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 2
+          },
+          {
+            "bill_type": "Others",
+            "billed": 300.0,
+            "payable": 300.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          }
+        ],
+        "billing_type": "Surgery",
+        "overall_confidence": 0.6,
+        "flagged_count": 0,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "BED CHARGE (GEN.R-WARD)",
+            "amount": 3000.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 2,
+            "description": "EASY FIX",
+            "amount": 80.0,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 3,
+            "description": "MEDIPOINT MEDICINE",
+            "amount": 2571.0,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 4,
+            "description": "RECORDS MANAGEMENT AND MAINTENANCE CHARGE",
+            "amount": 300.0,
+            "bill_type": "Others",
+            "sub_bill_type": "Others",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 5,
+            "description": "RMO CHARGE",
+            "amount": 600.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 6,
+            "description": "DR.SANTANU BHATTACHARJEE",
+            "amount": 60000.0,
+            "bill_type": "Surgeon Charges",
+            "sub_bill_type": "Procedure or Surgery or Operation Charges",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 7,
+            "description": "OT-2 (OT CHARGE UPTO 2 HRS)",
+            "amount": 8200.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 8,
+            "description": "O.T. MEDICINE CHARGE (REF. TO DETAIL BILL)",
+            "amount": 1227.41,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "OT Drugs",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 9,
+            "description": "BED CHARGE (GEN.R-WARD)",
+            "amount": 3000.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 10,
+            "description": "EASY FIX",
+            "amount": 80.0,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 11,
+            "description": "MEDIPOINT MEDICINE",
+            "amount": 2571.0,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 12,
+            "description": "RMO CHARGE",
+            "amount": 600.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 13,
+            "description": "RECORDS MANAGEMENT AND MAINTENANCE CHARGE",
+            "amount": 300.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Medical records",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 14,
+            "description": "DR.SANTANU BHATTACHARJEE",
+            "amount": 60000.0,
+            "bill_type": "Assistant Doctor Charges",
+            "sub_bill_type": "Assistant Doctor Charges",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 15,
+            "description": "OT-2 (OT CHARGE UPTO 2 HRS)",
+            "amount": 8200.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 16,
+            "description": "O.T. MEDICINE CHARGE (REF. TO DETAIL BILL)",
+            "amount": 1227.41,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          }
+        ],
+        "notes": [
+          "Bill reconciles and every line item is payable."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 17.055,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 3,
+      "medium": 6,
+      "low": 4,
+      "total": 13
+    }
+  }
+}

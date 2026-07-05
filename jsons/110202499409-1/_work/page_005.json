@@ -1,0 +1,39 @@
+{
+  "page": 5,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "L.V.S. EYE HOSPITAL"
+  },
+  "patient": {
+    "name": "MR.VENKATACHALAM.M"
+  },
+  "hospital": {
+    "name": "L.V.S. EYE HOSPITAL",
+    "address": "13A, Palaniappa Street, Opposite to G.H, Erode - 638 009",
+    "contact": "Mob : 82200 07131, 82200 17131"
+  },
+  "medications": [
+    {
+      "name": "PREDFORTE EYE DROPS",
+      "frequency": "6 times",
+      "source_line_index": 0
+    },
+    {
+      "name": "ZIVIMOX EYE DROPS",
+      "frequency": "3 times",
+      "source_line_index": 1
+    },
+    {
+      "name": "AQUIM-T EYE DROPS",
+      "frequency": "2 times",
+      "source_line_index": 2
+    },
+    {
+      "name": "Tab. DOLO 650 mg",
+      "frequency": "sos",
+      "source_line_index": 3
+    }
+  ],
+  "raw_summary": "Discharge summary from L.V.S. Eye Hospital listing post-operative medications and advice for patient Mr. Venkatachalam.M, with treating consultant details and hospital contact information."
+}

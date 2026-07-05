@@ -1,0 +1,12 @@
+PDF: Chander Kochhar 01_compressed.pdf
+request_id: 4792cd98
+status: completed
+pages: 76
+line_items: 168
+extracted_amount: 853811.1
+payable (after discount): 914760.85
+amounts_match: False
+overall_confidence: 0.6
+billing_type: Surgery
+adjudication_overall: fail
+summary: Case is FLAGGED and needs reviewer attention. The consolidated bill has 168 line item(s) totalling ₹853,811.10 (gross), with a net payable of ₹914,760.85. the printed net (₹189,771.25) was inconsistent with the itemised total (₹914,760.85) and was recomputed. 15 line item(s) are flagged for review. billing type assessed as Surgery. extraction confidence 0.60.

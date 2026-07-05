@@ -1,0 +1,31 @@
+=== PAGE 26 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3641
+Tokens Out: 312
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 26,
+  "page_type": "non_bill",
+  "non_bill_type": "diagnostic_report",
+  "document_markers": {
+    "document_title": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE DEPARTMENT OF IMAGING"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 Y",
+    "gender": "F",
+    "uhid": "192673",
+    "ip_number": "68160"
+  },
+  "admission": {
+    "referring_doctor": "ABHAY RAUT"
+  },
+  "hospital": {
+    "name": "P. D. Hinduja Hospital & Medical Research Centre",
+    "address": "724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "+91 22 6174 6000 / 2646 9999"
+  },
+  "raw_summary": "Diagnostic imaging report for a portable chest X-ray (AP view) of a 91-year-old female patient, noting cardiomegaly, tracheal calcification, and T10 vertebral compression, with clear lung fields and costophrenic angles, validated by Dr. Praveen Jayaswal."
+}

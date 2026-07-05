@@ -1,0 +1,25 @@
+=== PAGE 71 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4192
+Tokens Out: 182
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 71,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "document_title": "CONSENT FOR CONTRAST MATERIAL INJECTION"
+  },
+  "patient": {
+    "name": "CAANPER",
+    "age": "",
+    "gender": "Male / Female"
+  },
+  "hospital": {
+    "name": "P.D Hinduja Hospital & Medical Research Centre",
+    "address": "11th road, Khar (W), Mumbai 400 052"
+  },
+  "raw_summary": "Page 71 contains a consent form for contrast material injection from P.D. Hinduja Hospital, signed by the patient Manu Kolvoar on 21/2/25, with no billing or insurance data present."
+}

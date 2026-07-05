@@ -1,0 +1,14 @@
+{
+  "page": 10,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Nursing Care Plan"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD, TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "raw_summary": "This page contains a Nursing Care Plan for a patient with Anxiety, detailing the goal, intervention, implementation, outcome, and patient note, along with creation and modification timestamps and personnel."
+}

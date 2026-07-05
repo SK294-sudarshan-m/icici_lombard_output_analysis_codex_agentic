@@ -1,0 +1,28 @@
+=== PAGE 2 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4395
+Tokens Out: 301
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 2,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Discharge summary"
+  },
+  "patient": {
+    "name": "Arnav Nilesh Rokade",
+    "age": "11 years"
+  },
+  "admission": {
+    "date_of_admission": "02/06/2026, 17:00 hours",
+    "date_of_discharge": "08/06/2026, 10:30 hours"
+  },
+  "hospital": {
+    "name": "Amora Panchkarma and Wellness center",
+    "address": "Sr. No. 109/2/2, Near Shivdatta Mandir, Radhabai Raghu raskar chowk, Vrundavan, Charholi Bk, Pune, MH 412105"
+  },
+  "raw_summary": "Discharge summary for patient Arnav Nilesh Rokade, age 11, admitted for severe indigestion and extreme dry eyes, diagnosed with Pitta dosha, treated with Ayurveda therapies from 02/06/2026 to 08/06/2026, with home medicine and diet instructions provided."
+}

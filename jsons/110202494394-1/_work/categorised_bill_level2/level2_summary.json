@@ -1,0 +1,32 @@
+{
+  "categories": {
+    "final_bill": [
+      {
+        "bill_id": "final_bill_1",
+        "pages": [
+          2,
+          3
+        ],
+        "sequence_reason": "Both pages share identical patient and bill information (UHID, IPD NO., BILL NO., etc.) and identical line items with the same amounts, indicating they are duplicate copies of the same bill rather than sequential pages of a multi-page document. The print times differ (01:00:59PM vs 12:58:53PM), suggesting they were printed at different times but represent the same logical bill."
+      }
+    ],
+    "pharmacy_bill": [
+      {
+        "bill_id": "pharmacy_bill_1",
+        "pages": [
+          4
+        ],
+        "sequence_reason": "The page is a standalone TAX INVOICE from MEDI POINT with a complete set of line items, totals, and no indication of continuation to another page. It is independent of the O.T. MEDICINE BILL on page 5."
+      },
+      {
+        "bill_id": "pharmacy_bill_2",
+        "pages": [
+          5
+        ],
+        "sequence_reason": "The page is a standalone O.T. MEDICINE BILL from LIFE LINE DIAGNOSTIC CENTRE CUM NURSING HOME with a complete set of line items, totals, and no indication of continuation to another page. It is independent of the TAX INVOICE on page 4."
+      }
+    ]
+  },
+  "total_tokens_in": 4452,
+  "total_tokens_out": 307
+}

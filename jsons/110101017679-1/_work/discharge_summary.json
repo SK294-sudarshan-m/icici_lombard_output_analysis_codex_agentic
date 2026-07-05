@@ -1,0 +1,36 @@
+{
+  "source_pages": [
+    5,
+    7
+  ],
+  "primary_diagnosis": "UNITED BOTH BONE FRACTURE LEFT FOREARM",
+  "procedures": [
+    "IMPLANT REMOVAL"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "2",
+  "treating_doctor": "M.V. Hari Prasad",
+  "department": "Orthopaedics",
+  "pre_existing_diseases": [],
+  "treatment": "Surgical management with implant removal.",
+  "medications": [
+    {
+      "name": "TAB K CEF BD",
+      "dosage": "",
+      "frequency": "BD",
+      "duration": ""
+    },
+    {
+      "name": "TAB REACTIN BD",
+      "dosage": "",
+      "frequency": "BD",
+      "duration": ""
+    },
+    {
+      "name": "TAB RANTAC BD",
+      "dosage": "",
+      "frequency": "BD",
+      "duration": ""
+    }
+  ]
+}

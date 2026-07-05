@@ -1,0 +1,54 @@
+{
+  "categories": {
+    "detailed_final_bill": [
+      {
+        "bill_id": "detailed_final_bill_1",
+        "pages": [
+          7
+        ],
+        "sequence_reason": "Single page"
+      }
+    ],
+    "investigation_bill": [
+      {
+        "bill_id": "investigation_bill_1",
+        "pages": [
+          6
+        ],
+        "sequence_reason": "All five provided images are identical copies of the same page (Page 6), showing a complete statement with a final 'End of Statement' line and no continuation indicators. Therefore, they represent a single logical bill, and only one instance is needed for the sequence."
+      }
+    ],
+    "pharmacy_bill": [
+      {
+        "bill_id": "pharmacy_bill_1",
+        "pages": [
+          1
+        ],
+        "sequence_reason": "All five pages are identical, showing no page numbering, running totals, or content continuity to suggest they are part of a multi-page document. They appear to be duplicate copies of the same single-page bill."
+      },
+      {
+        "bill_id": "pharmacy_bill_2",
+        "pages": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "sequence_reason": "All five pages are identical, showing no page numbering, running totals, or content continuity to suggest they are part of a multi-page document. They appear to be duplicate copies of the same single-page bill."
+      },
+      {
+        "bill_id": "pharmacy_bill_3",
+        "pages": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "sequence_reason": "The new pages continue the chronological sequence of bills from the existing group. Page 4 (new) is dated 06-Jun-2026 with Bill No: C136476, which follows the previous page 4 (dated 05-Jun-2026). The new pages 5 are dated 07-Jun-2026 and 08-Jun-2026, continuing the sequence. The duplicate pages (5, 5, 5) are identical and appear to be copies of the same bill, so they are grouped together at the end of the sequence."
+      }
+    ]
+  },
+  "total_tokens_in": 20928,
+  "total_tokens_out": 635
+}

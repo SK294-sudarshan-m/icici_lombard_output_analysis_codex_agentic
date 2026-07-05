@@ -1,0 +1,825 @@
+{
+  "schema_version": "1.0",
+  "request_id": "73e27d4d",
+  "source_filename": "110101017483-1.pdf",
+  "generated_at": "2026-07-04T12:40:35.778347+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker, Administrative Review. 10 issue(s) raised (3 high, 3 medium, 4 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "YASMIN S MEMON",
+      "age": "61",
+      "gender": "F",
+      "uhid": "64399",
+      "ip_number": "",
+      "ward": "",
+      "bed_number": ""
+    },
+    "admission": {
+      "date_of_admission": "08-06-2026",
+      "date_of_discharge": "08-06-2026",
+      "length_of_stay": "",
+      "admission_type": "OPD",
+      "referring_doctor": "",
+      "treating_doctor": "Dr. Sanjay Jaswal",
+      "department": ""
+    },
+    "hospital": {
+      "name": "Evista Eye Care Centre Pvt.Ltd.",
+      "address": "Opposite Dhantoli Park, Nagpur",
+      "contact": "Ph.0712-2459855,2467415"
+    },
+    "insurance": {
+      "company": "ICICI LOMBARD HEALTHCARE",
+      "policy_number": "100355830",
+      "member_id": "110101017483",
+      "claimed_amount": "35000.00",
+      "approved_amount": "",
+      "tpa": ""
+    },
+    "total_pages": 2,
+    "charge_count": 6,
+    "diagnosis": "RE Cataract",
+    "treatment": "Surgical management with phacoemulsification and intraocular lens implantation in right eye."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 2 of 13 mandatory documents are present (15.4% complete, status critical). Critical documents missing: Authorization Letter. The claim appears to be Cashless (confidence 0.75, llm). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Authorization Letter.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Authorization Letter from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "10 mandatory document(s) missing: Claim Form, Pre Authorization Request Note, Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Consultation Papers, Others.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 11 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 0,
+        "total": 3
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent reports 13 mandatory documents but the rubric expects 16, violating inventory integrity. It incorrectly flags 'Authorization Letter' as critical and missing for a same-day OPD cataract procedure, which typically doesn’t require pre-authorization. The claim type 'Cashless' is confidently assigned without supporting keywords or evidence in the digest.",
+        "suggestions": [
+          "Reconcile mandatory document count to 16 per rubric; correct found/missing totals.",
+          "Re-evaluate 'Authorization Letter' as non-critical for OPD same-day procedures unless policy explicitly requires it.",
+          "Revise claim type detection: do not assign 'Cashless' with 0.75 confidence without matching keywords like 'pre-auth' or 'cashless approval'."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.385,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "73e27d4d",
+        "source_filename": "110101017483-1.pdf",
+        "generated_at": "2026-07-04T12:40:21.347554Z",
+        "total_pages": 2,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Cashless",
+          "detection_method": "llm",
+          "confidence": 0.75,
+          "cashless_matches": [],
+          "reimbursement_matches": []
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Final Hospital Bills"
+          ],
+          "missing": [
+            "Claim Form",
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Investigation Reports",
+            "Pharmacy or Medicine Bills",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Consultation Papers",
+            "Others"
+          ],
+          "missing_critical": [
+            "Authorization Letter"
+          ],
+          "found_count": 2,
+          "missing_count": 11,
+          "total_mandatory": 13,
+          "completeness_percent": 15.4,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Final Hospital Bills": "structured"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Authorization Letter before adjudication.",
+            "Request the following missing documents: Claim Form, Authorization Letter, Pre Authorization Request Note, Investigation Reports, Pharmacy or Medicine Bills, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Consultation Papers, Others."
+          ]
+        },
+        "non_mandatory_found": [
+          "room charges",
+          "anaesthesia charges",
+          "surgery note"
+        ],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "unknown",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "bill_detail_statement",
+            "start_page": 2,
+            "end_page": 2,
+            "pages": [
+              2
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "fail",
+      "summary": "Administrative admissibility failed: one or more critical checks did not pass. Checks: identity=FAIL, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=FLAG. Blocking issues: identity: 1 doc name mismatch(es), 0 ID mismatch(es).. Advisory notes: period_compliance: BILL — Unparseable date '08/06/26'.; insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.; period_compliance: 1 document(s) checked — in-period=0, out-of-period=0, ambiguous=1..",
+      "issues": [
+        {
+          "message": "identity: 1 doc name mismatch(es), 0 ID mismatch(es).",
+          "severity": "high",
+          "code": "admin.blocking",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "period_compliance: BILL — Unparseable date '08/06/26'.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "period_compliance: 1 document(s) checked — in-period=0, out-of-period=0, ambiguous=1.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 1,
+        "medium": 0,
+        "low": 4,
+        "total": 5
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The overall FAIL verdict is justified due to the identity check failure, but the insured and policy_dates checks are incorrectly marked as SKIPPED instead of FAIL — both are CRITICAL and missing required inputs (insured_name, policy dates) which should block the claim. The period_compliance FLAG is correctly advisory, but the identity failure evidence is over-stated: a 0.846 score on 'Mrs. Jasmin Memon' vs 'YASMIN S MEMON' may be acceptable under fuzzy matching thresholds if policy allows it.",
+        "suggestions": [
+          "Change 'insured' and 'policy_dates' from SKIPPED to FAIL — missing critical data should not be skipped in CRITICAL checks.",
+          "Re-evaluate identity failure: if 0.846 is above the 0.85 threshold, it should be PASS; if below, clarify why it’s not acceptable (e.g., policy mandates exact match).",
+          "Add advisory note explaining why 'Mrs. Jasmin Memon' was not accepted despite high similarity — e.g., honorifics or middle initial mismatch."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.014,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "FAIL",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "FAIL",
+            "severity": "CRITICAL",
+            "evidence": "1 doc name mismatch(es), 0 ID mismatch(es).",
+            "detail": {
+              "status": "FAIL",
+              "reference_name": "YASMIN S MEMON",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "YASMIN S MEMON",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "Mrs. Jasmin Memon",
+                  "score": 0.846,
+                  "match": false
+                },
+                {
+                  "document_name": "page_2",
+                  "patient_name": "YASMIN S MEMON",
+                  "score": 1.0,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": [
+                {
+                  "document_name": "page_1",
+                  "patient_name": "Mrs. Jasmin Memon",
+                  "score": 0.846,
+                  "match": false
+                }
+              ],
+              "details": "1 doc name mismatch(es), 0 ID mismatch(es)."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "YASMIN S MEMON",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "FLAG",
+            "severity": "ADVISORY",
+            "evidence": "1 document(s) checked — in-period=0, out-of-period=0, ambiguous=1.",
+            "detail": {
+              "status": "FLAG",
+              "documents": [
+                {
+                  "document_name": "BILL",
+                  "type": "bill",
+                  "date": "08/06/26",
+                  "flag": "AMBIGUOUS",
+                  "reason": "Unparseable date '08/06/26'."
+                }
+              ],
+              "counts": {
+                "IN_PERIOD": 0,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 1
+              },
+              "total_checked": 1,
+              "hospitalization": {
+                "admission": "2026-06-08",
+                "discharge": "2026-06-08"
+              },
+              "window_config": {
+                "pre_hosp_days": 30,
+                "post_hosp_days": 30
+              }
+            }
+          }
+        ],
+        "blocking_issues": [
+          "identity: 1 doc name mismatch(es), 0 ID mismatch(es)."
+        ],
+        "advisory_issues": [
+          "period_compliance: BILL — Unparseable date '08/06/26'.",
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "period_compliance: 1 document(s) checked — in-period=0, out-of-period=0, ambiguous=1."
+        ],
+        "inputs": {
+          "patient_name": "YASMIN S MEMON",
+          "insured_name": null,
+          "admission_date": "08-06-2026",
+          "discharge_date": "08-06-2026",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:40:24.206196+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "pass",
+      "summary": "Medical admissibility passed: billed treatment is consistent with the clinical record. Treatment validity score 1.00; recommended action APPROVE. 6 charge(s): valid=6, partial=0, invalid=0, review=0. Treatment process appears correct: Surgical intervention for moderate cataract is clinically appropriate; no contradictory evidence. Major conflicts: Treating doctor mismatch between billing and discharge summary: Dr. Sanjay Jaswal vs Sanjay Jaiswal. PED validation: INSUFFICIENT / MANUAL_REVIEW across 3 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Treating doctor mismatch between billing and discharge summary: Dr. Sanjay Jaswal vs Sanjay Jaiswal",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "PED validation requires manual review (ambiguous or undeclared evidence).",
+          "severity": "medium",
+          "code": "medical.ped_review",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 2,
+        "low": 0,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent correctly flagged the doctor name mismatch as a non-clinical administrative issue and approved all charges as VALID, which is reasonable. However, the PED validation status is marked INSUFFICIENT/MANUAL_REVIEW for three conditions, yet the overall verdict is VALID without any charge-level impact — this creates a false negative risk if any PED is later found to breach waiting periods. The agent should have flagged at least one charge as REVIEW or adjusted the overall verdict to reflect PED uncertainty.",
+        "suggestions": [
+          "Adjust overall_verdict to 'REVIEW' to reflect PED validation uncertainty, even if charges are clinically valid.",
+          "Add a charge-level REVIEW decision for at least one line item linked to PED items (e.g., line_item_id 0) to signal pending PED adjudication.",
+          "Clarify in treatment_process_explanation that PED status does not override clinical validity but requires policy-level resolution before final approval."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 4.334,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "73e27d4d",
+        "generated_at": "2026-07-04T12:40:31.367362Z",
+        "overall_verdict": "VALID",
+        "treatment_validity_score": 1.0,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "FAIL",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 1,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 2,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 3,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 4,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 5,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "Treating doctor mismatch between billing and discharge summary: Dr. Sanjay Jaswal vs Sanjay Jaiswal"
+        ],
+        "recommended_action": "APPROVE",
+        "treatment_process_correct": true,
+        "treatment_process_explanation": "Surgical intervention for moderate cataract is clinically appropriate; no contradictory evidence.",
+        "treatment_process_confidence": 0.95,
+        "treatment_process_evidence": [
+          "Diagnosis of RE cataract with moderate severity supports surgical intervention.",
+          "Phacoemulsification + IOL implantation is standard of care for cataract surgery.",
+          "No lab or imaging evidence contradicts treatment decision.",
+          "Doctor name discrepancy is administrative, not clinical; does not invalidate treatment appropriateness."
+        ],
+        "lab_evidence_count": 0,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "MANUAL_REVIEW",
+          "confidence": 0.62,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "DECLARATION_SOURCE_MISSING",
+            "DISCHARGE_SUMMARY_SOURCE_AVAILABLE",
+            "POLICY_WORDING_SOURCE_MISSING",
+            "WAITING_PERIOD_RULE_MISSING",
+            "PED_LLM_REFINEMENT_USED"
+          ],
+          "ped_items": [
+            {
+              "ped_name": "Hypertensive",
+              "declared_status": "UNKNOWN",
+              "treatment_linkage": "POSSIBLE",
+              "policy_decision": "REVIEW",
+              "waiting_period_applies": null,
+              "standard_waiting_applies": null,
+              "specific_waiting_applies": null,
+              "moratorium_applies": null,
+              "continuity_benefit_used": null,
+              "decision_source": "LLM_AGENT",
+              "linked_treatment": [],
+              "confidence": 0.62,
+              "reason_codes": [
+                "PED_PRESENT_BUT_NO_DIRECT_TEXT_MATCH",
+                "DECLARATION_SOURCE_MISSING"
+              ],
+              "evidence_references": [
+                {
+                  "source_type": "DISCHARGE_SUMMARY",
+                  "source_file": "discharge_summary",
+                  "page": null,
+                  "snippet": "PED extracted: Hypertensive",
+                  "line_item_id": null
+                }
+              ]
+            },
+            {
+              "ped_name": "Asthmatic",
+              "declared_status": "UNKNOWN",
+              "treatment_linkage": "POSSIBLE",
+              "policy_decision": "REVIEW",
+              "waiting_period_applies": null,
+              "standard_waiting_applies": null,
+              "specific_waiting_applies": null,
+              "moratorium_applies": null,
+              "continuity_benefit_used": null,
+              "decision_source": "LLM_AGENT",
+              "linked_treatment": [],
+              "confidence": 0.62,
+              "reason_codes": [
+                "PED_PRESENT_BUT_NO_DIRECT_TEXT_MATCH",
+                "DECLARATION_SOURCE_MISSING"
+              ],
+              "evidence_references": [
+                {
+                  "source_type": "DISCHARGE_SUMMARY",
+                  "source_file": "discharge_summary",
+                  "page": null,
+                  "snippet": "PED extracted: Asthmatic",
+                  "line_item_id": null
+                }
+              ]
+            },
+            {
+              "ped_name": "IHD",
+              "declared_status": "UNKNOWN",
+              "treatment_linkage": "POSSIBLE",
+              "policy_decision": "REVIEW",
+              "waiting_period_applies": null,
+              "standard_waiting_applies": null,
+              "specific_waiting_applies": null,
+              "moratorium_applies": null,
+              "continuity_benefit_used": null,
+              "decision_source": "LLM_AGENT",
+              "linked_treatment": [],
+              "confidence": 0.62,
+              "reason_codes": [
+                "PED_PRESENT_BUT_NO_DIRECT_TEXT_MATCH",
+                "DECLARATION_SOURCE_MISSING"
+              ],
+              "evidence_references": [
+                {
+                  "source_type": "DISCHARGE_SUMMARY",
+                  "source_file": "discharge_summary",
+                  "page": null,
+                  "snippet": "PED extracted: IHD",
+                  "line_item_id": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "pass",
+      "summary": "Financial adjudication passed: the bill reconciles and is fully payable. Of 35000.00 billed across 6 line item(s): payable 35000.00 (6), non-payable 0.00 (0), undetermined 0.00 (0). Recommended action APPROVE; admissible amount 35000.00. Billing type assessed as Day Care. Figures derived via the consolidated path.",
+      "issues": [],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent incorrectly assigned a VALID verdict despite the absence of insurer figures (claimed/sanctioned amounts), which violates Rule 4 — VALID requires alignment with sanctioned amounts when available. While totals reconcile and all line items are marked payable, the lack of insurer comparison justification makes the verdict premature. The billing type 'Day Care' is appropriate for cataract surgery, but the agent should flag the missing insurer data as a gap.",
+        "suggestions": [
+          "Revise verdict to INVESTIGATION_REQUIRED due to missing insurer figures (claimed/sanctioned) — per Rule 4.",
+          "Add a note explicitly stating that insurer figures are unavailable and require manual verification before final approval."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "73e27d4d",
+        "generated_at": "2026-07-04T12:40:33.809398Z",
+        "mode": "consolidated",
+        "overall_verdict": "VALID",
+        "recommended_action": "APPROVE",
+        "final_admissible_amount": 35000.0,
+        "totals": {
+          "total_billed": 35000.0,
+          "payable_total": 35000.0,
+          "non_payable_total": 0.0,
+          "unknown_total": 0.0,
+          "charge_count": 6,
+          "payable_count": 6,
+          "non_payable_count": 0,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 35000.0,
+          "recomputed_total": 35000.0,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 35000.0,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 35000.0,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 0.0,
+          "non_payable_vs_disallowed_match": true
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Procedure Charges",
+            "billed": 16175.0,
+            "payable": 16175.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Cost of Implant",
+            "billed": 11825.0,
+            "payable": 11825.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Operation Theatre Charges",
+            "billed": 3000.0,
+            "payable": 3000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Investigation Charges",
+            "billed": 1500.0,
+            "payable": 1500.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Anesthetist Charges",
+            "billed": 1500.0,
+            "payable": 1500.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Room Charges",
+            "billed": 1000.0,
+            "payable": 1000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          }
+        ],
+        "billing_type": "Day Care",
+        "overall_confidence": 1.0,
+        "flagged_count": 0,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "Operation Charges",
+            "amount": 16175.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Surgery or Operation charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 2,
+            "description": "Cost of IOL",
+            "amount": 11825.0,
+            "bill_type": "Cost of Implant",
+            "sub_bill_type": "Intra Ocular Lense IOL",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 3,
+            "description": "Operation Theatre Charges",
+            "amount": 3000.0,
+            "bill_type": "Operation Theatre Charges",
+            "sub_bill_type": "Cathlab",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 4,
+            "description": "A-scan",
+            "amount": 1500.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 5,
+            "description": "Anaesthesia Charges",
+            "amount": 1500.0,
+            "bill_type": "Anesthetist Charges",
+            "sub_bill_type": "Anesthetist Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 6,
+            "description": "Room charges",
+            "amount": 1000.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          }
+        ],
+        "notes": [
+          "Bill reconciles and every line item is payable."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 4.735,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 3,
+      "medium": 3,
+      "low": 4,
+      "total": 10
+    }
+  }
+}

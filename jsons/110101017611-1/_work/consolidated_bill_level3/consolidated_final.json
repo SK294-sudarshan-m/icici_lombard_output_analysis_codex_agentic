@@ -1,0 +1,140 @@
+{
+  "bill_id": "84542610",
+  "case_number": "110101017611-1",
+  "bill_summary": {
+    "extracted_amount": 55000.0,
+    "calculated_amount": 55000.0,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 55000.0,
+    "calculated_after_discount": 55000.0,
+    "total_line_items": 2,
+    "amounts_match": true,
+    "overall_confidence": 1.0,
+    "case_verdict": 0,
+    "summary": "Case is FLAGGED and needs reviewer attention. The consolidated bill has 2 line item(s) totalling ₹55,000.00 (gross), with a net payable of ₹55,000.00. the line items reconcile with the bill's printed total. billing type assessed as Medical Management. extraction confidence 1.00.",
+    "billing_type": {
+      "billing_type": "Medical Management",
+      "confidence": 0.7,
+      "reasoning": "No surgery/package/day-care indicators; DS severity=Mild"
+    }
+  },
+  "patient": {
+    "name": "Surekha Bhosale",
+    "age": "47",
+    "gender": "Female",
+    "uhid": "LJN_08942",
+    "ip_number": "IPD_6506",
+    "ward": "",
+    "bed_number": ""
+  },
+  "hospital": {
+    "name": "Laxmi Jyot Eye Hospital",
+    "address": "101, Dharamveer Building, Opp Municipal School No. 7, Uthalsar Naka, Thane West 400 601",
+    "contact": "Tel: 2547 3811 / Website : laxmijyotnetralaya.com"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "2026-06-08 10:00 AM",
+    "date_of_discharge": "2026-06-08 14:00 PM",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "Dr. Sandeep Saildesai",
+    "department": ""
+  },
+  "charges": [
+    {
+      "bill_type": "Package Charges",
+      "bill_type_id": "1000745",
+      "sub_bill_type": "Package Charges",
+      "sub_bill_type_id": "1011542",
+      "sr_no": "1",
+      "description": "PPN OPH 01 B",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "15000.00",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "procedure_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Mics Ppnoph01B",
+        "standard_name": "Not in list",
+        "score": 0.6214,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 15000.00 exactly matches image. Description 'PPN OPH 01 B' matches image. Quantity and unit_price are correctly left blank as not present in image. Bill type 'Package Charges' is appropriate for this item per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "1\tPPN OPH 01 B\t15000.00",
+          "match_ratio": 0.686
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 0
+    },
+    {
+      "bill_type": "Cost of Implant",
+      "bill_type_id": "1011059",
+      "sub_bill_type": "Intra Ocular Lense IOL",
+      "sub_bill_type_id": "1011079",
+      "sr_no": "2",
+      "description": "IOL Cost",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "40000.00",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "procedure_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Cost Of IOLs",
+        "standard_name": "implant",
+        "score": 0.9152,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 40000.00 exactly matches image. Description 'IOL Cost' matches image. Quantity and unit_price are correctly left blank as not present in image. Bill type 'Cost of Implant' and sub_bill_type 'Intra Ocular Lense IOL' are correct per bill master."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "2\tIOL Cost\t40000.00",
+          "match_ratio": 0.593
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 1
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [],
+  "flagged_for_review": true,
+  "flag_reason": "No final bill found — charges are from a single procedure bill",
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "overall_confidence": 1.0
+}

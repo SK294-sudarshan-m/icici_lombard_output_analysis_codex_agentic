@@ -1,0 +1,33 @@
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Discharge Summary"
+  },
+  "patient": {
+    "name": "Mrs. Manali Manohar Kadam",
+    "age": "47",
+    "gender": "Female",
+    "uhid": "15518",
+    "ip_number": ".457"
+  },
+  "admission": {
+    "date_of_admission": "05-06-2026",
+    "date_of_discharge": "08-06-2026",
+    "referring_doctor": "Dr. SHARAD SHELAR",
+    "treating_doctor": "DR SHARAD SHELAR"
+  },
+  "hospital": {
+    "name": "Gurukrupa Superspeciality Hospital",
+    "address": "S.No.119/5/B, Near St. Thomas Church, Off. Mira-Bhayendar Highway, Saibaba Nagar, Mira Road (E), Thane 401107.",
+    "contact": "gshforyou@gmail.com"
+  },
+  "insurance": {
+    "company": "ICICI Lombard General Insurance",
+    "policy_number": "186635667",
+    "member_id": "110101016774",
+    "tpa": "ICICI Lombard General Insurance"
+  },
+  "raw_summary": "Page 1 of a discharge summary for Mrs. Manali Manohar Kadam, a 47-year-old female admitted for acute calculus cholecystitis and treated with laparoscopic cholecystectomy, detailing diagnosis, complaints, examination findings, past history, and hospital course."
+}

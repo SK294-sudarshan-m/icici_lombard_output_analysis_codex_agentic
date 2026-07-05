@@ -1,0 +1,21 @@
+=== PAGE 6 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3806
+Tokens Out: 183
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 6,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "page_indicator": "3 / 3"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD,TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "raw_summary": "Page 3 of 3 from Sri Venkateswara Institute of Medical Sciences, showing hospital letterhead, GST number, a QR code, a doctor's stamp, and a footer note stating it is an electronically generated report that does not require a signature."
+}

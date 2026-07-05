@@ -1,0 +1,56 @@
+{
+  "total_pages": 7,
+  "total_tokens_in": 29937,
+  "total_tokens_out": 3371,
+  "pages": [
+    {
+      "page": 1,
+      "elapsed": 14.58,
+      "tokens_in": 4434,
+      "tokens_out": 505,
+      "page_type": "non_bill"
+    },
+    {
+      "page": 2,
+      "elapsed": 16.03,
+      "tokens_in": 4342,
+      "tokens_out": 748,
+      "page_type": "non_bill"
+    },
+    {
+      "page": 3,
+      "elapsed": 10.78,
+      "tokens_in": 4043,
+      "tokens_out": 212,
+      "page_type": "non_bill"
+    },
+    {
+      "page": 4,
+      "elapsed": 13.68,
+      "tokens_in": 4408,
+      "tokens_out": 503,
+      "page_type": "non_bill"
+    },
+    {
+      "page": 5,
+      "elapsed": 1.61,
+      "tokens_in": 4341,
+      "tokens_out": 105,
+      "page_type": "non_bill"
+    },
+    {
+      "page": 6,
+      "elapsed": 8.26,
+      "tokens_in": 4217,
+      "tokens_out": 769,
+      "page_type": "bill"
+    },
+    {
+      "page": 7,
+      "elapsed": 6.93,
+      "tokens_in": 4152,
+      "tokens_out": 529,
+      "page_type": "bill"
+    }
+  ]
+}

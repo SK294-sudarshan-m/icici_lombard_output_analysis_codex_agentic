@@ -1,0 +1,32 @@
+=== PAGE 44 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3714
+Tokens Out: 413
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 44,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "DEPARTMENT OF LABORATORY MEDICINE CLINICAL CHEMISTRY & IMMUNOLOGY"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 YEARS",
+    "gender": "FEMALE",
+    "uhid": "192673",
+    "ip_number": "68049"
+  },
+  "admission": {
+    "date_of_admission": "22/02/2025",
+    "referring_doctor": "DR ABHAY RAUT"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "Tel: +91 22 6174 6000 / 2644 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "raw_summary": "Lab report from P.D. Hinduja Hospital for patient Kochhar Chander, age 91, female, showing Troponin I (High Sensitive) result of 352.10 ng/L (High) and Lithium level of 0.35 ug/l, collected on 22/02/2025, with authentication timestamp and signatures of pathologists."
+}

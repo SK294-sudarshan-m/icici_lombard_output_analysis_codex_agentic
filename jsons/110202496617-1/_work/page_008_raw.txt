@@ -1,0 +1,442 @@
+=== PAGE 8 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 5926
+Tokens Out: 3590
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 8,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "5065630",
+    "bill_date": "8/06/2026",
+    "page_indicator": "",
+    "document_title": "Final Bill"
+  },
+  "patient": {
+    "name": "MRS. HARSHITA SHARMA W/O MR.SHIVAM TIWARI",
+    "age": "28 Y 1 M 11 D",
+    "gender": "Female",
+    "uhid": "370888",
+    "ip_number": "61054",
+    "ward": "TWIN SHARING(AC)SING",
+    "bed_number": "TAC-08"
+  },
+  "admission": {
+    "date_of_admission": "2/06/2026 7:49 PM",
+    "date_of_discharge": "8/06/2026 6:01 PM",
+    "length_of_stay": "6 days",
+    "admission_type": "MEDICINE",
+    "referring_doctor": "",
+    "treating_doctor": "DR. ASHISH MISHRA",
+    "department": ""
+  },
+  "hospital": {
+    "name": "M.P.BIRLA HOSPITAL SATNA",
+    "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "13852",
+      "description": "NEW TWINWARD AC FULL BED CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "1800.00",
+      "discount": "",
+      "amount": "1800.00"
+    },
+    {
+      "sr_no": "13861",
+      "description": "NEW TWINWARD AC FULL BED CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "1800.00",
+      "discount": "",
+      "amount": "1800.00"
+    },
+    {
+      "sr_no": "13912",
+      "description": "NEW TWINWARD AC FULL BED CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "1800.00",
+      "discount": "",
+      "amount": "1800.00"
+    },
+    {
+      "sr_no": "13888",
+      "description": "NEW TWINWARD AC FULL BED CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "1800.00",
+      "discount": "",
+      "amount": "1800.00"
+    },
+    {
+      "sr_no": "13896",
+      "description": "NEW TWINWARD AC FULL BED CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "1800.00",
+      "discount": "",
+      "amount": "1800.00"
+    },
+    {
+      "sr_no": "13906",
+      "description": "NEW TWINWARD AC FULL BED CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "1800.00",
+      "discount": "",
+      "amount": "1800.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "19.00",
+      "discount": "",
+      "amount": "19.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "6.00",
+      "discount": "",
+      "amount": "6.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "10",
+      "unit_price": "",
+      "gross_amount": "111.60",
+      "discount": "",
+      "amount": "111.60"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "32.00",
+      "discount": "",
+      "amount": "32.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "56.00",
+      "discount": "",
+      "amount": "56.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "220.00",
+      "discount": "",
+      "amount": "220.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "335.00",
+      "discount": "",
+      "amount": "335.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "180.00",
+      "discount": "",
+      "amount": "180.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "120.00",
+      "discount": "",
+      "amount": "120.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "110.00",
+      "discount": "",
+      "amount": "110.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "39.00",
+      "discount": "",
+      "amount": "39.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "328.12",
+      "discount": "",
+      "amount": "328.12"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "435.00",
+      "discount": "",
+      "amount": "435.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "30.00",
+      "discount": "",
+      "amount": "30.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "5",
+      "unit_price": "",
+      "gross_amount": "231.00",
+      "discount": "",
+      "amount": "231.00"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "126.19",
+      "discount": "",
+      "amount": "126.19"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "12.72",
+      "discount": "",
+      "amount": "12.72"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "53.90",
+      "discount": "",
+      "amount": "53.90"
+    },
+    {
+      "sr_no": "1935300",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "284.06",
+      "discount": "",
+      "amount": "284.06"
+    },
+    {
+      "sr_no": "1935339",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "76.00",
+      "discount": "",
+      "amount": "76.00"
+    },
+    {
+      "sr_no": "1935339",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "100.00",
+      "discount": "",
+      "amount": "100.00"
+    },
+    {
+      "sr_no": "1935339",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "56.00",
+      "discount": "",
+      "amount": "56.00"
+    },
+    {
+      "sr_no": "1935339",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "60.00",
+      "discount": "",
+      "amount": "60.00"
+    },
+    {
+      "sr_no": "1935339",
+      "description": "PHARMACY CHARGES",
+      "quantity": "2",
+      "unit_price": "",
+      "gross_amount": "870.00",
+      "discount": "",
+      "amount": "870.00"
+    },
+    {
+      "sr_no": "1935339",
+      "description": "PHARMACY CHARGES",
+      "quantity": "5",
+      "unit_price": "",
+      "gross_amount": "231.00",
+      "discount": "",
+      "amount": "231.00"
+    },
+    {
+      "sr_no": "1935339",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "378.57",
+      "discount": "",
+      "amount": "378.57"
+    },
+    {
+      "sr_no": "1935339",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "38.16",
+      "discount": "",
+      "amount": "38.16"
+    },
+    {
+      "sr_no": "1935339",
+      "description": "PHARMACY CHARGES",
+      "quantity": "1",
+      "unit_price": "",
+      "gross_amount": "53.90",
+      "discount": "",
+      "amount": "53.90"
+    },
+    {
+      "sr_no": "1935339",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "1136.24",
+      "discount": "",
+      "amount": "1136.24"
+    },
+    {
+      "sr_no": "1935586",
+      "description": "PHARMACY CHARGES",
+      "quantity": "5",
+      "unit_price": "",
+      "gross_amount": "12.30",
+      "discount": "",
+      "amount": "12.30"
+    },
+    {
+      "sr_no": "1935721",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "76.00",
+      "discount": "",
+      "amount": "76.00"
+    },
+    {
+      "sr_no": "1935721",
+      "description": "PHARMACY CHARGES",
+      "quantity": "4",
+      "unit_price": "",
+      "gross_amount": "56.00",
+      "discount": "",
+      "amount": "56.00"
+    },
+    {
+      "sr_no": "1935721",
+      "description": "PHARMACY CHARGES",
+      "quantity": "5",
+      "unit_price": "",
+      "gross_amount": "150.00",
+      "discount": "",
+      "amount": "150.00"
+    },
+    {
+      "sr_no": "1935721",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "1305.00",
+      "discount": "",
+      "amount": "1305.00"
+    },
+    {
+      "sr_no": "1935721",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "378.57",
+      "discount": "",
+      "amount": "378.57"
+    },
+    {
+      "sr_no": "1935721",
+      "description": "PHARMACY CHARGES",
+      "quantity": "3",
+      "unit_price": "",
+      "gross_amount": "38.16",
+      "discount": "",
+      "amount": "38.16"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Page 8 of a hospital final bill from M.P. Birla Hospital Satna, detailing room charges for 6 days in a twin-sharing AC ward and itemized pharmacy charges for medications administered during the stay, with patient and admission details."
+}

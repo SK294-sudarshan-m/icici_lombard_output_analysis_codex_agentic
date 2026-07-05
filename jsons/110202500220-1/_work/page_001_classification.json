@@ -1,0 +1,12 @@
+{
+  "page": 1,
+  "bill_category": "detailed_final_bill",
+  "is_final_bill": true,
+  "is_detailed_final": true,
+  "charges": [
+    {
+      "index": 0,
+      "charge_type": "line_item"
+    }
+  ]
+}

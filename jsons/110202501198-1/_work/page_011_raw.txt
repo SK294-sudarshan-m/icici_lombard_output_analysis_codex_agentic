@@ -1,0 +1,27 @@
+=== PAGE 11 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3226
+Tokens Out: 224
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 11,
+  "page_type": "non_bill",
+  "non_bill_type": "diagnostic_report",
+  "document_markers": {
+    "document_title": "Mews/See Now"
+  },
+  "patient": {
+    "name": "Mrs Bandla Hymavathi",
+    "age": "62 Y,1 M,17 D",
+    "gender": "Female",
+    "uhid": "893505"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD, TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "raw_summary": "Mews/See Now diagnostic report for patient Mrs Bandla Hymavathi showing vital sign scores with a total score of 0, generated electronically without signature."
+}

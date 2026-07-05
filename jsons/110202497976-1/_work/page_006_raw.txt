@@ -1,0 +1,64 @@
+=== PAGE 6 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4000
+Tokens Out: 402
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 6,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "",
+    "document_title": ""
+  },
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "ICICI Lombard",
+    "policy_number": "322908",
+    "member_id": "",
+    "claimed_amount": "90000",
+    "approved_amount": "16200",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Pre-authorization approval letter from ICICI Lombard for a medical claim related to Endometriosis, showing approved amount of Rs. 16200, co-pay of Rs. 10800, and policy details including sum insured of Rs. 500000."
+}

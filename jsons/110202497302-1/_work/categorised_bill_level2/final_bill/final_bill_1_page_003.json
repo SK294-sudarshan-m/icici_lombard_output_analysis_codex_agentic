@@ -1,0 +1,70 @@
+{
+  "page": 3,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "378",
+    "bill_date": "",
+    "page_indicator": "",
+    "document_title": "Final Bill"
+  },
+  "patient": {
+    "name": "SUNEETA SHRIKANT GUNDAKAL",
+    "ip_number": "26.6.15/369"
+  },
+  "admission": {
+    "date_of_admission": "03-06-2026",
+    "date_of_discharge": "08-06-2026"
+  },
+  "hospital": {
+    "name": "TAVARGERI NURSING HOME PVT. LTD.",
+    "address": "Near K.C. Park Post Office, DHARWAD - 580 008.",
+    "contact": "0836 - 2448359"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "tpa": "ICICI LOMBARD"
+  },
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "SPECIAL ROOM",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "",
+      "source_line_index": 0,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "ELECTIVE LSCS(Packeg)",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "60500.00",
+      "source_line_index": 1,
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "",
+      "description": "Tubectomy charges",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "",
+      "discount": "",
+      "amount": "7000.00",
+      "source_line_index": 2,
+      "charge_type": "line_item"
+    }
+  ],
+  "bill_summary": {
+    "total_amount": "67500.00"
+  },
+  "raw_summary": "Final bill from Tavargeri Nursing Home for patient Suneeta Shrikant Gundakal, showing charges for Elective LSCS package and Tubectomy, with total amount of Rs. 67,500.00, covered under ICICI Lombard insurance.",
+  "bill_category": "final_bill",
+  "pipeline_category": "final_bill",
+  "bill_id": "final_bill_1",
+  "sequence_reason": "Single page"
+}

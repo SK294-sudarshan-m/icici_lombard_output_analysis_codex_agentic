@@ -1,0 +1,72 @@
+{
+  "source_pages": [
+    8,
+    9
+  ],
+  "primary_diagnosis": "URINARY TRACT INFECTION - KLEBSIELLA",
+  "procedures": [],
+  "severity": "Moderate",
+  "length_of_stay": "6",
+  "treating_doctor": "SR.BRIJEETHA",
+  "department": "GENERAL MEDICINE",
+  "pre_existing_diseases": [
+    "Hypertension"
+  ],
+  "treatment": "Managed with IV antibiotics, IV fluid, nebulization, antiplatelet and supportive medications; MRI showed chronic small vessel ischemic changes; started on antiplatelet and statin; physiotherapy done.",
+  "medications": [
+    {
+      "name": "NEUROBION FORTE TABLET",
+      "dosage": "10",
+      "frequency": "0-1-0",
+      "duration": "10"
+    },
+    {
+      "name": "HISTIN 8MG TABLET",
+      "dosage": "21",
+      "frequency": "1-1-1",
+      "duration": "7"
+    },
+    {
+      "name": "MILIXIM 200MG TABLET",
+      "dosage": "10",
+      "frequency": "1-0-1",
+      "duration": "5"
+    },
+    {
+      "name": "ROLL 20 TAB",
+      "dosage": "10",
+      "frequency": "1-0-1",
+      "duration": "5"
+    },
+    {
+      "name": "DESWIN 5MG TAB",
+      "dosage": "5",
+      "frequency": "0-0-1",
+      "duration": "5"
+    },
+    {
+      "name": "ECOSPRIN AV 75/10MG CAPSULE",
+      "dosage": "7",
+      "frequency": "0-0-1",
+      "duration": "7"
+    },
+    {
+      "name": "TELMA 40MG TABLET",
+      "dosage": "14",
+      "frequency": "1-0-1",
+      "duration": "7"
+    },
+    {
+      "name": "NOVASOFT 100ML LOTION",
+      "dosage": "1",
+      "frequency": "1-0-1",
+      "duration": "12"
+    },
+    {
+      "name": "MOMATE CREAM 20GM",
+      "dosage": "1",
+      "frequency": "1-0-1",
+      "duration": "12"
+    }
+  ]
+}

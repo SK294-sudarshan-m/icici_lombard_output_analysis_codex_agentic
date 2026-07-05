@@ -1,0 +1,57 @@
+{
+  "page": 39,
+  "page_type": "non_bill",
+  "non_bill_type": "diagnostic_report",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "39",
+    "document_title": ""
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91 Years",
+    "gender": "Female",
+    "uhid": "HS No 192673",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "CASUALTY",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": "A& E Department"
+  },
+  "hospital": {
+    "name": "PD HINDUJA HOSPITAL KHAR",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "ECG diagnostic report for patient Chandan, age 91, female, showing sinus tachycardia, left ventricular hypertrophy, left anterior fascicular block, and other abnormalities, recorded on 21/07/2025 at 20:17:32 in Casualty department of PD Hinduja Hospital Khar."
+}

@@ -1,0 +1,322 @@
+=== PAGE 3 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 6192
+Tokens Out: 2899
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 3,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "D/L No : 20/922/43/2019,21/923/43/2019,20F924/43/2019",
+    "bill_date": "08/06/2026",
+    "page_indicator": "Page 1 of 5",
+    "document_title": "Medicine Report - In Patient Credit"
+  },
+  "patient": {
+    "name": "MRS. HARSHITA SHARMA W/O MR.SHIVAM TIWARI",
+    "uhid": "61054"
+  },
+  "hospital": {
+    "name": "M.P.BIRLA HOSPITAL SATNA",
+    "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005"
+  },
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "DEXTROSE 10% 500 ML",
+      "quantity": "-1.00",
+      "unit_price": "30.00",
+      "gross_amount": "-30.00",
+      "discount": "0.00",
+      "amount": "-30.00"
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSSABLE SYRING (10ML)",
+      "quantity": "-2.00",
+      "unit_price": "14.00",
+      "gross_amount": "-28.00",
+      "discount": "0.00",
+      "amount": "-28.00"
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSSABLE SYRING (2ML)",
+      "quantity": "-1.00",
+      "unit_price": "8.00",
+      "gross_amount": "-8.00",
+      "discount": "0.00",
+      "amount": "-8.00"
+    },
+    {
+      "sr_no": "",
+      "description": "HEPAGARD 10ML INJ",
+      "quantity": "-1.00",
+      "unit_price": "435.00",
+      "gross_amount": "-435.00",
+      "discount": "0.00",
+      "amount": "-435.00"
+    },
+    {
+      "sr_no": "",
+      "description": "SUMOL-L IV",
+      "quantity": "-1.00",
+      "unit_price": "284.06",
+      "gross_amount": "-284.06",
+      "discount": "0.00",
+      "amount": "-284.06"
+    },
+    {
+      "sr_no": "",
+      "description": "EXAMINATION GLOVES",
+      "quantity": "-8.00",
+      "unit_price": "11.16",
+      "gross_amount": "-89.28",
+      "discount": "0.00",
+      "amount": "-89.28"
+    },
+    {
+      "sr_no": "",
+      "description": "ROTA FLOW",
+      "quantity": "-1.00",
+      "unit_price": "220.00",
+      "gross_amount": "-220.00",
+      "discount": "0.00",
+      "amount": "-220.00"
+    },
+    {
+      "sr_no": "",
+      "description": "MUCOMIX 5ML INJ (SAMARTH)",
+      "quantity": "-1.00",
+      "unit_price": "126.19",
+      "gross_amount": "-126.19",
+      "discount": "0.00",
+      "amount": "-126.19"
+    },
+    {
+      "sr_no": "",
+      "description": "NORMAL SALINE. 100ML",
+      "quantity": "-4.00",
+      "unit_price": "19.00",
+      "gross_amount": "-76.00",
+      "discount": "0.00",
+      "amount": "-76.00"
+    },
+    {
+      "sr_no": "",
+      "description": "NORMAL SALINE. 100ML",
+      "quantity": "-2.00",
+      "unit_price": "19.00",
+      "gross_amount": "-38.00",
+      "discount": "0.00",
+      "amount": "-38.00"
+    },
+    {
+      "sr_no": "",
+      "description": "NORMAL SALINE. 100ML",
+      "quantity": "1.00",
+      "unit_price": "19.00",
+      "gross_amount": "19.00",
+      "discount": "0.00",
+      "amount": "19.00"
+    },
+    {
+      "sr_no": "",
+      "description": "NEEDLES 18 G",
+      "quantity": "2.00",
+      "unit_price": "3.00",
+      "gross_amount": "6.00",
+      "discount": "0.00",
+      "amount": "6.00"
+    },
+    {
+      "sr_no": "",
+      "description": "EXAMINATION GLOVES",
+      "quantity": "10.00",
+      "unit_price": "11.16",
+      "gross_amount": "111.60",
+      "discount": "0.00",
+      "amount": "111.60"
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSSABLE SYRING (2ML)",
+      "quantity": "4.00",
+      "unit_price": "8.00",
+      "gross_amount": "32.00",
+      "discount": "0.00",
+      "amount": "32.00"
+    },
+    {
+      "sr_no": "",
+      "description": "DISPOSSABLE SYRING (10ML)",
+      "quantity": "4.00",
+      "unit_price": "14.00",
+      "gross_amount": "56.00",
+      "discount": "0.00",
+      "amount": "56.00"
+    },
+    {
+      "sr_no": "",
+      "description": "ROTA FLOW",
+      "quantity": "1.00",
+      "unit_price": "220.00",
+      "gross_amount": "220.00",
+      "discount": "0.00",
+      "amount": "220.00"
+    },
+    {
+      "sr_no": "",
+      "description": "EXTEENA TRIO",
+      "quantity": "1.00",
+      "unit_price": "335.00",
+      "gross_amount": "335.00",
+      "discount": "0.00",
+      "amount": "335.00"
+    },
+    {
+      "sr_no": "",
+      "description": "I.V.SET",
+      "quantity": "2.00",
+      "unit_price": "90.00",
+      "gross_amount": "180.00",
+      "discount": "0.00",
+      "amount": "180.00"
+    },
+    {
+      "sr_no": "",
+      "description": "TEGADREM 1633 3M",
+      "quantity": "1.00",
+      "unit_price": "120.00",
+      "gross_amount": "120.00",
+      "discount": "0.00",
+      "amount": "120.00"
+    },
+    {
+      "sr_no": "",
+      "description": "IV CANNULA 20 NO.",
+      "quantity": "1.00",
+      "unit_price": "110.00",
+      "gross_amount": "110.00",
+      "discount": "0.00",
+      "amount": "110.00"
+    },
+    {
+      "sr_no": "",
+      "description": "GD 75GM",
+      "quantity": "1.00",
+      "unit_price": "39.00",
+      "gross_amount": "39.00",
+      "discount": "0.00",
+      "amount": "39.00"
+    },
+    {
+      "sr_no": "",
+      "description": "DUPHALAC SOL 250ML",
+      "quantity": "1.00",
+      "unit_price": "328.12",
+      "gross_amount": "328.12",
+      "discount": "0.00",
+      "amount": "328.12"
+    },
+    {
+      "sr_no": "",
+      "description": "HEPAGARD 10ML INJ",
+      "quantity": "1.00",
+      "unit_price": "435.00",
+      "gross_amount": "435.00",
+      "discount": "0.00",
+      "amount": "435.00"
+    },
+    {
+      "sr_no": "",
+      "description": "DEXTROSE 10% 500 ML",
+      "quantity": "1.00",
+      "unit_price": "30.00",
+      "gross_amount": "30.00",
+      "discount": "0.00",
+      "amount": "30.00"
+    }
+  ],
+  "returns": [
+    {
+      "description": "DEXTROSE 10% 500 ML",
+      "quantity": "-1.00",
+      "unit_price": "30.00",
+      "discount": "0.00",
+      "amount": "-30.00"
+    },
+    {
+      "description": "DISPOSSABLE SYRING (10ML)",
+      "quantity": "-2.00",
+      "unit_price": "14.00",
+      "discount": "0.00",
+      "amount": "-28.00"
+    },
+    {
+      "description": "DISPOSSABLE SYRING (2ML)",
+      "quantity": "-1.00",
+      "unit_price": "8.00",
+      "discount": "0.00",
+      "amount": "-8.00"
+    },
+    {
+      "description": "HEPAGARD 10ML INJ",
+      "quantity": "-1.00",
+      "unit_price": "435.00",
+      "discount": "0.00",
+      "amount": "-435.00"
+    },
+    {
+      "description": "SUMOL-L IV",
+      "quantity": "-1.00",
+      "unit_price": "284.06",
+      "discount": "0.00",
+      "amount": "-284.06"
+    },
+    {
+      "description": "EXAMINATION GLOVES",
+      "quantity": "-8.00",
+      "unit_price": "11.16",
+      "discount": "0.00",
+      "amount": "-89.28"
+    },
+    {
+      "description": "ROTA FLOW",
+      "quantity": "-1.00",
+      "unit_price": "220.00",
+      "discount": "0.00",
+      "amount": "-220.00"
+    },
+    {
+      "description": "MUCOMIX 5ML INJ (SAMARTH)",
+      "quantity": "-1.00",
+      "unit_price": "126.19",
+      "discount": "0.00",
+      "amount": "-126.19"
+    },
+    {
+      "description": "NORMAL SALINE. 100ML",
+      "quantity": "-4.00",
+      "unit_price": "19.00",
+      "discount": "0.00",
+      "amount": "-76.00"
+    },
+    {
+      "description": "NORMAL SALINE. 100ML",
+      "quantity": "-2.00",
+      "unit_price": "19.00",
+      "discount": "0.00",
+      "amount": "-38.00"
+    }
+  ],
+  "bill_summary": {
+    "gross_amount": "2729.59",
+    "total_amount": "2729.59",
+    "discount": "0.0000",
+    "net_payable": "2729.59"
+  },
+  "raw_summary": "Pharmacy medicine report for in-patient credit, listing itemized charges and returns with negative amounts for items dispensed and returned, dated 08/06/2026."
+}

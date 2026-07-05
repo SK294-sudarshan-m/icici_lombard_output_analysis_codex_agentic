@@ -1,0 +1,32 @@
+=== PAGE 52 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3898
+Tokens Out: 397
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 52,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "DEPARTMENT OF LABORATORY MEDICINE CLINICAL CHEMISTRY & IMMUNOLOGY"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 YEARS",
+    "gender": "FEMALE",
+    "uhid": "192673",
+    "ip_number": "68049"
+  },
+  "admission": {
+    "date_of_admission": "21/02/2025",
+    "referring_doctor": "DR ABHAY RAUT"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "Tel: +91 22 6374 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "raw_summary": "Laboratory report from P.D. Hinduja Hospital showing General Body Profile test results for patient Kochhar Chander, including Calcium, SGOT/AST, SGPT/ALT, Alkaline Phosphatase, and Gamma GT levels with reference intervals and status indicators, dated February 21, 2025."
+}

@@ -1,0 +1,34 @@
+{
+  "page": 5,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "document_title": "CASHLESS CLAIM APPROVED!"
+  },
+  "patient": {
+    "name": "NALAMOLU SATYAVATHI",
+    "age": "59",
+    "gender": "FEMALE",
+    "uhid": "IL24074183603",
+    "ip_number": "APVHM.0000"
+  },
+  "admission": {
+    "date_of_admission": "06-JUN-26",
+    "date_of_discharge": "06-JUN-26",
+    "length_of_stay": "0"
+  },
+  "hospital": {
+    "name": "Hcg Curie City Cancer Centre (A Unit Of Healthcare Global Enterprises Ltd)",
+    "address": "44-1-1/4, Padavalarevu, Gunadala Vijayawada,Andhra Pradesh-520004",
+    "contact": "Tel: Mob:"
+  },
+  "insurance": {
+    "company": "CHANNELSOFT IT SERVICES PRIVATE LIMITED",
+    "policy_number": "4016/X/348305455/02/000",
+    "member_id": "8900080173316",
+    "claimed_amount": "",
+    "approved_amount": "16200",
+    "tpa": ""
+  },
+  "raw_summary": "Pre-authorization letter approving a cashless claim for Rs. 16,200 for patient NALAMOLU SATYAVATHI, with admission scheduled for 06-JUN-26, issued by Hcg Curie City Cancer Centre under policy of CHANNELSOFT IT SERVICES PRIVATE LIMITED."
+}

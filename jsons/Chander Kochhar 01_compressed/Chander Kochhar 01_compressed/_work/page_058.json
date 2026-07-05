@@ -1,0 +1,57 @@
+{
+  "page": 58,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "2-2",
+    "document_title": "REQUEST FOR CASHLESS HOSPITALISATION FOR HEALTH INSURANCE POLICY PART- C (Revised)"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91",
+    "gender": "Male",
+    "uhid": "145304681",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "DR N.R. HINGORANI",
+    "treating_doctor": "Dr. Abhay Pault",
+    "department": ""
+  },
+  "hospital": {
+    "name": "",
+    "address": "191C022 HUME, PALZ HILL, BANDRA WEST, MUMBAI 400050",
+    "contact": "9819862685"
+  },
+  "insurance": {
+    "company": "ICICI Lombard GIC Limited",
+    "policy_number": "4128I//HSHA/25592166/00/000",
+    "member_id": "145304681",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": "ICICI Lombard"
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "This is a pre-authorization request form for cashless hospitalization under a health insurance policy, filled by the patient and treating doctor, containing patient demographics, insurance details, and clinical information for approval by ICICI Lombard."
+}

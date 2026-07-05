@@ -1,0 +1,1607 @@
+{
+  "bill_id": "d027e9a7",
+  "case_number": "110202494394-1",
+  "bill_summary": {
+    "extracted_amount": 151956.82,
+    "calculated_amount": 151956.82,
+    "discount": 0.0,
+    "tax": 300.0,
+    "extracted_after_discount": 152256.82,
+    "calculated_after_discount": 152256.82,
+    "total_line_items": 16,
+    "amounts_match": false,
+    "amount_diff": 0.0,
+    "net_corrected": true,
+    "printed_net_payable": 76278.0,
+    "overall_confidence": 0.6,
+    "case_verdict": 0,
+    "summary": "Case is FLAGGED and needs reviewer attention. The consolidated bill has 16 line item(s) totalling ₹151,956.82 (gross) plus ₹300.00 tax, with a net payable of ₹152,256.82. the printed net (₹76,278.00) was inconsistent with the itemised total (₹151,956.82) and was recomputed. billing type assessed as Surgery. extraction confidence 0.60.",
+    "billing_type": {
+      "billing_type": "Surgery",
+      "confidence": 0.95,
+      "reasoning": "OT/surgeon charges present + DS confirms procedure(s): RIGHT MODIFIED RADICAL MASTOIDECTOMY + INTERLAY TYMPANOPLASTY (REVISION)"
+    }
+  },
+  "patient": {
+    "name": "AMARDEEP KUMAR",
+    "age": "31-Y 1-M 8-D",
+    "gender": "MALE",
+    "uhid": "79364-LH/2606",
+    "ip_number": "48505-IPD/2606",
+    "ward": "GEN.R-WARD",
+    "bed_number": "RW-10"
+  },
+  "hospital": {
+    "name": "Life Line DIAGNOSTIC CENTRE CUM NURSING HOME (A Unit of : Navjeevan Nursing Home Pvt. Ltd.)",
+    "address": "4A, Wood Street, Kolkata - 700 016",
+    "contact": "Phone : 4026 7400, 3500 6100, E-mail : lifeline_dcnh@yahoo.co.in"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "76278.00",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "07/06/2026",
+    "date_of_discharge": "08/06/2026",
+    "length_of_stay": "1",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "SANTANU BHATTACHARJEE MBBS DLO RESEARCH SCHOOL ICMR",
+    "department": ""
+  },
+  "charges": [
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "",
+      "description": "BED CHARGE (GEN.R-WARD)",
+      "quantity": "2",
+      "unit_price": "1500.00",
+      "discount": "",
+      "amount": "3000.00",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": ". Bed Charge General Ward",
+        "standard_name": "bed charges",
+        "score": 0.8588,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type assignment is correct per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "BED CHARGE",
+          "match_ratio": 0.606
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 0
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "EASY FIX",
+      "quantity": "1",
+      "unit_price": "80.00",
+      "discount": "",
+      "amount": "80.00",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Easy Fix (Canet Fix)",
+        "standard_name": "tape - surgical tape",
+        "score": 0.7153,
+        "method": "llm_selected"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 80.0,
+        "supporting_bills_total": 3798.3,
+        "difference": 3718.3,
+        "difference_pct": 97.89,
+        "tolerance_pct": 15.0,
+        "within_tolerance": false
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type assignment is correct per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.421
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 1
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "MEDIPOINT MEDICINE",
+      "quantity": "1",
+      "unit_price": "2571.00",
+      "discount": "",
+      "amount": "2571.00",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "",
+        "standard_name": "",
+        "score": 0,
+        "method": "llm_master_taxonomy"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 2571.0,
+        "supporting_bills_total": 3798.3,
+        "difference": 1227.3,
+        "difference_pct": 32.31,
+        "tolerance_pct": 15.0,
+        "within_tolerance": false
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type assignment is correct per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "O.T. MEDICINE CHARGE",
+          "match_ratio": 0.579
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_master_taxonomy",
+      "display_order": 2
+    },
+    {
+      "sr_no": "",
+      "description": "RECORDS MANAGEMENT AND MAINTENANCE CHARGE",
+      "quantity": "1",
+      "unit_price": "300.00",
+      "discount": "",
+      "amount": "300.00",
+      "source_line_index": 3,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "final_bill_1",
+      "bill_type": "Others",
+      "sub_bill_type": "Others",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Medical Record Maintenance",
+        "standard_name": "MEDICAL RECORDS",
+        "score": 0.5477,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type assignment is correct per master list (Records Management is Miscellaneous -> Medical records)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "RECORDS MANAGEMENT AND MAINTENANCE\t08/06/26\t1\t300.00\t300.00",
+          "match_ratio": 0.68
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 3
+    },
+    {
+      "bill_type": "Miscellaneous",
+      "bill_type_id": "1014508",
+      "sub_bill_type": "Miscellaneous Charges",
+      "sub_bill_type_id": "1011084",
+      "sr_no": "",
+      "description": "RMO CHARGE",
+      "quantity": "2",
+      "unit_price": "300.00",
+      "discount": "",
+      "amount": "600.00",
+      "source_line_index": 4,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "RMO Charge",
+        "standard_name": "RMO",
+        "score": 0.9697,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type assignment is correct per master list (RMO Charge falls under Miscellaneous -> DMO RMO CMO Charges)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "O.T. CHARGE",
+          "match_ratio": 0.762
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 4
+    },
+    {
+      "bill_type": "Surgeon Charges",
+      "bill_type_id": "500530",
+      "sub_bill_type": "Procedure or Surgery or Operation Charges",
+      "sub_bill_type_id": "1011539",
+      "sr_no": "",
+      "description": "DR.SANTANU BHATTACHARJEE",
+      "quantity": "1",
+      "unit_price": "60000.00",
+      "discount": "",
+      "amount": "60000.00",
+      "source_line_index": 5,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "",
+        "standard_name": "",
+        "score": 0,
+        "method": "llm_master_taxonomy"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type assignment is correct per master list (Consultation fee for surgeon is Surgeon Charges -> Procedure or Surgery or Operation Charges)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": ": SANTANU BHATTACHARJEE MBBS DLO RESEARCH",
+          "match_ratio": 0.646
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_master_taxonomy",
+      "display_order": 5
+    },
+    {
+      "bill_type": "Miscellaneous",
+      "bill_type_id": "1014508",
+      "sub_bill_type": "Miscellaneous Charges",
+      "sub_bill_type_id": "1011084",
+      "sr_no": "",
+      "description": "OT-2 (OT CHARGE UPTO 2 HRS)",
+      "quantity": "1",
+      "unit_price": "8200.00",
+      "discount": "",
+      "amount": "8200.00",
+      "source_line_index": 6,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Ot Charge",
+        "standard_name": "miscellaneous charges",
+        "score": 0.5635,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. Bill type assignment is correct per master list (OT Charge is Miscellaneous -> Miscellaneous Charges)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "OT-2 (OT CHARGE UPTO 2 HRS)\t07/06/26\t1\t8200.00\t8200.00",
+          "match_ratio": 0.667
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 6
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "OT Drugs",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "O.T. MEDICINE CHARGE (REF. TO DETAIL BILL)",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "1227.41",
+      "source_line_index": 7,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "O.T.Medicine Charges",
+        "standard_name": "medicine",
+        "score": 0.7615,
+        "method": "llm_selected"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 1227.41,
+        "supporting_bills_total": 3798.3,
+        "difference": 2570.89,
+        "difference_pct": 67.69,
+        "tolerance_pct": 15.0,
+        "within_tolerance": false
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount exactly matches the image. Description matches. Quantity and unit_price are correctly left blank as they are not provided in the image for this line. Bill type assignment is correct per master list (OT Medicine Charge is Medicines Pharmacy Charges -> OT Drugs)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "O.T. MEDICINE CHARGE (REF. TO DETAIL BILL)",
+          "match_ratio": 1.0
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 7
+    },
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "",
+      "description": "BED CHARGE (GEN.R-WARD)",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "3000.00",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": ". Bed Charge General Ward",
+        "standard_name": "bed charges",
+        "score": 0.8588,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 3000.00 exactly matches image. Description 'BED CHARGE (GEN.R-WARD)' matches. Bill type 'Room Charges' and sub_bill_type 'Room Charge' are correct per bill master (1000739, 1000746)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "BED CHARGE (GEN.R-WARD)\t3000.00 #",
+          "match_ratio": 0.821
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 8
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "EASY FIX",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "80.00",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Easy Fix (Canet Fix)",
+        "standard_name": "tape - surgical tape",
+        "score": 0.7153,
+        "method": "llm_selected"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 80.0,
+        "supporting_bills_total": 3798.3,
+        "difference": 3718.3,
+        "difference_pct": 97.89,
+        "tolerance_pct": 15.0,
+        "within_tolerance": false
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 80.00 exactly matches image. Description 'EASY FIX' matches. Bill type 'Medicines Pharmacy Charges' and sub_bill_type 'Medicines Pharmacy Charges' are correct per bill master (500533, 706048)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "EASY FIX\t80.00",
+          "match_ratio": 0.727
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 9
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "MEDIPOINT MEDICINE",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "2571.00",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "",
+        "standard_name": "",
+        "score": 0,
+        "method": "llm_master_taxonomy"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 2571.0,
+        "supporting_bills_total": 3798.3,
+        "difference": 1227.3,
+        "difference_pct": 32.31,
+        "tolerance_pct": 15.0,
+        "within_tolerance": false
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 2571.00 exactly matches image. Description 'MEDIPOINT MEDICINE' matches. Bill type 'Medicines Pharmacy Charges' and sub_bill_type 'Medicines Pharmacy Charges' are correct per bill master (500533, 706048)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "MEDIPOINT MEDICINE\t2571.00",
+          "match_ratio": 0.818
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_master_taxonomy",
+      "display_order": 10
+    },
+    {
+      "bill_type": "Miscellaneous",
+      "bill_type_id": "1014508",
+      "sub_bill_type": "Miscellaneous Charges",
+      "sub_bill_type_id": "1011084",
+      "sr_no": "",
+      "description": "RMO CHARGE",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "600.00",
+      "source_line_index": 3,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "RMO Charge",
+        "standard_name": "RMO",
+        "score": 0.9697,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 600.00 exactly matches image. Description 'RMO CHARGE' matches. Bill type 'Miscellaneous' and sub_bill_type 'Miscellaneous Charges' are correct per bill master (1014508, 1011084)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "O.T. CHARGE",
+          "match_ratio": 0.762
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 11
+    },
+    {
+      "sr_no": "",
+      "description": "RECORDS MANAGEMENT AND MAINTENANCE CHARGE",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "300.00",
+      "source_line_index": 4,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "bill_type": "Miscellaneous",
+      "sub_bill_type": "Medical records",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Medical Record Maintenance",
+        "standard_name": "MEDICAL RECORDS",
+        "score": 0.5477,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 300.00 exactly matches image. Description 'RECORDS MANAGEMENT AND MAINTENANCE CHARGE' matches. Bill type 'Others' is not in master; should be 'Miscellaneous' with sub_bill_type 'Medical records' (1014508, 1014391). However, since bill_type correction is not penalized, confidence remains 1.0 for extraction accuracy."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "RECORDS MANAGEMENT AND MAINTENANCE CHARGE\t300.00",
+          "match_ratio": 0.921
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 12
+    },
+    {
+      "bill_type": "Assistant Doctor Charges",
+      "bill_type_id": "1011058",
+      "sub_bill_type": "Assistant Doctor Charges",
+      "sub_bill_type_id": "1014375",
+      "sr_no": "",
+      "description": "DR.SANTANU BHATTACHARJEE",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "60000.00",
+      "source_line_index": 5,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "",
+        "standard_name": "",
+        "score": 0,
+        "method": "llm_master_taxonomy"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 60000.00 exactly matches image. Description 'DR.SANTANU BHATTACHARJEE' matches. Bill type 'Assistant Doctor Charges' and sub_bill_type 'Assistant Doctor Charges' are correct per bill master (1011058, 1014375)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "DR.SANTANU BHATTACHARJEE\t60000.00",
+          "match_ratio": 0.842
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_master_taxonomy",
+      "display_order": 13
+    },
+    {
+      "bill_type": "Miscellaneous",
+      "bill_type_id": "1014508",
+      "sub_bill_type": "Miscellaneous Charges",
+      "sub_bill_type_id": "1011084",
+      "sr_no": "",
+      "description": "OT-2 (OT CHARGE UPTO 2 HRS)",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "8200.00",
+      "source_line_index": 6,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Ot Charge",
+        "standard_name": "miscellaneous charges",
+        "score": 0.5635,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 8200.00 exactly matches image. Description 'OT-2 (OT CHARGE UPTO 2 HRS)' matches. Bill type 'Miscellaneous' and sub_bill_type 'Miscellaneous Charges' are acceptable per bill master (1014508, 1011084), though 'Operation Theatre Charges' might be more precise; no penalty for bill type."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "OT-2 (OT CHARGE UPTO 2 HRS)\t8200.00",
+          "match_ratio": 0.871
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 14
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "",
+      "description": "O.T. MEDICINE CHARGE (REF. TO DETAIL BILL)",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "1227.41",
+      "source_line_index": 7,
+      "charge_type": "line_item",
+      "page_number": 3,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "O.T.Medicine Charges",
+        "standard_name": "medicine",
+        "score": 0.7615,
+        "method": "llm_selected"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 1227.41,
+        "supporting_bills_total": 3798.3,
+        "difference": 2570.89,
+        "difference_pct": 67.69,
+        "tolerance_pct": 15.0,
+        "within_tolerance": false
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "Amount 1227.41 exactly matches image. Description 'O.T. MEDICINE CHARGE (REF. TO DETAIL BILL)' matches. Bill type 'Medicines Pharmacy Charges' and sub_bill_type 'Medicines Pharmacy Charges' are correct per bill master (500533, 706048)."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "O.T. MEDICINE CHARGE (REF. TO DETAIL BILL)\t1,227.41",
+          "match_ratio": 0.903
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 15
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [
+    {
+      "category": "pharmacy_bill",
+      "total": 3798.3,
+      "reason": "No final bill charge matched category 'pharmacy_bill' within 15% of amount 3798.3",
+      "item_count": 35,
+      "charges": [
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "LOX 2% (ADR) INJ 30ML",
+          "quantity": "1",
+          "unit_price": "42.00",
+          "discount": "",
+          "amount": "42.00",
+          "source_line_index": 0,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Lox 2% Inj 30 Ml",
+            "standard_name": "medicine",
+            "score": 0.8958,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "VASOCON 1ml INJ.",
+          "quantity": "1",
+          "unit_price": "24.00",
+          "discount": "",
+          "amount": "24.00",
+          "source_line_index": 1,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Vasocon 1Ml Inj",
+            "standard_name": "medicine",
+            "score": 0.903,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "PENTAZOCINE INJ",
+          "quantity": "1",
+          "unit_price": "48.31",
+          "discount": "",
+          "amount": "48.31",
+          "source_line_index": 2,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Pentazocine - (Tazowin 1Ml) Inj",
+            "standard_name": "medicine",
+            "score": 0.7234,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "PHENERGAN 2ML INJ",
+          "quantity": "1",
+          "unit_price": "16.21",
+          "discount": "",
+          "amount": "16.21",
+          "source_line_index": 3,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Phenergan Inj 2 Ml",
+            "standard_name": "medicine",
+            "score": 0.9135,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "DYNAPAR AQ 1ML INJ",
+          "quantity": "1",
+          "unit_price": "39.60",
+          "discount": "",
+          "amount": "39.60",
+          "source_line_index": 4,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Dynapar Aq 1Ml Inj",
+            "standard_name": "medicine",
+            "score": 0.9169,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "DISPO SYN 5ML",
+          "quantity": "2",
+          "unit_price": "10.00",
+          "discount": "",
+          "amount": "20.00",
+          "source_line_index": 5,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Dispo 5Ml Syr",
+            "standard_name": "Not in list",
+            "score": 0.751,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "sr_no": "",
+          "description": "GLOVES 8.0(SURGICARE)",
+          "quantity": "2",
+          "unit_price": "80.00",
+          "discount": "",
+          "amount": "160.00",
+          "source_line_index": 6,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type": "Consumables",
+          "sub_bill_type": "Disposables",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Non-Payable",
+          "match_info": {
+            "matched_item": "Gloves Surgicare",
+            "standard_name": "gloves - sterilized gloves",
+            "score": 0.6403,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Investigation Charges",
+          "bill_type_id": "500535",
+          "sub_bill_type": "Investigation  Charges",
+          "sub_bill_type_id": "1014386",
+          "sr_no": "",
+          "description": "ABGEL",
+          "quantity": "1",
+          "unit_price": "276.00",
+          "discount": "",
+          "amount": "276.00",
+          "source_line_index": 7,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Abg.",
+            "standard_name": "test",
+            "score": 0.5996,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "VICRYL--2123",
+          "quantity": "1",
+          "unit_price": "515.00",
+          "discount": "",
+          "amount": "515.00",
+          "source_line_index": 8,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_normalized_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Vicryl No Round",
+            "standard_name": "implant",
+            "score": 0.57,
+            "method": "llm_normalized_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "RANTAC INJ 2ML.",
+          "quantity": "1",
+          "unit_price": "7.25",
+          "discount": "",
+          "amount": "7.25",
+          "source_line_index": 9,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Rantac Inj 2Ml",
+            "standard_name": "medicine",
+            "score": 0.9385,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "",
+          "description": "NS 500ML (PEN)GB",
+          "quantity": "1",
+          "unit_price": "39.04",
+          "discount": "",
+          "amount": "39.04",
+          "source_line_index": 10,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Ns 500Ml",
+            "standard_name": "medicine",
+            "score": 0.7499,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "",
+          "description": "CAP +MASK",
+          "quantity": "2",
+          "unit_price": "20.00",
+          "discount": "",
+          "amount": "40.00",
+          "source_line_index": 11,
+          "charge_type": "line_item",
+          "page_number": 4,
+          "bill_id": "pharmacy_bill_1",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Non-Payable",
+          "match_info": {
+            "matched_item": "Cap Mask",
+            "standard_name": "caps",
+            "score": 0.7482,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "10",
+          "description": "VALIUM 5MG TAB",
+          "quantity": "10",
+          "unit_price": "1.71",
+          "discount": "0.00",
+          "amount": "17.06",
+          "source_line_index": 0,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Valium 5Mg Tab",
+            "standard_name": "medicine",
+            "score": 0.8701,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "1",
+          "description": "VENFLON 20NO.",
+          "quantity": "1",
+          "unit_price": "321.00",
+          "discount": "0.00",
+          "amount": "321.00",
+          "source_line_index": 1,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Venflon No -20",
+            "standard_name": "Not in list",
+            "score": 0.8911,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "1",
+          "description": "B.T. SET",
+          "quantity": "1",
+          "unit_price": "238.12",
+          "discount": "0.00",
+          "amount": "238.12",
+          "source_line_index": 2,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "B T Set",
+            "standard_name": "drip - drip set",
+            "score": 0.913,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "1",
+          "description": "XONE 1GM. INJ",
+          "quantity": "1",
+          "unit_price": "66.64",
+          "discount": "0.00",
+          "amount": "66.64",
+          "source_line_index": 3,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Xone 1Gm Inj.",
+            "standard_name": "medicine",
+            "score": 0.8529,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "1",
+          "description": "RANTAC INJ 2ML.",
+          "quantity": "1",
+          "unit_price": "6.81",
+          "discount": "0.00",
+          "amount": "6.81",
+          "source_line_index": 4,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Rantac Inj 2Ml",
+            "standard_name": "medicine",
+            "score": 0.9385,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "1",
+          "description": "ONDEM 2MG INJ 2ML",
+          "quantity": "1",
+          "unit_price": "12.73",
+          "discount": "0.00",
+          "amount": "12.73",
+          "source_line_index": 5,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Ondem 2 Ml Inj",
+            "standard_name": "medicine",
+            "score": 0.8705,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "1",
+          "description": "N.S 500 ML (STREPORT)",
+          "quantity": "1",
+          "unit_price": "94.55",
+          "discount": "0.00",
+          "amount": "94.55",
+          "source_line_index": 6,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_consensus",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "N S 500 Ml",
+            "standard_name": "medicine",
+            "score": 0.8123,
+            "method": "vector_consensus"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "2",
+          "description": "DISCARDIT-10CC",
+          "quantity": "2",
+          "unit_price": "37.50",
+          "discount": "0.00",
+          "amount": "75.00",
+          "source_line_index": 7,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_master_taxonomy",
+          "payability": "Non-Payable",
+          "match_info": {
+            "matched_item": "",
+            "standard_name": "",
+            "score": 0,
+            "method": "llm_master_taxonomy"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "1",
+          "description": "B.D.INSULIN 1ML U/40 SYG(31G",
+          "quantity": "1",
+          "unit_price": "12.40",
+          "discount": "0.00",
+          "amount": "12.40",
+          "source_line_index": 8,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Insulin Syringe(Bd)-1Ml(U-40)",
+            "standard_name": "needle",
+            "score": 0.7247,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "2",
+          "description": "XONE 1GM. INJ",
+          "quantity": "2",
+          "unit_price": "66.64",
+          "discount": "0.00",
+          "amount": "133.28",
+          "source_line_index": 9,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Xone 1Gm Inj.",
+            "standard_name": "medicine",
+            "score": 0.8529,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "2",
+          "description": "ONDEM 2MG INJ 2ML",
+          "quantity": "2",
+          "unit_price": "12.73",
+          "discount": "0.00",
+          "amount": "25.46",
+          "source_line_index": 10,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Ondem 2 Ml Inj",
+            "standard_name": "medicine",
+            "score": 0.8705,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "2",
+          "description": "RANTAC INJ 2ML.",
+          "quantity": "2",
+          "unit_price": "6.81",
+          "discount": "0.00",
+          "amount": "13.62",
+          "source_line_index": 11,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Rantac Inj 2Ml",
+            "standard_name": "medicine",
+            "score": 0.9385,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "2",
+          "description": "VALIUM 5MG TAB",
+          "quantity": "2",
+          "unit_price": "1.71",
+          "discount": "0.00",
+          "amount": "3.41",
+          "source_line_index": 12,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "vector_direct",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Valium 5Mg Tab",
+            "standard_name": "medicine",
+            "score": 0.8701,
+            "method": "vector_direct"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "3",
+          "description": "DISCARDIT-10CC",
+          "quantity": "3",
+          "unit_price": "37.50",
+          "discount": "0.00",
+          "amount": "112.50",
+          "source_line_index": 13,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_master_taxonomy",
+          "payability": "Non-Payable",
+          "match_info": {
+            "matched_item": "",
+            "standard_name": "",
+            "score": 0,
+            "method": "llm_master_taxonomy"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "Disposables",
+          "sub_bill_type_id": "1011077",
+          "sr_no": "6",
+          "description": "DISCARDIT- 2CC",
+          "quantity": "6",
+          "unit_price": "15.00",
+          "discount": "0.00",
+          "amount": "90.00",
+          "source_line_index": 14,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Discardit Syringe",
+            "standard_name": "needle",
+            "score": 0.5628,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "1",
+          "description": "B.D.INSULIN 1ML U/40 SYG(31G",
+          "quantity": "1",
+          "unit_price": "10.60",
+          "discount": "0.00",
+          "amount": "10.60",
+          "source_line_index": 15,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Insulin Syringe(Bd)-1Ml(U-40)",
+            "standard_name": "needle",
+            "score": 0.7247,
+            "method": "llm_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "10",
+          "description": "FEXODOL M TAB 10'S",
+          "quantity": "10",
+          "unit_price": "14.06",
+          "discount": "0.00",
+          "amount": "140.60",
+          "source_line_index": 16,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_normalized_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Fexofenadine Hcl 120 Mg",
+            "standard_name": "medicine",
+            "score": 0.6702,
+            "method": "llm_normalized_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "1",
+          "description": "FRENASE X NASAL DROP",
+          "quantity": "1",
+          "unit_price": "47.91",
+          "discount": "0.00",
+          "amount": "47.91",
+          "source_line_index": 17,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_master_taxonomy",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "",
+            "standard_name": "",
+            "score": 0,
+            "method": "llm_master_taxonomy"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "10",
+          "description": "FENADOL PS TAB 10'S",
+          "quantity": "10",
+          "unit_price": "10.30",
+          "discount": "0.00",
+          "amount": "103.00",
+          "source_line_index": 18,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_normalized_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Benadon Tab",
+            "standard_name": "medicine",
+            "score": 0.4093,
+            "method": "llm_normalized_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "10",
+          "description": "BULLZO 600MG TAB 10'S",
+          "quantity": "10",
+          "unit_price": "37.43",
+          "discount": "0.00",
+          "amount": "374.25",
+          "source_line_index": 19,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_master_taxonomy",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "",
+            "standard_name": "",
+            "score": 0,
+            "method": "llm_master_taxonomy"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "10",
+          "description": "LORFAST AM TAB 10'S",
+          "quantity": "10",
+          "unit_price": "10.88",
+          "discount": "0.00",
+          "amount": "108.75",
+          "source_line_index": 20,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_master_taxonomy",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "",
+            "standard_name": "",
+            "score": 0,
+            "method": "llm_master_taxonomy"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "12",
+          "description": "FADOX CV TAB 6'S",
+          "quantity": "12",
+          "unit_price": "37.50",
+          "discount": "0.00",
+          "amount": "450.00",
+          "source_line_index": 21,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_normalized_selected",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Droxyl-500Mg,Tab,1X10,Cefadroxil-",
+            "standard_name": "medicine",
+            "score": 0.5101,
+            "method": "llm_normalized_selected"
+          },
+          "status": "knocked_off"
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "10",
+          "description": "ROSHAMIN DSR CAP 10'S",
+          "quantity": "10",
+          "unit_price": "11.32",
+          "discount": "0.00",
+          "amount": "113.20",
+          "source_line_index": 22,
+          "charge_type": "line_item",
+          "page_number": 5,
+          "bill_id": "pharmacy_bill_2",
+          "bill_type_resolve_method": "llm_master_taxonomy",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "",
+            "standard_name": "",
+            "score": 0,
+            "method": "llm_master_taxonomy"
+          },
+          "status": "knocked_off"
+        }
+      ]
+    }
+  ],
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "flagged_for_review": true,
+  "flag_reason": "Printed net 76278.0 was inconsistent with the itemized total 151956.82 and was recomputed.",
+  "overall_confidence": 0.6
+}

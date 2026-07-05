@@ -1,0 +1,16 @@
+=== PAGE 8 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4363
+Tokens Out: 96
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 8,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "document_title": "Guidelines for Approved Claim Request"
+  },
+  "raw_summary": "This page is a pre-authorization approval letter from ICICI Lombard, outlining conditions for claim approval, validity period, copayment collection, and mandatory documents required from the hospital for claim settlement."
+}

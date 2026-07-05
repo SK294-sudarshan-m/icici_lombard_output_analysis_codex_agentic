@@ -1,0 +1,16 @@
+=== PAGE 9 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4210
+Tokens Out: 97
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 9,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "document_title": "Following Details are mandatory for Claim Settlement"
+  },
+  "raw_summary": "This page is a pre-authorization letter detailing mandatory claim settlement information including discharge date, final bill amount, and amount paid by patient, along with terms and conditions of authorization for cashless treatment."
+}

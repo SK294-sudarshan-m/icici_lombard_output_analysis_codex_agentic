@@ -1,0 +1,11 @@
+{
+  "consolidated_bill": "consolidated_final",
+  "source_bills": 1,
+  "expanded_categories": [],
+  "total_charges": 10,
+  "total_line_items": 10,
+  "overall_confidence": 0.0,
+  "flagged_for_review": 0,
+  "amounts_match": true,
+  "amount_diff": 0.0
+}

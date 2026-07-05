@@ -1,0 +1,22 @@
+{
+  "page": 15,
+  "page_type": "non_bill",
+  "non_bill_type": "diagnostic_report",
+  "document_markers": {
+    "document_title": "HEMATOLOGY REPORT"
+  },
+  "patient": {
+    "name": "NALAMOLU SATYAVATHI",
+    "age": "57 Years",
+    "gender": "F",
+    "uhid": "APVHM.0000050571",
+    "ip_number": "VHMIP66521",
+    "ward": "RECLINER - RC-02"
+  },
+  "hospital": {
+    "name": "HCG CURIE CITY CANCER CENTRE, VIJA",
+    "address": "Triesta Sciences, No. 10, Mission Road, Kalinga Rao Road, Bangalore - 560027, Karnataka, India",
+    "contact": "Tel: 0866-2435900, 2438331, 9100333508 | Ext: 158 | Email: ccvijayawada@hcgel.com"
+  },
+  "raw_summary": "This page contains a Hematology Report (CBC) for patient Nalamolu Satyavathi, showing complete blood count parameters with results, units, reference intervals, and methods, issued by Triesta Sciences for HCG Curie City Cancer Centre, Vijayawada, on 08-Jun-2026."
+}

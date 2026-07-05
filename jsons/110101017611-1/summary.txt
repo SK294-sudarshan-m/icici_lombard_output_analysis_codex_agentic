@@ -1,0 +1,12 @@
+PDF: 110101017611-1.pdf
+request_id: 84542610
+status: completed
+pages: 5
+line_items: 2
+extracted_amount: 55000.0
+payable (after discount): 55000.0
+amounts_match: True
+overall_confidence: 1.0
+billing_type: Medical Management
+adjudication_overall: fail
+summary: Case is FLAGGED and needs reviewer attention. The consolidated bill has 2 line item(s) totalling ₹55,000.00 (gross), with a net payable of ₹55,000.00. the line items reconcile with the bill's printed total. billing type assessed as Medical Management. extraction confidence 1.00.

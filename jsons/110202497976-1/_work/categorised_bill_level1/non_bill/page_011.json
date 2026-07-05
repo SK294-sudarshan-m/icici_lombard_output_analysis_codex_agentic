@@ -1,0 +1,42 @@
+{
+  "page": 11,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "Mrs. N. SATYAVATHI",
+    "age": "57y",
+    "gender": "F",
+    "uhid": "50571",
+    "ip_number": "VHMIP66521"
+  },
+  "admission": {
+    "date_of_admission": "08.06.2026",
+    "date_of_discharge": "08.06.2026"
+  },
+  "hospital": {
+    "name": "HealthCare Global Enterprises Ltd.",
+    "address": "# 44-1-1/3, Padavalarevu, Gunadala Vijayawada -520 004.",
+    "contact": "Tel : 0866 - 2435900 2438331"
+  },
+  "medications": [
+    {
+      "name": "Inj. Genexol",
+      "dosage": "230 mg",
+      "source_line_index": 0
+    },
+    {
+      "name": "Inj. Carboplatin",
+      "dosage": "440mg",
+      "source_line_index": 1
+    },
+    {
+      "name": "Inj. PEG GCSF",
+      "dosage": "6mg",
+      "source_line_index": 2
+    }
+  ],
+  "raw_summary": "Discharge summary for Mrs. N. Satyavathi, 57-year-old female, admitted and discharged on 08.06.2026 for Cycle 5th chemotherapy for Carcinoma Endometrium, treated with Genexol, Carboplatin, and PEG GCSF."
+}

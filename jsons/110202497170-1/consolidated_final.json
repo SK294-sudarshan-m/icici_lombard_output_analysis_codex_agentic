@@ -1,0 +1,102 @@
+{
+  "bill_id": "a3aedb42",
+  "case_number": "110202497170-1",
+  "bill_summary": {
+    "extracted_amount": 25000.0,
+    "calculated_amount": 25000.0,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 25000.0,
+    "calculated_after_discount": 25000.0,
+    "total_line_items": 1,
+    "amounts_match": true,
+    "overall_confidence": 1.0,
+    "case_verdict": 0,
+    "summary": "Case is FLAGGED and needs reviewer attention. The consolidated bill has 1 line item(s) totalling ₹25,000.00 (gross), with a net payable of ₹25,000.00. the line items reconcile with the bill's printed total. billing type assessed as Package. extraction confidence 1.00.",
+    "billing_type": {
+      "billing_type": "Package",
+      "confidence": 0.9,
+      "reasoning": "Package/lump-sum charge detected"
+    }
+  },
+  "patient": {
+    "name": "Mr SHER BAHADUR SINGH",
+    "age": "66 Years 11 Months",
+    "gender": "MALE",
+    "uhid": "RTN0000089812",
+    "ip_number": "IP-001",
+    "ward": "GENERAL-WARD",
+    "bed_number": "R-202-24"
+  },
+  "hospital": {
+    "name": "ROTARY TECHNO NETRALAYA SALTLAKE",
+    "address": "CN 5, Sector V, Kolkata 700 091, West Bengal",
+    "contact": "+91 33 3011 5000, +91 33 23673312/13/14, +91 9874763763"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD HEALTH CARE",
+    "policy_number": "4016/X/278194070/03/000",
+    "member_id": "110202497170",
+    "claimed_amount": "25000.00",
+    "approved_amount": "25000.00",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "08/06/2026 09:49",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "General",
+    "referring_doctor": "",
+    "treating_doctor": "Dr. Pankaj Rupauliha",
+    "department": ""
+  },
+  "charges": [
+    {
+      "bill_type": "Package Charges",
+      "bill_type_id": "1000745",
+      "sub_bill_type": "Package Charges",
+      "sub_bill_type_id": "1011542",
+      "sr_no": "",
+      "description": "Package MICRO COAXIAL CATARACT SURGERY MCCS/MICS+IOL(FIQ) PKG",
+      "quantity": "1",
+      "unit_price": "25000.00",
+      "discount": "0.00",
+      "amount": "25000.00",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "procedure_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Micro Coaxial Cataract Surgery Mccs/Mics Iol(Fiq) Pkg",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.8817,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. The bill_type 'Package Charges' and sub_bill_type 'Package Charges' are correctly assigned per the bill master list for this type of lump-sum package charge."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "",
+          "match_ratio": 0.331
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 0
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [],
+  "flagged_for_review": true,
+  "flag_reason": "No final bill found — charges are from a single procedure bill",
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "overall_confidence": 1.0
+}

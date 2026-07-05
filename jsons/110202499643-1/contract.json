@@ -1,0 +1,64 @@
+{
+  "claim_no": null,
+  "llm_remarks": null,
+  "merged_doc_uri": "",
+  "processed_time_in_secs": 65.79,
+  "stage_confidence": null,
+  "llm_case_verdict": {
+    "id": "6d8048ba-1436-40f8-861e-ae057283fa41",
+    "timestamp": "2026-07-04T12:52:23.718582+00:00",
+    "bill_extraction_attempts": 1,
+    "extracted_total_amount": 55000.0,
+    "calculated_total_amount": 55000.0,
+    "calculated_difference": 0.0,
+    "calculated_match": true,
+    "bill_extraction_is_accurate": true,
+    "bill_extraction_accuracy_reason": null,
+    "i3_total_amount": 0.0,
+    "i3_total_difference": 55000.0,
+    "i3_total_match": false,
+    "non_payable_amount": 0.0,
+    "payable_amount": 55000.0,
+    "i3_non_payable_amount": 0.0,
+    "i3_payable_amount": 0.0,
+    "i3_non_payable_difference": 0.0,
+    "i3_payable_difference": 55000.0,
+    "i3_non_payable_match": true,
+    "i3_payable_match": false,
+    "nme_classification_conclusive": true,
+    "overall_confidence": 1.0,
+    "final_case_verdict": null,
+    "billing_type": "Package",
+    "billing_type_confidence": 0.9,
+    "billing_type_reason": "Package/lump-sum charge detected",
+    "unique_bill_count": 1,
+    "bill_item_count": 1,
+    "bills_scout_briefing": null
+  },
+  "llm_response": {
+    "bills_classified": [
+      {
+        "bill_items": [
+          {
+            "display_order": 0,
+            "sr_no": "",
+            "page_number": 2,
+            "item_name": "CHOLECYSTECTOMY PACKAGE (DR G.M SADIQUE) (PRIVATE)",
+            "amount": 55000.0,
+            "standard_item_name": "Not in list",
+            "bill_type_id": 1000745,
+            "bill_type": "Package Charges",
+            "bill_sub_type_id": 1011542,
+            "bill_sub_type": "Package Charges",
+            "is_payable": true,
+            "closest_item_name": "Lap-Cholecystectomy Package",
+            "payable_value_source": "llm_selected",
+            "llm_confidence": 1.0,
+            "llm_confidence_reason": "All values (description, quantity, unit_price, amount) exactly match the image. The bill_type 'Package Charges' and sub_bill_type 'Package Charges' are correctly assigned per the bill master for this type of charge.",
+            "textract_confidence": 1.0
+          }
+        ]
+      }
+    ]
+  }
+}

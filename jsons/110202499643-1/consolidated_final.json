@@ -1,0 +1,95 @@
+{
+  "bill_id": "140df0f3",
+  "case_number": "110202499643-1",
+  "bill_summary": {
+    "extracted_amount": 55000.0,
+    "calculated_amount": 55000.0,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 55000.0,
+    "calculated_after_discount": 55000.0,
+    "total_line_items": 1,
+    "amounts_match": true,
+    "overall_confidence": 1.0,
+    "case_verdict": 1,
+    "summary": "Case is in order and recommended for processing. The consolidated bill has 1 line item(s) totalling ₹55,000.00 (gross), with a net payable of ₹55,000.00. the line items reconcile with the bill's printed total. billing type assessed as Package. extraction confidence 1.00.",
+    "billing_type": {
+      "billing_type": "Package",
+      "confidence": 0.9,
+      "reasoning": "Package/lump-sum charge detected"
+    }
+  },
+  "patient": {
+    "name": "Mrs. SAMSUNNEHAR KHATUN",
+    "age": "68 Yrs",
+    "gender": "F",
+    "uhid": "P2606797",
+    "ip_number": "IP26004215",
+    "ward": "PRIVATE CABIN 408 (PRIVATE)",
+    "bed_number": "408"
+  },
+  "hospital": {
+    "name": "MANMOHINI HEALTHCARE",
+    "address": "24/A/B/15,Kalikapur Road,Shilpataluk,Po-Berhampore,742101,Dist-Murshidabad",
+    "contact": "CE Licence No. : 33352489"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "55000.00",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "admission": {
+    "date_of_admission": "07-Jun-2026 06:47",
+    "admission_type": "PRIVATE CABIN 408"
+  },
+  "charges": [
+    {
+      "bill_type": "Package Charges",
+      "bill_type_id": "1000745",
+      "sub_bill_type": "Package Charges",
+      "sub_bill_type_id": "1011542",
+      "sr_no": "",
+      "description": "CHOLECYSTECTOMY PACKAGE (DR G.M SADIQUE) (PRIVATE)",
+      "quantity": "1",
+      "unit_price": "55000",
+      "discount": "",
+      "amount": "55000.00",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 2,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Lap-Cholecystectomy Package",
+        "standard_name": "Not in list",
+        "score": 0.6684,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 1.0,
+          "reason": "All values (description, quantity, unit_price, amount) exactly match the image. The bill_type 'Package Charges' and sub_bill_type 'Package Charges' are correctly assigned per the bill master for this type of charge."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "07-06-2026\tCHOLECYSTECTOMY PACKAGE (DR G.M SADIQUE) (PRIVATE)\t55000\t1\t55,000.00",
+          "match_ratio": 0.775
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 0
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [],
+  "review_summary": {
+    "total_flagged": 0,
+    "flagged_items": []
+  },
+  "overall_confidence": 1.0
+}

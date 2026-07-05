@@ -1,0 +1,59 @@
+{
+  "page": 4,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Normal Discharge"
+  },
+  "patient": {
+    "name": "Mrs Bandla Hymavathi",
+    "age": "62 Y,1 M,17 D",
+    "gender": "Female",
+    "uhid": "893505",
+    "ip_number": "SVIMS/IP-168159",
+    "ward": "Special Rooms AC Room",
+    "bed_number": "Single Ward/SACS-20"
+  },
+  "admission": {
+    "date_of_admission": "09-06-2026 10:05 AM",
+    "date_of_discharge": "09-06-2026 10:10 AM",
+    "admission_type": "Elective Medical",
+    "referring_doctor": "",
+    "treating_doctor": "Dr. D Bhargavi",
+    "department": "Department of Medical Oncology"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD,TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "insurance": {
+    "company": "ICICI Lombord",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [
+    {
+      "name": "Inj. Gemcitabine",
+      "dosage": "800mg/msq D1, D8 & D15",
+      "frequency": "Q4 weekly",
+      "duration": "",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 0
+    },
+    {
+      "name": "Inj. Gemcitabine",
+      "dosage": "1200mg",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": "",
+      "source_line_index": 1
+    }
+  ],
+  "raw_summary": "Page 4 is a Normal Discharge summary from Sri Venkateswara Institute of Medical Sciences for patient Mrs Bandla Hymavathi, detailing diagnosis of Carcinoma Ovary, treatment history, current chemotherapy protocol (Gemcitabine), and discharge advice after the 2nd cycle of treatment."
+}

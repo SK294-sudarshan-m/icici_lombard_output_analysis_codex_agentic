@@ -1,0 +1,52 @@
+=== PAGE 7 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4005
+Tokens Out: 492
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 7,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "20/922/43/2019,21/923/43/2019,20F924/43/2019",
+    "bill_date": "08/06/2026",
+    "page_indicator": "Page 5 of 5",
+    "document_title": "Medicine Report - In Patient Credit"
+  },
+  "hospital": {
+    "name": "M.P. BIRLA HOSPITAL SATNA",
+    "address": "J.R. Birla Road, Post Birla Vikas, Satna, Madhya Pradesh 485005"
+  },
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "PHARMACY ITEM",
+      "quantity": "185.00",
+      "unit_price": "",
+      "gross_amount": "15,137.69",
+      "discount": "0.00",
+      "amount": "15137.69"
+    },
+    {
+      "sr_no": "",
+      "description": "MATERIAL",
+      "quantity": "32.00",
+      "unit_price": "",
+      "gross_amount": "357.12",
+      "discount": "0.00",
+      "amount": "357.12"
+    }
+  ],
+  "bill_summary": {
+    "gross_amount": "15,494.81",
+    "total_amount": "15494.81",
+    "discount": "0.00",
+    "tax": "",
+    "net_payable": "15494.81",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "raw_summary": "Page 5 of 5 of an in-patient medicine credit report from M.P. Birla Hospital Satna, dated 08/06/2026, detailing pharmacy items and materials with quantities, gross amounts, and net payable amounts totaling 15,494.81."
+}

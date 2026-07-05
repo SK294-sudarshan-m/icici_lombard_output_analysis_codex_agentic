@@ -1,0 +1,11 @@
+{
+  "consolidated_bill": "consolidated_final",
+  "source_bills": 6,
+  "expanded_categories": [],
+  "total_charges": 168,
+  "total_line_items": 168,
+  "overall_confidence": 0.0,
+  "flagged_for_review": 1,
+  "amounts_match": false,
+  "amount_diff": 60949.75
+}

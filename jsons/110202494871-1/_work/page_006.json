@@ -1,0 +1,357 @@
+{
+  "page": 6,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "",
+    "document_title": "DISPOSABLE BREAKUP and LAB DETAILS"
+  },
+  "patient": {
+    "name": "By.Jessica",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "509984/1327",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "KALYANI GENERAL HOSPITAL",
+    "address": "15, Dr. Radhakrishnan Salai, Chennai - 600 004 (South India)",
+    "contact": "Phone : 28470642, 28473306, 28475101"
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [
+    {
+      "bill_number": "",
+      "bill_category": "DISPOSABLE BREAKUP",
+      "document_title": "DISPOSABLE BREAKUP",
+      "charges": [
+        {
+          "sr_no": "",
+          "description": "JELCO",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "120"
+        },
+        {
+          "sr_no": "",
+          "description": "EASY FIX",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "50"
+        },
+        {
+          "sr_no": "",
+          "description": "CLEAN GLOVE",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "40"
+        },
+        {
+          "sr_no": "",
+          "description": "NAME TAG",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "50"
+        },
+        {
+          "sr_no": "",
+          "description": "SPLINT",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "50"
+        },
+        {
+          "sr_no": "",
+          "description": "JELCO",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "120"
+        },
+        {
+          "sr_no": "",
+          "description": "EASY FIX",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "50"
+        },
+        {
+          "sr_no": "",
+          "description": "CLEAN GLOVE",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "40"
+        },
+        {
+          "sr_no": "",
+          "description": "Q SITE",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "150"
+        },
+        {
+          "sr_no": "",
+          "description": "MASK",
+          "quantity": "2",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "60"
+        },
+        {
+          "sr_no": "",
+          "description": "MOSQUITO NET",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "250"
+        },
+        {
+          "sr_no": "",
+          "description": "JELCO",
+          "quantity": "3",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "360"
+        },
+        {
+          "sr_no": "",
+          "description": "EASY FIX",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "50"
+        },
+        {
+          "sr_no": "",
+          "description": "CLEAN GLOVE",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "40"
+        },
+        {
+          "sr_no": "",
+          "description": "JELCO",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "120"
+        },
+        {
+          "sr_no": "",
+          "description": "EASY FIX",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "50"
+        },
+        {
+          "sr_no": "",
+          "description": "CLEAN GLOVE",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "40"
+        },
+        {
+          "sr_no": "",
+          "description": "FILE",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "25"
+        },
+        {
+          "sr_no": "",
+          "description": "CLEAN GLOVE",
+          "quantity": "1",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "40"
+        }
+      ],
+      "bill_summary": {
+        "total_amount": "1705"
+      }
+    },
+    {
+      "bill_number": "",
+      "bill_category": "LAB DETAILS",
+      "document_title": "LAB DETAILS",
+      "charges": [
+        {
+          "sr_no": "",
+          "description": "CBC,OT,PT",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "775"
+        },
+        {
+          "sr_no": "",
+          "description": "ELE,CRP,DENGUE",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "1875"
+        },
+        {
+          "sr_no": "",
+          "description": "URINE ROUTINE, URINE CLS",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "700"
+        },
+        {
+          "sr_no": "",
+          "description": "RMT",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "330"
+        },
+        {
+          "sr_no": "",
+          "description": "PCV,PLT",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "185"
+        },
+        {
+          "sr_no": "",
+          "description": "LFT",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "675"
+        },
+        {
+          "sr_no": "",
+          "description": "DENGUEIGM,LEPTO IGM",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "1850"
+        },
+        {
+          "sr_no": "",
+          "description": "LEPTO IGM",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "700"
+        },
+        {
+          "sr_no": "",
+          "description": "PCV,PLT",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "185"
+        },
+        {
+          "sr_no": "",
+          "description": "CRP",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "250"
+        },
+        {
+          "sr_no": "",
+          "description": "URINE ROUTINE",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "125"
+        },
+        {
+          "sr_no": "",
+          "description": "LFT,CRP",
+          "quantity": "",
+          "unit_price": "",
+          "gross_amount": "",
+          "discount": "",
+          "amount": "925"
+        }
+      ],
+      "bill_summary": {
+        "total_amount": "8575"
+      }
+    }
+  ],
+  "raw_summary": "Page 6 contains two separate bill sections: 'DISPOSABLE BREAKUP' with 19 line items totaling 1705, and 'LAB DETAILS' with 12 line items totaling 8575, both for patient By.Jessica (OP/IP: 509984/1327) at Kalyani General Hospital.",
+  "bill_category": "Consumable Charges"
+}

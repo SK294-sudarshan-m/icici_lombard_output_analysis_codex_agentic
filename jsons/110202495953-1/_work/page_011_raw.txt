@@ -1,0 +1,16 @@
+=== PAGE 11 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4135
+Tokens Out: 106
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 11,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "MICROBIOLOGY"
+  },
+  "raw_summary": "Microbiology lab report for urine culture showing Klebsiella Species with colony count >50000 CFU/ml and antibiotic sensitivity results, prepared by IRIN SIMON NUR and signed by Dr. SR.BRIJEETHA."
+}

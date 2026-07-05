@@ -1,0 +1,48 @@
+{
+  "source_pages": [
+    1,
+    2,
+    3
+  ],
+  "primary_diagnosis": "CALCULUS CHOLECYSTITIS",
+  "procedures": [
+    "LAPAROSCOPIC CHOLECYSTECTOMY",
+    "Cystic duct and artery were clipped and divided",
+    "Gall bladder separated from Gall bladder fossa",
+    "Gall bladder extracted from umbilical port",
+    "Port closure done",
+    "CND done"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "2",
+  "treating_doctor": "Gaurav Prakash Sawant",
+  "department": "General Surgery",
+  "pre_existing_diseases": [],
+  "treatment": "Laparoscopic cholecystectomy performed with postoperative IV antibiotics and supportive care.",
+  "medications": [
+    {
+      "name": "Tablet Ceftum 500",
+      "dosage": "1-0-1 (after meals)",
+      "frequency": "After meals",
+      "duration": "5 days"
+    },
+    {
+      "name": "Tablet Diclogesic",
+      "dosage": "1-0-1 (after meals)",
+      "frequency": "After meals",
+      "duration": "5 days then SOS if pain"
+    },
+    {
+      "name": "Tablet Pan 40",
+      "dosage": "1-0-1 (30 minutes before meal)",
+      "frequency": "30 minutes before meal",
+      "duration": "5 days"
+    },
+    {
+      "name": "Syrup Cremaffine",
+      "dosage": "30 ml 0-0-1",
+      "frequency": "0-0-1",
+      "duration": "1 week"
+    }
+  ]
+}

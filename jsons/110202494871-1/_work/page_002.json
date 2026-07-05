@@ -1,0 +1,25 @@
+{
+  "page": 2,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "JESSICA",
+    "age": "8Years",
+    "gender": "Female",
+    "ip_number": "1327/26",
+    "uhid": "509984"
+  },
+  "admission": {
+    "date_of_admission": "30/05/2026",
+    "date_of_discharge": "08/06/2026"
+  },
+  "hospital": {
+    "name": "KALYANI GENERAL HOSPITAL",
+    "address": "15, Dr. Radhakrishnan Salai, Chennai - 600 004 (South India)",
+    "contact": "Phone: 28470642, 28473306, 28475101"
+  },
+  "raw_summary": "Discharge summary for 8-year-old female patient Jessica, detailing diagnosis (urosepsis, acalculous cholecystitis, probable enteric fever), complaints, history of present illness, and physical findings upon discharge."
+}

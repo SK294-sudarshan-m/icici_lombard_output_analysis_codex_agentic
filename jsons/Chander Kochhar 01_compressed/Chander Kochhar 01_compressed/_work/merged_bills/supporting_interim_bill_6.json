@@ -1,0 +1,65 @@
+{
+  "page": 24,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "18764",
+    "bill_date": "2025-02-21",
+    "page_indicator": "24",
+    "document_title": "AXIS BANK SALE RECEIPT"
+  },
+  "patient": {
+    "name": "MR MANU KOCHHAR"
+  },
+  "hospital": {
+    "name": "P.d. Hinduja Hospital Khar",
+    "address": "plot No. 730 And 724 Mumbai"
+  },
+  "insurance": {
+    "claimed_amount": "50000.00"
+  },
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "BASE AMOUNT",
+      "quantity": "",
+      "unit_price": "",
+      "gross_amount": "50000.00",
+      "discount": "",
+      "amount": "50000.00",
+      "source_line_index": 0,
+      "page_number": 24,
+      "bill_id": "supporting_interim_bill_6",
+      "bill_type_resolve_method": "unresolved",
+      "payability": "unknown",
+      "match_info": {
+        "matched_item": "Lab Amount",
+        "standard_name": "junk",
+        "score": 0.3514,
+        "method": "unresolved"
+      }
+    }
+  ],
+  "bill_summary": {
+    "gross_amount": "50000.00",
+    "total_amount": "50000.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "50000.00",
+    "amount_paid": "50000.00",
+    "balance": "0.00",
+    "advance_paid": ""
+  },
+  "raw_summary": "This is a customer copy of an Axis Bank payment receipt for Rs.50,000.00 dated 2025-02-21, processed via Mastercard EMV with PIN at P.d. Hinduja Hospital Khar, Mumbai, under invoice number 18764.",
+  "pipeline_category": "supporting_interim_bill",
+  "bill_id": "supporting_interim_bill_6",
+  "sequence_reason": "Page 24 is a standalone credit card payment receipt from Axis Bank for the National Health and Education Society at P.D. Hinduja Hospital. It shows a payment of Rs. 50,000.00 on 2025-02-21, which corresponds to the deposit receipt on page 20 (dated 24/02/2025) for the same patient and admission. However, it is a separate financial transaction document with its own unique identifiers (Invoice No. 18764, TID, etc.) and does not continue any previous bill, making it a new, independent group.",
+  "source_pages": [
+    24
+  ],
+  "merged_from": 1,
+  "merge_stats": {
+    "total_charges": 1,
+    "summary_rows_removed": 0,
+    "duplicates_removed": 0
+  }
+}

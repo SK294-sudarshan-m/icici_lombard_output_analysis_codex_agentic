@@ -1,0 +1,32 @@
+{
+  "page": 7,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "document_title": "Authorization Letter to the Hospital for the Treatment and Guarantee of Payment (Part-D)"
+  },
+  "patient": {
+    "name": "Chander Kochhar",
+    "age": 88,
+    "gender": "FEMALE",
+    "uhid": "145304681",
+    "ip_number": "123"
+  },
+  "admission": {
+    "date_of_admission": "21-FEB-2025",
+    "date_of_discharge": "24-FEB-25"
+  },
+  "hospital": {
+    "name": "P. D. Hinduja Hospital And Medical Research Centre - Khar",
+    "address": "724, 11Th Road, Khar (W), MUMBAI, Maharashtra-400052",
+    "contact": "Rohini ID 8900080104129"
+  },
+  "insurance": {
+    "company": "ICICI Lombard",
+    "policy_number": "41281/HSHA/255992166/00/000",
+    "member_id": "CHANDER KOCHHAR",
+    "approved_amount": 80698,
+    "tpa": "ICICI Lombard"
+  },
+  "raw_summary": "Pre-authorization letter from ICICI Lombard approving Rs 80698 for treatment of Chander Kochhar at P.D. Hinduja Hospital, with policy details, deductions, and validity period."
+}

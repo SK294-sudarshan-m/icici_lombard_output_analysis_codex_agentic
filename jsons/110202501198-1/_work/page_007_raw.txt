@@ -1,0 +1,97 @@
+=== PAGE 7 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3428
+Tokens Out: 739
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 7,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Progress Note"
+  },
+  "patient": {
+    "name": "Mrs Bandla Hymavathi",
+    "age": "62 Y,1 M,17 D",
+    "gender": "Female",
+    "uhid": "893505"
+  },
+  "admission": {
+    "treating_doctor": "Dr. Dinakar Kootala",
+    "department": "Medical Oncology"
+  },
+  "hospital": {
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "address": "ALIPIRI ROAD, TIRUPATI-517507",
+    "contact": "Phone: 0877-2287777; Email: svimshosp@yahoo.com"
+  },
+  "medications": [
+    {
+      "name": "Inj GEMCITABINE",
+      "dosage": "800mg/m2 D1, D8 & D15 q4 weekly",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tab NETUPITANT",
+      "dosage": "PO OD 30mins before chemotherapy",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Inj ONDANSETRON",
+      "dosage": "8 mg + Inj DEXAMETASONE 8mg in 100 ml NS I.V over 30 Minutes",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Inj GEMCITABINE",
+      "dosage": "1200 mg (ready to administer formulation) I.V over 30 minutes",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "IVF",
+      "dosage": "100ml N.S I.V over 30 Min",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tab ONDANSETRON",
+      "dosage": "8mg SOS - 6",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tab TRAMADOL",
+      "dosage": "37.5mg+PARACETMOL 325mg SOS - 10",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Tab PANTOPRAZOLE",
+      "dosage": "40mg OD - 10",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    }
+  ],
+  "raw_summary": "Progress note page for patient Mrs Bandla Hymavathi detailing chemotherapy protocol (GEMCITABINE), pre-chemo medications, discharge advice, and clinical remarks, with no billing information or charges."
+}

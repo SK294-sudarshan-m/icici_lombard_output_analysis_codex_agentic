@@ -1,0 +1,16 @@
+{
+  "categories": {
+    "detailed_final_bill": [
+      {
+        "bill_id": "detailed_final_bill_1",
+        "pages": [
+          4,
+          5
+        ],
+        "sequence_reason": "The pages are explicitly numbered 'Page 1 of 2' and 'Page 2 of 2' respectively, indicating they are parts of the same two-page bill. Page 4 contains the itemized charges and total amount, while Page 5 is the continuation page with the signature and stamp, confirming the logical sequence."
+      }
+    ]
+  },
+  "total_tokens_in": 2231,
+  "total_tokens_out": 109
+}

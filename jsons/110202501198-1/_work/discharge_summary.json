@@ -1,0 +1,64 @@
+{
+  "source_pages": [
+    4,
+    5,
+    7,
+    10,
+    12,
+    13
+  ],
+  "primary_diagnosis": "Carcinoma Ovary",
+  "procedures": [],
+  "severity": "Moderate",
+  "length_of_stay": "0",
+  "treating_doctor": "D Bhargavi",
+  "department": "Medical Oncology",
+  "pre_existing_diseases": [
+    "Carcinoma Ovary"
+  ],
+  "treatment": "Single agent Gemcitabine chemotherapy administered for 2nd cycle on day 8 of admission.",
+  "medications": [
+    {
+      "name": "Gemcitabine",
+      "dosage": "1200mg",
+      "frequency": "Inj. D8",
+      "duration": "2nd cycle"
+    },
+    {
+      "name": "ONDANSETRON",
+      "dosage": "8mg",
+      "frequency": "SOS",
+      "duration": "6"
+    },
+    {
+      "name": "TRAMADOL+PARACETMOL",
+      "dosage": "37.5mg+325mg",
+      "frequency": "SOS",
+      "duration": "10"
+    },
+    {
+      "name": "PANTOPRAZOLE",
+      "dosage": "40mg",
+      "frequency": "OD",
+      "duration": "10"
+    },
+    {
+      "name": "Dexamethasone",
+      "dosage": "4 mg",
+      "frequency": "IV over 30 minutes",
+      "duration": "Pre-chemo"
+    },
+    {
+      "name": "TRAMADOL",
+      "dosage": "50 mg",
+      "frequency": "IV over 10 minutes",
+      "duration": "As needed"
+    },
+    {
+      "name": "PARACETAMOL",
+      "dosage": "325 mg",
+      "frequency": "SOS",
+      "duration": "As needed"
+    }
+  ]
+}

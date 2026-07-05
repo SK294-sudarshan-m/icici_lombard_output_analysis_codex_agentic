@@ -1,0 +1,66 @@
+=== PAGE 1 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4376
+Tokens Out: 604
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE CERTIFICATE"
+  },
+  "patient": {
+    "name": "SAMSUNNEHAR KHATUN",
+    "age": "68YRS.",
+    "gender": "F",
+    "uhid": "P2606797",
+    "ip_number": "IP26004215",
+    "bed_number": "408"
+  },
+  "admission": {
+    "date_of_admission": "07.06.2026@ 06:47 AM",
+    "date_of_discharge": "09/06/26",
+    "treating_doctor": "DR. G M SADIQUE"
+  },
+  "hospital": {
+    "name": "MANMOHINI HEALTHCARE",
+    "address": "24/A/B/15, Kalikapur Road, Berhampore Shilpataluk, E-mail : manmohinihealthcare@gmail.com",
+    "contact": "Help Line : 9732792000 / 3000 / 5000"
+  },
+  "medications": [
+    {
+      "name": "TAB-CETIL (500)",
+      "dosage": "1 TAB",
+      "frequency": "TWICE DAILY",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "TAB-PAN (40)",
+      "dosage": "1 TAB",
+      "frequency": "ONCE BEFORE BREAKFAST DAILY",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "TAB-ZERODOL-P",
+      "dosage": "1 TAB",
+      "frequency": "TWICE DAILY",
+      "duration": "5 DAYS"
+    },
+    {
+      "name": "SYP DUPHALAC",
+      "dosage": "20 ML",
+      "frequency": "AT BED TIME",
+      "duration": "5 DAYS (STOP IF DIARRHEA)"
+    },
+    {
+      "name": "T-BACT OINTMENT",
+      "dosage": "APPLY LOCALLY",
+      "frequency": "THRICE DAILY",
+      "duration": "5 DAYS"
+    }
+  ],
+  "raw_summary": "Discharge certificate for patient Samsunnehara Khatun, 68F, discharged on 09/06/26 after laparoscopic cholecystectomy performed on 07.06.2026; includes diagnosis, admission reason, vitals, medications with instructions, and follow-up advice."
+}

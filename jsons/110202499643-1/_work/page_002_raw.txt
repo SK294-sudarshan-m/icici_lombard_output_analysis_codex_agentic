@@ -1,0 +1,68 @@
+=== PAGE 2 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4078
+Tokens Out: 636
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 2,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "P2606797",
+    "bill_date": "09-Jun-26",
+    "page_indicator": "Page 1 of 1",
+    "document_title": "FINAL BILL BREAK UP"
+  },
+  "patient": {
+    "name": "Mrs. SAMSUNNEHAR KHATUN",
+    "age": "68 Yrs",
+    "gender": "F",
+    "uhid": "P2606797",
+    "ip_number": "IP26004215",
+    "ward": "PRIVATE CABIN 408 (PRIVATE)",
+    "bed_number": "408"
+  },
+  "admission": {
+    "date_of_admission": "07-Jun-2026 06:47",
+    "admission_type": "PRIVATE CABIN 408"
+  },
+  "hospital": {
+    "name": "MANMOHINI HEALTHCARE",
+    "address": "24/A/B/15,Kalikapur Road,Shilpataluk,Po-Berhampore,742101,Dist-Murshidabad",
+    "contact": "CE Licence No. : 33352489"
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "55000.00",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [
+    {
+      "sr_no": "",
+      "description": "CHOLECYSTECTOMY PACKAGE (DR G.M SADIQUE) (PRIVATE)",
+      "quantity": "1",
+      "unit_price": "55000",
+      "gross_amount": "55000.00",
+      "discount": "",
+      "amount": "55000.00"
+    }
+  ],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "55000.00",
+    "total_amount": "55000.00",
+    "discount": "",
+    "tax": "",
+    "net_payable": "55000.00",
+    "amount_paid": "",
+    "balance": "55000.00",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Final bill for Mrs. Samsunnehara Khatun for a Cholecystectomy Package under Dr. G.M. Sadique, billed on 09-Jun-26 with a total payable of Rs. 55,000.00, covered under ICICI Lombard insurance."
+}

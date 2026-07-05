@@ -1,0 +1,840 @@
+{
+  "bill_id": "b44fbd70",
+  "case_number": "110202499409-1",
+  "bill_summary": {
+    "extracted_amount": 43000.0,
+    "calculated_amount": 43000.0,
+    "discount": 0.0,
+    "tax": 0.0,
+    "extracted_after_discount": 43000.0,
+    "calculated_after_discount": 43000.0,
+    "total_line_items": 8,
+    "amounts_match": true,
+    "overall_confidence": 0.97,
+    "case_verdict": 1,
+    "summary": "Case is in order and recommended for processing. The consolidated bill has 8 line item(s) totalling ₹43,000.00 (gross), with a net payable of ₹43,000.00. the line items reconcile with the bill's printed total. 2 line item(s) are flagged for review. billing type assessed as Day Care. extraction confidence 0.97.",
+    "billing_type": {
+      "billing_type": "Day Care",
+      "confidence": 0.85,
+      "reasoning": "Length of stay < 24h (0h)"
+    }
+  },
+  "patient": {
+    "name": "MR.VENKATACHALAM.M",
+    "age": "64 YEAR(S)",
+    "gender": "M",
+    "uhid": "215507",
+    "ip_number": "000279"
+  },
+  "hospital": {
+    "name": "L.V.S. EYE HOSPITAL",
+    "address": "13-A, Palaniappa Street, Opposite to G.H, Erode - 638 009",
+    "contact": "82200 07131, 82200 17131"
+  },
+  "insurance": {
+    "company": "ICICI Lombard",
+    "policy_number": "4016/X/163142411/07/000",
+    "member_id": "",
+    "claimed_amount": "0",
+    "approved_amount": "",
+    "tpa": "ICICI Lombard Health Care"
+  },
+  "admission": {
+    "date_of_admission": "2026-06-08",
+    "date_of_discharge": "2026-06-08",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "charges": [
+    {
+      "bill_type": "Cost of Implant",
+      "bill_type_id": "1011059",
+      "sub_bill_type": "Intra Ocular Lense IOL",
+      "sub_bill_type_id": "1011079",
+      "sr_no": "1",
+      "description": "RIGHT EYE - MICS PHACO WITH ACRYSOF IQ TORIC IOL IMPLANTATION DONE UNDER TOPICAL ANAESTHESIA",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "",
+      "source_line_index": 0,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Acrysof Iq Toric Iol Implant",
+        "standard_name": "implant",
+        "score": 0.6765,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Description matches exactly. Amount is missing in extracted data but is present in image (16,750). bill_type and sub_bill_type are correct per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "1\tRIGHT EYE - MICS PHACO WITH ACRYSOF IQ TORIC IOL",
+          "match_ratio": 0.676
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 0
+    },
+    {
+      "bill_type": "Cost of Implant",
+      "bill_type_id": "500535",
+      "sub_bill_type": "Intra Ocular Lense IOL",
+      "sub_bill_type_id": "1014386",
+      "sr_no": "2",
+      "description": "COST OF IMPLANTS",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "16750",
+      "source_line_index": 1,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Cost Of Implant- Details Attached",
+        "standard_name": "implant",
+        "score": 0.7514,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.85,
+          "reason": "Amount 16750 is correct. Description matches. bill_type 'Investigation Charges' is incorrect; should be 'Cost of Implant'."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "2\tCOST OF IMPLANTS\t16,750",
+          "match_ratio": 0.78
+        }
+      },
+      "status": "flagged",
+      "bill_type_match": "llm_selected",
+      "display_order": 1,
+      "flag_reason": "LLM confidence 0.85 < 0.9: Amount 16750 is correct. Description matches. bill_type 'Investigation Charges' is incorrect; should be 'Cost of Implant'."
+    },
+    {
+      "bill_type": "Operation Theatre Charges",
+      "bill_type_id": "500539",
+      "sub_bill_type": "Operation Theatre Charges",
+      "sub_bill_type_id": "1014389",
+      "sr_no": "3",
+      "description": "THEATRE CHARGES",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "7500",
+      "source_line_index": 2,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Theatre Charges",
+        "standard_name": "miscellaneous charges",
+        "score": 0.9265,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.85,
+          "reason": "Amount 7500 is correct. Description matches. bill_type 'Operation Theatre Charges' is correct, but sub_bill_type 'Cathlab' is incorrect; should be 'Operation Theatre Charges' or similar generic OT charge."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "3\tTHEATRE CHARGES\t7,500",
+          "match_ratio": 0.789
+        }
+      },
+      "status": "flagged",
+      "bill_type_match": "vector_direct",
+      "display_order": 2,
+      "flag_reason": "LLM confidence 0.85 < 0.9: Amount 7500 is correct. Description matches. bill_type 'Operation Theatre Charges' is correct, but sub_bill_type 'Cathlab' is incorrect; should be 'Operation Theatre Charges' or similar generic OT charge."
+    },
+    {
+      "bill_type": "Surgeon Charges",
+      "bill_type_id": "500530",
+      "sub_bill_type": "Procedure or Surgery or Operation Charges",
+      "sub_bill_type_id": "1011539",
+      "sr_no": "4",
+      "description": "SURGEON AND OPEARTING TEAMS CHARGES",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "9750",
+      "source_line_index": 3,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Surgeon And Opearting Teams Charges",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.7475,
+        "method": "llm_selected"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount 9750 is correct. Description matches. bill_type 'Surgeon Charges' and sub_bill_type 'Procedure or Surgery or Operation Charges' are correct per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "4\tSURGEON AND OPEARTING TEAMS CHARGES\t9,750",
+          "match_ratio": 0.897
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "llm_selected",
+      "display_order": 3
+    },
+    {
+      "bill_type": "Procedure Charges",
+      "bill_type_id": "500642",
+      "sub_bill_type": "Surgery or Operation charges",
+      "sub_bill_type_id": "1014407",
+      "sr_no": "5",
+      "description": "PHACO CHARGES",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "3000",
+      "source_line_index": 4,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Phaco Charges",
+        "standard_name": "Not in list",
+        "score": 0.8913,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount 3000 is correct. Description matches. bill_type 'Procedure Charges' and sub_bill_type 'Surgery or Operation charges' are correct per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "5\tPHACO CHARGES\t3,000",
+          "match_ratio": 0.765
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 4
+    },
+    {
+      "bill_type": "Medicines Pharmacy Charges",
+      "bill_type_id": "500533",
+      "sub_bill_type": "Medicines Pharmacy Charges",
+      "sub_bill_type_id": "706048",
+      "sr_no": "6",
+      "description": "O.T.MEDICINE CHARGES(BILL ATTACHED)",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "4000",
+      "source_line_index": 5,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "O.T.Medicine Charges",
+        "standard_name": "medicine",
+        "score": 0.8343,
+        "method": "vector_consensus"
+      },
+      "aggregation_match": {
+        "category": "pharmacy_bill",
+        "final_bill_amount": 4000.0,
+        "supporting_bills_total": 4000.0,
+        "difference": 0.0,
+        "difference_pct": 0.0,
+        "tolerance_pct": 15.0,
+        "within_tolerance": true
+      },
+      "expanded_details": [
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "1",
+          "description": "Centurion Balanced Salt Solution",
+          "quantity": "1",
+          "unit_price": "764.00",
+          "amount": "764.00",
+          "source_line_index": 0,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Balanced Salt Solution (Bss)",
+            "standard_name": "medicine",
+            "score": 0.6136,
+            "method": "llm_selected"
+          },
+          "status": "correct",
+          "bill_type_match": "llm_selected",
+          "display_order": 6,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for a medicine."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "1\tCenturion Balanced Salt Solution\t1",
+              "match_ratio": 0.941
+            }
+          }
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "2",
+          "description": "Tropicamide Eye drops",
+          "quantity": "1",
+          "unit_price": "50.00",
+          "amount": "50.00",
+          "source_line_index": 1,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Tropicacyl 1% 5Ml (Sunways)",
+            "standard_name": "medicine",
+            "score": 0.373,
+            "method": "llm_normalized_selected"
+          },
+          "status": "correct",
+          "bill_type_match": "llm_normalized_selected",
+          "display_order": 7,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for eye drops."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "2\tTropicamide Eye drops\t1\t50.00\t50.00",
+              "match_ratio": 0.724
+            }
+          }
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "3",
+          "description": "Hynidase Injection",
+          "quantity": "1",
+          "unit_price": "139.00",
+          "amount": "139.00",
+          "source_line_index": 2,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Hynidase 1500Iu In :- :-",
+            "standard_name": "medicine",
+            "score": 0.655,
+            "method": "llm_selected"
+          },
+          "status": "correct",
+          "bill_type_match": "llm_selected",
+          "display_order": 8,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for an injection."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "3\tHynidase Injection\t1\t139.00",
+              "match_ratio": 0.766
+            }
+          }
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "4",
+          "description": "Aurodone Eye Drops",
+          "quantity": "1",
+          "unit_price": "25.00",
+          "amount": "25.00",
+          "source_line_index": 3,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Aurolab - Aurodone Drops",
+            "standard_name": "medicine",
+            "score": 0.7775,
+            "method": "llm_selected"
+          },
+          "status": "correct",
+          "bill_type_match": "llm_selected",
+          "display_order": 9,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for eye drops."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "Aurodone Eye Drops",
+              "match_ratio": 1.0
+            }
+          }
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "5",
+          "description": "Paracaine Eye Drops",
+          "quantity": "1",
+          "unit_price": "51.00",
+          "amount": "51.00",
+          "source_line_index": 4,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Paracain Eye Drops 5Ml",
+            "standard_name": "medicine",
+            "score": 0.8139,
+            "method": "vector_consensus"
+          },
+          "status": "correct",
+          "bill_type_match": "vector_consensus",
+          "display_order": 10,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for eye drops."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "Aurodone Eye Drops",
+              "match_ratio": 0.757
+            }
+          }
+        },
+        {
+          "bill_type": "Consumable Charges",
+          "bill_type_id": "500534",
+          "sub_bill_type": "OT Materials",
+          "sub_bill_type_id": "1014363",
+          "sr_no": "6",
+          "description": "Keratome",
+          "quantity": "2",
+          "unit_price": "80.00",
+          "amount": "160.00",
+          "source_line_index": 5,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Non-Payable",
+          "match_info": {
+            "matched_item": "",
+            "standard_name": "",
+            "score": 0,
+            "method": "llm_master_taxonomy"
+          },
+          "status": "correct",
+          "bill_type_match": "llm_master_taxonomy",
+          "display_order": 11,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type 'Consumable Charges' with sub_bill_type 'OT Materials' is appropriate for 'Keratome' as per master list."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "6\tKeratome",
+              "match_ratio": 0.889
+            }
+          }
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "7",
+          "description": "Auromox Injection",
+          "quantity": "1",
+          "unit_price": "148.00",
+          "amount": "148.00",
+          "source_line_index": 6,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Aurolab- Auro Mox",
+            "standard_name": "medicine",
+            "score": 0.5636,
+            "method": "llm_selected"
+          },
+          "status": "correct",
+          "bill_type_match": "llm_selected",
+          "display_order": 12,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for an injection."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "Auromox Injection",
+              "match_ratio": 1.0
+            }
+          }
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "8",
+          "description": "Viscoat - Alcon",
+          "quantity": "1",
+          "unit_price": "2204.00",
+          "amount": "2204.00",
+          "source_line_index": 7,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Viscoat .75Ml",
+            "standard_name": "medicine",
+            "score": 0.6501,
+            "method": "llm_selected"
+          },
+          "status": "correct",
+          "bill_type_match": "llm_selected",
+          "display_order": 13,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for a viscoelastic agent used in surgery."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "8\tViscoat - Alcon\t1\t2204.00\t2204.00",
+              "match_ratio": 0.6
+            }
+          }
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "9",
+          "description": "Moxicip Eye Drops",
+          "quantity": "1",
+          "unit_price": "87.00",
+          "amount": "87.00",
+          "source_line_index": 8,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Moxicip Eye Drops",
+            "standard_name": "medicine",
+            "score": 1.0,
+            "method": "vector_direct"
+          },
+          "status": "correct",
+          "bill_type_match": "vector_direct",
+          "display_order": 14,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for eye drops."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "9\tMoxicip Eye Drops",
+              "match_ratio": 0.944
+            }
+          }
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "10",
+          "description": "Myticom Eye Drops",
+          "quantity": "2",
+          "unit_price": "84.00",
+          "amount": "168.00",
+          "source_line_index": 9,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "",
+            "standard_name": "",
+            "score": 0,
+            "method": "llm_master_taxonomy"
+          },
+          "status": "correct",
+          "bill_type_match": "llm_master_taxonomy",
+          "display_order": 15,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for eye drops."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "10\tMyticom Eye Drops",
+              "match_ratio": 0.919
+            }
+          }
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "11",
+          "description": "Homide Eye Drops",
+          "quantity": "1",
+          "unit_price": "27.00",
+          "amount": "27.00",
+          "source_line_index": 10,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "Homide E/Drop 5Ml Dr. Bharatkumar Varakanahalli",
+            "standard_name": "medicine",
+            "score": 0.507,
+            "method": "llm_selected"
+          },
+          "status": "correct",
+          "bill_type_match": "llm_selected",
+          "display_order": 16,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for eye drops."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "11\tHomide Eye Drops\t1",
+              "match_ratio": 0.865
+            }
+          }
+        },
+        {
+          "bill_type": "Medicines Pharmacy Charges",
+          "bill_type_id": "500533",
+          "sub_bill_type": "Medicines Pharmacy Charges",
+          "sub_bill_type_id": "706048",
+          "sr_no": "12",
+          "description": "Amplinak Eye Drops",
+          "quantity": "1",
+          "unit_price": "177.00",
+          "amount": "177.00",
+          "source_line_index": 11,
+          "charge_type": "line_item",
+          "page_number": 3,
+          "bill_id": "pharmacy_bill_1",
+          "payability": "Payable",
+          "match_info": {
+            "matched_item": "",
+            "standard_name": "",
+            "score": 0,
+            "method": "llm_master_taxonomy"
+          },
+          "status": "correct",
+          "bill_type_match": "llm_master_taxonomy",
+          "display_order": 17,
+          "confidence": {
+            "llm": {
+              "score": 1.0,
+              "reason": "All values (description, quantity, unit price, amount) exactly match the image. Bill type is appropriate for eye drops."
+            },
+            "textract": {
+              "score": 1.0,
+              "page_mean": 1.0,
+              "matched_line": "12\tAmplinak Eye Drops",
+              "match_ratio": 0.923
+            }
+          }
+        }
+      ],
+      "expanded_details_total": 4000.0,
+      "expanded_details_match": true,
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount 4000 is correct. Description matches. bill_type 'Medicines Pharmacy Charges' and sub_bill_type 'Medicines Pharmacy Charges' are correct per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "6\tO.T.MEDICINE CHARGES(BILL ATTACHED)\t4,000",
+          "match_ratio": 0.897
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_consensus",
+      "display_order": 5
+    },
+    {
+      "bill_type": "Anesthetist Charges",
+      "bill_type_id": "500528",
+      "sub_bill_type": "Anesthetist Charges",
+      "sub_bill_type_id": "706035",
+      "sr_no": "7",
+      "description": "ANAESTHESIA CHARGES",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "1000",
+      "source_line_index": 6,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Anaesthetics Charges",
+        "standard_name": "doctor charges - doctor charges",
+        "score": 0.9208,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount 1000 is correct. Description matches. bill_type 'Anesthetist Charges' and sub_bill_type 'Anesthetist Charges' are correct per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "7\tANAESTHESIA CHARGES\t1,000",
+          "match_ratio": 0.826
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 18
+    },
+    {
+      "bill_type": "Room Charges",
+      "bill_type_id": "1000739",
+      "sub_bill_type": "Room Charge",
+      "sub_bill_type_id": "1000746",
+      "sr_no": "8",
+      "description": "ROOM RENT& NURSING CHARGES",
+      "quantity": "",
+      "unit_price": "",
+      "discount": "",
+      "amount": "1000",
+      "source_line_index": 7,
+      "charge_type": "line_item",
+      "page_number": 1,
+      "bill_id": "final_bill_1",
+      "payability": "Payable",
+      "match_info": {
+        "matched_item": "Room Rent  And Nursing Charges",
+        "standard_name": "Not in list",
+        "score": 0.9437,
+        "method": "vector_direct"
+      },
+      "confidence": {
+        "llm": {
+          "score": 0.95,
+          "reason": "Amount 1000 is correct. Description matches. bill_type 'Room Charges' and sub_bill_type 'Room Charge' are correct per master list."
+        },
+        "textract": {
+          "score": 1.0,
+          "page_mean": 1.0,
+          "matched_line": "8\tROOM RENT& NURSING CHARGES\t1,000",
+          "match_ratio": 0.867
+        }
+      },
+      "status": "correct",
+      "bill_type_match": "vector_direct",
+      "display_order": 19
+    }
+  ],
+  "returns": [],
+  "knocked_off_bills": [],
+  "review_summary": {
+    "total_flagged": 2,
+    "flagged_items": [
+      {
+        "index": 1,
+        "description": "COST OF IMPLANTS",
+        "page_number": 1,
+        "bill_id": "final_bill_1",
+        "confidence": 0.85,
+        "reason": "LLM confidence 0.85 < 0.9: Amount 16750 is correct. Description matches. bill_type 'Investigation Charges' is incorrect; should be 'Cost of Implant'."
+      },
+      {
+        "index": 2,
+        "description": "THEATRE CHARGES",
+        "page_number": 1,
+        "bill_id": "final_bill_1",
+        "confidence": 0.85,
+        "reason": "LLM confidence 0.85 < 0.9: Amount 7500 is correct. Description matches. bill_type 'Operation Theatre Charges' is correct, but sub_bill_type 'Cathlab' is incorrect; should be 'Operation Theatre Charges' or similar generic OT charge."
+      }
+    ]
+  },
+  "overall_confidence": 0.97
+}

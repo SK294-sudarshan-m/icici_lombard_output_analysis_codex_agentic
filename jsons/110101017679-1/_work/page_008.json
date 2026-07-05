@@ -1,0 +1,20 @@
+{
+  "page": 8,
+  "page_type": "non_bill",
+  "non_bill_type": "prescription",
+  "document_markers": {
+    "document_title": "ROH Roopa Orthopaedic & Multi Speciality Hospital"
+  },
+  "patient": {
+    "name": "pradhunar yadav",
+    "age": "IS",
+    "gender": "Hf",
+    "ip_number": "6433"
+  },
+  "hospital": {
+    "name": "ROH Roopa Orthopaedic & Multi Speciality Hospital",
+    "address": "Opp. High School Road Bus Stop, Patamata, VIJAYAWADA - 10.",
+    "contact": "0866-2473108"
+  },
+  "raw_summary": "Handwritten prescription page from Roopa Orthopaedic & Multi Speciality Hospital listing medications and dosages for patient Pradhunar Yadav, with hospital stamp and IP number."
+}

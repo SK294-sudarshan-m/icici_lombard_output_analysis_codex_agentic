@@ -1,0 +1,72 @@
+=== PAGE 20 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4131
+Tokens Out: 508
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 20,
+  "page_type": "non_bill",
+  "non_bill_type": "prescription",
+  "document_markers": {
+    "document_title": "STEP3 - CHEMOTHERAPY ORDERS"
+  },
+  "medications": [
+    {
+      "name": "INJ GENOXL-PH",
+      "dosage": "230 mg",
+      "frequency": "IV 500 ml NS over 3 hrs",
+      "duration": ""
+    },
+    {
+      "name": "INJ CARBOPLATIN",
+      "dosage": "440 mg",
+      "frequency": "IV 5YD 500 ml over 2 hrs",
+      "duration": ""
+    },
+    {
+      "name": "INJ PEG",
+      "dosage": "6 mg",
+      "frequency": "S/c after 24 hrs",
+      "duration": ""
+    },
+    {
+      "name": "Tab Emeset",
+      "dosage": "8mg",
+      "frequency": "1-1-1 X 4d",
+      "duration": ""
+    },
+    {
+      "name": "Tab Rantac",
+      "dosage": "150 mg",
+      "frequency": "1-0-1 x4d",
+      "duration": ""
+    },
+    {
+      "name": "Tab Tramadol",
+      "dosage": "50 mg",
+      "frequency": "1-1-1x4d",
+      "duration": ""
+    },
+    {
+      "name": "Syp Gaviscon",
+      "dosage": "10 ml",
+      "frequency": "1-1-1",
+      "duration": ""
+    },
+    {
+      "name": "Tab Dolo",
+      "dosage": "650 mg",
+      "frequency": "1-1-1 X 4d",
+      "duration": ""
+    },
+    {
+      "name": "Syp Cramaffin Plus",
+      "dosage": "15 ml",
+      "frequency": "HS",
+      "duration": ""
+    }
+  ],
+  "raw_summary": "Chemotherapy orders and discharge medication instructions for a patient, including IV drugs and oral medications with dosages and frequencies, signed by Dr. Sai Madhuri on 8-6-26."
+}

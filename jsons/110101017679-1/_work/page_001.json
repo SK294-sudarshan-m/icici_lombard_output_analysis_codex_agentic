@@ -1,0 +1,29 @@
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "document_title": "CASHLESS CLAIM APPROVED!"
+  },
+  "patient": {
+    "name": "V PRADYUMNA YADAV",
+    "age": "12",
+    "gender": "MALE",
+    "uhid": "104112565"
+  },
+  "admission": {
+    "date_of_admission": "06-JUN-26",
+    "date_of_discharge": "06-JUN-26",
+    "length_of_stay": "0"
+  },
+  "hospital": {
+    "name": "Roopa Orthopaedic Multi Speciality Hospital",
+    "address": "73-5-3, Ramayanapu Street, Bandar Road, Opp.High School Road Bus Stop, Patamata Vijayawada,Andhra Pradesh-520010"
+  },
+  "insurance": {
+    "policy_number": "4193I/APRN/408802883/00/000",
+    "member_id": "8900080375161",
+    "approved_amount": "16400"
+  },
+  "raw_summary": "Pre-authorization letter approving a cashless claim for Rs. 16,400 for patient V Pradyumna Yadav, with policy details and admission/discharge dates both on 06-JUN-26."
+}

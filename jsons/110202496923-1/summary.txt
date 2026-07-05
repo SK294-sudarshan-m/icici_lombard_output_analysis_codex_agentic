@@ -1,0 +1,12 @@
+PDF: 110202496923-1.pdf
+request_id: e5761e18
+status: completed
+pages: 9
+line_items: 34
+extracted_amount: 17712.18
+payable (after discount): 17712.18
+amounts_match: False
+overall_confidence: 0.6
+billing_type: Surgery
+adjudication_overall: fail
+summary: Case is FLAGGED and needs reviewer attention. The consolidated bill has 34 line item(s) totalling ₹17,712.18 (gross), with a net payable of ₹17,712.18. the printed net (₹24,101.00) was inconsistent with the itemised total (₹17,712.18) and was recomputed. billing type assessed as Surgery. extraction confidence 0.60.

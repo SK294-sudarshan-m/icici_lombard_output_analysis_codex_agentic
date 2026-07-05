@@ -1,0 +1,142 @@
+=== PAGE 5 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4130
+Tokens Out: 903
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 5,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "TREATMENT"
+  },
+  "patient": {},
+  "admission": {},
+  "hospital": {
+    "name": "KALYANI GENERAL HOSPITAL",
+    "address": "MYLAPORE, CHENNAI-600 004",
+    "contact": "04428470504,04428476199,044-28476433"
+  },
+  "insurance": {},
+  "medications": [
+    {
+      "name": "Inj Ceftriaxone",
+      "dosage": "",
+      "frequency": "",
+      "duration": "x 4 days",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Inj. Piptaz",
+      "dosage": "",
+      "frequency": "",
+      "duration": "x 2 days",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Inj.amikacin",
+      "dosage": "",
+      "frequency": "",
+      "duration": "x 2 days",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Inj.Meropenam",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Syp.Calpol",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Syp.Zinconia",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Syp.Fourts B",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Syp.Azithromycin",
+      "dosage": "",
+      "frequency": "",
+      "duration": "x 2 days",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Inj. Pantoprazole",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Syp.Fourts B",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Inj. Emeset",
+      "dosage": "",
+      "frequency": "",
+      "duration": "",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Syp.Faropenem (100mg/5ml)",
+      "dosage": "5ml- 5ml- 5ml",
+      "frequency": "",
+      "duration": "x 5 days",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "Syp.FourtsB",
+      "dosage": "5ml - 0 - 0",
+      "frequency": "",
+      "duration": "x 1 month",
+      "quantity": "",
+      "amount": ""
+    },
+    {
+      "name": "T.pantoprazole 20mg",
+      "dosage": "1 - 0 - 0",
+      "frequency": "",
+      "duration": "x 5 days",
+      "quantity": "",
+      "amount": ""
+    }
+  ],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {},
+  "sub_bills": [],
+  "raw_summary": "Page 5 contains a discharge summary detailing the treatment administered (IV fluids and various injections/syrups) and advice medications with dosages and durations, along with emergency contact information and signatures of the treating doctors at Kalyani General Hospital, Chennai."
+}

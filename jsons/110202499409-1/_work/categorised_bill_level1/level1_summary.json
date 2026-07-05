@@ -1,0 +1,22 @@
+{
+  "bill_pages": {
+    "final_bill": [
+      1
+    ],
+    "pharmacy_bill": [
+      3
+    ]
+  },
+  "non_bill_pages": {
+    "unknown": [
+      2,
+      6
+    ],
+    "discharge_summary": [
+      4,
+      5
+    ]
+  },
+  "unclassified_pages": [],
+  "total_pages": 6
+}

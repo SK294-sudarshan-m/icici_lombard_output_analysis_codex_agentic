@@ -1,0 +1,26 @@
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "DISCHARGE SUMMARY"
+  },
+  "patient": {
+    "name": "MRS CHANDER KOCHHAR",
+    "age": "91 Years",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "bed_number": "110A"
+  },
+  "admission": {
+    "date_of_admission": "21/02/2025 08:41:00 PM",
+    "date_of_discharge": "24/02/2025 10:59:23 AM",
+    "treating_doctor": "ABHAY RAUT"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "724, 11th Road, Khar (West), Mumbai - 400 052, India",
+    "contact": "+91 22 6174 5000 / 2046 9999"
+  },
+  "raw_summary": "Discharge summary for 91-year-old patient Mrs. Chander Kochhar detailing diagnosis of bilateral pulmonary embolism post hip surgery, ICU and ward course, and clinical stability at discharge."
+}

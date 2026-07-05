@@ -1,0 +1,53 @@
+{
+  "page": 4,
+  "page_type": "bill",
+  "raw_summary": "Page 4 contains three separate pharmacy bills dated 05-Jun-2026 and 06-Jun-2026 with itemized charges for medications and surgical supplies, including quantities, unit prices, and total amounts for each item.",
+  "extraction_recall_warning": "Extracted 0 charges but the page appears to have many more line items — possible missed rows, review this page.",
+  "page_sub_id": "4-1",
+  "bill_category": "pharmacy_bill",
+  "pipeline_category": "",
+  "document_markers": {
+    "bill_number": "C136317",
+    "document_title": "",
+    "bill_date": "05-Jun-2026",
+    "page_indicator": ""
+  },
+  "charges": [
+    {
+      "sr_no": "1",
+      "description": "FLUVIR 75MG CAP(OSELTAMIVIR PHOSPHATE 75MG)",
+      "quantity": "1",
+      "unit_price": "50.53",
+      "gross_amount": "50.53",
+      "discount": ".00",
+      "amount": "50.53",
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "1",
+      "description": "CEZON S 1.5GM(Cefoperazone sodium 1 GM+Sulbactam 500 MG)",
+      "quantity": "1",
+      "unit_price": "220.00",
+      "gross_amount": "220.00",
+      "discount": ".00",
+      "amount": "220.00",
+      "charge_type": "line_item"
+    },
+    {
+      "sr_no": "2",
+      "description": "SYRINGE 10ML(Surgicals -)",
+      "quantity": "1",
+      "unit_price": "13.30",
+      "gross_amount": "13.30",
+      "discount": ".00",
+      "amount": "13.30",
+      "charge_type": "line_item"
+    }
+  ],
+  "returns": [],
+  "medications": [],
+  "bill_summary": {
+    "total_amount": "233"
+  },
+  "_split_from_page": 4
+}

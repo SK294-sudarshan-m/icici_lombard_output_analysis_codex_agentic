@@ -1,0 +1,2355 @@
+{
+  "schema_version": "1.0",
+  "request_id": "e5761e18",
+  "source_filename": "110202496923-1.pdf",
+  "generated_at": "2026-07-04T12:49:05.348545+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker. Agents needing review: Administrative Review, Medical Admissibility. 16 issue(s) raised (9 high, 5 medium, 2 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "Mast. GLENN FLEMING PRADEEP",
+      "age": "11M-12D",
+      "gender": "MALE",
+      "uhid": "26-6986",
+      "ip_number": "267341 / IP-001",
+      "ward": "PAEDIATRIC",
+      "bed_number": "ROOM SHARING"
+    },
+    "admission": {
+      "date_of_admission": "03/06/2026 04:00 PM",
+      "date_of_discharge": "08/06/2026 10:43 AM",
+      "length_of_stay": "",
+      "admission_type": "",
+      "referring_doctor": "",
+      "treating_doctor": "Dr HAREEZ",
+      "department": "PAEDIATRIC"
+    },
+    "hospital": {
+      "name": "AJ HOSPITAL",
+      "address": "KAZHAKOOTTAM",
+      "contact": "GST: 32AIKPJ3231C1ZX, PH: 0471-7144600, 9207333388"
+    },
+    "insurance": {
+      "company": "ICICI LOMBARD",
+      "policy_number": "",
+      "member_id": "",
+      "claimed_amount": "24101.00",
+      "approved_amount": "24,101.00",
+      "tpa": ""
+    },
+    "total_pages": 9,
+    "charge_count": 111,
+    "diagnosis": "AC BRONCHIOLITIS",
+    "treatment": "Patient was treated with Inj Ceftriaxone x 5 days, Inj Amikacin x 5 day & symptomatic management."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 6 of 16 mandatory documents are present (37.5% complete, status critical). Critical documents missing: Payment Receipts, Identity Proof - Aadhar. The claim appears to be Reimbursement (confidence 0.90, keyword_matching). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Payment Receipts.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Payment Receipts from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "Critical mandatory document missing: Identity Proof - Aadhar.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Identity Proof - Aadhar from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "8 mandatory document(s) missing: Claim Form, Authorization Letter, Pre Authorization Request Note, Investigation Reports, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Others.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 10 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 3,
+        "medium": 1,
+        "low": 0,
+        "total": 4
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent correctly identifies 6 mandatory documents found, but misclassifies 'Identity Proof - Non Aadhar' as sufficient — Aadhar is explicitly required and missing, which should trigger critical status. The claim type detection is reasonable (keyword 'amount paid'), but the verdict 'INCOMPLETE' is overly harsh given 6/16 documents are present and no critical document like Discharge Summary or Final Bills is missing. The completeness status should be 'critical' (correct), but the overall verdict should be 'PARTIAL' per rubric rule 4.",
+        "suggestions": [
+          "Reclassify 'Identity Proof - Non Aadhar' as insufficient; only 'Identity Proof - Aadhar' satisfies the mandatory requirement.",
+          "Adjust overall verdict from 'INCOMPLETE' to 'PARTIAL' since 6/16 documents are present and no critical document (Discharge Summary, Final Bills) is missing.",
+          "Clarify in notes that 'Identity Proof - Aadhar' is a hard requirement and cannot be substituted by other ID proofs."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.009,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "e5761e18",
+        "source_filename": "110202496923-1.pdf",
+        "generated_at": "2026-07-04T12:48:11.110759Z",
+        "total_pages": 9,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Reimbursement",
+          "detection_method": "keyword_matching",
+          "confidence": 0.9,
+          "cashless_matches": [],
+          "reimbursement_matches": [
+            "amount paid"
+          ]
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Final Hospital Bills",
+            "Pharmacy or Medicine Bills",
+            "Prescription Papers",
+            "Consultation Papers",
+            "Identity Proof - Non Aadhar"
+          ],
+          "missing": [
+            "Claim Form",
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Investigation Reports",
+            "Payment Receipts",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Identity Proof - Aadhar",
+            "Others"
+          ],
+          "missing_critical": [
+            "Payment Receipts",
+            "Identity Proof - Aadhar"
+          ],
+          "found_count": 6,
+          "missing_count": 10,
+          "total_mandatory": 16,
+          "completeness_percent": 37.5,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Final Hospital Bills": "structured",
+            "Pharmacy or Medicine Bills": "fuzzy",
+            "Prescription Papers": "variation",
+            "Consultation Papers": "abbreviation",
+            "Identity Proof - Non Aadhar": "variation"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Payment Receipts, Identity Proof - Aadhar before adjudication.",
+            "Request the following missing documents: Claim Form, Authorization Letter, Pre Authorization Request Note, Investigation Reports, Payment Receipts, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Identity Proof - Aadhar, Others."
+          ]
+        },
+        "non_mandatory_found": [
+          "room rent",
+          "x-ray"
+        ],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 3,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 4,
+            "document_type": "bill_detail_statement",
+            "page_type": "non_bill",
+            "non_bill_type": "prescription",
+            "low_content": false
+          },
+          {
+            "page_no": 5,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 6,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 7,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 8,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 9,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "bill_detail_statement",
+            "start_page": 1,
+            "end_page": 1,
+            "pages": [
+              1
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "discharge_summary",
+            "start_page": 2,
+            "end_page": 3,
+            "pages": [
+              2,
+              3
+            ]
+          },
+          {
+            "document_id": "DOC-0003",
+            "document_type": "bill_detail_statement",
+            "start_page": 4,
+            "end_page": 9,
+            "pages": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=PASS. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date..",
+      "issues": [
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The verdict correctly flags critical SKIPPED checks for 'insured' and 'policy_dates' and assigns WARN status, avoiding false positives. However, it mislabels 'period_compliance' as PASS with advisory severity despite being a non-critical check — this is misleading since the check is clean and should not contribute to WARN. Also, 'identity' is marked PASS but lacks cross-verification with policy/insured data, which is a gap in evidence quality.",
+        "suggestions": [
+          "Reclassify 'period_compliance' as a non-critical check and remove it from advisory issues — it should not influence overall WARN status.",
+          "Enhance 'identity' check evidence to include cross-verification with insured/policy data if available, or explicitly note absence of such linkage.",
+          "Clarify in advisory notes that 'insured' and 'policy_dates' SKIPPED status are blockers for final approval, not just advisories."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "Mast. GLENN FLEMING PRADEEP",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "Mast. GLENN FLEMING PRADEEP",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "Mast. GLENN FLEMING PRADEEP",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_2",
+                  "patient_name": "Mast. GLENN FLEMING PRADEEP",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_5",
+                  "patient_name": "Mast. GLENN FLEMING PRADEEP",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_8",
+                  "patient_name": "Mast. GLENN FLEMING PRADEEP",
+                  "score": 1.0,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "Mast. GLENN FLEMING PRADEEP",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "PASS",
+            "severity": "ADVISORY",
+            "evidence": "6 document(s) checked — in-period=6, out-of-period=0, ambiguous=0.",
+            "detail": {
+              "status": "PASS",
+              "documents": [
+                {
+                  "document_name": "INPATIENT BILL",
+                  "type": "bill",
+                  "date": "08/06/2026 10:49 AM",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-04 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "INPATIENT BILL DETAILED",
+                  "type": "bill",
+                  "date": "08/06/2026 10:43 AM",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-04 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "AJ HOSPITAL KAZHAKOOTTAM",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-04 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "AJ HOSPITAL KAZHAKOOTTAM",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-04 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "AJ HOSPITAL KAZHAKOOTTAM",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-04 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "TOTAL HOSPITAL CHARGES FOR SERVICES/ITEMS",
+                  "type": "bill",
+                  "date": "08/06/2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-04 to 2026-07-08) for type 'bill'."
+                }
+              ],
+              "counts": {
+                "IN_PERIOD": 6,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 0
+              },
+              "total_checked": 6,
+              "hospitalization": {
+                "admission": "2026-06-03",
+                "discharge": "2026-06-08"
+              },
+              "window_config": {
+                "pre_hosp_days": 30,
+                "post_hosp_days": 30
+              }
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+        ],
+        "inputs": {
+          "patient_name": "Mast. GLENN FLEMING PRADEEP",
+          "insured_name": null,
+          "admission_date": "03/06/2026 04:00 PM",
+          "discharge_date": "08/06/2026 10:43 AM",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:48:13.760101+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "warn",
+      "summary": "Medical admissibility is partial: most charges are supported but some need review. Treatment validity score 0.77; recommended action PARTIAL_APPROVE. 111 charge(s): valid=84, partial=4, invalid=6, review=17. Treatment process could not be confirmed: Inappropriate IV antibiotics and excessive non-essential charges without lab support or procedure documentation. Major conflicts: Treating doctor mismatch between billing and discharge summary: Dr HAREEZ vs HAREEZ; 61 line items appear duplicated by description and amount. PED validation: INSUFFICIENT / UNKNOWN across 0 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Charge #82 is INVALID: Carry bag is non-medical; no clinical justification or policy inclusion found.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[82]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #83 is INVALID: Duplicate carry bag; non-medical item with no clinical or policy justification.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[83]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #84 is INVALID: Third carry bag; clearly non-essential; no policy or clinical support for reimbursement.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[84]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #85 is INVALID: Non-medical item (carry bag) not clinically justified for bronchiolitis.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[85]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #86 is INVALID: Non-medical item (carry bag) not clinically justified for bronchiolitis.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[86]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #87 is INVALID: Non-medical item (carry bag) not clinically justified for bronchiolitis.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[87]",
+          "suggestion": null
+        },
+        {
+          "message": "17 charge(s) require manual review.",
+          "severity": "medium",
+          "code": "medical.charge_review",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Treating doctor mismatch between billing and discharge summary: Dr HAREEZ vs HAREEZ",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "61 line items appear duplicated by description and amount",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Treatment process not confirmed: Inappropriate IV antibiotics and excessive non-essential charges without lab support or procedure documentation.",
+          "severity": "medium",
+          "code": "medical.treatment_process",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 6,
+        "medium": 4,
+        "low": 0,
+        "total": 10
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.72,
+        "rationale": "The agent correctly flagged non-medical items (carry bags) as INVALID and identified duplication and IV antibiotic overuse, but inconsistently applied clinical justification: some IV-related charges (e.g., syringes, cannulas) are VALID despite lacking documented procedure support, while others are REVIEW — creating false negatives. The treatment_validity_score (0.77) and PARTIAL verdict are reasonable, but the agent failed to consistently apply the 'no lab evidence' logic to all IV antibiotics, risking under-flagging. PED validation is correctly marked INSUFFICIENT, but the treatment process explanation overreaches by implying policy violations without policy wording.",
+        "suggestions": [
+          "Reclassify all IV-related consumables (syringes, needles, cannulas) as REVIEW unless explicitly linked to documented procedures or lab-justified antibiotics.",
+          "Apply consistent logic: if Amikacin is PARTIAL due to lack of culture evidence, then all associated IV administration charges should also be PARTIAL or REVIEW, not VALID.",
+          "Revise treatment_process_explanation to avoid implying policy exclusions without citing specific policy clauses; stick to clinical appropriateness."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 42.518,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "e5761e18",
+        "generated_at": "2026-07-04T12:48:59.134426Z",
+        "overall_verdict": "PARTIAL",
+        "treatment_validity_score": 0.7748,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "FAIL",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 1,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 2,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 3,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 4,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 5,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 6,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 7,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 8,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 9,
+            "status": "REVIEW",
+            "reason": "Duplicate charge flagged; no clinical justification provided for IV cannula in bronchiolitis.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 10,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 11,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 12,
+            "status": "VALID",
+            "reason": "Budesonide respules align with symptomatic management of moderate bronchiolitis.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 13,
+            "status": "VALID",
+            "reason": "Levosalbutamol respules are standard for bronchodilation in bronchiolitis.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 14,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 15,
+            "status": "PARTIAL",
+            "reason": "Amikacin not typically first-line for bronchiolitis; justification weak without culture evidence.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 16,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 17,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 18,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 19,
+            "status": "REVIEW",
+            "reason": "Syringe charges lack clinical linkage; possible duplicate; no procedure evidence.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 20,
+            "status": "REVIEW",
+            "reason": "Syringe charges lack clinical linkage; possible duplicate; no procedure evidence.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 21,
+            "status": "REVIEW",
+            "reason": "Syringe charges lack clinical linkage; possible duplicate; no procedure evidence.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 22,
+            "status": "REVIEW",
+            "reason": "Needle charge lacks clinical linkage; possible duplicate; no procedure evidence.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 23,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 24,
+            "status": "VALID",
+            "reason": "Lansoprazole may be used for GI protection during antibiotic therapy.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 25,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 26,
+            "status": "REVIEW",
+            "reason": "Cannula fixator lacks clinical justification; possible duplicate charge.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 27,
+            "status": "REVIEW",
+            "reason": "Duplicate IV cannula charge; no clear clinical need for repeated insertion.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 28,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 29,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 30,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 31,
+            "status": "VALID",
+            "reason": "Ceftriaxone aligns with treatment summary for moderate bronchiolitis with possible bacterial co-infection.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 32,
+            "status": "VALID",
+            "reason": "Hydrocortisone injection aligns with symptomatic management for moderate bronchiolitis.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 33,
+            "status": "VALID",
+            "reason": "Syringes with needles are standard for IV administration of prescribed antibiotics.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 34,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 35,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 36,
+            "status": "VALID",
+            "reason": "18G needle appropriate for IV access during antibiotic therapy.",
+            "confidence": 0.88,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 37,
+            "status": "VALID",
+            "reason": "Neo IV cannula appropriate for pediatric moderate bronchiolitis requiring IV access.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 38,
+            "status": "VALID",
+            "reason": "24G IV cannula suitable for IV antibiotic administration in pediatric setting.",
+            "confidence": 0.87,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 39,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 40,
+            "status": "VALID",
+            "reason": "IV cannula fixator supports secure IV access during multi-day antibiotic therapy.",
+            "confidence": 0.86,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 41,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 42,
+            "status": "VALID",
+            "reason": "Ceftriaxone injection matches documented 5-day treatment for moderate bronchiolitis.",
+            "confidence": 0.92,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 43,
+            "status": "VALID",
+            "reason": "Amikacin injection aligns with documented 5-day treatment for moderate bronchiolitis.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 44,
+            "status": "VALID",
+            "reason": "Duplicate hydrocortisone charge; clinically justified but flagged for duplication.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 45,
+            "status": "VALID",
+            "reason": "Lansoprazole supports GI protection during antibiotic/steroid therapy.",
+            "confidence": 0.83,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 46,
+            "status": "VALID",
+            "reason": "Levosalbutamol respules align with bronchodilator support for bronchiolitis.",
+            "confidence": 0.89,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 47,
+            "status": "VALID",
+            "reason": "Budesonide respules support anti-inflammatory management in moderate bronchiolitis.",
+            "confidence": 0.87,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 48,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 49,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 50,
+            "status": "REVIEW",
+            "reason": "Syringe use not clearly linked to IV/IM procedures for bronchiolitis; no procedure evidence.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 51,
+            "status": "REVIEW",
+            "reason": "Syringe use not clearly linked to IV/IM procedures for bronchiolitis; no procedure evidence.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 52,
+            "status": "REVIEW",
+            "reason": "Syringe use not clearly linked to IV/IM procedures for bronchiolitis; no procedure evidence.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 53,
+            "status": "REVIEW",
+            "reason": "Needle 18G not justified without documented IM/IV procedure; bronchiolitis typically not requiring such.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 54,
+            "status": "REVIEW",
+            "reason": "POSIFLUSH not clearly indicated for bronchiolitis; no IV line or flush documentation.",
+            "confidence": 0.5,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 55,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 56,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 57,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 58,
+            "status": "VALID",
+            "reason": "Budesonide inhaler justified for moderate bronchiolitis with symptomatic management.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 59,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 60,
+            "status": "REVIEW",
+            "reason": "Duplicate of line 51; syringe use not clearly linked to procedure for bronchiolitis.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 61,
+            "status": "REVIEW",
+            "reason": "Duplicate of line 52; syringe use not clearly linked to procedure for bronchiolitis.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 62,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 63,
+            "status": "REVIEW",
+            "reason": "Duplicate of line 54; POSIFLUSH not clearly indicated without IV documentation.",
+            "confidence": 0.5,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 64,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 65,
+            "status": "REVIEW",
+            "reason": "IV cannula fixator not clearly justified without documented IV access for bronchiolitis.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 66,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 67,
+            "status": "REVIEW",
+            "reason": "Neo IV cannula not clearly justified; bronchiolitis typically managed without IV access unless severe.",
+            "confidence": 0.5,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 68,
+            "status": "VALID",
+            "reason": "Ceftriaxone injection justified per treatment summary for moderate bronchiolitis with antibiotics.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 69,
+            "status": "VALID",
+            "reason": "Amikacin aligns with treatment summary for moderate AC bronchiolitis with bacterial co-infection concern.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 70,
+            "status": "VALID",
+            "reason": "Hydrocortisone injection supports symptomatic management in moderate bronchiolitis per treatment summary.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 71,
+            "status": "VALID",
+            "reason": "Levosalbutamol respules are standard for bronchodilation in bronchiolitis; quantity aligns with discharge meds.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 72,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 73,
+            "status": "VALID",
+            "reason": "2mL syringes with needle are clinically necessary for administering injectables like Amikacin/Hydrocortisone.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 74,
+            "status": "VALID",
+            "reason": "5mL syringes with needle support accurate dosing of injectables; consistent with treatment protocol.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 75,
+            "status": "VALID",
+            "reason": "10mL syringes with needle are appropriate for larger-volume injections; no overuse indicated.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 76,
+            "status": "VALID",
+            "reason": "18G needles are standard for IM/IV injections; quantity matches billed injectables.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 77,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 78,
+            "status": "PARTIAL",
+            "reason": "Cefuroxime suspension is oral; conflicting with IV Ceftriaxone in treatment summary; possible duplication or transition.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 79,
+            "status": "PARTIAL",
+            "reason": "Duplicate of line 78; same drug, quantity, and amount; likely billing error or transition to oral therapy.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 80,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 81,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 82,
+            "status": "INVALID",
+            "reason": "Carry bag is non-medical; no clinical justification or policy inclusion found.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 83,
+            "status": "INVALID",
+            "reason": "Duplicate carry bag; non-medical item with no clinical or policy justification.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 84,
+            "status": "INVALID",
+            "reason": "Third carry bag; clearly non-essential; no policy or clinical support for reimbursement.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 85,
+            "status": "INVALID",
+            "reason": "Non-medical item (carry bag) not clinically justified for bronchiolitis.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 86,
+            "status": "INVALID",
+            "reason": "Non-medical item (carry bag) not clinically justified for bronchiolitis.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 87,
+            "status": "INVALID",
+            "reason": "Non-medical item (carry bag) not clinically justified for bronchiolitis.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 88,
+            "status": "VALID",
+            "reason": "Consultation charge justified for moderate bronchiolitis management.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 89,
+            "status": "VALID",
+            "reason": "Consultation charge justified for moderate bronchiolitis management.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 90,
+            "status": "VALID",
+            "reason": "Consultation charge justified for moderate bronchiolitis management.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 91,
+            "status": "VALID",
+            "reason": "Consultation charge justified for moderate bronchiolitis management.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 92,
+            "status": "VALID",
+            "reason": "Consultation charge justified for moderate bronchiolitis management.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 93,
+            "status": "VALID",
+            "reason": "Consultation charge justified for moderate bronchiolitis management.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 94,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 95,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 96,
+            "status": "VALID",
+            "reason": "Nebulization + O2 clinically appropriate for moderate bronchiolitis.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 97,
+            "status": "VALID",
+            "reason": "Nebulization + O2 clinically appropriate for moderate bronchiolitis.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 98,
+            "status": "VALID",
+            "reason": "Nebulization + O2 clinically appropriate for moderate bronchiolitis.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 99,
+            "status": "PARTIAL",
+            "reason": "Nebulization + O2 is clinically relevant for moderate bronchiolitis, but quantity of 5 may be excessive without documented respiratory distress or SpO2 trends.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 100,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 101,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 102,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 103,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 104,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 105,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 106,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 107,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 108,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 109,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 110,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "Treating doctor mismatch between billing and discharge summary: Dr HAREEZ vs HAREEZ",
+          "61 line items appear duplicated by description and amount"
+        ],
+        "recommended_action": "PARTIAL_APPROVE",
+        "treatment_process_correct": false,
+        "treatment_process_explanation": "Inappropriate IV antibiotics and excessive non-essential charges without lab support or procedure documentation.",
+        "treatment_process_confidence": 0.65,
+        "treatment_process_evidence": [
+          "No lab evidence (e.g., culture/sensitivity) to justify IV Amikacin or Ceftriaxone in bronchiolitis.",
+          "Bronchiolitis is viral; antibiotics not indicated unless bacterial co-infection proven.",
+          "Multiple duplicate/redundant charges (syringes, needles, cannulas) without documented procedures.",
+          "Non-medical items (carry bags) billed without clinical justification.",
+          "Oral Cefuroxime suspension conflicts with IV Ceftriaxone without transition rationale.",
+          "No documented need for repeated IV access or flushes in moderate bronchiolitis."
+        ],
+        "lab_evidence_count": 0,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "UNKNOWN",
+          "confidence": 0.0,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "pre_existing_diseases",
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "NO_PED_FOUND_IN_DISCHARGE_SUMMARY"
+          ],
+          "ped_items": []
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "pass",
+      "summary": "Financial adjudication passed: the bill reconciles and is fully payable. Of 17712.18 billed across 34 line item(s): payable 17712.18 (34), non-payable 0.00 (0), undetermined 0.00 (0). Recommended action APPROVE; admissible amount 17712.18. Billing type assessed as Surgery. Figures derived via the consolidated path.",
+      "issues": [],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent incorrectly labels the billing type as 'Surgery' for a pediatric case of acute bronchiolitis, which is medically non-surgical. While arithmetic and reconciliation are correct, the insurer comparison flags a mismatch (billed vs claimed = 17712.18) that should trigger investigation or justification, not a VALID verdict. The overall confidence of 0.6 also suggests low certainty in the adjudication.",
+        "suggestions": [
+          "Reclassify billing type from 'Surgery' to 'Medical' or 'Non-Surgical' to align with diagnosis 'AC BRONCHIOLITIS'.",
+          "Re-evaluate verdict to 'INVESTIGATION_REQUIRED' due to unexplained billed-vs-claimed mismatch and low confidence score.",
+          "Add a note explaining why insurer figures are absent and whether this is a pre-authorization or post-settlement claim."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "e5761e18",
+        "generated_at": "2026-07-04T12:49:02.866061Z",
+        "mode": "consolidated",
+        "overall_verdict": "VALID",
+        "recommended_action": "APPROVE",
+        "final_admissible_amount": 17712.18,
+        "totals": {
+          "total_billed": 17712.18,
+          "payable_total": 17712.18,
+          "non_payable_total": 0.0,
+          "unknown_total": 0.0,
+          "charge_count": 34,
+          "payable_count": 34,
+          "non_payable_count": 0,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 17712.18,
+          "recomputed_total": 17712.18,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 17712.18,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 17712.18,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 0.0,
+          "non_payable_vs_disallowed_match": true
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Room Charges",
+            "billed": 6750.0,
+            "payable": 6750.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Investigation Charges",
+            "billed": 3105.0,
+            "payable": 3105.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 8
+          },
+          {
+            "bill_type": "Procedure Charges",
+            "billed": 2625.0,
+            "payable": 2625.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 6
+          },
+          {
+            "bill_type": "Consultation Visit Charges",
+            "billed": 1800.0,
+            "payable": 1800.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 6
+          },
+          {
+            "bill_type": "Room Nursing Charges",
+            "billed": 1800.0,
+            "payable": 1800.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Miscellaneous",
+            "billed": 900.0,
+            "payable": 900.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Medicines Pharmacy Charges",
+            "billed": 646.96,
+            "payable": 646.96,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 4
+          },
+          {
+            "bill_type": "Consumable Charges",
+            "billed": 85.22,
+            "payable": 85.22,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 7
+          }
+        ],
+        "billing_type": "Surgery",
+        "overall_confidence": 0.6,
+        "flagged_count": 0,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "POSIFLUSH / / 5267039 / 09/2028 / 62.5",
+            "amount": 61.4,
+            "bill_type": "Consumable Charges",
+            "sub_bill_type": "Disposables",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 2,
+            "description": "ALTACEF SUS 30ML / CEFUROXIME AXETIL / C4875013 / 10/2027 / 170.1",
+            "amount": 168.48,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "llm_normalized_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 3,
+            "description": "ALTACEF SUS 30ML / CEFUROXIME AXETIL / C4875013 / 10/2027 / 170.1",
+            "amount": 168.48,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "llm_normalized_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 4,
+            "description": "JUNIOR LANZOL 15 TAB / LANSOPRAZOLE / 5BA2412 / 07/2027 / 12.3",
+            "amount": 121.8,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 5,
+            "description": "DEZACORE SYP 30ML / DEFLAZACORT / PA260165 / 06/2027 / 95",
+            "amount": 188.2,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 6,
+            "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+            "amount": 3.97,
+            "bill_type": "Consumable Charges",
+            "sub_bill_type": "Materials",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 7,
+            "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+            "amount": 3.97,
+            "bill_type": "Consumable Charges",
+            "sub_bill_type": "Materials",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 8,
+            "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+            "amount": 3.97,
+            "bill_type": "Consumable Charges",
+            "sub_bill_type": "Materials",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 9,
+            "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+            "amount": 3.97,
+            "bill_type": "Consumable Charges",
+            "sub_bill_type": "Materials",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 10,
+            "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+            "amount": 3.97,
+            "bill_type": "Consumable Charges",
+            "sub_bill_type": "Materials",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 11,
+            "description": "CARRY BAG / / ASDF / 10/2030 / 4",
+            "amount": 3.97,
+            "bill_type": "Consumable Charges",
+            "sub_bill_type": "Materials",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 12,
+            "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+            "amount": 300.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 13,
+            "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+            "amount": 300.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 14,
+            "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+            "amount": 300.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 15,
+            "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+            "amount": 300.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 16,
+            "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+            "amount": 300.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 17,
+            "description": "CONSULTATION CHARGE | Dr HAREEZ , PAEDIATRIC",
+            "amount": 300.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 18,
+            "description": "NURSING CHARGE",
+            "amount": 1800.0,
+            "bill_type": "Room Nursing Charges",
+            "sub_bill_type": "Hospital Nursing Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 19,
+            "description": "NEBULIZATION + O2",
+            "amount": 250.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 20,
+            "description": "NEBULIZATION + O2",
+            "amount": 500.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 21,
+            "description": "NEBULIZATION + O2",
+            "amount": 625.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 22,
+            "description": "NEBULIZATION + O2",
+            "amount": 500.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 23,
+            "description": "NEBULIZATION + O2",
+            "amount": 625.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 24,
+            "description": "NEBULIZATION + O2 (TRIPLE)",
+            "amount": 125.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 25,
+            "description": "HOUSE KEEPING",
+            "amount": 900.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 26,
+            "description": "BLOOD R/E",
+            "amount": 160.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 27,
+            "description": "PACKED CELL VOLUME",
+            "amount": 100.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 28,
+            "description": "PLATELET COUNT",
+            "amount": 120.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 29,
+            "description": "C REACTIVE PROTEIN",
+            "amount": 375.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 30,
+            "description": "SCRUB TYPHUS CARD",
+            "amount": 700.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 31,
+            "description": "TYPHI DOT M",
+            "amount": 400.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 32,
+            "description": "DENGUE NS1 CLIA",
+            "amount": 450.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 33,
+            "description": "CHEST AP",
+            "amount": 800.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 34,
+            "description": "ROOM SHARING",
+            "amount": 6750.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          }
+        ],
+        "notes": [
+          "Bill reconciles and every line item is payable."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 42.531,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 9,
+      "medium": 5,
+      "low": 2,
+      "total": 16
+    }
+  }
+}

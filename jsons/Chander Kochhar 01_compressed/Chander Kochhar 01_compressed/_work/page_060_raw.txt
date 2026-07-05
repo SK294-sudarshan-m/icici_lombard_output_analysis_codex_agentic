@@ -1,0 +1,64 @@
+=== PAGE 60 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3555
+Tokens Out: 378
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 60,
+  "page_type": "non_bill",
+  "non_bill_type": "pre_auth_letter",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "60",
+    "document_title": ""
+  },
+  "patient": {
+    "name": "Manu Kochhar",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "This page is a pre-authorization form requiring patient and treating doctor signatures, dated 22.02.2025, listing documents the hospital must provide to support the insurance claim, including discharge summary, bills, test reports, and surgeon's certificate."
+}

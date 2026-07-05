@@ -1,0 +1,75 @@
+=== PAGE 1 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4199
+Tokens Out: 591
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 1,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "Discharge Summary"
+  },
+  "patient": {
+    "name": "Suneeta Shrikant Gundakal",
+    "age": "27y",
+    "gender": "Female",
+    "uhid": "17634"
+  },
+  "admission": {
+    "date_of_admission": "03-Jun-2026",
+    "date_of_discharge": "08-Jun-2026",
+    "admission_type": "Elective CS",
+    "treating_doctor": "DR AISHWARYA HUNASHYAL"
+  },
+  "hospital": {
+    "name": "Tavargeri Nursing Home Pvt. Ltd.",
+    "address": "Near Kittur Channamma Park Post Office, Dharwad - 580 008",
+    "contact": "OPD: 0836-2747603, Hosp: 0836-2448359"
+  },
+  "medications": [
+    {
+      "name": "IVF NS, DNS, RL",
+      "duration": "2 DAYS"
+    },
+    {
+      "name": "INJ PAN 40MG IV BD",
+      "duration": "3 DAYS"
+    },
+    {
+      "name": "INJ XONE 1 GM IV BD",
+      "duration": "3 DAYS"
+    },
+    {
+      "name": "INJ PAUSE IV STAT",
+      "duration": "STAT"
+    },
+    {
+      "name": "INJ EMESET 4MG IV BD",
+      "duration": "3 DAYS"
+    },
+    {
+      "name": "INJ NEOMOL 100ML IV SOS",
+      "duration": "SOS"
+    },
+    {
+      "name": "INJ NEOMOL 3AMP WITH 100ML NS IV SOS",
+      "duration": "SOS"
+    },
+    {
+      "name": "JONAC SUPPOSITORY SOS",
+      "duration": "SOS"
+    },
+    {
+      "name": "INJ DOMADOL IM STAT",
+      "duration": "STAT"
+    },
+    {
+      "name": "ENTEROGERMIN BD",
+      "duration": "3DAYS"
+    }
+  ],
+  "raw_summary": "Discharge summary for a 27-year-old female patient admitted for elective cesarean section, detailing diagnosis, physical findings, investigations, and medications administered during hospitalization from June 3 to June 8, 2026."
+}

@@ -1,0 +1,27 @@
+{
+  "page": 27,
+  "page_type": "non_bill",
+  "non_bill_type": "diagnostic_report",
+  "document_markers": {
+    "document_title": "DEPARTMENT OF ECHO PORTABLE"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91",
+    "gender": "FEMALE",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "406"
+  },
+  "admission": {
+    "date_of_admission": "22/02/2025",
+    "referring_doctor": "DR. ABHAY RAUT",
+    "department": "DEPARTMENT OF ECHO PORTABLE"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052. India",
+    "contact": "+91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "raw_summary": "Echo with Color Doppler report for patient Kochhar Chander, age 91, showing cardiac chamber dimensions, valve structure, ejection fractions, and Doppler findings, issued by P. D. Hinduja Hospital on 22/02/2025."
+}

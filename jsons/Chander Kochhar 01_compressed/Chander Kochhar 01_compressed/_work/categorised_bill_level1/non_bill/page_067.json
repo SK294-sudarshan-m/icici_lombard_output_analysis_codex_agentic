@@ -1,0 +1,26 @@
+{
+  "page": 67,
+  "page_type": "non_bill",
+  "non_bill_type": "unknown",
+  "document_markers": {
+    "document_title": "Deposit Form"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91",
+    "gender": "FEMAL",
+    "uhid": "192673",
+    "ip_number": "68049"
+  },
+  "admission": {
+    "date_of_admission": "21/02/2025 20:41:46.00",
+    "referring_doctor": "RAUT ABHAY",
+    "treating_doctor": "RAUT ABHAY"
+  },
+  "hospital": {
+    "name": "P.D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "B91, COZI HOME, PALI HILL, BANDRA WEST, Maharashtra Mumbai 400050",
+    "contact": "9892462685"
+  },
+  "raw_summary": "This is a Deposit Form from P.D. Hinduja Hospital for patient Chander Kochhar, aged 91, admitted on 21/02/2025, with details of responsible person, reference doctor, and sections for deposit payments and transfers, but no itemized charges or bill summary."
+}

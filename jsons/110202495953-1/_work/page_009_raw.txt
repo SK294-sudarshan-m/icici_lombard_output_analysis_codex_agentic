@@ -1,0 +1,137 @@
+=== PAGE 9 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 4579
+Tokens Out: 887
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 9,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "bill_number": "",
+    "bill_date": "",
+    "page_indicator": "",
+    "document_title": ""
+  },
+  "patient": {
+    "name": "",
+    "age": "",
+    "gender": "",
+    "uhid": "",
+    "ip_number": "",
+    "ward": "",
+    "bed_number": ""
+  },
+  "admission": {
+    "date_of_admission": "",
+    "date_of_discharge": "",
+    "length_of_stay": "",
+    "admission_type": "",
+    "referring_doctor": "",
+    "treating_doctor": "",
+    "department": ""
+  },
+  "hospital": {
+    "name": "",
+    "address": "",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "",
+    "approved_amount": "",
+    "tpa": ""
+  },
+  "medications": [
+    {
+      "name": "NEUROBION FORTE TABLET",
+      "dosage": "10",
+      "frequency": "0-1-0",
+      "duration": "10",
+      "quantity": "10",
+      "amount": ""
+    },
+    {
+      "name": "HISTIN 8MG TABLET",
+      "dosage": "21",
+      "frequency": "1-1-1",
+      "duration": "7",
+      "quantity": "21",
+      "amount": ""
+    },
+    {
+      "name": "MILIXIM 200MG TABLET",
+      "dosage": "10",
+      "frequency": "1-0-1",
+      "duration": "5",
+      "quantity": "10",
+      "amount": ""
+    },
+    {
+      "name": "ROLL 20 TAB",
+      "dosage": "10",
+      "frequency": "1-0-1",
+      "duration": "5",
+      "quantity": "10",
+      "amount": ""
+    },
+    {
+      "name": "DESWIN 5MG TAB",
+      "dosage": "5",
+      "frequency": "0-0-1",
+      "duration": "5",
+      "quantity": "5",
+      "amount": ""
+    },
+    {
+      "name": "ECOSPRIN AV 75/10MG CAPSULE",
+      "dosage": "7",
+      "frequency": "0-0-1",
+      "duration": "7",
+      "quantity": "7",
+      "amount": ""
+    },
+    {
+      "name": "TELMA 40MG TABLET",
+      "dosage": "14",
+      "frequency": "1-0-1",
+      "duration": "7",
+      "quantity": "14",
+      "amount": ""
+    },
+    {
+      "name": "NOVASOFT 100ML LOTION",
+      "dosage": "1",
+      "frequency": "1-0-1",
+      "duration": "12",
+      "quantity": "1",
+      "amount": ""
+    },
+    {
+      "name": "MOMATE CREAM 20GM",
+      "dosage": "1",
+      "frequency": "1-0-1",
+      "duration": "12",
+      "quantity": "1",
+      "amount": ""
+    }
+  ],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "",
+    "total_amount": "",
+    "discount": "",
+    "tax": "",
+    "net_payable": "",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Discharge summary page detailing medications prescribed at discharge, patient's condition, advice, follow-up instructions, and laboratory investigation results from 02-Jun-2026, with no billing information or charges."
+}

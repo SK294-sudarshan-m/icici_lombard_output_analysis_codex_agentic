@@ -1,0 +1,63 @@
+=== PAGE 11 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3647
+Tokens Out: 593
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 11,
+  "page_type": "bill",
+  "document_markers": {
+    "bill_number": "ICO15284",
+    "bill_date": "24/02/2025 11:36:58AM",
+    "page_indicator": "Page No : 2",
+    "document_title": "INPATIENT FINAL BILL (Summary) Bill of Supply"
+  },
+  "patient": {
+    "name": "CHANDER KOCHHAR",
+    "age": "91 Y",
+    "gender": "F",
+    "uhid": "192673",
+    "ip_number": "68049",
+    "ward": "",
+    "bed_number": "110A"
+  },
+  "admission": {
+    "date_of_admission": "21/02/2025 08:41:00PM",
+    "date_of_discharge": "24/02/2025",
+    "length_of_stay": "",
+    "admission_type": "TPA",
+    "referring_doctor": "",
+    "treating_doctor": "DR. ABHAY RAUT",
+    "department": ""
+  },
+  "hospital": {
+    "name": "",
+    "address": "B91, COZI HOME, PALI HILL, BANDRA WEST, MUMBAI-400050, MAHARASHTRA",
+    "contact": ""
+  },
+  "insurance": {
+    "company": "ICICI LOMBARD GENERAL INSURANCE COMPANY LTD",
+    "policy_number": "",
+    "member_id": "",
+    "claimed_amount": "189771.00",
+    "approved_amount": "189771.00",
+    "tpa": "ICICI LOMBARD GENERAL INSURANCE COMPANY LTD"
+  },
+  "medications": [],
+  "charges": [],
+  "returns": [],
+  "bill_summary": {
+    "gross_amount": "189771.00",
+    "total_amount": "189771.00",
+    "discount": "0.00",
+    "tax": "0.00",
+    "net_payable": "189771.00",
+    "amount_paid": "",
+    "balance": "",
+    "advance_paid": ""
+  },
+  "sub_bills": [],
+  "raw_summary": "Page 2 of an Inpatient Final Bill Summary showing patient details, admission information, insurance payer, and a total payable amount of 189,771.00 with no itemized charges listed on this page."
+}

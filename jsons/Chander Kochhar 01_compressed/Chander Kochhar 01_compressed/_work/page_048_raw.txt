@@ -1,0 +1,34 @@
+=== PAGE 48 — EXTRACTION ===
+Model: qwen.qwen3-vl-235b-a22b
+Tokens In: 3718
+Tokens Out: 374
+Attempt: 1
+
+--- RESPONSE ---
+{
+  "page": 48,
+  "page_type": "non_bill",
+  "non_bill_type": "lab_report",
+  "document_markers": {
+    "document_title": "DEPARTMENT OF LABORATORY MEDICINE HEMATOLOGY"
+  },
+  "patient": {
+    "name": "KOCHHAR CHANDER",
+    "age": "91 YEARS",
+    "gender": "FEMALE",
+    "uhid": "192673",
+    "ip_number": "68049"
+  },
+  "admission": {
+    "referring_doctor": "DR. ABHAY RAUT"
+  },
+  "hospital": {
+    "name": "P. D. HINDUJA HOSPITAL & MEDICAL RESEARCH CENTRE",
+    "address": "P. D. Hinduja National Hospital & Medical Research Centre, 724, 11th Road, Khar (West), Mumbai - 400 052. India",
+    "contact": "Tel: +91 22 6174 6000 / 2646 9999 | Fax: +91 22 2646 1945 | Email: contactus.khar@hindujahospital.com | Website: www.hindujahospital.com"
+  },
+  "insurance": {
+    "tpa": "TPA"
+  },
+  "raw_summary": "Lab report for D-Dimer test from P. D. Hinduja Hospital, showing result of 6.61 mg FEU/L (High) for patient Kochhar Chander, age 91, with comments on clinical correlation and lipemia interference."
+}

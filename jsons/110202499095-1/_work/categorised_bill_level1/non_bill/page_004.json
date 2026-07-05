@@ -1,0 +1,14 @@
+{
+  "page": 4,
+  "page_type": "non_bill",
+  "non_bill_type": "discharge_summary",
+  "document_markers": {
+    "document_title": "MEDICAL CASE SHEET"
+  },
+  "hospital": {
+    "name": "Amora Panchkarma and wellness center",
+    "address": "Sr.No. 109/2/2, Near Shivdatta Mandir, Radhabai Raghu Raskar Chowk, Vrundavan, Charholi Bk, Pune 412105",
+    "contact": "9997738731"
+  },
+  "raw_summary": "Handwritten medical case sheet from Amora Panchkarma and wellness center documenting daily notes on stomach pain and eye irritation, investigation findings (pus cells in urine, T3=235), and final diagnosis of Pitta dosh, with no billing or financial data."
+}

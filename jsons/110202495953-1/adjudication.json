@@ -1,0 +1,2674 @@
+{
+  "schema_version": "1.0",
+  "request_id": "12a52e80",
+  "source_filename": "110202495953-1.pdf",
+  "generated_at": "2026-07-04T12:50:53.200098+00:00",
+  "overall_status": "fail",
+  "aborted": false,
+  "decision_summary": "The claim cannot be auto-approved and must be investigated. Blocking agents: Document Checker, Medical Admissibility. Agents needing review: Administrative Review. 24 issue(s) raised (16 high, 6 medium, 2 low) across 4 agent(s).",
+  "agent_order": [
+    "document_checker",
+    "administrative",
+    "medical",
+    "financial"
+  ],
+  "claim": {
+    "claim_number": "",
+    "patient": {
+      "name": "AMMINI THANKAPPAN",
+      "age": "68Y",
+      "gender": "Female",
+      "uhid": "249109",
+      "ip_number": "45738",
+      "ward": "SINGLE NON AC SN-616",
+      "bed_number": "SN-616"
+    },
+    "admission": {
+      "date_of_admission": "02-Jun-2026 12:14 PM",
+      "date_of_discharge": "08-Jun-2026 01:49 PM",
+      "length_of_stay": "6 days",
+      "admission_type": "",
+      "referring_doctor": "",
+      "treating_doctor": "SR.BRIJEETHA",
+      "department": "DEPARTMENT OF GENERAL MEDICINE"
+    },
+    "hospital": {
+      "name": "MAGJ HOSPITAL",
+      "address": "Mookkannoor, Angamaly- 683577",
+      "contact": "Ph: 0484 2674300/ 6674300, Mob: 8086194300, E-mail: enquiry@magjhospital.org, Web: www.magjhospital.org"
+    },
+    "insurance": {
+      "company": "ICICI Lombard",
+      "policy_number": "",
+      "member_id": "",
+      "claimed_amount": "",
+      "approved_amount": "",
+      "tpa": "ICICI Lombard"
+    },
+    "total_pages": 29,
+    "charge_count": 144,
+    "diagnosis": "URINARY TRACT INFECTION - KLEBSIELLA",
+    "treatment": "Managed with IV antibiotics, IV fluid, nebulization, antiplatelet and supportive medications; MRI showed chronic small vessel ischemic changes; started on antiplatelet and statin; physiotherapy done."
+  },
+  "agents": [
+    {
+      "agent": "document_checker",
+      "display_name": "Document Checker",
+      "status": "fail",
+      "summary": "Document check failed: the claim file is severely incomplete. 6 of 16 mandatory documents are present (37.5% complete, status critical). Critical documents missing: Payment Receipts, Identity Proof - Aadhar. The claim appears to be Reimbursement (confidence 0.75, llm). Recommended action: REQUEST_MISSING_DOCUMENTS.",
+      "issues": [
+        {
+          "message": "Critical mandatory document missing: Payment Receipts.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Payment Receipts from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "Critical mandatory document missing: Identity Proof - Aadhar.",
+          "severity": "high",
+          "code": "document_checker.critical_document_missing",
+          "location": null,
+          "suggestion": "Request Identity Proof - Aadhar from the hospital / claimant before adjudication."
+        },
+        {
+          "message": "8 mandatory document(s) missing: Authorization Letter, Pre Authorization Request Note, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Others, Identity Proof - Non Aadhar.",
+          "severity": "medium",
+          "code": "document_checker.mandatory_document_missing",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Claim file is severely incomplete: 10 mandatory documents missing.",
+          "severity": "high",
+          "code": "document_checker.severely_incomplete",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 3,
+        "medium": 1,
+        "low": 0,
+        "total": 4
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.65,
+        "rationale": "The agent incorrectly flags 'Identity Proof - Aadhar' as missing without evidence it was ever required or expected in this reimbursement claim; also, 'Payment Receipts' may be conflated with pharmacy/hospital bills already present. The completeness status (critical) is over-penalized given 6/16 found, but the verdict should not be INCOMPLETE if core clinical docs (Discharge Summary, Bills) are present. Claim type detection lacks keyword support.",
+        "suggestions": [
+          "Re-evaluate 'Identity Proof - Aadhar' — if not explicitly requested in policy or claim form, it should not be mandatory for this reimbursement claim.",
+          "Verify if 'Payment Receipts' are distinct from the 25 bill pages already classified; if not, mark as found or remove from mandatory list.",
+          "Adjust completeness status to 'warn' (6/16 found is 37.5%, but 5+ missing triggers critical — reconsider if all 16 are truly mandatory for this claim type).",
+          "Add evidence for 'Reimbursement' claim type — e.g., keywords like 'reimbursement form', 'claim submission', or absence of pre-authorization references."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.301,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "12a52e80",
+        "source_filename": "110202495953-1.pdf",
+        "generated_at": "2026-07-04T12:49:15.845480Z",
+        "total_pages": 29,
+        "overall_verdict": "INCOMPLETE",
+        "recommended_action": "REQUEST_MISSING_DOCUMENTS",
+        "claim_type": {
+          "claim_type": "Reimbursement",
+          "detection_method": "llm",
+          "confidence": 0.75,
+          "cashless_matches": [],
+          "reimbursement_matches": []
+        },
+        "mandatory": {
+          "found": [
+            "Discharge Summary",
+            "Claim Form",
+            "Final Hospital Bills",
+            "Investigation Reports",
+            "Pharmacy or Medicine Bills",
+            "Consultation Papers"
+          ],
+          "missing": [
+            "Authorization Letter",
+            "Pre Authorization Request Note",
+            "Payment Receipts",
+            "Indoor Case Papers",
+            "Implants Invoice",
+            "Implants Label or Sticker",
+            "Prescription Papers",
+            "Identity Proof - Aadhar",
+            "Others",
+            "Identity Proof - Non Aadhar"
+          ],
+          "missing_critical": [
+            "Payment Receipts",
+            "Identity Proof - Aadhar"
+          ],
+          "found_count": 6,
+          "missing_count": 10,
+          "total_mandatory": 16,
+          "completeness_percent": 37.5,
+          "completeness_status": "critical",
+          "match_details": {
+            "Discharge Summary": "structured",
+            "Claim Form": "fuzzy",
+            "Final Hospital Bills": "structured",
+            "Investigation Reports": "variation",
+            "Pharmacy or Medicine Bills": "variation",
+            "Consultation Papers": "abbreviation"
+          },
+          "recommendations": [
+            "PRIORITY: request the critical documents Payment Receipts, Identity Proof - Aadhar before adjudication.",
+            "Request the following missing documents: Authorization Letter, Pre Authorization Request Note, Payment Receipts, Indoor Case Papers, Implants Invoice, Implants Label or Sticker, Prescription Papers, Identity Proof - Aadhar, Others, Identity Proof - Non Aadhar."
+          ]
+        },
+        "non_mandatory_found": [
+          "room rent",
+          "radiology charges",
+          "physiotherapy",
+          "ecg",
+          "mri",
+          "lab report"
+        ],
+        "pages": [
+          {
+            "page_no": 1,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 2,
+            "document_type": "pharmacy_bill",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 3,
+            "document_type": "pharmacy_bill",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 4,
+            "document_type": "pharmacy_bill",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 5,
+            "document_type": "pharmacy_bill",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 6,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 7,
+            "document_type": "bill_detail_statement",
+            "page_type": "bill",
+            "non_bill_type": "",
+            "low_content": false
+          },
+          {
+            "page_no": 8,
+            "document_type": "discharge_summary",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 9,
+            "document_type": "bill_detail_statement",
+            "page_type": "non_bill",
+            "non_bill_type": "discharge_summary",
+            "low_content": false
+          },
+          {
+            "page_no": 10,
+            "document_type": "bill_detail_statement",
+            "page_type": "non_bill",
+            "non_bill_type": "lab_report",
+            "low_content": false
+          },
+          {
+            "page_no": 11,
+            "document_type": "unknown",
+            "page_type": "non_bill",
+            "non_bill_type": "lab_report",
+            "low_content": false
+          }
+        ],
+        "document_groups": [
+          {
+            "document_id": "DOC-0001",
+            "document_type": "bill_detail_statement",
+            "start_page": 1,
+            "end_page": 1,
+            "pages": [
+              1
+            ]
+          },
+          {
+            "document_id": "DOC-0002",
+            "document_type": "pharmacy_bill",
+            "start_page": 2,
+            "end_page": 5,
+            "pages": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "document_id": "DOC-0003",
+            "document_type": "bill_detail_statement",
+            "start_page": 6,
+            "end_page": 7,
+            "pages": [
+              6,
+              7
+            ]
+          },
+          {
+            "document_id": "DOC-0004",
+            "document_type": "discharge_summary",
+            "start_page": 8,
+            "end_page": 8,
+            "pages": [
+              8
+            ]
+          },
+          {
+            "document_id": "DOC-0005",
+            "document_type": "bill_detail_statement",
+            "start_page": 9,
+            "end_page": 10,
+            "pages": [
+              9,
+              10
+            ]
+          }
+        ],
+        "low_content_pages": [],
+        "notes": []
+      }
+    },
+    {
+      "agent": "administrative",
+      "display_name": "Administrative Review",
+      "status": "warn",
+      "summary": "Administrative admissibility cleared with advisory flags for human review. Checks: identity=PASS, insured=SKIPPED, policy_dates=SKIPPED, period_compliance=PASS. Advisory notes: insured: Missing patient name or insured name — cannot verify insured.; policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date..",
+      "issues": [
+        {
+          "message": "insured: Missing patient name or insured name — cannot verify insured.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+          "severity": "low",
+          "code": "admin.advisory",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "total": 2
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The verdict correctly flags critical SKIPPED checks for 'insured' and 'policy_dates', justifying the WARN status. However, the 'identity' check is misleadingly marked PASS despite the patient name appearing inconsistently (e.g., 'AMMINI THANKAPPAN 2213/18' on page_8), which may indicate a data anomaly requiring advisory escalation, not a clean PASS. This risks a false negative if the suffix is part of an official identifier.",
+        "suggestions": [
+          "Reclassify 'identity' check from PASS to WARN if any document shows a name variant (e.g., with suffix '2213/18') — even if score=1.0, it warrants human review for potential mismatch.",
+          "Clarify in 'identity' detail whether the suffix '2213/18' is considered part of the legal name or an identifier — if uncertain, mark as 'AMBIGUOUS' or 'ADVISORY'."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.005,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "claim_number": null,
+        "overall_status": "WARN",
+        "checks": [
+          {
+            "name": "identity",
+            "status": "PASS",
+            "severity": "CRITICAL",
+            "evidence": "All names match across documents.",
+            "detail": {
+              "status": "PASS",
+              "reference_name": "AMMINI THANKAPPAN",
+              "threshold": 0.85,
+              "document_scores": [
+                {
+                  "document_name": "consolidated",
+                  "patient_name": "AMMINI THANKAPPAN",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "AMMINI THANKAPPAN",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "AMMINI THANKAPPAN",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "AMMINI THANKAPPAN",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "AMMINI THANKAPPAN",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_1",
+                  "patient_name": "AMMINI THANKAPPAN",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_7",
+                  "patient_name": "AMMINI THANKAPPAN",
+                  "score": 1.0,
+                  "match": true
+                },
+                {
+                  "document_name": "page_8",
+                  "patient_name": "AMMINI THANKAPPAN 2213/18",
+                  "score": 1.0,
+                  "match": true
+                }
+              ],
+              "id_cross_check": null,
+              "missing_name_documents": null,
+              "failures": null,
+              "details": "All names match across documents."
+            }
+          },
+          {
+            "name": "insured",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Missing patient name or insured name — cannot verify insured.",
+            "detail": {
+              "status": "SKIPPED",
+              "details": "Missing patient name or insured name — cannot verify insured.",
+              "patient_name": "AMMINI THANKAPPAN",
+              "insured_name": null
+            }
+          },
+          {
+            "name": "policy_dates",
+            "status": "SKIPPED",
+            "severity": "CRITICAL",
+            "evidence": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date.",
+            "detail": {
+              "status": "SKIPPED",
+              "reason": "missing_or_unparseable_dates",
+              "missing": [
+                "policy_start_date",
+                "policy_end_date"
+              ],
+              "details": "Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+            }
+          },
+          {
+            "name": "period_compliance",
+            "status": "PASS",
+            "severity": "ADVISORY",
+            "evidence": "14 document(s) checked — in-period=14, out-of-period=0, ambiguous=0.",
+            "detail": {
+              "status": "PASS",
+              "documents": [
+                {
+                  "document_name": "IP Bill",
+                  "type": "bill",
+                  "date": "08-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "Medicine Bill",
+                  "type": "bill",
+                  "date": "08-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "Medicine Bill",
+                  "type": "bill",
+                  "date": "08-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "Medicine Bill",
+                  "type": "bill",
+                  "date": "08-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "Medicine Bill",
+                  "type": "bill",
+                  "date": "08-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "page_3",
+                  "type": "bill",
+                  "date": "04-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "page_4",
+                  "type": "bill",
+                  "date": "05-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "page_4",
+                  "type": "bill",
+                  "date": "05-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "page_4",
+                  "type": "bill",
+                  "date": "05-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "page_4",
+                  "type": "bill",
+                  "date": "05-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "page_5",
+                  "type": "bill",
+                  "date": "07-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "page_5",
+                  "type": "bill",
+                  "date": "07-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "page_5",
+                  "type": "bill",
+                  "date": "07-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                },
+                {
+                  "document_name": "IP FINAL/DISCHARGE STATEMENT",
+                  "type": "bill",
+                  "date": "08-Jun-2026",
+                  "flag": "IN_PERIOD",
+                  "reason": "Within applicable window (2026-05-03 to 2026-07-08) for type 'bill'."
+                }
+              ],
+              "counts": {
+                "IN_PERIOD": 14,
+                "OUT_OF_PERIOD": 0,
+                "AMBIGUOUS": 0
+              },
+              "total_checked": 14,
+              "hospitalization": {
+                "admission": "2026-06-02",
+                "discharge": "2026-06-08"
+              },
+              "window_config": {
+                "pre_hosp_days": 30,
+                "post_hosp_days": 30
+              }
+            }
+          }
+        ],
+        "blocking_issues": [],
+        "advisory_issues": [
+          "insured: Missing patient name or insured name — cannot verify insured.",
+          "policy_dates: Cannot check policy period — missing/unparseable: policy_start_date, policy_end_date."
+        ],
+        "inputs": {
+          "patient_name": "AMMINI THANKAPPAN",
+          "insured_name": null,
+          "admission_date": "02-Jun-2026 12:14 PM",
+          "discharge_date": "08-Jun-2026 01:49 PM",
+          "policy_start_date": null,
+          "policy_end_date": null
+        },
+        "generated_at": "2026-07-04T12:49:19.815630+00:00"
+      }
+    },
+    {
+      "agent": "medical",
+      "display_name": "Medical Admissibility",
+      "status": "fail",
+      "summary": "Medical admissibility failed: one or more charges are not clinically admissible. Treatment validity score 0.69; recommended action REJECT. 144 charge(s): valid=91, partial=17, invalid=13, review=23. Treatment process could not be confirmed: Multiple medications and procedures unrelated to Klebsiella UTI (e.g., betahistine, telmisartan, ecosprin av, wound plaster) with no documented clinical justification; duplicate billing and excessive consumables further undermine clinical appropriateness. Major conflicts: 103 line items appear duplicated by description and amount. PED validation: INSUFFICIENT / MANUAL_REVIEW across 1 pre-existing disease(s).",
+      "issues": [
+        {
+          "message": "Charge #1 is INVALID: Betahistine for vertigo, not indicated for Klebsiella UTI",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[1]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #10 is INVALID: Betahistine 16mg not indicated for Klebsiella UTI",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[10]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #17 is INVALID: Histin (Betahistine) is for vertigo; no evidence of vestibular disorder or vertigo in UTI case.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[17]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #20 is INVALID: Polybion A injection (B-complex) not indicated for UTI; no evidence of deficiency or supportive need.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[20]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #26 is INVALID: Betahistine is for vertigo; no evidence of vestibular disorder or vertigo in diagnosis or treatment.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[26]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #54 is INVALID: Wound plaster irrelevant to UTI diagnosis or treatment narrative.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[54]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #71 is INVALID: Duplicate of line 54; wound plaster not indicated for UTI or IV treatment.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[71]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #89 is INVALID: Telmisartan is an antihypertensive; no evidence of hypertension or indication for its use in UTI management.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[89]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #90 is INVALID: Wound plaster is unrelated to UTI treatment; no wound or surgical site documented.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[90]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #93 is INVALID: Desloratadine is an antihistamine; no evidence of allergic component or indication in UTI management.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[93]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #94 is INVALID: Ecosprin AV (aspirin+atorvastatin) is for cardiovascular prophylaxis; no documented indication in UTI or discharge meds.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[94]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #96 is INVALID: Betahistine is for vertigo; no evidence of vestibular symptoms or indication in UTI or discharge meds.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[96]",
+          "suggestion": null
+        },
+        {
+          "message": "Charge #104 is INVALID: Wound plaster unrelated to UTI diagnosis or treatment.",
+          "severity": "high",
+          "code": "medical.charge_invalid",
+          "location": "charge[104]",
+          "suggestion": null
+        },
+        {
+          "message": "23 charge(s) require manual review.",
+          "severity": "medium",
+          "code": "medical.charge_review",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "103 line items appear duplicated by description and amount",
+          "severity": "medium",
+          "code": "medical.rule_conflict",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "Treatment process not confirmed: Multiple medications and procedures unrelated to Klebsiella UTI (e.g., betahistine, telmisartan, ecosprin av, wound plaster) with no documented clinical justification; duplicate billing and excessive consumables further undermine clinical appropriateness.",
+          "severity": "medium",
+          "code": "medical.treatment_process",
+          "location": null,
+          "suggestion": null
+        },
+        {
+          "message": "PED validation requires manual review (ambiguous or undeclared evidence).",
+          "severity": "medium",
+          "code": "medical.ped_review",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 13,
+        "medium": 4,
+        "low": 0,
+        "total": 17
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.78,
+        "rationale": "The agent correctly flagged unrelated medications (betahistine, telmisartan, wound plaster) as INVALID or REVIEW, but over-applied INVALID to supportive care items (e.g., multivitamins, gloves) without sufficient clinical justification for exclusion. The PED validation correctly flagged INSUFFICIENT inputs but should not have influenced the overall INVALID verdict since policy waiting periods were not verifiable. The treatment_validity_score (0.69) and charge distribution (91 VALID, 13 INVALID) suggest a borderline case better suited for REVIEW, not REJECT.",
+        "suggestions": [
+          "Reclassify PARTIAL/INVALID charges for supportive items (e.g., gloves, multivitamins) as REVIEW unless explicit clinical contraindication or policy exclusion is documented.",
+          "Adjust overall_verdict to REVIEW to align with treatment_validity_score and charge distribution; REJECT is too severe given 63% of charges are VALID.",
+          "Clarify PED validation: since policy inputs are missing, PED should not drive claim rejection — separate PED review from clinical admissibility verdict."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 82.567,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "bill_id": "12a52e80",
+        "generated_at": "2026-07-04T12:50:44.937942Z",
+        "overall_verdict": "INVALID",
+        "treatment_validity_score": 0.691,
+        "episode_checks": {
+          "los_consistency": "PASS",
+          "doctor_consistency": "PASS",
+          "diagnosis_present": "PASS"
+        },
+        "charge_decisions": [
+          {
+            "line_item_id": 0,
+            "status": "PARTIAL",
+            "reason": "3-way extension not typically required for UTI; possible duplicate with line 6",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 1,
+            "status": "INVALID",
+            "reason": "Betahistine for vertigo, not indicated for Klebsiella UTI",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 2,
+            "status": "VALID",
+            "reason": "Ceftriaxone appropriate for Klebsiella UTI per culture",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 3,
+            "status": "VALID",
+            "reason": "NS 500ml for IV fluid support in moderate UTI",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 4,
+            "status": "PARTIAL",
+            "reason": "Multivitamin injection not standard for UTI; supportive only",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 5,
+            "status": "VALID",
+            "reason": "Syringes for IV administration of antibiotics/fluids",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 6,
+            "status": "PARTIAL",
+            "reason": "Duplicate of line 0; 3-way extension not standard for UTI",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 7,
+            "status": "VALID",
+            "reason": "Ceftriaxone appropriate for Klebsiella UTI per culture",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 8,
+            "status": "VALID",
+            "reason": "Ceftriaxone appropriate for Klebsiella UTI per culture",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 9,
+            "status": "VALID",
+            "reason": "Syringes for IV administration of antibiotics/fluids",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 10,
+            "status": "INVALID",
+            "reason": "Betahistine 16mg not indicated for Klebsiella UTI",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 11,
+            "status": "PARTIAL",
+            "reason": "Transparent dressing not typically required for UTI; may be for IV site",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 12,
+            "status": "VALID",
+            "reason": "Gloves are standard PPE for UTI management; quantity and unit price reasonable for clinical use.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 13,
+            "status": "VALID",
+            "reason": "Gloves are standard PPE; small size may be for staff or specific procedure; no overuse indicated.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 14,
+            "status": "VALID",
+            "reason": "Handrub is standard infection control for UTI; single unit reasonable for clinical setting.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 15,
+            "status": "VALID",
+            "reason": "IV cannula required for IV antibiotics (Ceftriaxone) and fluids; appropriate for moderate UTI.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 16,
+            "status": "VALID",
+            "reason": "3-way extension likely used for IV fluid/antibiotic administration; consistent with treatment narrative.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 17,
+            "status": "INVALID",
+            "reason": "Histin (Betahistine) is for vertigo; no evidence of vestibular disorder or vertigo in UTI case.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 18,
+            "status": "VALID",
+            "reason": "Ceftriaxone is appropriate for Klebsiella UTI; supported by culture and sensitivity report.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 19,
+            "status": "VALID",
+            "reason": "NS 500ml used for IV fluid support; consistent with moderate UTI management.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 20,
+            "status": "INVALID",
+            "reason": "Polybion A injection (B-complex) not indicated for UTI; no evidence of deficiency or supportive need.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 21,
+            "status": "VALID",
+            "reason": "10ml syringes used for IV fluid/antibiotic administration; quantity consistent with procedure.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 22,
+            "status": "VALID",
+            "reason": "1ml syringe likely for precise medication dosing; reasonable for clinical use.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 23,
+            "status": "PARTIAL",
+            "reason": "Duplicate charge of line 16; same item and amount; may indicate billing error or overcharge.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 24,
+            "status": "VALID",
+            "reason": "Ceftriaxone indicated for Klebsiella UTI; moderate severity supports IV antibiotic use.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 25,
+            "status": "VALID",
+            "reason": "Syringes are necessary for IV administration of antibiotics; quantity aligns with treatment.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 26,
+            "status": "INVALID",
+            "reason": "Betahistine is for vertigo; no evidence of vestibular disorder or vertigo in diagnosis or treatment.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 27,
+            "status": "PARTIAL",
+            "reason": "Transparent dressing may be used for IV site; but no explicit documentation of IV site care or need.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 28,
+            "status": "PARTIAL",
+            "reason": "10 medium gloves exceed typical clinical need for single IV/med administration; possible overbilling.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 29,
+            "status": "PARTIAL",
+            "reason": "8 small gloves exceed typical clinical need; no justification for quantity in treatment summary.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 30,
+            "status": "REVIEW",
+            "reason": "Handrub cost is high; no policy exclusion, but insufficient evidence of necessity or frequency.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 31,
+            "status": "VALID",
+            "reason": "IV cannula required for IV antibiotics; consistent with treatment narrative.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 32,
+            "status": "VALID",
+            "reason": "Pantoprazole IV indicated for GI protection during IV antibiotics; moderate severity supports use.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 33,
+            "status": "VALID",
+            "reason": "Syringes necessary for IV meds; duplicate of line 25 but clinically justified per treatment.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 34,
+            "status": "VALID",
+            "reason": "Repeat Ceftriaxone dose clinically justified for moderate Klebsiella UTI; no policy exclusion.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 35,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 36,
+            "status": "PARTIAL",
+            "reason": "Duplicate of line 27; no additional clinical justification for second dressing.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 37,
+            "status": "VALID",
+            "reason": "IV cannula required for IV antibiotic and fluid administration in moderate UTI.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 38,
+            "status": "REVIEW",
+            "reason": "Desloratadine not indicated for UTI; unclear clinical justification.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 39,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 40,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 41,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 42,
+            "status": "VALID",
+            "reason": "Antiplatelet + statin indicated per discharge meds and MRI findings of ischemic changes.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 43,
+            "status": "VALID",
+            "reason": "Gloves are standard PPE for IV/clinical procedures; quantity reasonable for care episode.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 44,
+            "status": "REVIEW",
+            "reason": "Betahistine for vertigo; no documented vestibular symptoms or indication in UTI context.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 45,
+            "status": "VALID",
+            "reason": "Ceftriaxone appropriate for Klebsiella UTI per culture sensitivity; IV route justified.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 46,
+            "status": "VALID",
+            "reason": "Neurobion supports nerve health; commonly prescribed post-hospitalization; low cost, low risk.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 47,
+            "status": "VALID",
+            "reason": "IV NS for hydration and antibiotic dilution in moderate UTI; standard supportive care.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 48,
+            "status": "VALID",
+            "reason": "B-complex injection supports recovery; often used in hospital settings for nutritional support.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 49,
+            "status": "VALID",
+            "reason": "Spirit swabs for site prep during IV cannulation; 2 units reasonable for procedure.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 50,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 51,
+            "status": "VALID",
+            "reason": "10mL syringes for IV fluid/antibiotic administration; 4 units consistent with treatment protocol.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 52,
+            "status": "VALID",
+            "reason": "2.5mL syringes for precise dosing or flushes; 2 units reasonable for IV management.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 53,
+            "status": "REVIEW",
+            "reason": "Syringes not clinically linked to UTI or IV treatment; no procedure evidence.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 54,
+            "status": "INVALID",
+            "reason": "Wound plaster irrelevant to UTI diagnosis or treatment narrative.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 55,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 56,
+            "status": "VALID",
+            "reason": "Desloratadine may be for allergy/symptom control; listed in discharge meds.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 57,
+            "status": "VALID",
+            "reason": "Antiplatelet/statin combo aligns with MRI findings and discharge meds.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 58,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 59,
+            "status": "REVIEW",
+            "reason": "Betahistine for vertigo; no evidence of vestibular symptoms in UTI context.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 60,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 61,
+            "status": "VALID",
+            "reason": "Neurobion Forte is a multivitamin; listed in discharge meds, supportive care.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 62,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 63,
+            "status": "VALID",
+            "reason": "Pantoprazole IV for GI protection during IV antibiotics; clinically justified.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 64,
+            "status": "REVIEW",
+            "reason": "Polybion injection not clearly indicated for UTI; no documented deficiency.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 65,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 66,
+            "status": "REVIEW",
+            "reason": "Prochlorperazine for nausea; no documented vomiting or nausea in narrative.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 67,
+            "status": "REVIEW",
+            "reason": "10mL syringes not clearly linked to IV or procedure; possible duplication.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 68,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 69,
+            "status": "REVIEW",
+            "reason": "Duplicate of line 53; no additional clinical justification provided.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 70,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 71,
+            "status": "INVALID",
+            "reason": "Duplicate of line 54; wound plaster not indicated for UTI or IV treatment.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 72,
+            "status": "PARTIAL",
+            "reason": "NSAID/analgesic not primary for UTI; may be for symptom relief but excessive for moderate UTI without pain documentation.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 73,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 74,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 75,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 76,
+            "status": "VALID",
+            "reason": "Cefoperazone-sulbactam appropriate for Klebsiella UTI per sensitivity; IV antibiotic aligns with treatment summary.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 77,
+            "status": "PARTIAL",
+            "reason": "Antihistamine not indicated for UTI; possibly for allergy but no supporting evidence.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 78,
+            "status": "VALID",
+            "reason": "Antiplatelet/statin justified per discharge meds and MRI findings of chronic ischemic changes.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 79,
+            "status": "REVIEW",
+            "reason": "Gloves quantity excessive for UTI; no procedure or invasive intervention documented to justify 10 units.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 80,
+            "status": "PARTIAL",
+            "reason": "Betahistine for vertigo; no vertigo or vestibular symptoms documented in UTI context.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 81,
+            "status": "VALID",
+            "reason": "Neurobion Forte listed in discharge meds; likely for general support or neuropathy, consistent with chronic ischemic changes.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 82,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 83,
+            "status": "PARTIAL",
+            "reason": "PPI injection not standard for UTI; possibly for GI prophylaxis but no risk factors documented.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 84,
+            "status": "VALID",
+            "reason": "Spirit swabs are standard for IV site prep; consistent with IV antibiotic administration.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 85,
+            "status": "PARTIAL",
+            "reason": "Antiemetic not indicated unless nausea/vomiting present; no such symptoms documented for UTI.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 86,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 87,
+            "status": "REVIEW",
+            "reason": "1ml syringe quantity unclear; no specific injection documented requiring this size.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 88,
+            "status": "REVIEW",
+            "reason": "5ml syringes may be for fluid/med administration but no specific use documented.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 89,
+            "status": "INVALID",
+            "reason": "Telmisartan is an antihypertensive; no evidence of hypertension or indication for its use in UTI management.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 90,
+            "status": "INVALID",
+            "reason": "Wound plaster is unrelated to UTI treatment; no wound or surgical site documented.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 91,
+            "status": "PARTIAL",
+            "reason": "Aceclofenac+Paracetamol may be used for fever/pain in UTI, but NSAIDs carry renal risk; caution advised in moderate UTI.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 92,
+            "status": "VALID",
+            "reason": "Cefoperazone+Sulbactam is appropriate for Klebsiella UTI per sensitivity; IV antibiotic aligns with treatment summary.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 93,
+            "status": "INVALID",
+            "reason": "Desloratadine is an antihistamine; no evidence of allergic component or indication in UTI management.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 94,
+            "status": "INVALID",
+            "reason": "Ecosprin AV (aspirin+atorvastatin) is for cardiovascular prophylaxis; no documented indication in UTI or discharge meds.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 95,
+            "status": "REVIEW",
+            "reason": "Gloves quantity (10) exceeds typical UTI care needs; insufficient evidence to confirm necessity or procedure context.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 96,
+            "status": "INVALID",
+            "reason": "Betahistine is for vertigo; no evidence of vestibular symptoms or indication in UTI or discharge meds.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 97,
+            "status": "VALID",
+            "reason": "Neurobion Forte is a multivitamin; commonly prescribed for general support; listed in discharge meds.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 98,
+            "status": "VALID",
+            "reason": "Pantoprazole IV is appropriate for GI protection during IV antibiotics; aligns with supportive care in treatment summary.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 99,
+            "status": "REVIEW",
+            "reason": "Spirit swabs may be for site prep, but no procedure or injection documented to justify use; insufficient context.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 100,
+            "status": "REVIEW",
+            "reason": "Syringes (4x10ml) may be for IV meds, but no specific procedure or injection volume documented; insufficient evidence.",
+            "confidence": 0.65,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 101,
+            "status": "VALID",
+            "reason": "Syringes used for IV antibiotic administration in UTI management.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 102,
+            "status": "VALID",
+            "reason": "Syringes used for IV fluid or medication administration in moderate UTI.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 103,
+            "status": "REVIEW",
+            "reason": "Telmisartan not indicated for UTI; possible comorbidity not documented.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 104,
+            "status": "INVALID",
+            "reason": "Wound plaster unrelated to UTI diagnosis or treatment.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 105,
+            "status": "PARTIAL",
+            "reason": "Analgesic may be supportive but not primary for Klebsiella UTI; overuse risk.",
+            "confidence": 0.75,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 106,
+            "status": "VALID",
+            "reason": "Cefoperazone/sulbactam appropriate for Klebsiella UTI per sensitivity.",
+            "confidence": 0.95,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 107,
+            "status": "REVIEW",
+            "reason": "Desloratadine not indicated for UTI; possible allergy comorbidity undocumented.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 108,
+            "status": "VALID",
+            "reason": "Antiplatelet/statin initiated per MRI findings of chronic ischemic changes.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 109,
+            "status": "VALID",
+            "reason": "Gloves used for IV/clinical procedures in moderate UTI management.",
+            "confidence": 0.9,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 110,
+            "status": "REVIEW",
+            "reason": "Betahistine for vertigo; no documented vestibular symptoms or indication.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 111,
+            "status": "VALID",
+            "reason": "Neurobion Forte supports nerve health; listed in discharge meds.",
+            "confidence": 0.8,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 112,
+            "status": "VALID",
+            "reason": "Pantoprazole IV for GI protection during IV antibiotic therapy.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 113,
+            "status": "REVIEW",
+            "reason": "No evidence of wound or surgical site requiring spirit swabs for UTI management.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 114,
+            "status": "REVIEW",
+            "reason": "Syringes billed without clear link to IV/IM procedures; no procedure documentation provided.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 115,
+            "status": "REVIEW",
+            "reason": "Syringe 2.5ml quantity not justified; no specific injection or dosing protocol referenced.",
+            "confidence": 0.5,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 116,
+            "status": "REVIEW",
+            "reason": "Syringes 5ml billed without procedure linkage; excessive quantity without clinical rationale.",
+            "confidence": 0.55,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 117,
+            "status": "VALID",
+            "reason": "Telma 40mg listed in discharge meds; may be for hypertension comorbidity; no exclusion.",
+            "confidence": 0.85,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 118,
+            "status": "REVIEW",
+            "reason": "Wound plaster not clinically indicated for UTI; no evidence of skin injury or procedure.",
+            "confidence": 0.6,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 119,
+            "status": "PARTIAL",
+            "reason": "Zerodol P (analgesic/anti-inflammatory) may be for symptom relief, but not standard for UTI; overuse risk.",
+            "confidence": 0.7,
+            "decided_by": "LLM_AGENT",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 120,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 121,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 122,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 123,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 124,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 125,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 126,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 127,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 128,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 129,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 130,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 131,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 132,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 133,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 134,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 135,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 136,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 137,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 138,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 139,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 140,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 141,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 142,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          },
+          {
+            "line_item_id": 143,
+            "status": "VALID",
+            "reason": "Passed deterministic validation checks",
+            "confidence": 0.95,
+            "decided_by": "RULE_ENGINE",
+            "exclusion_applies": null,
+            "exclusion_reason_code": null,
+            "exclusion_clause_reference": null,
+            "exclusion_decision_source": null
+          }
+        ],
+        "major_conflicts": [
+          "103 line items appear duplicated by description and amount"
+        ],
+        "recommended_action": "REJECT",
+        "treatment_process_correct": false,
+        "treatment_process_explanation": "Multiple medications and procedures unrelated to Klebsiella UTI (e.g., betahistine, telmisartan, ecosprin av, wound plaster) with no documented clinical justification; duplicate billing and excessive consumables further undermine clinical appropriateness.",
+        "treatment_process_confidence": 0.88,
+        "treatment_process_evidence": [
+          "Betahistine (Histin) prescribed without evidence of vertigo or vestibular disorder.",
+          "Telmisartan and Ecosprin AV (antiplatelet/statin) lack indication in UTI management or documented comorbidities.",
+          "Wound plaster and syringes not linked to any procedure or IV site care documented.",
+          "Polybion injections and multivitamins not indicated without evidence of deficiency.",
+          "Duplicate charges and excessive glove/syringe quantities suggest billing inaccuracies.",
+          "Lab confirms Klebsiella UTI but no evidence supports non-antibiotic interventions listed."
+        ],
+        "lab_evidence_count": 2,
+        "ped_validation": {
+          "validation_status": "INSUFFICIENT",
+          "overall_decision": "MANUAL_REVIEW",
+          "confidence": 0.62,
+          "execution_mode": "sequential",
+          "missing_inputs": [
+            "declared_pre_existing_diseases",
+            "policy_start_date",
+            "policy_wording",
+            "ped_waiting_period_years"
+          ],
+          "reason_codes": [
+            "DECLARATION_SOURCE_MISSING",
+            "DISCHARGE_SUMMARY_SOURCE_AVAILABLE",
+            "POLICY_WORDING_SOURCE_MISSING",
+            "WAITING_PERIOD_RULE_MISSING",
+            "PED_LLM_REFINEMENT_USED"
+          ],
+          "ped_items": [
+            {
+              "ped_name": "Hypertension",
+              "declared_status": "UNKNOWN",
+              "treatment_linkage": "POSSIBLE",
+              "policy_decision": "REVIEW",
+              "waiting_period_applies": null,
+              "standard_waiting_applies": null,
+              "specific_waiting_applies": null,
+              "moratorium_applies": null,
+              "continuity_benefit_used": null,
+              "decision_source": "LLM_AGENT",
+              "linked_treatment": [],
+              "confidence": 0.62,
+              "reason_codes": [
+                "PED_PRESENT_BUT_NO_DIRECT_TEXT_MATCH",
+                "DECLARATION_SOURCE_MISSING"
+              ],
+              "evidence_references": [
+                {
+                  "source_type": "DISCHARGE_SUMMARY",
+                  "source_file": "discharge_summary",
+                  "page": null,
+                  "snippet": "PED extracted: Hypertension",
+                  "line_item_id": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "agent": "financial",
+      "display_name": "Financial Adjudication",
+      "status": "pass",
+      "summary": "Financial adjudication passed: the bill reconciles and is fully payable. Of 27817.00 billed across 11 line item(s): payable 27817.00 (11), non-payable 0.00 (0), undetermined 0.00 (0). Recommended action APPROVE; admissible amount 27817.00. Billing type assessed as Surgery. Figures derived via the consolidated path.",
+      "issues": [
+        {
+          "message": "1 line item(s) were flagged for review during consolidation.",
+          "severity": "medium",
+          "code": "financial.flagged_lines",
+          "location": null,
+          "suggestion": null
+        }
+      ],
+      "issue_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 0,
+        "total": 1
+      },
+      "judge": {
+        "status": "revise",
+        "score": 0.75,
+        "rationale": "The agent incorrectly classified the billing type as 'Surgery' for a UTI diagnosis with no surgical procedure, risking over-payment if policy terms restrict surgery coverage. Also, the insurer comparison flags a mismatch (billed 27817.0 vs claimed 0.0), yet the verdict is VALID without justification — this should trigger INVESTIGATION_REQUIRED. Line item 4 (Emergency Transportation) at 0.85 confidence is borderline and should be flagged for review.",
+        "suggestions": [
+          "Reclassify billing type from 'Surgery' to 'Medical' to align with diagnosis and avoid policy misapplication.",
+          "Change overall verdict to INVESTIGATION_REQUIRED due to unexplained mismatch with insurer figures (claimed=0.0).",
+          "Flag line item 4 (Emergency Transportation) as 'undetermined' for manual review given low confidence (0.85)."
+        ],
+        "attempts": 1
+      },
+      "metrics": {
+        "elapsed_seconds": 0.002,
+        "attempts": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_id": null
+      },
+      "error": null,
+      "report": {
+        "request_id": "12a52e80",
+        "generated_at": "2026-07-04T12:50:50.136997Z",
+        "mode": "consolidated",
+        "overall_verdict": "VALID",
+        "recommended_action": "APPROVE",
+        "final_admissible_amount": 27817.0,
+        "totals": {
+          "total_billed": 27817.0,
+          "payable_total": 27817.0,
+          "non_payable_total": 0.0,
+          "unknown_total": 0.0,
+          "charge_count": 11,
+          "payable_count": 11,
+          "non_payable_count": 0,
+          "unknown_count": 0
+        },
+        "reconciliation": {
+          "extracted_total": 27817.0,
+          "recomputed_total": 27817.0,
+          "difference": 0.0,
+          "matches": true
+        },
+        "insurer_comparison": {
+          "has_insurer_figures": false,
+          "claimed_amount": 0.0,
+          "sanctioned_amount": 0.0,
+          "disallowed_amount": 0.0,
+          "billed_vs_claimed_difference": 27817.0,
+          "billed_vs_claimed_match": false,
+          "payable_vs_sanctioned_difference": 27817.0,
+          "payable_vs_sanctioned_match": false,
+          "non_payable_vs_disallowed_difference": 0.0,
+          "non_payable_vs_disallowed_match": true
+        },
+        "by_bill_type": [
+          {
+            "bill_type": "Medicines Pharmacy Charges",
+            "billed": 8017.0,
+            "payable": 8017.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Investigation Charges",
+            "billed": 6200.0,
+            "payable": 6200.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 3
+          },
+          {
+            "bill_type": "Room Charges",
+            "billed": 6000.0,
+            "payable": 6000.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "ICU Nursing Charges",
+            "billed": 4500.0,
+            "payable": 4500.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Consultation Visit Charges",
+            "billed": 2650.0,
+            "payable": 2650.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 3
+          },
+          {
+            "bill_type": "Procedure Charges",
+            "billed": 400.0,
+            "payable": 400.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          },
+          {
+            "bill_type": "Miscellaneous",
+            "billed": 50.0,
+            "payable": 50.0,
+            "non_payable": 0.0,
+            "unknown": 0.0,
+            "count": 1
+          }
+        ],
+        "billing_type": "Surgery",
+        "overall_confidence": 0.983,
+        "flagged_count": 1,
+        "line_items": [
+          {
+            "line_item_id": 1,
+            "description": "CONSULTATION CHARGE",
+            "amount": 1500.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 2,
+            "description": "CROSS CONSULTATION",
+            "amount": 550.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 3,
+            "description": "DOCUMENTATION SERVICE FEE",
+            "amount": 50.0,
+            "bill_type": "Miscellaneous",
+            "sub_bill_type": "Miscellaneous Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 4,
+            "description": "EMERGENCY TRANSPORTATION SERVICE",
+            "amount": 600.0,
+            "bill_type": "Consultation Visit Charges",
+            "sub_bill_type": "Consultation charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 0.85
+          },
+          {
+            "line_item_id": 5,
+            "description": "MRI BRAIN NON-CONTRAST",
+            "amount": 4600.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "llm_selected",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 6,
+            "description": "NURSING CARE",
+            "amount": 4500.0,
+            "bill_type": "ICU Nursing Charges",
+            "sub_bill_type": "ICU Nursing",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 0.95
+          },
+          {
+            "line_item_id": 7,
+            "description": "PHYSIOTHERAPY",
+            "amount": 400.0,
+            "bill_type": "Procedure Charges",
+            "sub_bill_type": "Physiotherapy",
+            "payability": "payable",
+            "resolve_method": "llm_master_taxonomy",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 8,
+            "description": "ROOM RENT",
+            "amount": 6000.0,
+            "bill_type": "Room Charges",
+            "sub_bill_type": "Room Charge",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 9,
+            "description": "LAB CHARGES",
+            "amount": 1460.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 10,
+            "description": "MEDICINE CHARGES",
+            "amount": 8017.0,
+            "bill_type": "Medicines Pharmacy Charges",
+            "sub_bill_type": "Medicines Pharmacy Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          },
+          {
+            "line_item_id": 11,
+            "description": "RADIOLOGY CHARGES",
+            "amount": 140.0,
+            "bill_type": "Investigation Charges",
+            "sub_bill_type": "Investigation  Charges",
+            "payability": "payable",
+            "resolve_method": "vector_direct",
+            "confidence": 1.0
+          }
+        ],
+        "notes": [
+          "Bill reconciles and every line item is payable."
+        ],
+        "contract": null
+      }
+    }
+  ],
+  "metrics": {
+    "agent_count": 4,
+    "total_agent_elapsed_seconds": 82.875,
+    "processing_time_seconds": null,
+    "issue_counts": {
+      "high": 16,
+      "medium": 6,
+      "low": 2,
+      "total": 24
+    }
+  }
+}

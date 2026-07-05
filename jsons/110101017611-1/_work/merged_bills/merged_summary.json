@@ -1,0 +1,20 @@
+{
+  "bills": [
+    {
+      "bill_id": "procedure_bill_1",
+      "category": "procedure_bill",
+      "pages": [
+        3
+      ],
+      "merged_from": 1,
+      "total_charges": 2,
+      "duplicates_removed": 0,
+      "total_amount": "55000.00"
+    }
+  ],
+  "category_totals": {
+    "procedure_bill": 55000.0
+  },
+  "grand_total": 55000.0,
+  "total_bills": 1
+}

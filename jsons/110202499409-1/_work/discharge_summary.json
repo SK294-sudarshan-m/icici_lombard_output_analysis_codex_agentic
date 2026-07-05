@@ -1,0 +1,34 @@
+{
+  "source_pages": [
+    4,
+    5
+  ],
+  "primary_diagnosis": "RIGHT EYE - CATARACT",
+  "procedures": [
+    "RIGHT EYE MICS PHACO WITH ACRYSOF IQ TORIC MONOFOCAL IOL IMPLANTATION"
+  ],
+  "severity": "Moderate",
+  "length_of_stay": "0",
+  "treating_doctor": "L.V. SHANMUGHANATHAN",
+  "department": "OPHTHALMOLOGY",
+  "pre_existing_diseases": [],
+  "treatment": "Right eye MICS phaco with Acrysof IQ Toric Monofocal IOL implantation done under topical anaesthesia.",
+  "medications": [
+    {
+      "name": "Predforte Eye Drops",
+      "frequency": "6 times"
+    },
+    {
+      "name": "Zivimox Eye Drops",
+      "frequency": "3 times"
+    },
+    {
+      "name": "Aquim-T Eye Drops",
+      "frequency": "2 times"
+    },
+    {
+      "name": "Tab. Dolo 650 mg",
+      "frequency": "SOS"
+    }
+  ]
+}
