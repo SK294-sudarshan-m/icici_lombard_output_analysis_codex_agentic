@@ -1,9 +1,10 @@
-"""Run the full-artifact, standalone-model case-verdict analysis agent.
+"""Run the full-artifact, standalone case-verdict analysis agent.
 
 The primary workflow is entirely agent-generated: every nested JSON leaf and every
-raw/page artifact is fed through the standalone copied Bedrock model settings, and
-the resulting seven-column workbook is authored by this program.  The preserved
-``output_codex`` folder is never read, changed, or used as model evidence.
+raw/page artifact and every accepted PDF is processed by this program.  Default
+mode uses no external AI; optional Bedrock mode uses standalone copied Qwen/Titan
+settings.  The preserved ``output_codex`` folder is never read, changed, or used
+as evidence.
 """
 
 from __future__ import annotations
@@ -27,6 +28,7 @@ try:
         ModelAnalysisError,
         generate_model_rows,
     )
+    from .rule_analysis import generate_rule_rows
 except ImportError:  # Direct script execution.
     from model_corpus import (
         AL_PATTERN,
@@ -36,6 +38,7 @@ except ImportError:  # Direct script execution.
         ModelAnalysisError,
         generate_model_rows,
     )
+    from rule_analysis import generate_rule_rows
 
 
 def discover_case_roots(jsons_dir: Path) -> list[Path]:
@@ -202,7 +205,8 @@ def build_xlsx(
         ("input_folder", audit.get("input_folder")),
         ("case_count", audit.get("case_count")),
         ("pdf_input_count", audit.get("pdf_input_count")),
-        ("unmapped_pdf_input_count", audit.get("unmapped_pdf_input_count")),
+        ("standalone_pdf_input_count", audit.get("standalone_pdf_input_count")),
+        ("analysis_mode", audit.get("analysis_mode")),
         ("language_model_id", model_runtime.get("language_model_id")),
         ("embedding_model_id", embedding_runtime.get("model_id") or model_runtime.get("embedding_model_id")),
         ("region", model_runtime.get("region")),
@@ -256,18 +260,17 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     case_pairs = [(infer_case_id(root), root) for root in roots]
     if len({case_id for case_id, _root in case_pairs}) != len(case_pairs):
         raise ModelAnalysisError("Duplicate AL numbers were inferred from the input corpus")
-    pdf_assignments, unmapped_pdfs = assign_pdf_inputs(case_pairs, args.pdf_input_dir.resolve())
-    if unmapped_pdfs and args.strict_pdf_mapping:
-        names = ", ".join(path.name for path in unmapped_pdfs)
+    pdf_assignments, standalone_pdfs = assign_pdf_inputs(case_pairs, args.pdf_input_dir.resolve())
+    if standalone_pdfs and args.strict_pdf_mapping:
+        names = ", ".join(path.name for path in standalone_pdfs)
         raise ModelAnalysisError(
             f"Ground-truth PDF(s) could not be mapped to an AL case: {names}"
         )
-    if unmapped_pdfs:
-        names = ", ".join(path.name for path in unmapped_pdfs)
+    if standalone_pdfs:
+        names = ", ".join(path.name for path in standalone_pdfs)
         print(
-            "WARNING: Skipping ground-truth PDF(s) with no matching output case in jsons: "
+            "INFO: Accepting standalone PDF context with no matching output case in jsons: "
             f"{names}",
-            file=sys.stderr,
         )
     cases = [
         (case_id, root, pdf_assignments[case_id])
@@ -275,12 +278,21 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     ]
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    rows, model_audit = generate_model_rows(
-        cases,
-        output_dir=output_dir,
-        chunk_chars=args.chunk_chars,
-        workers=args.model_workers,
-    )
+    if args.analysis_mode == "bedrock":
+        rows, model_audit = generate_model_rows(
+            cases,
+            standalone_pdfs=standalone_pdfs,
+            output_dir=output_dir,
+            chunk_chars=args.chunk_chars,
+            workers=args.model_workers,
+        )
+    else:
+        rows, model_audit = generate_rule_rows(
+            cases,
+            standalone_pdfs=standalone_pdfs,
+            output_dir=output_dir,
+            chunk_chars=args.chunk_chars,
+        )
     if len(rows) != len(cases):
         raise ModelAnalysisError("Configured model did not generate exactly one row per case")
     if any(list(row) != ROW_HEADERS for row in rows):
@@ -294,12 +306,18 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "input_folder": str(jsons_dir),
         "input_manifest": input_manifest(jsons_dir),
         "case_count": len(cases),
-        "pdf_input_count": sum(len(paths) for paths in pdf_assignments.values()),
-        "unmapped_pdf_input_count": len(unmapped_pdfs),
-        "unmapped_pdf_inputs": [str(path) for path in unmapped_pdfs],
+        "pdf_input_count": sum(len(paths) for paths in pdf_assignments.values()) + len(standalone_pdfs),
+        "matched_pdf_input_count": sum(len(paths) for paths in pdf_assignments.values()),
+        "standalone_pdf_input_count": len(standalone_pdfs),
+        "standalone_pdf_inputs": [str(path) for path in standalone_pdfs],
+        "analysis_mode": args.analysis_mode,
         "output_codex_preserved": output_codex.exists(),
         "output_codex_used_as_input": False,
-        "excel_rows_generated_by": "standalone copied Bedrock model settings via agent code",
+        "excel_rows_generated_by": (
+            "standalone deterministic rule analysis"
+            if args.analysis_mode == "rules"
+            else "standalone copied Bedrock model settings via agent code"
+        ),
         "model_analysis": model_audit,
     }
     audit_path.write_text(json.dumps(audit, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -315,8 +333,13 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         )
     return {
         "cases": len(cases),
+        "analysis_mode": args.analysis_mode,
         "input_files": audit["input_manifest"]["files"],
         "all_artifacts_model_processed": model_audit["all_json_fields_and_raw_artifacts_model_processed"],
+        "all_artifacts_processed": model_audit.get(
+            "all_json_fields_and_raw_artifacts_processed",
+            model_audit["all_json_fields_and_raw_artifacts_model_processed"],
+        ),
         "output_codex_preserved": True,
         "xlsx": str(xlsx_path) if not args.skip_xlsx else None,
         "audit": str(audit_path),
@@ -330,6 +353,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--pdf-input-dir", type=Path, default=here / "input_pdfs")
     parser.add_argument("--output-dir", type=Path, default=here / "output_agent")
     parser.add_argument("--xlsx-name", default="case_verdict_analysis_agent.xlsx")
+    parser.add_argument(
+        "--analysis-mode",
+        choices=("rules", "bedrock"),
+        default="rules",
+        help=(
+            "rules = no AI/Codex/Bedrock dependency; bedrock = use the standalone copied Qwen/Titan settings."
+        ),
+    )
     parser.add_argument("--chunk-chars", type=int, default=60000)
     parser.add_argument("--model-workers", type=int, default=4)
     parser.add_argument("--node", help=argparse.SUPPRESS)
@@ -342,7 +373,7 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help=(
             "Fail if any PDF under --pdf-input-dir does not map to a discovered AL/output case. "
-            "By default, unmatched PDFs are recorded in the audit and skipped."
+            "By default, unmatched PDFs are accepted as standalone context and recorded in the audit."
         ),
     )
     return parser

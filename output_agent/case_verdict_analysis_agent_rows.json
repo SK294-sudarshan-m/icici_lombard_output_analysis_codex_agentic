@@ -1,0 +1,218 @@
+[
+  {
+    "AL-number": "110100834860-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "amount reconciliation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components",
+    "how it happened": "Stored gate facts: amounts_match=False, extracted_amount=853811.1, calculated_amount=914760.85, extracted_after_discount=914760.85, calculated_after_discount=914760.85, amount_diff=60949.75, printed_net_payable=189771.25, overall_confidence=0.6, total_line_items=168, review_total_flagged=15.",
+    "where it happened(step in pipeline)": "stage_6_7_consolidation_confidence; confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: amount reconciliation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 103, \"extraction\": 19288, \"classification\": 937, \"amount\": 6286, \"returns\": 565, \"confidence\": 6848}. Sample safe evidence: $.insurance.claimed_amount = \"\"; $.insurance.approved_amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/level1_summary.json; RELATIVE_PATH _work/categorised_bill_level1/non_bill/page_001.json; $.extraction_recall_warning = \"Extracted 5 charges but the page appears to have many more line items — possible missed rows, review this page.\"; $.extraction_recall_warning = \"Extracted 5 charges but the page appears to have many more line items — possible missed rows, review this page.\"",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110101016363-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "confidence/review flag",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=329450.0, calculated_amount=329450.0, extracted_after_discount=313950.0, calculated_after_discount=313950.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=0.9, total_line_items=2, review_total_flagged=1.",
+    "where it happened(step in pipeline)": "confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: confidence/review flag. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 30, \"extraction\": 548, \"classification\": 106, \"amount\": 305, \"returns\": 8, \"confidence\": 420}. Sample safe evidence: $.insurance.claimed_amount = \"313950.00\"; $.insurance.approved_amount = \"313950.00\"; RELATIVE_PATH _work/categorised_bill_level1/final_bill/page_006.json; RELATIVE_PATH _work/categorised_bill_level1/implant_bill/page_007.json; PIPELINE_STAGE stage_6_7_consolidation_confidence; $.bill_summary.overall_confidence = 0.9",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110101016434-2",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=288652.71, calculated_amount=288652.71, extracted_after_discount=288652.71, calculated_after_discount=288652.71, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=0.971, total_line_items=34, review_total_flagged=1.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 7 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110101016774-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=87200.0, calculated_amount=87200.0, extracted_after_discount=87200.0, calculated_after_discount=87200.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=3, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 2 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110101016808-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=65000.0, calculated_amount=65000.0, extracted_after_discount=65000.0, calculated_after_discount=65000.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=8, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 3 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110101017483-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=35000.0, calculated_amount=35000.0, extracted_after_discount=35000.0, calculated_after_discount=35000.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=6, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 2 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110101017611-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "confidence/review flag",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=55000.0, calculated_amount=55000.0, extracted_after_discount=55000.0, calculated_after_discount=55000.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=2, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: confidence/review flag. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 12, \"extraction\": 294, \"classification\": 73, \"amount\": 198, \"returns\": 11, \"confidence\": 207}. Sample safe evidence: $.insurance.claimed_amount = \"\"; $.insurance.approved_amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/level1_summary.json; RELATIVE_PATH _work/categorised_bill_level1/non_bill/page_001.json; PIPELINE_STAGE stage_6_7_consolidation_confidence; $.bill_summary.overall_confidence = 1.0",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110101017679-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=20400.0, calculated_amount=20400.0, extracted_after_discount=20400.0, calculated_after_discount=20400.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=1, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 2 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110101018148-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=7089.73, calculated_amount=7089.73, extracted_after_discount=7089.73, calculated_after_discount=7089.73, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=17, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 4 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110202494394-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "amount reconciliation mismatch; supporting bill aggregation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components",
+    "how it happened": "Stored gate facts: amounts_match=False, extracted_amount=151956.82, calculated_amount=151956.82, extracted_after_discount=152256.82, calculated_after_discount=152256.82, amount_diff=0.0, printed_net_payable=76278.0, overall_confidence=0.6, total_line_items=16, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "stage_4_5_sequencing_merging; stage_6_7_consolidation_confidence; confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: amount reconciliation mismatch; supporting bill aggregation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 103, \"extraction\": 5212, \"classification\": 139, \"amount\": 1626, \"returns\": 23, \"confidence\": 762}. Sample safe evidence: $.insurance.claimed_amount = \"76278.00\"; $.insurance.approved_amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/final_bill/page_002.json; RELATIVE_PATH _work/categorised_bill_level1/final_bill/page_003.json; PIPELINE_STAGE stage_6_7_consolidation_confidence; $.bill_summary.overall_confidence = 0.6",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110202494871-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "supporting bill aggregation mismatch",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=56538.0, calculated_amount=56538.0, extracted_after_discount=56538.0, calculated_after_discount=56538.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=13, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "stage_4_5_sequencing_merging",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: supporting bill aggregation mismatch. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 48, \"extraction\": 9804, \"classification\": 161, \"amount\": 2734, \"returns\": 28, \"confidence\": 786}. Sample safe evidence: $.insurance.claimed_amount = \"56538.00\"; $.charges[0].gross_amount = \"10800.00\"; RELATIVE_PATH _work/categorised_bill_level1/final_bill/page_001.json; RELATIVE_PATH _work/categorised_bill_level1/level1_summary.json; PIPELINE_STAGE stage_6_7_consolidation_confidence; $.bill_summary.overall_confidence = 1.0",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110202495953-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "supporting bill aggregation mismatch; confidence/review flag",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=27817.0, calculated_amount=27817.0, extracted_after_discount=27817.0, calculated_after_discount=27817.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=0.983, total_line_items=11, review_total_flagged=1.",
+    "where it happened(step in pipeline)": "stage_4_5_sequencing_merging; confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: supporting bill aggregation mismatch; confidence/review flag. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 85, \"extraction\": 9296, \"classification\": 392, \"amount\": 3070, \"returns\": 61, \"confidence\": 990}. Sample safe evidence: $.insurance.claimed_amount = \"\"; $.insurance.approved_amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/detailed_final_bill/page_007.json; RELATIVE_PATH _work/categorised_bill_level1/investigation_bill/page_006.json; $.extraction_recall_warning = \"Extracted 0 charges but the page appears to have many more line items — possible missed rows, review this page.\"; $.extraction_recall_warning = \"Extracted 0 charges but the page appears to have many more line items — possible missed rows, review this page.\"",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110202496617-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "amount reconciliation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components",
+    "how it happened": "Stored gate facts: amounts_match=False, extracted_amount=70702.62, calculated_amount=74254.06, extracted_after_discount=74254.06, calculated_after_discount=74254.06, amount_diff=3551.44, printed_net_payable=43087.0, overall_confidence=0.6, total_line_items=198, review_total_flagged=3.",
+    "where it happened(step in pipeline)": "stage_6_7_consolidation_confidence; confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: amount reconciliation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 26, \"extraction\": 22950, \"classification\": 243, \"amount\": 6896, \"returns\": 882, \"confidence\": 4227}. Sample safe evidence: $.medications[0].amount = \"\"; $.medications[1].amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/level1_summary.json; RELATIVE_PATH _work/categorised_bill_level1/non_bill/page_001.json; $.extraction_recall_warning = \"Extracted 0 charges but the page appears to have many more line items — possible missed rows, review this page.\"; $.extraction_recall_warning = \"Extracted 0 charges but the page appears to have many more line items — possible missed rows, review this page.\"",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110202496923-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "amount reconciliation mismatch; supporting bill aggregation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components",
+    "how it happened": "Stored gate facts: amounts_match=False, extracted_amount=17712.18, calculated_amount=17712.18, extracted_after_discount=17712.18, calculated_after_discount=17712.18, amount_diff=0.0, printed_net_payable=24101.0, overall_confidence=0.6, total_line_items=34, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "stage_4_5_sequencing_merging; stage_6_7_consolidation_confidence; confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: amount reconciliation mismatch; supporting bill aggregation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 79, \"extraction\": 11131, \"classification\": 185, \"amount\": 2964, \"returns\": 17, \"confidence\": 1115}. Sample safe evidence: $.insurance.claimed_amount = \"\"; $.insurance.approved_amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/detailed_final_bill/page_008.json; RELATIVE_PATH _work/categorised_bill_level1/detailed_final_bill/page_009.json; PIPELINE_STAGE stage_6_7_consolidation_confidence; $.bill_summary.overall_confidence = 0.6",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110202497170-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "confidence/review flag",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=25000.0, calculated_amount=25000.0, extracted_after_discount=25000.0, calculated_after_discount=25000.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=1, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: confidence/review flag. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 9, \"extraction\": 151, \"classification\": 41, \"amount\": 162, \"returns\": 8, \"confidence\": 177}. Sample safe evidence: $.medications[0].amount = \"\"; $.medications[1].amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/level1_summary.json; RELATIVE_PATH _work/categorised_bill_level1/non_bill/page_001.json; PIPELINE_STAGE stage_6_7_consolidation_confidence; $.bill_summary.overall_confidence = 1.0",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110202497302-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=67500.0, calculated_amount=67500.0, extracted_after_discount=67500.0, calculated_after_discount=67500.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=3, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 2 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110202497866-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "amount reconciliation mismatch; confidence/review flag; possible extraction or line-item coverage gap",
+    "how it happened": "Stored gate facts: amounts_match=False, extracted_amount=55200.0, calculated_amount=0, extracted_after_discount=55200.0, calculated_after_discount=0.0, amount_diff=-55200.0, printed_net_payable=not recorded, overall_confidence=0.0, total_line_items=0, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "stage_1_extraction_ocr; stage_6_7_consolidation_confidence; confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: amount reconciliation mismatch; confidence/review flag; possible extraction or line-item coverage gap. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 10, \"extraction\": 49, \"classification\": 48, \"amount\": 120, \"returns\": 8, \"confidence\": 201}. Sample safe evidence: $.insurance.claimed_amount = \"55200.00\"; $.insurance.approved_amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/final_bill/page_003.json; RELATIVE_PATH _work/categorised_bill_level1/level1_summary.json; PIPELINE_STAGE stage_6_7_consolidation_confidence; $.bill_summary.overall_confidence = 0.0",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110202497976-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "amount reconciliation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components",
+    "how it happened": "Stored gate facts: amounts_match=False, extracted_amount=79661.0, calculated_amount=69523.63, extracted_after_discount=69523.63, calculated_after_discount=69523.63, amount_diff=-10137.37, printed_net_payable=79661.0, overall_confidence=0.6, total_line_items=27, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "stage_6_7_consolidation_confidence; confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: amount reconciliation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 31, \"extraction\": 4347, \"classification\": 248, \"amount\": 1370, \"returns\": 32, \"confidence\": 1357}. Sample safe evidence: $.document_markers.document_title = \"Payer Payable\"; $.insurance.claimed_amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/detailed_final_bill/page_003.json; RELATIVE_PATH _work/categorised_bill_level1/detailed_final_bill/page_004.json; PIPELINE_STAGE stage_6_7_consolidation_confidence; $.bill_summary.overall_confidence = 0.6",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110202497982-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "amount reconciliation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components",
+    "how it happened": "Stored gate facts: amounts_match=False, extracted_amount=36178.25, calculated_amount=36178.25, extracted_after_discount=36178.25, calculated_after_discount=36178.25, amount_diff=0.0, printed_net_payable=23774.0, overall_confidence=0.6, total_line_items=44, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "stage_6_7_consolidation_confidence; confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: amount reconciliation mismatch; confidence/review flag; net payable correction due to discount/return/deduction components. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 13, \"extraction\": 5139, \"classification\": 84, \"amount\": 1514, \"returns\": 21, \"confidence\": 1028}. Sample safe evidence: $.insurance.claimed_amount = \"\"; $.insurance.approved_amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/detailed_final_bill/page_004.json; RELATIVE_PATH _work/categorised_bill_level1/detailed_final_bill/page_005.json; PIPELINE_STAGE stage_6_7_consolidation_confidence; $.bill_summary.overall_confidence = 0.6",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  },
+  {
+    "AL-number": "110202499095-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=47945.0, calculated_amount=47945.0, extracted_after_discount=47945.0, calculated_after_discount=47945.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=0.96, total_line_items=10, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 3 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110202499409-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=43000.0, calculated_amount=43000.0, extracted_after_discount=43000.0, calculated_after_discount=43000.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=0.97, total_line_items=8, review_total_flagged=2.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 5 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110202499643-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=55000.0, calculated_amount=55000.0, extracted_after_discount=55000.0, calculated_after_discount=55000.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=1, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 2 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110202500220-1",
+    "case_verdict": 1,
+    "what caused case verdict 0": "Not applicable: stored case_verdict is 1, so no rejection gate fired.",
+    "how it happened": "Stored gate facts: amounts_match=True, extracted_amount=33900.0, calculated_amount=33900.0, extracted_after_discount=33900.0, calculated_after_discount=33900.0, amount_diff=not recorded, printed_net_payable=not recorded, overall_confidence=1.0, total_line_items=1, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "consolidated_final.json verdict gate passed after consolidation/confidence checks",
+    "why it happened(actual reasons)": "The consolidated facts did not show a blocking amount mismatch or active review condition. Full-artifact scan covered 2 evidence chunks.",
+    "what can be improved": "Use this case as a positive control when comparing rejected cases with similar bill totals, line-item density, discounts, returns and confidence signals."
+  },
+  {
+    "AL-number": "110202501198-1",
+    "case_verdict": 0,
+    "what caused case verdict 0": "amount reconciliation mismatch; confidence/review flag",
+    "how it happened": "Stored gate facts: amounts_match=False, extracted_amount=11326.77, calculated_amount=14622.31, extracted_after_discount=14622.31, calculated_after_discount=14622.31, amount_diff=3295.54, printed_net_payable=not recorded, overall_confidence=0.5, total_line_items=20, review_total_flagged=0.",
+    "where it happened(step in pipeline)": "stage_6_7_consolidation_confidence; confidence/adjudication review gate",
+    "why it happened(actual reasons)": "The deterministic verdict gate rejected the case because the consolidated numeric/review facts showed: amount reconciliation mismatch; confidence/review flag. Supporting evidence patterns were found across the full artifact corpus: {\"aggregation\": 23, \"extraction\": 2676, \"classification\": 170, \"amount\": 944, \"returns\": 24, \"confidence\": 918}. Sample safe evidence: $.insurance.claimed_amount = \"\"; $.insurance.approved_amount = \"\"; RELATIVE_PATH _work/categorised_bill_level1/detailed_final_bill/page_002.json; RELATIVE_PATH _work/categorised_bill_level1/final_bill/page_001.json; PIPELINE_STAGE stage_6_7_consolidation_confidence; $.bill_summary.overall_confidence = 0.5",
+    "what can be improved": "Operationally compare rejected cases against passed controls by bill scope, line-item coverage, discount/return handling, aggregation tolerance and confidence flags. Improve document/page triage, line-item completeness checks, return-credit sign handling, final-bill versus supporting-bill scope checks, and human-review routing for low-confidence or mismatch-heavy cases."
+  }
+]

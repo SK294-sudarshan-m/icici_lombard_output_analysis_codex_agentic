@@ -6,8 +6,19 @@ IMPORTANT
 Yes, you run "python agent.py", but only after changing into the
 case_verdict_analysis_agent folder.
 
-The new model-generated report is written to output_agent.
+The new report is written to output_agent.
 The existing output_codex folder is preserved and is never used as input.
+
+Default mode is standalone "rules" mode. It uses Python only:
+
+  - no Codex
+  - no OpenAI
+  - no Bedrock call
+  - no local AI model
+  - no Node.js or @oai/artifact-tool
+
+Optional "bedrock" mode is still available if an ICICI environment has approved
+AWS Bedrock access and wants Qwen/Titan model-generated wording.
 
 
 1. OPEN POWERSHELL AND CHANGE TO THE AGENT FOLDER
@@ -70,21 +81,26 @@ Ground-truth PDFs must be under:
 
   .\input_pdfs\
 
-PDF matching rule:
+PDF handling rule:
 
-  - If a PDF filename contains an AL number, that AL must also exist as an
-    output case under .\jsons\ for the PDF to be used.
+  - Every PDF under .\input_pdfs\ is accepted.
+  - If a PDF filename contains an AL number and that AL exists under .\jsons\,
+    the PDF is attached to that output case.
   - If the PDF is a neutral staged filename such as ground_truth_001.pdf, the
     agent maps it only when there is exactly one non-AL-named output case, such
     as the Chander Kochhar reference case.
-  - PDFs that do not map to a discovered output case are skipped by default and
-    listed in output_agent\case_verdict_analysis_agent_audit.json.
+  - PDFs that do not map to a discovered output case are still scanned as
+    standalone PDF context and listed in:
+
+      output_agent\case_verdict_analysis_agent_audit.json
+
   - To force old fail-fast behavior, run with:
 
       python agent.py --strict-pdf-mapping
 
-An unmatched PDF cannot produce an Excel row by itself because the row requires
-case_verdict from the matching output case's consolidated_final.json.
+An unmatched PDF does not produce an Excel row by itself because the row requires
+case_verdict from an output case's consolidated_final.json. It is still accepted
+as context and included in the audit.
 
 Do not place the old Codex report in jsons. The folder .\output_codex is not read.
 
@@ -95,12 +111,16 @@ Optional input count check for the current supplied dataset:
 The current supplied dataset should return 1375 files.
 
 
-4. CHECK THE STANDALONE COPIED MODEL SETTINGS
-----------------------------------------------
+4. OPTIONAL: CHECK THE STANDALONE COPIED BEDROCK SETTINGS
+----------------------------------------------------------
 
 Run:
 
 python agent.py --check-model-config
+
+This step is only needed if you plan to run:
+
+  python agent.py --analysis-mode bedrock
 
 Expected model configuration:
 
@@ -118,8 +138,8 @@ not import the parent project's config.py, .env files, pydantic settings, or
 pipeline.clients module. The agent does not accept model-ID overrides.
 
 
-5. CHECK AWS/BEDROCK ACCESS BEFORE THE FULL RUN
------------------------------------------------
+5. OPTIONAL: CHECK AWS/BEDROCK ACCESS BEFORE BEDROCK MODE
+----------------------------------------------------------
 
 Run:
 
@@ -127,7 +147,7 @@ python agent.py --check-model-access
 
 This makes one safe Titan embedding call and one safe Qwen JSON call.
 
-Only continue when this command exits successfully and prints:
+Only use bedrock mode when this command exits successfully and prints:
 
   embedding_dimension
   language_model_response with status "ok"
@@ -149,14 +169,15 @@ Do not paste access keys or secret keys into agent.py, config files, commands,
 commits, tickets, logs, or chat.
 
 At the time these instructions were created, this workstation's only "default"
-shared-credentials profile returned an invalid security token. The full run will
-correctly stop until that AWS profile/role is valid.
+shared-credentials profile returned an invalid security token. Bedrock mode will
+correctly stop until that AWS profile/role is valid. Default rules mode does not
+need Bedrock access.
 
 
-6. RUN THE FULL AGENT
----------------------
+6. RUN THE FULL AGENT WITH NO AI/CODEX/BEDROCK DEPENDENCY
+----------------------------------------------------------
 
-After --check-model-access succeeds, run:
+Run:
 
 python agent.py
 
@@ -166,16 +187,19 @@ That one command performs the full workflow:
   2. Reads every nested artifact.
   3. Flattens every nested JSON leaf path.
   4. Includes every raw/page line after identity redaction.
-  5. Sends every evidence chunk to the standalone copied Qwen Bedrock model.
-  6. Hierarchically reduces all chunk analyses.
-  7. Uses the standalone copied Titan embedding model to compare verdict-0 cases with verdict-1
-     controls.
-  8. Uses Qwen to generate exactly the seven requested Excel columns.
-  9. Creates the Excel workbook using Python/openpyxl.
+  5. Scans all accepted PDFs, including PDFs with no matching output case.
+  6. Applies standalone deterministic cause-categorization rules.
+  7. Generates exactly the seven requested Excel columns.
+  8. Creates the Excel workbook using Python/openpyxl.
 
-The current corpus produces approximately 193 mandatory map chunks at the default
-chunk size. The run can take time and incurs Bedrock usage. Do not close the shell
-while it is running.
+This default run does not incur Bedrock usage and does not need any external AI
+tool. Do not close the shell while it is running.
+
+Optional Bedrock/Qwen/Titan mode:
+
+python agent.py --analysis-mode bedrock
+
+Only use this optional mode after "python agent.py --check-model-access" succeeds.
 
 
 7. EXPECTED OUTPUT FILES
@@ -195,8 +219,7 @@ Supporting audit files are:
   .\output_agent\case_verdict_analysis_agent_audit.json
   .\output_agent\model_cache\...
 
-The Excel columns are generated by the configured Qwen model and remain in this
-exact order:
+The Excel columns remain in this exact order:
 
   AL-number
   case_verdict
@@ -214,13 +237,13 @@ Run this after successful completion:
 
 $audit = Get-Content .\output_agent\case_verdict_analysis_agent_audit.json -Raw | ConvertFrom-Json
 $audit.input_manifest
-$audit.model_analysis.all_json_fields_and_raw_artifacts_model_processed
+$audit.model_analysis.all_json_fields_and_raw_artifacts_processed
 $audit.output_codex_preserved
 $audit.output_codex_used_as_input
 
 Expected values for the two important coverage flags:
 
-  all_json_fields_and_raw_artifacts_model_processed = True
+  all_json_fields_and_raw_artifacts_processed       = True
   output_codex_preserved                            = True
   output_codex_used_as_input                        = False
 
@@ -236,20 +259,20 @@ Each case should show:
 9. TROUBLESHOOTING
 -------------------
 
-A. Error: invalid security token / configured Bedrock call failed
+A. Error in optional Bedrock mode: invalid security token / Bedrock call failed
 
   - Do not add keys to the source code.
   - Activate the approved AWS IAM role/profile/SSO session.
   - Run "python agent.py --check-model-access" again.
-  - Only run the full agent after the access check passes.
+  - Or run default rules mode with plain "python agent.py", which does not need Bedrock.
 
-B. Bedrock throttling or connection errors
+B. Optional Bedrock throttling or connection errors
 
 Run with one model worker:
 
 python agent.py --model-workers 1
 
-C. Model input/context-size error
+C. Optional Bedrock model input/context-size error
 
 Use smaller chunks (this increases the number of model calls but retains every
 field and line):
@@ -265,7 +288,7 @@ E. Exit codes
 
   0 = successful run
   1 = runtime/workbook/dependency error
-  2 = model access, corpus validation, or strict model-output validation failure
+  2 = optional Bedrock model access, corpus validation, or strict output validation failure
 
 On exit code 2 the agent does not substitute Codex or a local model and does not
 produce a fake replacement workbook.

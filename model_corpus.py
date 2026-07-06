@@ -344,6 +344,33 @@ class CaseCorpusBuilder:
                 )
             )
 
+        return self._chunks_from_records(case_id, records, audit)
+
+    def build_external_files(
+        self,
+        case_id: str,
+        extra_files: Iterable[Path],
+    ) -> tuple[list[EvidenceChunk], CorpusAudit]:
+        """Build a corpus from standalone PDF/context files not tied to an output case."""
+        audit = CorpusAudit(case_id=case_id)
+        records: list[EvidenceRecord] = []
+        for index, path in enumerate(sorted(set(extra_files)), start=1):
+            records.append(
+                self._record_for_file(
+                    path,
+                    relative_path=Path("standalone_pdf_inputs") / path.name,
+                    artifact_id=f"artifact_{index:06d}",
+                    audit=audit,
+                )
+            )
+        return self._chunks_from_records(case_id, records, audit)
+
+    def _chunks_from_records(
+        self,
+        case_id: str,
+        records: list[EvidenceRecord],
+        audit: CorpusAudit,
+    ) -> tuple[list[EvidenceChunk], CorpusAudit]:
         chunks: list[EvidenceChunk] = []
         represented: set[str] = set()
         current_parts: list[str] = []
@@ -682,6 +709,7 @@ def final_row_prompt(
     model_summary: dict,
     nearest_passed: list[dict],
     cohort: dict,
+    standalone_pdf_context: dict | None = None,
 ) -> str:
     schema = {header: "text" for header in ROW_HEADERS}
     schema["case_verdict"] = verdict
@@ -711,6 +739,9 @@ MODEL_SUMMARY_DERIVED_FROM_ALL CASE ARTIFACT CHUNKS:
 
 NEAREST_PASSED_CASES_FROM_CONFIGURED_TITAN_EMBEDDINGS:
 {json.dumps(nearest_passed, ensure_ascii=False)}
+
+STANDALONE_PDF_CONTEXT_NOT_TIED_TO_OUTPUT_CASES:
+{json.dumps(standalone_pdf_context or {}, ensure_ascii=False)}
 """
 
 
@@ -732,6 +763,7 @@ def validate_row(row: dict, *, case_id: str, verdict: int) -> dict:
 def generate_model_rows(
     cases: list[tuple[str, Path, list[Path]]],
     *,
+    standalone_pdfs: list[Path],
     output_dir: Path,
     chunk_chars: int,
     workers: int,
@@ -744,6 +776,24 @@ def generate_model_rows(
     gate_facts: dict[str, dict] = {}
     corpus_audits: dict[str, dict] = {}
     call_audits: dict[str, dict] = {}
+    standalone_pdf_summary: dict | None = None
+    standalone_pdf_calls: dict | None = None
+
+    if standalone_pdfs:
+        pdf_chunks, pdf_audit = builder.build_external_files(
+            "standalone_pdf_inputs",
+            standalone_pdfs,
+        )
+        if pdf_chunks:
+            standalone_pdf_summary, standalone_pdf_calls = analyze_case_chunks(
+                runtime,
+                pdf_chunks,
+                case_verdict=-1,
+                workers=workers,
+            )
+        corpus_audits["standalone_pdf_inputs"] = pdf_audit.to_dict()
+        if standalone_pdf_calls:
+            call_audits["standalone_pdf_inputs"] = standalone_pdf_calls
 
     for case_id, case_root, extra_files in cases:
         verdict, facts = _case_verdict(case_root)
@@ -786,6 +836,7 @@ def generate_model_rows(
                 summaries[case_id],
                 nearest[case_id],
                 cohort,
+                standalone_pdf_summary,
             ),
         )
         rows.append(validate_row(row, case_id=case_id, verdict=verdicts[case_id]))
@@ -800,6 +851,10 @@ def generate_model_rows(
         "all_json_fields_and_raw_artifacts_model_processed": all(
             value["all_artifacts_represented"] for value in corpus_audits.values()
         ),
-        "row_source": "configured Bedrock model output only",
+        "all_json_fields_and_raw_artifacts_processed": all(
+            value["all_artifacts_represented"] for value in corpus_audits.values()
+        ),
+        "standalone_pdf_context_model_summary": standalone_pdf_summary,
+        "row_source": "standalone copied Bedrock model output only",
     }
     return rows, audit
