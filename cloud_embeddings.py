@@ -1,22 +1,29 @@
-"""Cloud-only semantic categorization using the project's configured embedder.
+"""Cloud-only semantic categorization using standalone copied model settings.
 
-This module intentionally contains no local embedding implementation.  It loads
-``settings.med_embedding_model`` and ``settings.aws_region`` from the project's
-``config.py`` and calls that model through the existing Bedrock client factory.
-AWS credentials are resolved only by boto3's standard provider chain; access keys,
-secret keys and session tokens are never accepted, persisted or logged here.
+This module intentionally contains no local embedding implementation.  It uses
+the same Titan embedding model ID and AWS region that were copied from the
+project config into ``standalone_settings.py``.  It does not import the parent
+project's ``config.py`` or ``pipeline.clients`` modules.
+
+AWS credentials are resolved only by boto3's standard provider chain; access
+keys, secret keys and session tokens are never accepted, persisted or logged here.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
-import logging
 import math
-import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
+
+try:
+    from .standalone_bedrock import create_bedrock_runtime_client
+    from .standalone_settings import AWS_REGION, EMBEDDING_MODEL_ID
+except ImportError:  # Direct script execution.
+    from standalone_bedrock import create_bedrock_runtime_client
+    from standalone_settings import AWS_REGION, EMBEDDING_MODEL_ID
 
 
 class CloudEmbeddingError(RuntimeError):
@@ -32,38 +39,19 @@ class EmbeddingConfig:
     local_fallback: bool = False
 
 
-class ProjectBedrockEmbedder:
-    """Invoke only the embedding model defined by the parent project's settings."""
+class StandaloneBedrockEmbedder:
+    """Invoke only the copied standalone Bedrock embedding model setting."""
 
-    def __init__(self, project_root: Path) -> None:
-        project_root = project_root.resolve()
-        root_text = str(project_root)
-        if root_text not in sys.path:
-            sys.path.insert(0, root_text)
-
-        config_logger = logging.getLogger("config")
-        previous_level = config_logger.level
-        config_logger.setLevel(logging.ERROR)
-        try:
-            from config import settings
-            from pipeline.clients import create_bedrock_client
-        except Exception as exc:  # noqa: BLE001 - configuration import is an external boundary
-            raise CloudEmbeddingError(
-                "Could not load the project embedding configuration/client. "
-                "Run the analyzer with the project's Python environment."
-            ) from exc
-        finally:
-            config_logger.setLevel(previous_level)
-
-        model_id = str(settings.med_embedding_model or "").strip()
-        region = str(settings.aws_region or "").strip()
+    def __init__(self, *_ignored: object) -> None:
+        model_id = str(EMBEDDING_MODEL_ID or "").strip()
+        region = str(AWS_REGION or "").strip()
         if not model_id or not region:
             raise CloudEmbeddingError(
-                "config.py must provide settings.med_embedding_model and settings.aws_region"
+                "standalone_settings.py must provide EMBEDDING_MODEL_ID and AWS_REGION"
             )
         if "embed" not in model_id.lower():
             raise CloudEmbeddingError(
-                f"Configured med_embedding_model does not identify an embedding model: {model_id}"
+                f"Standalone EMBEDDING_MODEL_ID does not identify an embedding model: {model_id}"
             )
 
         self.config = EmbeddingConfig(
@@ -71,7 +59,7 @@ class ProjectBedrockEmbedder:
             region=region,
             model_id=model_id,
         )
-        self._client = create_bedrock_client(region)
+        self._client = create_bedrock_runtime_client(region)
         self.request_count = 0
 
     def embed(self, text: str) -> list[float]:
@@ -98,9 +86,14 @@ class ProjectBedrockEmbedder:
             return result
         except Exception as exc:  # noqa: BLE001 - fail closed across SDK/model failures
             raise CloudEmbeddingError(
-                "The configured Bedrock embedding call failed. No local embedding fallback was used. "
-                "Provide a valid project AWS role/profile/environment and retry."
+                "The standalone Bedrock embedding call failed. No local embedding fallback was used. "
+                "Provide a valid AWS role/profile for Bedrock and retry."
             ) from exc
+
+
+# Backward-compatible name for the preserved legacy analyzer.  The argument that
+# used to be a project root is accepted and ignored.
+ProjectBedrockEmbedder = StandaloneBedrockEmbedder
 
 
 class EmbeddingCache:
@@ -128,7 +121,7 @@ class EmbeddingCache:
     def _key(text: str) -> str:
         return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
-    def get_or_embed(self, text: str, embedder: ProjectBedrockEmbedder) -> list[float]:
+    def get_or_embed(self, text: str, embedder: StandaloneBedrockEmbedder) -> list[float]:
         key = self._key(text)
         cached = self.items.get(key)
         if isinstance(cached, list) and cached:
@@ -204,7 +197,7 @@ FAILURE_TAXONOMY = {
 def semantic_category(
     evidence_text: str,
     *,
-    embedder: ProjectBedrockEmbedder,
+    embedder: StandaloneBedrockEmbedder,
     cache: EmbeddingCache,
     taxonomy_vectors: dict[str, list[float]],
 ) -> dict[str, Any]:

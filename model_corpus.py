@@ -1,9 +1,9 @@
 """Full-artifact, model-driven claim verdict analysis.
 
 Every nested JSON leaf and every line/page of text is redacted, chunked, and sent
-to the project-configured Bedrock language model.  The project-configured Titan
-embedding model is used for cross-case retrieval.  There is no local model and no
-deterministic narrative fallback.
+to the standalone Bedrock language model setting copied from the project config.
+The copied Titan embedding model setting is used for cross-case retrieval.  There
+is no local model and no deterministic narrative fallback.
 """
 
 from __future__ import annotations
@@ -13,7 +13,6 @@ import io
 import json
 import math
 import re
-import sys
 import threading
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -25,15 +24,29 @@ try:
     from .cloud_embeddings import (
         CloudEmbeddingError,
         EmbeddingCache,
-        ProjectBedrockEmbedder,
+        StandaloneBedrockEmbedder,
         cosine_similarity,
+    )
+    from .standalone_bedrock import create_bedrock_runtime_client
+    from .standalone_settings import (
+        AWS_REGION,
+        EMBEDDING_MODEL_ID,
+        LANGUAGE_MODEL_ID,
+        MAX_TOKENS_JUDGE,
     )
 except ImportError:  # Direct script execution.
     from cloud_embeddings import (
         CloudEmbeddingError,
         EmbeddingCache,
-        ProjectBedrockEmbedder,
+        StandaloneBedrockEmbedder,
         cosine_similarity,
+    )
+    from standalone_bedrock import create_bedrock_runtime_client
+    from standalone_settings import (
+        AWS_REGION,
+        EMBEDDING_MODEL_ID,
+        LANGUAGE_MODEL_ID,
+        MAX_TOKENS_JUDGE,
     )
 
 
@@ -148,7 +161,7 @@ def _pdf_pages(data: bytes) -> tuple[list[str], str | None]:
             reader = PdfReader(io.BytesIO(data))
             return [redact_text(page.extract_text() or "") for page in reader.pages], None
         except ImportError:
-            return [], "Neither project PyMuPDF nor optional pypdf is available"
+            return [], "Neither PyMuPDF nor optional pypdf is available"
         except Exception as exc:  # noqa: BLE001
             return [], f"{type(exc).__name__}: {exc}"
     except Exception as exc:  # noqa: BLE001
@@ -393,22 +406,17 @@ def _extract_json_object(text: str) -> dict:
 
 
 class ConfiguredModelRuntime:
-    """Only the language and embedding models declared by the project config."""
+    """Only the standalone copied language and embedding model settings."""
 
-    def __init__(self, project_root: Path, cache_dir: Path) -> None:
-        self.embedder = ProjectBedrockEmbedder(project_root)
-        try:
-            from config import settings
-            from pipeline.clients import create_bedrock_client
-        except Exception as exc:  # noqa: BLE001
-            raise ModelAnalysisError("Could not load configured Bedrock language model") from exc
-        self.region = str(settings.aws_region)
-        self.language_model_id = str(settings.model_id)
-        self.embedding_model_id = str(settings.med_embedding_model)
+    def __init__(self, cache_dir: Path) -> None:
+        self.embedder = StandaloneBedrockEmbedder()
+        self.region = str(AWS_REGION)
+        self.language_model_id = str(LANGUAGE_MODEL_ID)
+        self.embedding_model_id = str(EMBEDDING_MODEL_ID)
         if not self.language_model_id or not self.embedding_model_id:
-            raise ModelAnalysisError("Both configured language and embedding model IDs are required")
-        self.max_tokens = int(settings.max_tokens_judge)
-        self.client = create_bedrock_client(self.region)
+            raise ModelAnalysisError("Both standalone language and embedding model IDs are required")
+        self.max_tokens = int(MAX_TOKENS_JUDGE)
+        self.client = create_bedrock_runtime_client(self.region)
         self.cache_path = cache_dir / "configured_llm_cache.json"
         self._cache_lock = threading.Lock()
         self._cache: dict[str, dict] = {}
@@ -455,7 +463,7 @@ class ConfiguredModelRuntime:
             except Exception as exc:  # noqa: BLE001
                 last_error = exc
         raise ModelAnalysisError(
-            "Configured Bedrock language-model analysis failed; no local or Codex fallback was used"
+            "Standalone Bedrock language-model analysis failed; no local or Codex fallback was used"
         ) from last_error
 
     def save_cache(self) -> None:
@@ -475,7 +483,10 @@ class ConfiguredModelRuntime:
             "region": self.region,
             "language_model_id": self.language_model_id,
             "embedding_model_id": self.embedding_model_id,
+            "settings_source": "case_verdict_analysis_agent/standalone_settings.py",
             "credential_source": "boto3 default credential provider chain",
+            "imports_parent_project_config": False,
+            "imports_parent_project_pipeline_clients": False,
             "local_model": False,
             "codex_generated_analysis": False,
             "language_requests": self.language_requests,
@@ -721,13 +732,12 @@ def validate_row(row: dict, *, case_id: str, verdict: int) -> dict:
 def generate_model_rows(
     cases: list[tuple[str, Path, list[Path]]],
     *,
-    project_root: Path,
     output_dir: Path,
     chunk_chars: int,
     workers: int,
 ) -> tuple[list[dict], dict[str, Any]]:
     cache_dir = output_dir / "model_cache"
-    runtime = ConfiguredModelRuntime(project_root, cache_dir)
+    runtime = ConfiguredModelRuntime(cache_dir)
     builder = CaseCorpusBuilder(chunk_chars=chunk_chars)
     summaries: dict[str, dict] = {}
     verdicts: dict[str, int] = {}

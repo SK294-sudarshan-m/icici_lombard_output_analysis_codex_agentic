@@ -1,7 +1,7 @@
-"""Run the full-artifact, project-model-driven case-verdict analysis agent.
+"""Run the full-artifact, standalone-model case-verdict analysis agent.
 
 The primary workflow is entirely agent-generated: every nested JSON leaf and every
-raw/page artifact is fed through the models configured by the parent project, and
+raw/page artifact is fed through the standalone copied Bedrock model settings, and
 the resulting seven-column workbook is authored by this program.  The preserved
 ``output_codex`` folder is never read, changed, or used as model evidence.
 """
@@ -11,12 +11,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import os
 import re
-import shutil
-import subprocess
 import sys
-import tempfile
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -142,62 +138,96 @@ def input_manifest(jsons_dir: Path) -> dict[str, Any]:
     }
 
 
-def _find_node(explicit: str | None) -> str:
-    candidates = [explicit, os.getenv("CODEX_NODE"), shutil.which("node"), shutil.which("node.exe")]
-    candidates.append(str(Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node.exe"))
-    for candidate in candidates:
-        if candidate and Path(candidate).exists():
-            return str(Path(candidate))
-    raise RuntimeError("Node.js was not found. Pass --node with an executable path.")
-
-
-def _find_artifact_modules(explicit: str | None) -> Path:
-    candidates = [explicit, os.getenv("ARTIFACT_TOOL_NODE_MODULES")]
-    candidates.append(str(Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules"))
-    for candidate in candidates:
-        if candidate and (Path(candidate) / "@oai" / "artifact-tool").exists():
-            return Path(candidate).resolve()
-    raise RuntimeError("@oai/artifact-tool was not found. Pass --artifact-node-modules.")
-
-
 def build_xlsx(
     rows_json: Path,
     audit_json: Path,
     output_xlsx: Path,
     *,
-    node: str | None,
-    artifact_node_modules: str | None,
+    node: str | None = None,
+    artifact_node_modules: str | None = None,
 ) -> Path:
-    node_exe = _find_node(node)
-    modules = _find_artifact_modules(artifact_node_modules)
-    source_builder = Path(__file__).with_name("build_report.mjs")
-    with tempfile.TemporaryDirectory(prefix="case-verdict-agent-xlsx-") as temp_name:
-        temp_dir = Path(temp_name)
-        builder = temp_dir / "build_report.mjs"
-        shutil.copy2(source_builder, builder)
-        link = temp_dir / "node_modules"
-        try:
-            link.symlink_to(modules, target_is_directory=True)
-        except OSError:
-            if os.name != "nt":
-                raise
-            subprocess.run(
-                ["cmd", "/c", "mklink", "/J", str(link), str(modules)],
-                check=True,
-                capture_output=True,
-                text=True,
-            )
-        output_xlsx.parent.mkdir(parents=True, exist_ok=True)
-        output_xlsx.unlink(missing_ok=True)
-        completed = subprocess.run(
-            [node_exe, str(builder), str(rows_json), str(audit_json), str(output_xlsx)],
-            check=False,
-            cwd=temp_dir,
-        )
-        if not output_xlsx.exists() or output_xlsx.stat().st_size < 1000:
-            raise RuntimeError(
-                f"Workbook builder exited with {completed.returncode} before producing a valid XLSX"
-            )
+    """Build the Excel report with Python only.
+
+    ``node`` and ``artifact_node_modules`` are accepted for backward-compatible
+    CLI parsing but intentionally ignored.  The standalone agent no longer needs
+    Codex's artifact-tool or any parent-project code to create the workbook.
+    """
+    _ = (node, artifact_node_modules)
+    try:
+        from openpyxl import Workbook
+        from openpyxl.styles import Alignment, Font, PatternFill
+        from openpyxl.utils import get_column_letter
+    except ImportError as exc:
+        raise RuntimeError(
+            "openpyxl is required for standalone XLSX output. "
+            "Install case_verdict_analysis_agent/requirements.txt and retry."
+        ) from exc
+
+    rows = json.loads(rows_json.read_text(encoding="utf-8"))
+    audit = json.loads(audit_json.read_text(encoding="utf-8"))
+    workbook = Workbook()
+    worksheet = workbook.active
+    worksheet.title = "Case Verdict Analysis"
+    worksheet.append(ROW_HEADERS)
+    for row in rows:
+        worksheet.append([row.get(header, "") for header in ROW_HEADERS])
+
+    header_fill = PatternFill("solid", fgColor="1F4E78")
+    header_font = Font(color="FFFFFF", bold=True)
+    wrap_top = Alignment(wrap_text=True, vertical="top")
+    for cell in worksheet[1]:
+        cell.fill = header_fill
+        cell.font = header_font
+        cell.alignment = Alignment(wrap_text=True, vertical="center")
+    for row_cells in worksheet.iter_rows(min_row=2):
+        for cell in row_cells:
+            cell.alignment = wrap_top
+
+    widths = [20, 14, 42, 48, 38, 54, 54]
+    for index, width in enumerate(widths, start=1):
+        worksheet.column_dimensions[get_column_letter(index)].width = width
+    worksheet.freeze_panes = "A2"
+    worksheet.auto_filter.ref = worksheet.dimensions
+
+    meta = workbook.create_sheet("Run Audit")
+    meta.append(["Field", "Value"])
+    meta["A1"].font = header_font
+    meta["B1"].font = header_font
+    meta["A1"].fill = header_fill
+    meta["B1"].fill = header_fill
+    model_runtime = audit.get("model_analysis", {}).get("model_runtime", {})
+    embedding_runtime = audit.get("model_analysis", {}).get("embedding_runtime", {})
+    audit_rows = [
+        ("generated_at", audit.get("generated_at")),
+        ("input_folder", audit.get("input_folder")),
+        ("case_count", audit.get("case_count")),
+        ("pdf_input_count", audit.get("pdf_input_count")),
+        ("unmapped_pdf_input_count", audit.get("unmapped_pdf_input_count")),
+        ("language_model_id", model_runtime.get("language_model_id")),
+        ("embedding_model_id", embedding_runtime.get("model_id") or model_runtime.get("embedding_model_id")),
+        ("region", model_runtime.get("region")),
+        ("settings_source", model_runtime.get("settings_source")),
+        ("imports_parent_project_config", model_runtime.get("imports_parent_project_config")),
+        ("imports_parent_project_pipeline_clients", model_runtime.get("imports_parent_project_pipeline_clients")),
+        (
+            "all_json_fields_and_raw_artifacts_model_processed",
+            audit.get("model_analysis", {}).get("all_json_fields_and_raw_artifacts_model_processed"),
+        ),
+        ("output_codex_used_as_input", audit.get("output_codex_used_as_input")),
+    ]
+    for key, value in audit_rows:
+        meta.append([key, json.dumps(value, ensure_ascii=False) if isinstance(value, (dict, list)) else value])
+    meta.column_dimensions["A"].width = 48
+    meta.column_dimensions["B"].width = 92
+    for row_cells in meta.iter_rows():
+        for cell in row_cells:
+            cell.alignment = wrap_top
+
+    output_xlsx.parent.mkdir(parents=True, exist_ok=True)
+    output_xlsx.unlink(missing_ok=True)
+    workbook.save(output_xlsx)
+    if not output_xlsx.exists() or output_xlsx.stat().st_size < 1000:
+        raise RuntimeError("Workbook was not produced as a valid XLSX")
     return output_xlsx
 
 
@@ -213,7 +243,6 @@ def validate_destinations(jsons_dir: Path, output_dir: Path, output_codex: Path)
 
 def run(args: argparse.Namespace) -> dict[str, Any]:
     here = Path(__file__).resolve().parent
-    project_root = args.project_root.resolve()
     jsons_dir = args.jsons.resolve()
     output_dir = args.output_dir.resolve()
     output_codex = here / "output_codex"
@@ -248,7 +277,6 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
     rows, model_audit = generate_model_rows(
         cases,
-        project_root=project_root,
         output_dir=output_dir,
         chunk_chars=args.chunk_chars,
         workers=args.model_workers,
@@ -271,7 +299,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "unmapped_pdf_inputs": [str(path) for path in unmapped_pdfs],
         "output_codex_preserved": output_codex.exists(),
         "output_codex_used_as_input": False,
-        "excel_rows_generated_by": "configured project Bedrock model via agent code",
+        "excel_rows_generated_by": "standalone copied Bedrock model settings via agent code",
         "model_analysis": model_audit,
     }
     audit_path.write_text(json.dumps(audit, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -297,17 +325,15 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
 
 def build_parser() -> argparse.ArgumentParser:
     here = Path(__file__).resolve().parent
-    project = here.parent
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--project-root", type=Path, default=project)
     parser.add_argument("--jsons", type=Path, default=here / "jsons")
     parser.add_argument("--pdf-input-dir", type=Path, default=here / "input_pdfs")
     parser.add_argument("--output-dir", type=Path, default=here / "output_agent")
     parser.add_argument("--xlsx-name", default="case_verdict_analysis_agent.xlsx")
     parser.add_argument("--chunk-chars", type=int, default=60000)
     parser.add_argument("--model-workers", type=int, default=4)
-    parser.add_argument("--node")
-    parser.add_argument("--artifact-node-modules")
+    parser.add_argument("--node", help=argparse.SUPPRESS)
+    parser.add_argument("--artifact-node-modules", help=argparse.SUPPRESS)
     parser.add_argument("--skip-xlsx", action="store_true")
     parser.add_argument("--check-model-config", action="store_true")
     parser.add_argument("--check-model-access", action="store_true")
@@ -326,10 +352,7 @@ def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
         if args.check_model_config or args.check_model_access:
-            runtime = ConfiguredModelRuntime(
-                args.project_root.resolve(),
-                args.output_dir.resolve() / "model_cache",
-            )
+            runtime = ConfiguredModelRuntime(args.output_dir.resolve() / "model_cache")
             result = runtime.safe_metadata()
             if args.check_model_access:
                 vector = runtime.embedder.embed("case verdict artifact analysis access check")

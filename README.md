@@ -29,21 +29,22 @@ Neutral staged names such as `ground_truth_001.pdf` are mapped only when there i
 exactly one non-AL-named output case. PDFs with no matching output case are skipped
 by default and listed in the audit; use `--strict-pdf-mapping` to fail instead.
 
-## Model-only analysis flow
+## Standalone model-only analysis flow
 
-The agent uses only models declared by the parent project's `config.py`:
+The agent uses standalone copied settings in `standalone_settings.py`. These
+values match the parent project's model defaults, but the agent does not import
+the parent project's `config.py`, `.env`, settings objects, or `pipeline.clients`.
 
-1. `settings.model_id` (configured Qwen Bedrock model) analyzes every evidence chunk.
+1. `LANGUAGE_MODEL_ID = qwen.qwen3-vl-235b-a22b` analyzes every evidence chunk.
 2. Hierarchical Qwen reduce calls combine every chunk analysis without dropping
    conflicting evidence.
-3. `settings.med_embedding_model` (configured Titan Bedrock embedding model) compares
+3. `EMBEDDING_MODEL_ID = amazon.titan-embed-text-v2:0` compares
    rejected cases with the closest verdict-1 controls.
 4. Qwen produces one strict seven-column JSON row per AL case.
-5. The Python process passes those model-generated rows to `build_report.mjs`, which
-   writes the Excel workbook with `@oai/artifact-tool`.
+5. Python/openpyxl writes the Excel workbook.
 
 There is no local language model, local embedder, Codex fallback, or hard-coded
-narrative fallback. AWS credentials come only from boto3's normal project role,
+narrative fallback. AWS credentials come only from boto3's normal AWS role,
 profile or environment chain; the agent accepts and logs no access/secret keys.
 
 The audit records file/field/line/chunk coverage, configured model IDs, model/cache
@@ -52,10 +53,14 @@ model call exits with code 2 before a new workbook is produced.
 
 ## Run
 
-Use the project's Python environment:
+Use a standalone Python environment:
 
 ```powershell
-python case_verdict_analysis_agent\agent.py
+cd C:\Users\User\Desktop\icici-lombard-claims-extraction-uat\case_verdict_analysis_agent
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python agent.py
 ```
 
 The default output is:
