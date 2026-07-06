@@ -23,6 +23,12 @@ Patient, hospital and doctor identity values are redacted before model calls. Nu
 IDs, amounts, charges, medicines, prescriptions, returns and pipeline evidence are
 retained.
 
+Ground-truth PDFs in `input_pdfs/` are attached to matching output cases only.
+If a PDF filename contains an AL number, that same AL must exist under `jsons/`.
+Neutral staged names such as `ground_truth_001.pdf` are mapped only when there is
+exactly one non-AL-named output case. PDFs with no matching output case are skipped
+by default and listed in the audit; use `--strict-pdf-mapping` to fail instead.
+
 ## Model-only analysis flow
 
 The agent uses only models declared by the parent project's `config.py`:

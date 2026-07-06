@@ -68,6 +68,22 @@ Ground-truth PDFs must be under:
 
   .\input_pdfs\
 
+PDF matching rule:
+
+  - If a PDF filename contains an AL number, that AL must also exist as an
+    output case under .\jsons\ for the PDF to be used.
+  - If the PDF is a neutral staged filename such as ground_truth_001.pdf, the
+    agent maps it only when there is exactly one non-AL-named output case, such
+    as the Chander Kochhar reference case.
+  - PDFs that do not map to a discovered output case are skipped by default and
+    listed in output_agent\case_verdict_analysis_agent_audit.json.
+  - To force old fail-fast behavior, run with:
+
+      python agent.py --strict-pdf-mapping
+
+An unmatched PDF cannot produce an Excel row by itself because the row requires
+case_verdict from the matching output case's consolidated_final.json.
+
 Do not place the old Codex report in jsons. The folder .\output_codex is not read.
 
 Optional input count check for the current supplied dataset:

@@ -75,7 +75,7 @@ def _normalise_stem(value: str) -> str:
 def assign_pdf_inputs(
     case_pairs: list[tuple[str, Path]],
     pdf_dir: Path,
-) -> dict[str, list[Path]]:
+) -> tuple[dict[str, list[Path]], list[Path]]:
     """Pair ground-truth PDFs without semantic/local filename models."""
     assignments = {case_id: [] for case_id, _root in case_pairs}
     pdfs = sorted(pdf_dir.rglob("*.pdf")) if pdf_dir.exists() else []
@@ -107,21 +107,21 @@ def assign_pdf_inputs(
 
     # The supplied image-only PDF has a neutral staged filename. If there is exactly
     # one neutral PDF and one non-AL-named output case, pair them deterministically.
+    # Do this even when other AL-named PDFs are unmatched, because those PDFs simply
+    # belong to output cases that are not present in the current jsons corpus.
     non_al_cases = [
         (case_id, root)
         for case_id, root in case_pairs
         if not AL_PATTERN.fullmatch(root.name)
         and not assignments[case_id]
     ]
-    if len(unassigned) == len(non_al_cases) == 1:
-        assignments[non_al_cases[0][0]].append(unassigned[0])
-        unassigned.clear()
-    if unassigned:
-        names = ", ".join(path.name for path in unassigned)
-        raise ModelAnalysisError(
-            f"Ground-truth PDF(s) could not be mapped to an AL case: {names}"
-        )
-    return assignments
+    neutral_unassigned = [path for path in unassigned if not AL_PATTERN.search(path.name)]
+    if len(neutral_unassigned) == len(non_al_cases) == 1:
+        neutral_pdf = neutral_unassigned[0]
+        assignments[non_al_cases[0][0]].append(neutral_pdf)
+        unassigned = [path for path in unassigned if path != neutral_pdf]
+
+    return assignments, unassigned
 
 
 def input_manifest(jsons_dir: Path) -> dict[str, Any]:
@@ -227,7 +227,19 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     case_pairs = [(infer_case_id(root), root) for root in roots]
     if len({case_id for case_id, _root in case_pairs}) != len(case_pairs):
         raise ModelAnalysisError("Duplicate AL numbers were inferred from the input corpus")
-    pdf_assignments = assign_pdf_inputs(case_pairs, args.pdf_input_dir.resolve())
+    pdf_assignments, unmapped_pdfs = assign_pdf_inputs(case_pairs, args.pdf_input_dir.resolve())
+    if unmapped_pdfs and args.strict_pdf_mapping:
+        names = ", ".join(path.name for path in unmapped_pdfs)
+        raise ModelAnalysisError(
+            f"Ground-truth PDF(s) could not be mapped to an AL case: {names}"
+        )
+    if unmapped_pdfs:
+        names = ", ".join(path.name for path in unmapped_pdfs)
+        print(
+            "WARNING: Skipping ground-truth PDF(s) with no matching output case in jsons: "
+            f"{names}",
+            file=sys.stderr,
+        )
     cases = [
         (case_id, root, pdf_assignments[case_id])
         for case_id, root in sorted(case_pairs)
@@ -255,6 +267,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "input_manifest": input_manifest(jsons_dir),
         "case_count": len(cases),
         "pdf_input_count": sum(len(paths) for paths in pdf_assignments.values()),
+        "unmapped_pdf_input_count": len(unmapped_pdfs),
+        "unmapped_pdf_inputs": [str(path) for path in unmapped_pdfs],
         "output_codex_preserved": output_codex.exists(),
         "output_codex_used_as_input": False,
         "excel_rows_generated_by": "configured project Bedrock model via agent code",
@@ -297,6 +311,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--skip-xlsx", action="store_true")
     parser.add_argument("--check-model-config", action="store_true")
     parser.add_argument("--check-model-access", action="store_true")
+    parser.add_argument(
+        "--strict-pdf-mapping",
+        action="store_true",
+        help=(
+            "Fail if any PDF under --pdf-input-dir does not map to a discovered AL/output case. "
+            "By default, unmatched PDFs are recorded in the audit and skipped."
+        ),
+    )
     return parser
 
 
